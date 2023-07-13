@@ -1,0 +1,2096 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0054)http://en.wikipedia.org/wiki/Artificial_neural_network -->
+<HTML lang=en dir=ltr xml:lang="en" 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>Artificial neural network - Wikipedia, the free encyclopedia</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META http-equiv=Content-Style-Type content=text/css>
+<META content="MSHTML 6.00.6001.18203" name=GENERATOR>
+<META 
+content="Artificial neural network,Articles needing additional references from March 2009,Articles with unsourced statements since October 2008,Articles with unsourced statements since September 2007,Technology articles needing expert attention,Technology,Special:Search/Artificial neural network,20Q,Ad hoc,Adaptive resonance theory,Adaptive system" 
+name=keywords><LINK title="Edit this page" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit" 
+type=application/x-wiki rel=alternate><LINK title="Edit this page" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit" 
+rel=edit><LINK href="http://en.wikipedia.org/apple-touch-icon.png" 
+rel=apple-touch-icon><LINK href="/favicon.ico" rel="shortcut icon"><LINK 
+title="Wikipedia (en)" href="/w/opensearch_desc.php" 
+type=application/opensearchdescription+xml rel=search><LINK 
+href="http://www.gnu.org/copyleft/fdl.html" rel=copyright><LINK 
+title="Wikipedia RSS Feed" 
+href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=rss" 
+type=application/rss+xml rel=alternate><LINK title="Wikipedia Atom Feed" 
+href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" 
+type=application/atom+xml rel=alternate><LINK media=screen 
+href="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/shared.css" 
+type=text/css rel=stylesheet><LINK media=print 
+href="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/commonPrint.css" 
+type=text/css rel=stylesheet><LINK media=screen 
+href="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/main.css" 
+type=text/css rel=stylesheet><LINK media=handheld 
+href="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/main(1).css" 
+type=text/css rel=stylesheet><!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins-1.5/monobook/IE50Fixes.css?206xx" type="text/css" media="screen" /><![endif]--><!--[if IE 5.5000]><link rel="stylesheet" href="/skins-1.5/monobook/IE55Fixes.css?206xx" type="text/css" media="screen" /><![endif]--><!--[if IE 6]><link rel="stylesheet" href="/skins-1.5/monobook/IE60Fixes.css?206xx" type="text/css" media="screen" /><![endif]--><!--[if IE 7]><LINK 
+media=screen 
+href="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/IE70Fixes.css" 
+type=text/css rel=stylesheet><![endif]--><LINK 
+href="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index.css" 
+type=text/css rel=stylesheet><LINK media=print 
+href="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index(1).css" 
+type=text/css rel=stylesheet><LINK media=handheld 
+href="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index(2).css" 
+type=text/css rel=stylesheet><LINK 
+href="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index(3).css" 
+type=text/css rel=stylesheet><LINK 
+href="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index(4).css" 
+type=text/css rel=stylesheet><!--[if lt IE 7]><script type="text/javascript" src="/skins-1.5/common/IEFixes.js?206xx"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+<SCRIPT type=text/javascript>/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "/skins-1.5";
+		var wgArticlePath = "/wiki/$1";
+		var wgScriptPath = "/w";
+		var wgScript = "/w/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://en.wikipedia.org";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Artificial_neural_network";
+		var wgTitle = "Artificial neural network";
+		var wgAction = "view";
+		var wgArticleId = "21523";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "278067438";
+		var wgVersion = "1.15alpha";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgMWSuggestTemplate = "http://en.wikipedia.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest";
+		var wgDBname = "enwiki";
+		var wgSearchNamespaces = [0];
+		var wgMWSuggestMessages = ["with suggestions", "no suggestions"];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</SCRIPT>
+
+<SCRIPT 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/wikibits.js" 
+type=text/javascript><!-- wikibits js --></SCRIPT>
+<!-- Head Scripts -->
+<SCRIPT 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/ajax.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/mwsuggest.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT type=text/javascript>/*<![CDATA[*/
+var wgNotice='';var wgNoticeLocal='';
+/*]]>*/</SCRIPT>
+
+<SCRIPT 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/centralnotice.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/index.php" 
+type=text/javascript><!-- site js --></SCRIPT>
+</HEAD>
+<BODY 
+class="mediawiki ltr ns-0 ns-subject page-Artificial_neural_network skin-monobook">
+<DIV id=globalWrapper>
+<DIV id=column-content>
+<DIV id=content><A id=top name=top></A>
+<DIV id=siteNotice>
+<SCRIPT 
+type=text/javascript>if (wgNotice != '') document.writeln(wgNotice);</SCRIPT>
+</DIV>
+<H1 class=firstHeading id=firstHeading>Artificial neural network</H1>
+<DIV id=bodyContent>
+<H3 id=siteSub>From Wikipedia, the free encyclopedia</H3>
+<DIV id=contentSub></DIV>
+<DIV id=jump-to-nav>Jump to: <A 
+href="http://en.wikipedia.org/wiki/Artificial_neural_network#column-one">navigation</A>, 
+<A 
+href="http://en.wikipedia.org/wiki/Artificial_neural_network#searchInput">search</A></DIV><!-- start content -->
+<TABLE class="metadata plainlinks ambox ambox-move">
+  <TBODY>
+  <TR>
+    <TD class=mbox-image>
+      <DIV style="WIDTH: 52px"><A class=image title=Mergefrom.svg 
+      href="http://en.wikipedia.org/wiki/File:Mergefrom.svg"><IMG height=20 
+      alt="" 
+      src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/50px-Mergefrom.svg.png" 
+      width=50 border=0></A></DIV></TD>
+    <TD class=mbox-text>It has been suggested that <I><A 
+      title="Neural network" 
+      href="http://en.wikipedia.org/wiki/Neural_network">Neural network</A></I> 
+      be <A class=mw-redirect title="Wikipedia:Merging and moving pages" 
+      href="http://en.wikipedia.org/wiki/Wikipedia:Merging_and_moving_pages">merged</A> 
+      into this article or section. (<A title="Talk:Artificial neural network" 
+      href="http://en.wikipedia.org/wiki/Talk:Artificial_neural_network">Discuss</A>)</TD></TR></TBODY></TABLE>
+<TABLE class="metadata plainlinks ambox ambox-content">
+  <TBODY>
+  <TR>
+    <TD class=mbox-image>
+      <DIV style="WIDTH: 52px"><A class=image title="Question book-new.svg" 
+      href="http://en.wikipedia.org/wiki/File:Question_book-new.svg"><IMG 
+      height=39 alt="" 
+      src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/50px-Question_book-new.svg.png" 
+      width=50 border=0></A></DIV></TD>
+    <TD class=mbox-text>This article <B>needs additional <A 
+      title="Wikipedia:Citing sources" 
+      href="http://en.wikipedia.org/wiki/Wikipedia:Citing_sources">citations</A> 
+      for <A title=Wikipedia:Verifiability 
+      href="http://en.wikipedia.org/wiki/Wikipedia:Verifiability">verification</A>.</B> 
+      Please help <A class="external text" 
+      title=http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit 
+      href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit" 
+      rel=nofollow>improve this article</A> by adding <A 
+      title="Wikipedia:Reliable sources" 
+      href="http://en.wikipedia.org/wiki/Wikipedia:Reliable_sources">reliable 
+      references</A> (ideally, using <I><A title=Wikipedia:Footnotes 
+      href="http://en.wikipedia.org/wiki/Wikipedia:Footnotes">inline 
+      citations</A></I>). Unsourced material may be <A title=Template:Fact 
+      href="http://en.wikipedia.org/wiki/Template:Fact">challenged</A> and <A 
+      class=mw-redirect title=Wikipedia:BURDEN 
+      href="http://en.wikipedia.org/wiki/Wikipedia:BURDEN">removed</A>. 
+      <SMALL><I>(March 2009)</I></SMALL></TD></TR></TBODY></TABLE>
+<P>An <B>artificial neural network (ANN)</B>, often just called a "neural 
+network" (NN), is a <A title="Mathematical model" 
+href="http://en.wikipedia.org/wiki/Mathematical_model">mathematical model</A> or 
+<A title="Computational model" 
+href="http://en.wikipedia.org/wiki/Computational_model">computational model</A> 
+based on <A class=mw-redirect title="Biological neural networks" 
+href="http://en.wikipedia.org/wiki/Biological_neural_networks">biological neural 
+networks</A>. It consists of an interconnected group of <A 
+title="Artificial neuron" 
+href="http://en.wikipedia.org/wiki/Artificial_neuron">artificial neurons</A> and 
+processes information using a <A title=Connectionism 
+href="http://en.wikipedia.org/wiki/Connectionism">connectionist</A> approach to 
+<A title=Computation 
+href="http://en.wikipedia.org/wiki/Computation">computation</A>. In most cases 
+an ANN is an <A title="Adaptive system" 
+href="http://en.wikipedia.org/wiki/Adaptive_system">adaptive system</A> that 
+changes its structure based on external or internal information that flows 
+through the network during the learning phase.</P>
+<P>In more practical terms neural networks are <A class=mw-redirect 
+title=Non-linear href="http://en.wikipedia.org/wiki/Non-linear">non-linear</A> 
+<A class=mw-redirect title=Statistical 
+href="http://en.wikipedia.org/wiki/Statistical">statistical</A> <A 
+title="Data modeling" href="http://en.wikipedia.org/wiki/Data_modeling">data 
+modeling</A> tools. They can be used to model complex relationships between 
+inputs and outputs or to <A title="Pattern recognition" 
+href="http://en.wikipedia.org/wiki/Pattern_recognition">find patterns</A> in 
+data.</P>
+<DIV class="thumb tright">
+<DIV class=thumbinner style="WIDTH: 352px"><A class=image 
+title="A neural network is an interconnected group of nodes, akin to the vast network of neurons in the human brain." 
+href="http://en.wikipedia.org/wiki/File:Artificial_neural_network.svg"><IMG 
+class=thumbimage height=313 alt="" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/350px-Artificial_neural_network.svg.png" 
+width=350 border=0></A> 
+<DIV class=thumbcaption>
+<DIV class=magnify><A class=internal title=Enlarge 
+href="http://en.wikipedia.org/wiki/File:Artificial_neural_network.svg"><IMG 
+height=11 alt="" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/magnify-clip.png" 
+width=15></A></DIV>A neural network is an interconnected group of nodes, akin to 
+the vast network of <A title=Neuron 
+href="http://en.wikipedia.org/wiki/Neuron">neurons</A> in the <A 
+title="Human brain" href="http://en.wikipedia.org/wiki/Human_brain">human 
+brain</A>.</DIV></DIV></DIV>
+<TABLE class=toc id=toc summary=Contents>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV id=toctitle>
+      <H2>Contents</H2></DIV>
+      <UL>
+        <LI class=toclevel-1><A 
+        href="http://en.wikipedia.org/wiki/Artificial_neural_network#Background"><SPAN 
+        class=tocnumber>1</SPAN> <SPAN class=toctext>Background</SPAN></A> 
+        <UL>
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Models"><SPAN 
+          class=tocnumber>1.1</SPAN> <SPAN class=toctext>Models</SPAN></A> 
+          <UL>
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#The_network_in_artificial_neural_network"><SPAN 
+            class=tocnumber>1.1.1</SPAN> <SPAN class=toctext>The network in 
+            artificial neural network</SPAN></A> </LI></UL>
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Learning"><SPAN 
+          class=tocnumber>1.2</SPAN> <SPAN class=toctext>Learning</SPAN></A> 
+          <UL>
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Choosing_a_cost_function"><SPAN 
+            class=tocnumber>1.2.1</SPAN> <SPAN class=toctext>Choosing a cost 
+            function</SPAN></A> </LI></UL>
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Learning_paradigms"><SPAN 
+          class=tocnumber>1.3</SPAN> <SPAN class=toctext>Learning 
+          paradigms</SPAN></A> 
+          <UL>
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Supervised_learning"><SPAN 
+            class=tocnumber>1.3.1</SPAN> <SPAN class=toctext>Supervised 
+            learning</SPAN></A> 
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Unsupervised_learning"><SPAN 
+            class=tocnumber>1.3.2</SPAN> <SPAN class=toctext>Unsupervised 
+            learning</SPAN></A> 
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Reinforcement_learning"><SPAN 
+            class=tocnumber>1.3.3</SPAN> <SPAN class=toctext>Reinforcement 
+            learning</SPAN></A> </LI></UL>
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Learning_algorithms"><SPAN 
+          class=tocnumber>1.4</SPAN> <SPAN class=toctext>Learning 
+          algorithms</SPAN></A> </LI></UL>
+        <LI class=toclevel-1><A 
+        href="http://en.wikipedia.org/wiki/Artificial_neural_network#Employing_artificial_neural_networks"><SPAN 
+        class=tocnumber>2</SPAN> <SPAN class=toctext>Employing artificial neural 
+        networks</SPAN></A> 
+        <LI class=toclevel-1><A 
+        href="http://en.wikipedia.org/wiki/Artificial_neural_network#Applications"><SPAN 
+        class=tocnumber>3</SPAN> <SPAN class=toctext>Applications</SPAN></A> 
+        <UL>
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Real_life_applications"><SPAN 
+          class=tocnumber>3.1</SPAN> <SPAN class=toctext>Real life 
+          applications</SPAN></A> </LI></UL>
+        <LI class=toclevel-1><A 
+        href="http://en.wikipedia.org/wiki/Artificial_neural_network#Neural_network_software"><SPAN 
+        class=tocnumber>4</SPAN> <SPAN class=toctext>Neural network 
+        software</SPAN></A> 
+        <LI class=toclevel-1><A 
+        href="http://en.wikipedia.org/wiki/Artificial_neural_network#Types_of_neural_networks"><SPAN 
+        class=tocnumber>5</SPAN> <SPAN class=toctext>Types of neural 
+        networks</SPAN></A> 
+        <UL>
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Feedforward_neural_network"><SPAN 
+          class=tocnumber>5.1</SPAN> <SPAN class=toctext>Feedforward neural 
+          network</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Radial_basis_function_.28RBF.29_network"><SPAN 
+          class=tocnumber>5.2</SPAN> <SPAN class=toctext>Radial basis function 
+          (RBF) network</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Kohonen_self-organizing_network"><SPAN 
+          class=tocnumber>5.3</SPAN> <SPAN class=toctext>Kohonen self-organizing 
+          network</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Recurrent_network"><SPAN 
+          class=tocnumber>5.4</SPAN> <SPAN class=toctext>Recurrent 
+          network</SPAN></A> 
+          <UL>
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Simple_recurrent_network"><SPAN 
+            class=tocnumber>5.4.1</SPAN> <SPAN class=toctext>Simple recurrent 
+            network</SPAN></A> 
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Hopfield_network"><SPAN 
+            class=tocnumber>5.4.2</SPAN> <SPAN class=toctext>Hopfield 
+            network</SPAN></A> 
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Echo_state_network"><SPAN 
+            class=tocnumber>5.4.3</SPAN> <SPAN class=toctext>Echo state 
+            network</SPAN></A> 
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Long_short_term_memory_network"><SPAN 
+            class=tocnumber>5.4.4</SPAN> <SPAN class=toctext>Long short term 
+            memory network</SPAN></A> </LI></UL>
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Stochastic_neural_networks"><SPAN 
+          class=tocnumber>5.5</SPAN> <SPAN class=toctext>Stochastic neural 
+          networks</SPAN></A> 
+          <UL>
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Boltzmann_machine"><SPAN 
+            class=tocnumber>5.5.1</SPAN> <SPAN class=toctext>Boltzmann 
+            machine</SPAN></A> </LI></UL>
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Modular_neural_networks"><SPAN 
+          class=tocnumber>5.6</SPAN> <SPAN class=toctext>Modular neural 
+          networks</SPAN></A> 
+          <UL>
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Committee_of_machines"><SPAN 
+            class=tocnumber>5.6.1</SPAN> <SPAN class=toctext>Committee of 
+            machines</SPAN></A> 
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Associative_neural_network_.28ASNN.29"><SPAN 
+            class=tocnumber>5.6.2</SPAN> <SPAN class=toctext>Associative neural 
+            network (ASNN)</SPAN></A> </LI></UL>
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Other_types_of_networks"><SPAN 
+          class=tocnumber>5.7</SPAN> <SPAN class=toctext>Other types of 
+          networks</SPAN></A> 
+          <UL>
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Holographic_associative_memory"><SPAN 
+            class=tocnumber>5.7.1</SPAN> <SPAN class=toctext>Holographic 
+            associative memory</SPAN></A> 
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Instantaneously_trained_networks"><SPAN 
+            class=tocnumber>5.7.2</SPAN> <SPAN class=toctext>Instantaneously 
+            trained networks</SPAN></A> 
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Spiking_neural_networks"><SPAN 
+            class=tocnumber>5.7.3</SPAN> <SPAN class=toctext>Spiking neural 
+            networks</SPAN></A> 
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Dynamic_neural_networks"><SPAN 
+            class=tocnumber>5.7.4</SPAN> <SPAN class=toctext>Dynamic neural 
+            networks</SPAN></A> 
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Cascading_neural_networks"><SPAN 
+            class=tocnumber>5.7.5</SPAN> <SPAN class=toctext>Cascading neural 
+            networks</SPAN></A> 
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Neuro-fuzzy_networks"><SPAN 
+            class=tocnumber>5.7.6</SPAN> <SPAN class=toctext>Neuro-fuzzy 
+            networks</SPAN></A> 
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#Compositional_pattern-producing_networks"><SPAN 
+            class=tocnumber>5.7.7</SPAN> <SPAN class=toctext>Compositional 
+            pattern-producing networks</SPAN></A> 
+            <LI class=toclevel-3><A 
+            href="http://en.wikipedia.org/wiki/Artificial_neural_network#One-shot_associative_memory"><SPAN 
+            class=tocnumber>5.7.8</SPAN> <SPAN class=toctext>One-shot 
+            associative memory</SPAN></A> </LI></UL></LI></UL>
+        <LI class=toclevel-1><A 
+        href="http://en.wikipedia.org/wiki/Artificial_neural_network#Theoretical_properties"><SPAN 
+        class=tocnumber>6</SPAN> <SPAN class=toctext>Theoretical 
+        properties</SPAN></A> 
+        <UL>
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Computational_power"><SPAN 
+          class=tocnumber>6.1</SPAN> <SPAN class=toctext>Computational 
+          power</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Capacity"><SPAN 
+          class=tocnumber>6.2</SPAN> <SPAN class=toctext>Capacity</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Convergence"><SPAN 
+          class=tocnumber>6.3</SPAN> <SPAN class=toctext>Convergence</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Generalisation_and_statistics"><SPAN 
+          class=tocnumber>6.4</SPAN> <SPAN class=toctext>Generalisation and 
+          statistics</SPAN></A> 
+          <LI class=toclevel-2><A 
+          href="http://en.wikipedia.org/wiki/Artificial_neural_network#Dynamic_properties"><SPAN 
+          class=tocnumber>6.5</SPAN> <SPAN class=toctext>Dynamic 
+          properties</SPAN></A> </LI></UL>
+        <LI class=toclevel-1><A 
+        href="http://en.wikipedia.org/wiki/Artificial_neural_network#See_also"><SPAN 
+        class=tocnumber>7</SPAN> <SPAN class=toctext>See also</SPAN></A> 
+        <LI class=toclevel-1><A 
+        href="http://en.wikipedia.org/wiki/Artificial_neural_network#Patents"><SPAN 
+        class=tocnumber>8</SPAN> <SPAN class=toctext>Patents</SPAN></A> 
+        <LI class=toclevel-1><A 
+        href="http://en.wikipedia.org/wiki/Artificial_neural_network#Bibliography"><SPAN 
+        class=tocnumber>9</SPAN> <SPAN class=toctext>Bibliography</SPAN></A> 
+        <LI class=toclevel-1><A 
+        href="http://en.wikipedia.org/wiki/Artificial_neural_network#Notes"><SPAN 
+        class=tocnumber>10</SPAN> <SPAN class=toctext>Notes</SPAN></A> 
+        <LI class=toclevel-1><A 
+        href="http://en.wikipedia.org/wiki/Artificial_neural_network#External_links"><SPAN 
+        class=tocnumber>11</SPAN> <SPAN class=toctext>External links</SPAN></A> 
+        <LI class=toclevel-1><A 
+        href="http://en.wikipedia.org/wiki/Artificial_neural_network#Further_reading"><SPAN 
+        class=tocnumber>12</SPAN> <SPAN class=toctext>Further reading</SPAN></A> 
+        </LI></UL></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+//<![CDATA[
+ if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } 
+//]]>
+</SCRIPT>
+
+<P><A id=Background name=Background></A></P>
+<H2><SPAN class=editsection>[<A title="Edit section: Background" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=1">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Background</SPAN></H2>
+<DIV class="thumb tright">
+<DIV class=thumbinner style="WIDTH: 352px"><A class=image 
+title="Component based representation of a neural network. This kind of more general representation is used by some neural network software." 
+href="http://en.wikipedia.org/wiki/File:Annexample2.png"><IMG class=thumbimage 
+height=253 alt="" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/350px-Annexample2.png" 
+width=350 border=0></A> 
+<DIV class=thumbcaption>
+<DIV class=magnify><A class=internal title=Enlarge 
+href="http://en.wikipedia.org/wiki/File:Annexample2.png"><IMG height=11 alt="" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/magnify-clip.png" 
+width=15></A></DIV>Component based representation of a neural network. This kind 
+of more general representation is used by some <A 
+title="Neural network software" 
+href="http://en.wikipedia.org/wiki/Neural_network_software">neural network 
+software</A>.</DIV></DIV></DIV>
+<P>There is no precise agreed-upon definition among researchers as to what a <A 
+title="Neural network" href="http://en.wikipedia.org/wiki/Neural_network">neural 
+network</A> is, but most would agree that it involves a network of simple 
+processing elements (<A title="Artificial neuron" 
+href="http://en.wikipedia.org/wiki/Artificial_neuron">neurons</A>), which can 
+exhibit complex global behavior, determined by the connections between the 
+processing elements and element parameters. The original inspiration for the 
+technique was from examination of the <A title="Central nervous system" 
+href="http://en.wikipedia.org/wiki/Central_nervous_system">central nervous 
+system</A> and the neurons (and their <A class=mw-redirect title=Axons 
+href="http://en.wikipedia.org/wiki/Axons">axons</A>, <A class=mw-redirect 
+title=Dendrites href="http://en.wikipedia.org/wiki/Dendrites">dendrites</A> and 
+<A class=mw-redirect title=Synapses 
+href="http://en.wikipedia.org/wiki/Synapses">synapses</A>) which constitute one 
+of its most significant information processing elements (see <A 
+title=Neuroscience 
+href="http://en.wikipedia.org/wiki/Neuroscience">Neuroscience</A>). In a neural 
+network model, simple <A class=mw-redirect title="Node (neural networks)" 
+href="http://en.wikipedia.org/wiki/Node_(neural_networks)">nodes</A> (called 
+variously "neurons", "neurodes", "PEs" ("processing elements") or "units") are 
+connected together to form a network of nodes — hence the term "neural network." 
+While a neural network does not have to be adaptive per se, its practical use 
+comes with algorithms designed to alter the strength (weights) of the 
+connections in the network to produce a desired signal flow.</P>
+<P>These networks are also similar to the <A class=mw-redirect 
+title="Biological neural networks" 
+href="http://en.wikipedia.org/wiki/Biological_neural_networks">biological neural 
+networks</A> in the sense that functions are performed collectively and in 
+parallel by the units, rather than there being a clear delineation of subtasks 
+to which various units are assigned (see also <A title=Connectionism 
+href="http://en.wikipedia.org/wiki/Connectionism">connectionism</A>). Currently, 
+the term Artificial Neural Network (ANN) tends to refer mostly to neural network 
+models employed in <A title=Statistics 
+href="http://en.wikipedia.org/wiki/Statistics">statistics</A>, <A 
+title="Cognitive psychology" 
+href="http://en.wikipedia.org/wiki/Cognitive_psychology">cognitive 
+psychology</A> and <A title="Artificial intelligence" 
+href="http://en.wikipedia.org/wiki/Artificial_intelligence">artificial 
+intelligence</A>. <A title="Neural network" 
+href="http://en.wikipedia.org/wiki/Neural_network">Neural network</A> models 
+designed with emulation of the <A title="Central nervous system" 
+href="http://en.wikipedia.org/wiki/Central_nervous_system">central nervous 
+system</A> (CNS) in mind are a subject of <A class=mw-redirect 
+title="Theoretical neuroscience" 
+href="http://en.wikipedia.org/wiki/Theoretical_neuroscience">theoretical 
+neuroscience</A> (<A title="Computational neuroscience" 
+href="http://en.wikipedia.org/wiki/Computational_neuroscience">computational 
+neuroscience</A>).</P>
+<P>In modern <A title="Neural network software" 
+href="http://en.wikipedia.org/wiki/Neural_network_software">software 
+implementations</A> of artificial neural networks the approach inspired by 
+biology has more or less been abandoned for a more practical approach based on 
+statistics and signal processing. In some of these systems neural networks, or 
+parts of neural networks (such as <A title="Artificial neuron" 
+href="http://en.wikipedia.org/wiki/Artificial_neuron">artificial neurons</A>) 
+are used as components in larger systems that combine both adaptive and 
+non-adaptive elements. While the more general approach of such <A 
+class=mw-redirect title="Adaptive systems" 
+href="http://en.wikipedia.org/wiki/Adaptive_systems">adaptive systems</A> is 
+more suitable for real-world problem solving, it has far less to do with the 
+traditional artificial intelligence connectionist models. What they do, however, 
+have in common is the principle of non-linear, distributed, parallel and local 
+processing and adaptation.</P>
+<P><A id=Models name=Models></A></P>
+<H3><SPAN class=editsection>[<A title="Edit section: Models" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=2">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Models</SPAN></H3>
+<P>Neural network models in artificial intelligence are usually referred to as 
+artificial neural networks (ANNs); these are essentially simple mathematical 
+models defining a function <IMG class=tex alt=" f&nbsp;: X \rightarrow Y " 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/d10653246b8510daf15d33d41141919f.png">. 
+Each type of ANN model corresponds to a <I>class</I> of such functions.</P>
+<P><A id=The_network_in_artificial_neural_network 
+name=The_network_in_artificial_neural_network></A></P>
+<H4><SPAN class=editsection>[<A 
+title="Edit section: The network in artificial neural network" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=3">edit</A>]</SPAN> 
+<SPAN class=mw-headline>The <I>network</I> in <I>artificial neural 
+network</I></SPAN></H4>
+<P>The word <I>network</I> in the term 'artificial neural network' arises 
+because the function <SPAN class=texhtml><I>f</I>(<I>x</I>)</SPAN> is defined as 
+a composition of other functions <SPAN 
+class=texhtml><I>g</I><SUB><I>i</I></SUB>(<I>x</I>)</SPAN>, which can further be 
+defined as a composition of other functions. This can be conveniently 
+represented as a network structure, with arrows depicting the dependencies 
+between variables. A widely used type of composition is the <I>nonlinear 
+weighted sum</I>, where <IMG class=tex 
+alt="f (x) = K \left(\sum_i w_i g_i(x)\right) " 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/8336e618363d966f5c451a95c5145d1b.png">, 
+where <SPAN class=texhtml><I>K</I></SPAN> is some predefined function, such as 
+the <A class=mw-redirect title="Hyperbolic tangent" 
+href="http://en.wikipedia.org/wiki/Hyperbolic_tangent">hyperbolic tangent</A>. 
+It will be convenient for the following to refer to a collection of functions 
+<SPAN class=texhtml><I>g</I><SUB><I>i</I></SUB></SPAN> as simply a vector <IMG 
+class=tex alt="g = (g_1, g_2, \ldots, g_n)" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/dccb10465c968ee1ec58bec1799710b2.png">.</P>
+<DIV class="thumb tleft">
+<DIV class=thumbinner style="WIDTH: 152px"><A class=image 
+title="ANN dependency graph" 
+href="http://en.wikipedia.org/wiki/File:Ann_dependency_graph.png"><IMG 
+class=thumbimage height=108 alt="" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/150px-Ann_dependency_graph.png" 
+width=150 border=0></A> 
+<DIV class=thumbcaption>
+<DIV class=magnify><A class=internal title=Enlarge 
+href="http://en.wikipedia.org/wiki/File:Ann_dependency_graph.png"><IMG height=11 
+alt="" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/magnify-clip.png" 
+width=15></A></DIV>ANN dependency graph</DIV></DIV></DIV>
+<P>This figure depicts such a decomposition of <SPAN 
+class=texhtml><I>f</I></SPAN>, with dependencies between variables indicated by 
+arrows. These can be interpreted in two ways.</P>
+<P>The first view is the functional view: the input <SPAN 
+class=texhtml><I>x</I></SPAN> is transformed into a 3-dimensional vector <SPAN 
+class=texhtml><I>h</I></SPAN>, which is then transformed into a 2-dimensional 
+vector <SPAN class=texhtml><I>g</I></SPAN>, which is finally transformed into 
+<SPAN class=texhtml><I>f</I></SPAN>. This view is most commonly encountered in 
+the context of <A title="Optimization (mathematics)" 
+href="http://en.wikipedia.org/wiki/Optimization_(mathematics)">optimization</A>.</P>
+<P>The second view is the probabilistic view: the <A title="Random variable" 
+href="http://en.wikipedia.org/wiki/Random_variable">random variable</A> <SPAN 
+class=texhtml><I>F</I> = <I>f</I>(<I>G</I>)</SPAN> depends upon the random 
+variable <SPAN class=texhtml><I>G</I> = <I>g</I>(<I>H</I>)</SPAN>, which depends 
+upon <SPAN class=texhtml><I>H</I> = <I>h</I>(<I>X</I>)</SPAN>, which depends 
+upon the random variable <SPAN class=texhtml><I>X</I></SPAN>. This view is most 
+commonly encountered in the context of <A class=mw-redirect 
+title="Graphical models" 
+href="http://en.wikipedia.org/wiki/Graphical_models">graphical models</A>.</P>
+<P>The two views are largely equivalent. In either case, for this particular 
+network architecture, the components of individual layers are independent of 
+each other (e.g., the components of <SPAN class=texhtml><I>g</I></SPAN> are 
+independent of each other given their input <SPAN 
+class=texhtml><I>h</I></SPAN>). This naturally enables a degree of parallelism 
+in the implementation.</P>
+<DIV class="thumb tleft">
+<DIV class=thumbinner style="WIDTH: 122px"><A class=image 
+title="Recurrent ANN dependency graph" 
+href="http://en.wikipedia.org/wiki/File:Recurrent_ann_dependency_graph.png"><IMG 
+class=thumbimage height=134 alt="" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/120px-Recurrent_ann_dependency_graph.png" 
+width=120 border=0></A> 
+<DIV class=thumbcaption>
+<DIV class=magnify><A class=internal title=Enlarge 
+href="http://en.wikipedia.org/wiki/File:Recurrent_ann_dependency_graph.png"><IMG 
+height=11 alt="" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/magnify-clip.png" 
+width=15></A></DIV>Recurrent ANN dependency graph</DIV></DIV></DIV>
+<P>Networks such as the previous one are commonly called <A class=mw-redirect 
+title=Feedforward 
+href="http://en.wikipedia.org/wiki/Feedforward">feedforward</A>, because their 
+graph is a <A title="Directed acyclic graph" 
+href="http://en.wikipedia.org/wiki/Directed_acyclic_graph">directed acyclic 
+graph</A>. Networks with <A title="Path (graph theory)" 
+href="http://en.wikipedia.org/wiki/Path_(graph_theory)">cycles</A> are commonly 
+called <A title="Recurrent neural network" 
+href="http://en.wikipedia.org/wiki/Recurrent_neural_network">recurrent</A>. Such 
+networks are commonly depicted in the manner shown at the top of the figure, 
+where <SPAN class=texhtml><I>f</I></SPAN> is shown as being dependent upon 
+itself. However, there is an implied temporal dependence which is not shown.</P>
+<DIV class="rellink boilerplate seealso" 
+style="PADDING-LEFT: 2em; FONT-STYLE: italic">See also: <A class=mw-redirect 
+title="Graphical models" 
+href="http://en.wikipedia.org/wiki/Graphical_models">graphical models</A></DIV>
+<P><A id=Learning name=Learning></A></P>
+<H3><SPAN class=editsection>[<A title="Edit section: Learning" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=4">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Learning</SPAN></H3>
+<P>However interesting such functions may be in themselves, what has attracted 
+the most interest in neural networks is the possibility of <I>learning</I>, 
+which in practice means the following:</P>
+<P>Given a specific <I>task</I> to solve, and a <I>class</I> of functions <SPAN 
+class=texhtml><I>F</I></SPAN>, learning means using a set of 
+<I>observations</I>, in order to find <IMG class=tex alt=" f^* \in F" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/53a43beb14e851f8fc50079a408bdf2c.png"> 
+which solves the task in an <I>optimal sense</I>.</P>
+<P>This entails defining a <A class=mw-redirect title="Cost function" 
+href="http://en.wikipedia.org/wiki/Cost_function">cost function</A> <IMG 
+class=tex alt="C&nbsp;: F \rightarrow \mathbb{R}" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/37860da7ccb96487506d7c99ba7383c9.png"> 
+such that, for the optimal solution <SPAN class=texhtml><I>f</I> 
+<SUP>*</SUP></SPAN> , <IMG class=tex alt="C(f^*) \leq C(f)" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/efdd031b23e31bb43443c39772072c0a.png"> 
+<IMG class=tex alt="\forall f \in F" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/4e2f703f2a72502c43f989545cb984d0.png"> 
+(no solution has a cost less than the cost of the optimal solution).</P>
+<P>The <A class=mw-redirect title="Cost function" 
+href="http://en.wikipedia.org/wiki/Cost_function">cost function</A> <SPAN 
+class=texhtml><I>C</I></SPAN> is an important concept in learning, as it is a 
+measure of how far away we are from an optimal solution to the problem that we 
+want to solve. Learning algorithms search through the solution space in order to 
+find a function that has the smallest possible cost.</P>
+<P>For applications where the solution is dependent on some data, the cost must 
+necessarily be a <I>function of the observations</I>, otherwise we would not be 
+modelling anything related to the data. It is frequently defined as a <A 
+title=Statistic href="http://en.wikipedia.org/wiki/Statistic">statistic</A> to 
+which only approximations can be made. As a simple example consider the problem 
+of finding the model <SPAN class=texhtml><I>f</I></SPAN> which minimizes <IMG 
+class=tex alt="C=E\left[(f(x) - y)^2\right]" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/9541ffdc354fd32d4b65ca89c1396652.png">, 
+for data pairs <SPAN class=texhtml>(<I>x</I>,<I>y</I>)</SPAN> drawn from some 
+distribution <IMG class=tex alt=\mathcal{D} 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/0e4c3d09377b2eaa4053d184400c6616.png">. 
+In practical situations we would only have <SPAN class=texhtml><I>N</I></SPAN> 
+samples from <IMG class=tex alt=\mathcal{D} 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/0e4c3d09377b2eaa4053d184400c6616.png"> 
+and thus, for the above example, we would only minimize <IMG class=tex 
+alt="\hat{C}=\frac{1}{N}\sum_{i=1}^N (f(x_i)-y_i)^2" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/076a8e61fb375a641d694d7bbfdf1fc6.png">. 
+Thus, the cost is minimized over a sample of the data rather than the true data 
+distribution.</P>
+<P>When <IMG class=tex alt="N \rightarrow \infty" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/ec4668d92fc0fc5cfc89732fbc840c0d.png"> 
+some form of online learning must be used, where the cost is partially minimized 
+as each new example is seen. While online learning is often used when <IMG 
+class=tex alt=\mathcal{D} 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/0e4c3d09377b2eaa4053d184400c6616.png"> 
+is fixed, it is most useful in the case where the distribution changes slowly 
+over time. In neural network methods, some form of online learning is frequently 
+also used for finite datasets.</P>
+<DIV class="rellink boilerplate seealso" 
+style="PADDING-LEFT: 2em; FONT-STYLE: italic">See also: <A 
+title="Optimization (mathematics)" 
+href="http://en.wikipedia.org/wiki/Optimization_(mathematics)">Optimization 
+(mathematics)</A>, <A title="Estimation theory" 
+href="http://en.wikipedia.org/wiki/Estimation_theory">Estimation 
+theory</A>,&nbsp;and <A title="Machine learning" 
+href="http://en.wikipedia.org/wiki/Machine_learning">Machine learning</A></DIV>
+<P><A id=Choosing_a_cost_function name=Choosing_a_cost_function></A></P>
+<H4><SPAN class=editsection>[<A title="Edit section: Choosing a cost function" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=5">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Choosing a cost function</SPAN></H4>
+<P>While it is possible to arbitrarily define some <A title="Ad hoc" 
+href="http://en.wikipedia.org/wiki/Ad_hoc">ad hoc</A> cost function, frequently 
+a particular cost will be used either because it has desirable properties (such 
+as convexity) or because it arises naturally from a particular formulation of 
+the problem (i.e., In a probabilistic formulation the posterior probability of 
+the model can be used as an inverse cost). <B>Ultimately, the cost function will 
+depend on the task we wish to perform</B>. The three main categories of learning 
+tasks are overviewed below.</P>
+<P><A id=Learning_paradigms name=Learning_paradigms></A></P>
+<H3><SPAN class=editsection>[<A title="Edit section: Learning paradigms" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=6">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Learning paradigms</SPAN></H3>
+<P>There are three major learning paradigms, each corresponding to a particular 
+abstract learning task. These are <A title="Supervised learning" 
+href="http://en.wikipedia.org/wiki/Supervised_learning">supervised learning</A>, 
+<A title="Unsupervised learning" 
+href="http://en.wikipedia.org/wiki/Unsupervised_learning">unsupervised 
+learning</A> and <A title="Reinforcement learning" 
+href="http://en.wikipedia.org/wiki/Reinforcement_learning">reinforcement 
+learning</A>. Usually any given type of network architecture can be employed in 
+any of those tasks.</P>
+<P><A id=Supervised_learning name=Supervised_learning></A></P>
+<H4><SPAN class=editsection>[<A title="Edit section: Supervised learning" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=7">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Supervised learning</SPAN></H4>
+<P>In <A title="Supervised learning" 
+href="http://en.wikipedia.org/wiki/Supervised_learning">supervised learning</A>, 
+we are given a set of example pairs <IMG class=tex 
+alt=" (x, y), x \in X, y \in Y" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/1e39a260d546fe7c3cd1f9a42979dc71.png"> 
+and the aim is to find a function <IMG class=tex 
+alt=" f&nbsp;: X \rightarrow Y " 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/d10653246b8510daf15d33d41141919f.png"> 
+in the allowed class of functions that matches the examples. In other words, we 
+wish to <I>infer</I> the mapping implied by the data; the cost function is 
+related to the mismatch between our mapping and the data and it implicitly 
+contains prior knowledge about the problem domain.</P>
+<P>A commonly used cost is the <A class=mw-redirect title="Mean-squared error" 
+href="http://en.wikipedia.org/wiki/Mean-squared_error">mean-squared error</A> 
+which tries to minimize the average squared error between the network's output, 
+f(x), and the target value y over all the example pairs. When one tries to 
+minimise this cost using <A title="Gradient descent" 
+href="http://en.wikipedia.org/wiki/Gradient_descent">gradient descent</A> for 
+the class of neural networks called <A title="Multilayer perceptron" 
+href="http://en.wikipedia.org/wiki/Multilayer_perceptron">Multi-Layer 
+Perceptrons</A>, one obtains the common and well-known <A title=Backpropagation 
+href="http://en.wikipedia.org/wiki/Backpropagation">backpropagation 
+algorithm</A> for training neural networks.</P>
+<P>Tasks that fall within the paradigm of supervised learning are <A 
+title="Pattern recognition" 
+href="http://en.wikipedia.org/wiki/Pattern_recognition">pattern recognition</A> 
+(also known as classification) and <A title="Regression analysis" 
+href="http://en.wikipedia.org/wiki/Regression_analysis">regression</A> (also 
+known as function approximation). The supervised learning paradigm is also 
+applicable to sequential data (e.g., for speech and gesture recognition). This 
+can be thought of as learning with a "teacher," in the form of a function that 
+provides continuous feedback on the quality of solutions obtained thus far.</P>
+<P><A id=Unsupervised_learning name=Unsupervised_learning></A></P>
+<H4><SPAN class=editsection>[<A title="Edit section: Unsupervised learning" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=8">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Unsupervised learning</SPAN></H4>
+<P>In <A title="Unsupervised learning" 
+href="http://en.wikipedia.org/wiki/Unsupervised_learning">unsupervised 
+learning</A> we are given some data <SPAN class=texhtml><I>x</I></SPAN> and the 
+cost function to be minimized, that can be any function of the data <SPAN 
+class=texhtml><I>x</I></SPAN> and the network's output, <SPAN 
+class=texhtml><I>f</I></SPAN>.</P>
+<P>The cost function is dependent on the task (what we are trying to model) and 
+our <I>a priori</I> assumptions (the implicit properties of our model, its 
+parameters and the observed variables).</P>
+<P>As a trivial example, consider the model <SPAN 
+class=texhtml><I>f</I>(<I>x</I>) = <I>a</I></SPAN>, where <SPAN 
+class=texhtml><I>a</I></SPAN> is a constant and the cost <SPAN 
+class=texhtml><I>C</I> = <I>E</I>[(<I>x</I> − 
+<I>f</I>(<I>x</I>))<SUP>2</SUP>]</SPAN>. Minimizing this cost will give us a 
+value of <SPAN class=texhtml><I>a</I></SPAN> that is equal to the mean of the 
+data. The cost function can be much more complicated. Its form depends on the 
+application: For example in compression it could be related to the <A 
+title="Mutual information" 
+href="http://en.wikipedia.org/wiki/Mutual_information">mutual information</A> 
+between x and y. In statistical modelling, it could be related to the <A 
+title="Posterior probability" 
+href="http://en.wikipedia.org/wiki/Posterior_probability">posterior 
+probability</A> of the model given the data. (Note that in both of those 
+examples those quantities would be maximized rather than minimised).</P>
+<P>Tasks that fall within the paradigm of unsupervised learning are in general 
+<A title=Estimation 
+href="http://en.wikipedia.org/wiki/Estimation">estimation</A> problems; the 
+applications include <A class=mw-redirect title="Data clustering" 
+href="http://en.wikipedia.org/wiki/Data_clustering">clustering</A>, the 
+estimation of <A class=mw-redirect title="Statistical distributions" 
+href="http://en.wikipedia.org/wiki/Statistical_distributions">statistical 
+distributions</A>, <A title="Data compression" 
+href="http://en.wikipedia.org/wiki/Data_compression">compression</A> and <A 
+title="Bayesian spam filtering" 
+href="http://en.wikipedia.org/wiki/Bayesian_spam_filtering">filtering</A>.</P>
+<P><A id=Reinforcement_learning name=Reinforcement_learning></A></P>
+<H4><SPAN class=editsection>[<A title="Edit section: Reinforcement learning" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=9">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Reinforcement learning</SPAN></H4>
+<P>In <A title="Reinforcement learning" 
+href="http://en.wikipedia.org/wiki/Reinforcement_learning">reinforcement 
+learning</A>, data <SPAN class=texhtml><I>x</I></SPAN> is usually not given, but 
+generated by an agent's interactions with the environment. At each point in time 
+<SPAN class=texhtml><I>t</I></SPAN>, the agent performs an action <SPAN 
+class=texhtml><I>y</I><SUB><I>t</I></SUB></SPAN> and the environment generates 
+an observation <SPAN class=texhtml><I>x</I><SUB><I>t</I></SUB></SPAN> and an 
+instantaneous cost <SPAN class=texhtml><I>c</I><SUB><I>t</I></SUB></SPAN>, 
+according to some (usually unknown) dynamics. The aim is to discover a 
+<I>policy</I> for selecting actions that minimizes some measure of a long-term 
+cost, i.e. the expected cumulative cost. The environment's dynamics and the 
+long-term cost for each policy are usually unknown, but can be estimated.</P>
+<P>More formally, the environment is modeled as a <A 
+title="Markov decision process" 
+href="http://en.wikipedia.org/wiki/Markov_decision_process">Markov decision 
+process</A> (MDP) with states <IMG class=tex alt="{s_1,...,s_n}\in " 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/bffe6092dba5578fd3a76331a0dcf0f5.png">S 
+and actions <IMG class=tex alt="{a_1,...,a_m} \in A" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/fc6fdb0667408cebb842f4fcfef78366.png"> 
+with the following probability distributions: the instantaneous cost 
+distribution <SPAN class=texhtml><I>P</I>(<I>c</I><SUB><I>t</I></SUB> | 
+<I>s</I><SUB><I>t</I></SUB>)</SPAN>, the observation distribution <SPAN 
+class=texhtml><I>P</I>(<I>x</I><SUB><I>t</I></SUB> | 
+<I>s</I><SUB><I>t</I></SUB>)</SPAN> and the transition <SPAN 
+class=texhtml><I>P</I>(<I>s</I><SUB><I>t</I> + 1</SUB> | 
+<I>s</I><SUB><I>t</I></SUB>,<I>a</I><SUB><I>t</I></SUB>)</SPAN>, while a policy 
+is defined as conditional distribution over actions given the observations. 
+Taken together, the two define a <A title="Markov chain" 
+href="http://en.wikipedia.org/wiki/Markov_chain">Markov chain</A> (MC). The aim 
+is to discover the policy that minimizes the cost, i.e. the MC for which the 
+cost is minimal.</P>
+<P>ANNs are frequently used in reinforcement learning as part of the overall 
+algorithm.</P>
+<P>Tasks that fall within the paradigm of reinforcement learning are control 
+problems, <A title=Game href="http://en.wikipedia.org/wiki/Game">games</A> and 
+other <A class=new title="Sequential decision making (page does not exist)" 
+href="http://en.wikipedia.org/w/index.php?title=Sequential_decision_making&amp;action=edit&amp;redlink=1">sequential 
+decision making</A> tasks.</P>
+<P>See also: <A title="Dynamic programming" 
+href="http://en.wikipedia.org/wiki/Dynamic_programming">dynamic programming</A>, 
+<A title="Stochastic control" 
+href="http://en.wikipedia.org/wiki/Stochastic_control">stochastic 
+control</A></P>
+<P><A id=Learning_algorithms name=Learning_algorithms></A></P>
+<H3><SPAN class=editsection>[<A title="Edit section: Learning algorithms" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=10">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Learning algorithms</SPAN></H3>
+<P>Training a neural network model essentially means selecting one model from 
+the set of allowed models (or, in a <A title=Bayesian 
+href="http://en.wikipedia.org/wiki/Bayesian">Bayesian</A> framework, determining 
+a distribution over the set of allowed models) that minimises the cost 
+criterion. There are numerous algorithms available for training neural network 
+models; most of them can be viewed as a straightforward application of <A 
+title="Optimization (mathematics)" 
+href="http://en.wikipedia.org/wiki/Optimization_(mathematics)">optimization</A> 
+theory and <A class=mw-redirect title="Statistical estimation" 
+href="http://en.wikipedia.org/wiki/Statistical_estimation">statistical 
+estimation</A>.</P>
+<P>Most of the algorithms used in training artificial neural networks are 
+employing some form of <A title="Gradient descent" 
+href="http://en.wikipedia.org/wiki/Gradient_descent">gradient descent</A>. This 
+is done by simply taking the derivative of the cost function with respect to the 
+network parameters and then changing those parameters in a <A 
+title=Gradient-related 
+href="http://en.wikipedia.org/wiki/Gradient-related">gradient-related</A> 
+direction.</P>
+<P><A class=mw-redirect title="Evolutionary methods" 
+href="http://en.wikipedia.org/wiki/Evolutionary_methods">Evolutionary 
+methods</A>, <A title="Simulated annealing" 
+href="http://en.wikipedia.org/wiki/Simulated_annealing">simulated annealing</A>, 
+and <A class=mw-redirect title=Expectation-maximization 
+href="http://en.wikipedia.org/wiki/Expectation-maximization">expectation-maximization</A> 
+and <A class=mw-redirect title="Non-parametric methods" 
+href="http://en.wikipedia.org/wiki/Non-parametric_methods">non-parametric 
+methods</A> are among other commonly used methods for training neural networks. 
+See also <A title="Machine learning" 
+href="http://en.wikipedia.org/wiki/Machine_learning">machine learning</A>.</P>
+<P>Temporal perceptual learning relies on finding temporal relationships in 
+sensory signal streams. In an environment, statistically salient temporal 
+correlations can be found by monitoring the arrival times of sensory signals. 
+This is done by the <A class=new 
+title="Perceptual network (page does not exist)" 
+href="http://en.wikipedia.org/w/index.php?title=Perceptual_network&amp;action=edit&amp;redlink=1">perceptual 
+network</A>.</P>
+<P><A id=Employing_artificial_neural_networks 
+name=Employing_artificial_neural_networks></A></P>
+<H2><SPAN class=editsection>[<A 
+title="Edit section: Employing artificial neural networks" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=11">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Employing artificial neural networks</SPAN></H2>
+<P>Perhaps the greatest advantage of ANNs is their ability to be used as an 
+arbitrary function approximation mechanism which 'learns' from observed data. 
+However, using them is not so straightforward and a relatively good 
+understanding of the underlying theory is essential.</P>
+<UL>
+  <LI>Choice of model: This will depend on the data representation and the 
+  application. Overly complex models tend to lead to problems with learning. 
+  <LI>Learning algorithm: There are numerous tradeoffs between learning 
+  algorithms. Almost any algorithm will work well with the <I>correct <A 
+  title=Hyperparameter 
+  href="http://en.wikipedia.org/wiki/Hyperparameter">hyperparameters</A></I> for 
+  training on a particular fixed dataset. However selecting and tuning an 
+  algorithm for training on unseen data requires a significant amount of 
+  experimentation. 
+  <LI>Robustness: If the model, cost function and learning algorithm are 
+  selected appropriately the resulting ANN can be extremely robust. </LI></UL>
+<P>With the correct implementation ANNs can be used naturally in <A 
+title="Online algorithm" 
+href="http://en.wikipedia.org/wiki/Online_algorithm">online learning</A> and 
+large dataset applications. Their simple implementation and the existence of 
+mostly local dependencies exhibited in the structure allows for fast, parallel 
+implementations in hardware.</P>
+<P><A id=Applications name=Applications></A></P>
+<H2><SPAN class=editsection>[<A title="Edit section: Applications" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=12">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Applications</SPAN></H2>
+<P>The utility of artificial neural network models lies in the fact that they 
+can be used to infer a function from observations. This is particularly useful 
+in applications where the complexity of the data or task makes the design of 
+such a function by hand impractical.</P>
+<P><A id=Real_life_applications name=Real_life_applications></A></P>
+<H3><SPAN class=editsection>[<A title="Edit section: Real life applications" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=13">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Real life applications</SPAN></H3>
+<P>The tasks to which artificial neural networks are applied tend to fall within 
+the following broad categories:</P>
+<UL>
+  <LI><A title="Function approximation" 
+  href="http://en.wikipedia.org/wiki/Function_approximation">Function 
+  approximation</A>, or <A title="Regression analysis" 
+  href="http://en.wikipedia.org/wiki/Regression_analysis">regression 
+  analysis</A>, including <A class=mw-redirect title="Time series prediction" 
+  href="http://en.wikipedia.org/wiki/Time_series_prediction">time series 
+  prediction</A> and modelling. 
+  <LI><A title="Statistical classification" 
+  href="http://en.wikipedia.org/wiki/Statistical_classification">Classification</A>, 
+  including <A title="Pattern recognition" 
+  href="http://en.wikipedia.org/wiki/Pattern_recognition">pattern</A> and 
+  sequence recognition, <A title="Novelty detection" 
+  href="http://en.wikipedia.org/wiki/Novelty_detection">novelty detection</A> 
+  and sequential decision making. 
+  <LI><A class=mw-redirect title="Data processing" 
+  href="http://en.wikipedia.org/wiki/Data_processing">Data processing</A>, 
+  including filtering, clustering, blind source separation and compression. 
+</LI></UL>
+<P>Application areas include system identification and control (vehicle control, 
+process control), game-playing and decision making (backgammon, chess, racing), 
+pattern recognition (radar systems, face identification, object recognition and 
+more), sequence recognition (gesture, speech, handwritten text recognition), 
+medical diagnosis, financial applications (automated trading systems), <A 
+title="Data mining" href="http://en.wikipedia.org/wiki/Data_mining">data 
+mining</A> (or knowledge discovery in databases, "KDD"), visualization and <A 
+title="E-mail spam" href="http://en.wikipedia.org/wiki/E-mail_spam">e-mail 
+spam</A> filtering.</P>
+<P><A id=Neural_network_software name=Neural_network_software></A></P>
+<H2><SPAN class=editsection>[<A title="Edit section: Neural network software" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=14">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Neural network software</SPAN></H2>
+<DIV class="rellink noprint relarticle mainarticle" 
+style="PADDING-LEFT: 2em; FONT-STYLE: italic">Main article: <A 
+title="Neural network software" 
+href="http://en.wikipedia.org/wiki/Neural_network_software">Neural network 
+software</A></DIV>
+<P><B>Neural network software</B> is used to <A title=Simulation 
+href="http://en.wikipedia.org/wiki/Simulation">simulate</A>, <A title=Research 
+href="http://en.wikipedia.org/wiki/Research">research</A>, <A 
+title="Technology development" 
+href="http://en.wikipedia.org/wiki/Technology_development">develop</A> and apply 
+artificial neural networks, <A title="Biological neural network" 
+href="http://en.wikipedia.org/wiki/Biological_neural_network">biological neural 
+networks</A> and in some cases a wider array of <A title="Adaptive system" 
+href="http://en.wikipedia.org/wiki/Adaptive_system">adaptive systems</A>. See 
+also <A title="Logistic regression" 
+href="http://en.wikipedia.org/wiki/Logistic_regression">logistic 
+regression</A>.</P>
+<P><A id=Types_of_neural_networks name=Types_of_neural_networks></A></P>
+<H2><SPAN class=editsection>[<A title="Edit section: Types of neural networks" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=15">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Types of neural networks</SPAN></H2>
+<P><A id=Feedforward_neural_network name=Feedforward_neural_network></A></P>
+<H3><SPAN class=editsection>[<A title="Edit section: Feedforward neural network" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=16">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Feedforward neural network</SPAN></H3>
+<DIV class="rellink noprint relarticle mainarticle" 
+style="PADDING-LEFT: 2em; FONT-STYLE: italic">Main article: <A 
+title="Feedforward neural network" 
+href="http://en.wikipedia.org/wiki/Feedforward_neural_network">Feedforward 
+neural network</A></DIV>
+<P>The feedforward neural network was the first and arguably simplest type of 
+artificial neural network devised. In this network, the information moves in 
+only one direction, forward, from the input nodes, through the hidden nodes (if 
+any) and to the output nodes. There are no cycles or loops in the network.</P>
+<P><A id=Radial_basis_function_.28RBF.29_network 
+name=Radial_basis_function_.28RBF.29_network></A></P>
+<H3><SPAN class=editsection>[<A 
+title="Edit section: Radial basis function (RBF) network" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=17">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Radial basis function (RBF) network</SPAN></H3>
+<DIV class="rellink noprint relarticle mainarticle" 
+style="PADDING-LEFT: 2em; FONT-STYLE: italic">Main article: <A 
+title="Radial basis function network" 
+href="http://en.wikipedia.org/wiki/Radial_basis_function_network">Radial basis 
+function network</A></DIV>
+<P>Radial Basis Functions are powerful techniques for interpolation in 
+multidimensional space. A RBF is a function which has built into a distance 
+criterion with respect to a centre. Radial basis functions have been applied in 
+the area of neural networks where they may be used as a replacement for the 
+sigmoidal hidden layer transfer characteristic in Multi-Layer Perceptrons. RBF 
+networks have two layers of processing: In the first, input is mapped onto each 
+RBF in the 'hidden' layer. The RBF chosen is usually a Gaussian. In regression 
+problems the output layer is then a linear combination of hidden layer values 
+representing mean predicted output. The interpretation of this output layer 
+value is the same as a regression model in statistics. In classification 
+problems the output layer is typically a <A title="Sigmoid function" 
+href="http://en.wikipedia.org/wiki/Sigmoid_function">sigmoid function</A> of a 
+linear combination of hidden layer values, representing a posterior probability. 
+Performance in both cases is often improved by shrinkage techniques, known as <A 
+class=mw-redirect title="Ridge regression" 
+href="http://en.wikipedia.org/wiki/Ridge_regression">ridge regression</A> in 
+classical statistics and known to correspond to a prior belief in small 
+parameter values (and therefore smooth output functions) in a Bayesian 
+framework.</P>
+<P>RBF networks have the advantage of not suffering from local minima in the 
+same way as Multi-Layer Perceptrons. This is because the only parameters that 
+are adjusted in the learning process are the linear mapping from hidden layer to 
+output layer. Linearity ensures that the error surface is quadratic and 
+therefore has a single easily found minimum. In regression problems this can be 
+found in one matrix operation. In classification problems the fixed 
+non-linearity introduced by the sigmoid output function is most efficiently 
+dealt with using <A title="Iteratively re-weighted least squares" 
+href="http://en.wikipedia.org/wiki/Iteratively_re-weighted_least_squares">iteratively 
+re-weighted least squares</A>.</P>
+<P>RBF networks have the disadvantage of requiring good coverage of the input 
+space by radial basis functions. RBF centres are determined with reference to 
+the distribution of the input data, but without reference to the prediction 
+task. As a result, representational resources may be wasted on areas of the 
+input space that are irrelevant to the learning task. A common solution is to 
+associate each data point with its own centre, although this can make the linear 
+system to be solved in the final layer rather large, and requires shrinkage 
+techniques to avoid overfitting.</P>
+<P>Associating each input datum with an RBF leads naturally to kernel methods 
+such as <A class=mw-redirect title="Support Vector Machine" 
+href="http://en.wikipedia.org/wiki/Support_Vector_Machine">Support Vector 
+Machines</A> and Gaussian Processes (the RBF is the kernel function). All three 
+approaches use a non-linear kernel function to project the input data into a 
+space where the learning problem can be solved using a linear model. Like 
+Gaussian Processes, and unlike SVMs, RBF networks are typically trained in a 
+Maximum Likelihood framework by maximizing the probability (minimizing the 
+error) of the data under the model. SVMs take a different approach to avoiding 
+overfitting by maximizing instead a margin. RBF networks are outperformed in 
+most classification applications by SVMs. In regression applications they can be 
+competitive when the dimensionality of the input space is relatively small.</P>
+<P><A id=Kohonen_self-organizing_network 
+name=Kohonen_self-organizing_network></A></P>
+<H3><SPAN class=editsection>[<A 
+title="Edit section: Kohonen self-organizing network" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=18">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Kohonen self-organizing network</SPAN></H3>
+<DIV class="rellink noprint relarticle mainarticle" 
+style="PADDING-LEFT: 2em; FONT-STYLE: italic">Main article: <A 
+title="Self-organizing map" 
+href="http://en.wikipedia.org/wiki/Self-organizing_map">Self-organizing 
+map</A></DIV>
+<P>The self-organizing map (SOM) invented by <A title="Teuvo Kohonen" 
+href="http://en.wikipedia.org/wiki/Teuvo_Kohonen">Teuvo Kohonen</A> performs a 
+form of <A title="Unsupervised learning" 
+href="http://en.wikipedia.org/wiki/Unsupervised_learning">unsupervised 
+learning</A>. A set of artificial neurons learn to map points in an input space 
+to coordinates in an output space. The input space can have different dimensions 
+and topology from the output space, and the SOM will attempt to preserve 
+these.</P>
+<P><A id=Recurrent_network name=Recurrent_network></A></P>
+<H3><SPAN class=editsection>[<A title="Edit section: Recurrent network" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=19">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Recurrent network</SPAN></H3>
+<DIV class="rellink noprint relarticle mainarticle" 
+style="PADDING-LEFT: 2em; FONT-STYLE: italic">Main article: <A 
+title="Recurrent neural network" 
+href="http://en.wikipedia.org/wiki/Recurrent_neural_network">Recurrent neural 
+network</A></DIV>
+<P>Contrary to feedforward networks, <A title="Recurrent neural network" 
+href="http://en.wikipedia.org/wiki/Recurrent_neural_network">recurrent neural 
+networks</A> (RNs) are models with bi-directional data flow. While a feedforward 
+network propagates data linearly from input to output, RNs also propagate data 
+from later processing stages to earlier stages.</P>
+<P><A id=Simple_recurrent_network name=Simple_recurrent_network></A></P>
+<H4><SPAN class=editsection>[<A title="Edit section: Simple recurrent network" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=20">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Simple recurrent network</SPAN></H4>
+<P>A <I>simple recurrent network</I> (SRN) is a variation on the Multi-Layer 
+Perceptron, sometimes called an "Elman network" due to its invention by <A 
+class=mw-redirect title="Jeff Elman" 
+href="http://en.wikipedia.org/wiki/Jeff_Elman">Jeff Elman</A>. A three-layer 
+network is used, with the addition of a set of "context units" in the input 
+layer. There are connections from the middle (hidden) layer to these context 
+units fixed with a weight of one. At each time step, the input is propagated in 
+a standard feed-forward fashion, and then a learning rule (usually 
+back-propagation) is applied. The fixed back connections result in the context 
+units always maintaining a copy of the previous values of the hidden units 
+(since they propagate over the connections before the learning rule is applied). 
+Thus the network can maintain a sort of state, allowing it to perform such tasks 
+as sequence-prediction that are beyond the power of a standard Multi-Layer 
+Perceptron.</P>
+<P>In a <I>fully recurrent network</I>, every neuron receives inputs from every 
+other neuron in the network. These networks are not arranged in layers. Usually 
+only a subset of the neurons receive external inputs in addition to the inputs 
+from all the other neurons, and another disjunct subset of neurons report their 
+output externally as well as sending it to all the neurons. These distinctive 
+inputs and outputs perform the function of the input and output layers of a 
+feed-forward or simple recurrent network, and also join all the other neurons in 
+the recurrent processing.</P>
+<P><A id=Hopfield_network name=Hopfield_network></A></P>
+<H4><SPAN class=editsection>[<A title="Edit section: Hopfield network" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=21">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Hopfield network</SPAN></H4>
+<P>The <A class=mw-redirect title="Hopfield network" 
+href="http://en.wikipedia.org/wiki/Hopfield_network">Hopfield network</A> is a 
+recurrent neural network in which all connections are symmetric. Invented by <A 
+class=mw-redirect title="John Hopfield" 
+href="http://en.wikipedia.org/wiki/John_Hopfield">John Hopfield</A> in 1982, 
+this network guarantees that its dynamics will converge. If the connections are 
+trained using <A class=mw-redirect title="Hebbian learning" 
+href="http://en.wikipedia.org/wiki/Hebbian_learning">Hebbian learning</A> then 
+the Hopfield network can perform as robust content-addressable (or <A 
+title="Associative memory" 
+href="http://en.wikipedia.org/wiki/Associative_memory">associative</A>) memory, 
+resistant to connection alteration.</P>
+<P><A id=Echo_state_network name=Echo_state_network></A></P>
+<H4><SPAN class=editsection>[<A title="Edit section: Echo state network" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=22">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Echo state network</SPAN></H4>
+<P>The <A title="Echo state network" 
+href="http://en.wikipedia.org/wiki/Echo_state_network">echo state network</A> 
+(ESN) is a <A title="Recurrent neural network" 
+href="http://en.wikipedia.org/wiki/Recurrent_neural_network">recurrent neural 
+network</A> with a sparsely connected random hidden layer. The weights of output 
+neurons are the only part of the network that can change and be learned. ESN are 
+good to (re)produce temporal patterns.</P>
+<P><A id=Long_short_term_memory_network 
+name=Long_short_term_memory_network></A></P>
+<H4><SPAN class=editsection>[<A 
+title="Edit section: Long short term memory network" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=23">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Long short term memory network</SPAN></H4>
+<P>The <A title="Long short term memory" 
+href="http://en.wikipedia.org/wiki/Long_short_term_memory">Long short term 
+memory</A> is an artificial neural net structure that unlike traditional RNNs 
+doesn't have the problem of vanishing gradients. It can therefore use long 
+delays and can handle signals that have a mix of low and high frequency 
+components.</P>
+<P><A id=Stochastic_neural_networks name=Stochastic_neural_networks></A></P>
+<H3><SPAN class=editsection>[<A title="Edit section: Stochastic neural networks" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=24">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Stochastic neural networks</SPAN></H3>
+<P>A <A title="Stochastic neural network" 
+href="http://en.wikipedia.org/wiki/Stochastic_neural_network">stochastic neural 
+network</A> differs from a typical neural network because it introduces random 
+variations into the network. In a probabilistic view of neural networks, such 
+random variations can be viewed as a form of <A class=mw-redirect 
+title="Statistical sampling" 
+href="http://en.wikipedia.org/wiki/Statistical_sampling">statistical 
+sampling</A>, such as <A class=mw-redirect title="Monte Carlo sampling" 
+href="http://en.wikipedia.org/wiki/Monte_Carlo_sampling">Monte Carlo 
+sampling</A>.</P>
+<P><A id=Boltzmann_machine name=Boltzmann_machine></A></P>
+<H4><SPAN class=editsection>[<A title="Edit section: Boltzmann machine" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=25">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Boltzmann machine</SPAN></H4>
+<P>The <A title="Boltzmann machine" 
+href="http://en.wikipedia.org/wiki/Boltzmann_machine">Boltzmann machine</A> can 
+be thought of as a noisy Hopfield network. Invented by <A class=mw-redirect 
+title="Geoff Hinton" href="http://en.wikipedia.org/wiki/Geoff_Hinton">Geoff 
+Hinton</A> and <A title="Terry Sejnowski" 
+href="http://en.wikipedia.org/wiki/Terry_Sejnowski">Terry Sejnowski</A> in 1985, 
+the Boltzmann machine is important because it is one of the first neural 
+networks to demonstrate learning of latent variables (hidden units). Boltzmann 
+machine learning was at first slow to simulate, but the <A class=new 
+title="Contrastive divergence algorithm (page does not exist)" 
+href="http://en.wikipedia.org/w/index.php?title=Contrastive_divergence_algorithm&amp;action=edit&amp;redlink=1">contrastive 
+divergence algorithm</A> of Geoff Hinton (circa 2000) allows models such as 
+Boltzmann machines and <I>products of experts</I> to be trained much faster.</P>
+<P><A id=Modular_neural_networks name=Modular_neural_networks></A></P>
+<H3><SPAN class=editsection>[<A title="Edit section: Modular neural networks" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=26">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Modular neural networks</SPAN></H3>
+<P>Biological studies have shown that the human brain functions not as a single 
+massive network, but as a collection of small networks. This realization gave 
+birth to the concept of <A title="Modular neural networks" 
+href="http://en.wikipedia.org/wiki/Modular_neural_networks">modular neural 
+networks</A>, in which several small networks cooperate or compete to solve 
+problems.</P>
+<P><A id=Committee_of_machines name=Committee_of_machines></A></P>
+<H4><SPAN class=editsection>[<A title="Edit section: Committee of machines" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=27">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Committee of machines</SPAN></H4>
+<P>A <A title="Committee machine" 
+href="http://en.wikipedia.org/wiki/Committee_machine">committee of machines</A> 
+(CoM) is a collection of different neural networks that together "vote" on a 
+given example. This generally gives a much better result compared to other 
+neural network models. Because neural networks suffer from local minima, 
+starting with the same architecture and training but using different initial 
+random weights often gives vastly different networks<SUP 
+class="noprint Template-Fact"><SPAN 
+title="This claim needs references to reliable sources&nbsp;since October 2008" 
+style="WHITE-SPACE: nowrap">[<I><A title="Wikipedia:Citation needed" 
+href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed">citation 
+needed</A></I>]</SPAN></SUP>. A CoM tends to stabilize the result.</P>
+<P>The CoM is similar to the general <A title="Machine learning" 
+href="http://en.wikipedia.org/wiki/Machine_learning">machine learning</A> <I><A 
+class=mw-redirect title="Bootstrap Aggregating" 
+href="http://en.wikipedia.org/wiki/Bootstrap_Aggregating">bagging</A></I> 
+method, except that the necessary variety of machines in the committee is 
+obtained by training from different random starting weights rather than training 
+on different randomly selected subsets of the training data.</P>
+<P><A id=Associative_neural_network_.28ASNN.29 
+name=Associative_neural_network_.28ASNN.29></A></P>
+<H4><SPAN class=editsection>[<A 
+title="Edit section: Associative neural network (ASNN)" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=28">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Associative neural network (ASNN)</SPAN></H4>
+<P>The ASNN is an extension of the <I>committee of machines</I> that goes beyond 
+a simple/weighted average of different models. <A class="external text" 
+title=http://cogprints.soton.ac.uk/documents/disk0/00/00/14/41/index.html 
+href="http://cogprints.soton.ac.uk/documents/disk0/00/00/14/41/index.html" 
+rel=nofollow>ASNN</A> represents a combination of an ensemble of feed-forward 
+neural networks and the k-nearest neighbor technique (<A class=mw-redirect 
+title="Nearest neighbor (pattern recognition)" 
+href="http://en.wikipedia.org/wiki/Nearest_neighbor_(pattern_recognition)">kNN</A>). 
+It uses the correlation between ensemble responses as a measure of 
+<B>distance</B> amid the analyzed cases for the kNN. This corrects the bias of 
+the neural network ensemble. An associative neural network has a memory that can 
+coincide with the training set. If new data become available, the network 
+instantly improves its predictive ability and provides data approximation 
+(self-learn the data) without a need to retrain the ensemble. Another important 
+feature of ASNN is the possibility to interpret neural network results by 
+analysis of correlations between data cases in the space of models. The method 
+is demonstrated at <A class="external text" title=http://www.vcclab.org/lab/asnn 
+href="http://www.vcclab.org/lab/asnn" 
+rel=nofollow>http://www.vcclab.org/lab/asnn</A>, where you can either use it 
+online or download it.</P>
+<P><A id=Other_types_of_networks name=Other_types_of_networks></A></P>
+<H3><SPAN class=editsection>[<A title="Edit section: Other types of networks" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=29">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Other types of networks</SPAN></H3>
+<P>These special networks do not fit in any of the previous categories.</P>
+<P><A id=Holographic_associative_memory 
+name=Holographic_associative_memory></A></P>
+<H4><SPAN class=editsection>[<A 
+title="Edit section: Holographic associative memory" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=30">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Holographic associative memory</SPAN></H4>
+<P><A title="Holographic associative memory" 
+href="http://en.wikipedia.org/wiki/Holographic_associative_memory"><I>Holographic 
+associative memory</I></A> represents a family of analog, correlation-based, 
+associative, stimulus-response memories, where information is mapped onto the 
+phase orientation of complex numbers operating.</P>
+<P><A id=Instantaneously_trained_networks 
+name=Instantaneously_trained_networks></A></P>
+<H4><SPAN class=editsection>[<A 
+title="Edit section: Instantaneously trained networks" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=31">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Instantaneously trained networks</SPAN></H4>
+<P><I><A title="Instantaneously trained neural networks" 
+href="http://en.wikipedia.org/wiki/Instantaneously_trained_neural_networks">Instantaneously 
+trained neural networks</A></I> (ITNNs) were inspired by the phenomenon of 
+short-term learning that seems to occur instantaneously. In these networks the 
+weights of the hidden and the output layers are mapped directly from the 
+training vector data. Ordinarily, they work on binary data, but versions for 
+continuous data that require small additional processing are also available.</P>
+<P><A id=Spiking_neural_networks name=Spiking_neural_networks></A></P>
+<H4><SPAN class=editsection>[<A title="Edit section: Spiking neural networks" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=32">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Spiking neural networks</SPAN></H4>
+<P><A title="Spiking neural network" 
+href="http://en.wikipedia.org/wiki/Spiking_neural_network">Spiking neural 
+networks</A> (SNNs) are models which explicitly take into account the timing of 
+inputs. The network input and output are usually represented as series of spikes 
+(delta function or more complex shapes). SNNs have an advantage of being able to 
+process information in the <A title="Time domain" 
+href="http://en.wikipedia.org/wiki/Time_domain">time domain</A> (signals that 
+vary over time). They are often implemented as recurrent networks. SNNs are also 
+a form of <A title="Pulse computer" 
+href="http://en.wikipedia.org/wiki/Pulse_computer">pulse computer</A>.</P>
+<P>Networks of spiking neurons — and the temporal correlations of neural 
+assemblies in such networks — have been used to model figure/ground separation 
+and region linking in the visual system (see e.g. Reitboeck et.al.in Haken and 
+Stadler: Synergetics of the Brain. Berlin, 1989).</P>
+<P>Gerstner and Kistler have a freely available online textbook on <A 
+class="external text" title=http://diwww.epfl.ch/~gerstner/BUCH.html 
+href="http://diwww.epfl.ch/~gerstner/BUCH.html" rel=nofollow>Spiking Neuron 
+Models</A>.</P>
+<P>Spiking neural networks with axonal conduction delays exhibit 
+polychronization, and hence could have a potentially unlimited memory 
+capacity.<SUP class="noprint Template-Fact"><SPAN 
+title="This claim needs references to reliable sources&nbsp;since September 2007" 
+style="WHITE-SPACE: nowrap">[<I><A title="Wikipedia:Citation needed" 
+href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed">citation 
+needed</A></I>]</SPAN></SUP></P>
+<P>In June 2005 <A title=IBM href="http://en.wikipedia.org/wiki/IBM">IBM</A> 
+announced construction of a <A title="Blue Gene" 
+href="http://en.wikipedia.org/wiki/Blue_Gene">Blue Gene</A> <A 
+title=Supercomputer 
+href="http://en.wikipedia.org/wiki/Supercomputer">supercomputer</A> dedicated to 
+the simulation of a large recurrent spiking neural network <A 
+class="external autonumber" 
+title=http://domino.research.ibm.com/comm/pr.nsf/pages/news.20050606_CognitiveIntelligence.html 
+href="http://domino.research.ibm.com/comm/pr.nsf/pages/news.20050606_CognitiveIntelligence.html" 
+rel=nofollow>[1]</A>.</P>
+<P><A id=Dynamic_neural_networks name=Dynamic_neural_networks></A></P>
+<H4><SPAN class=editsection>[<A title="Edit section: Dynamic neural networks" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=33">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Dynamic neural networks</SPAN></H4>
+<P><A class=new title="Dynamic neural network (page does not exist)" 
+href="http://en.wikipedia.org/w/index.php?title=Dynamic_neural_network&amp;action=edit&amp;redlink=1">Dynamic 
+neural networks</A> not only deal with nonlinear multivariate behaviour, but 
+also include (learning of) time-dependent behaviour such as various transient 
+phenomena and delay effects.</P>
+<P><A id=Cascading_neural_networks name=Cascading_neural_networks></A></P>
+<H4><SPAN class=editsection>[<A title="Edit section: Cascading neural networks" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=34">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Cascading neural networks</SPAN></H4>
+<P><I>Cascade-Correlation</I> is an architecture and <A 
+title="Supervised learning" 
+href="http://en.wikipedia.org/wiki/Supervised_learning">supervised learning</A> 
+<A title=Algorithm href="http://en.wikipedia.org/wiki/Algorithm">algorithm</A> 
+developed by <A title="Scott Fahlman" 
+href="http://en.wikipedia.org/wiki/Scott_Fahlman">Scott Fahlman</A> and <A 
+class=new title="Christian Lebiere (page does not exist)" 
+href="http://en.wikipedia.org/w/index.php?title=Christian_Lebiere&amp;action=edit&amp;redlink=1">Christian 
+Lebiere</A>. Instead of just adjusting the weights in a network of fixed 
+topology, Cascade-Correlation begins with a minimal network, then automatically 
+trains and adds new hidden units one by one, creating a multi-layer structure. 
+Once a new hidden unit has been added to the network, its input-side weights are 
+frozen. This unit then becomes a permanent feature-detector in the network, 
+available for producing outputs or for creating other, more complex feature 
+detectors. The Cascade-Correlation architecture has several advantages over 
+existing algorithms: it learns very quickly, the network determines its own size 
+and topology, it retains the structures it has built even if the training set 
+changes, and it requires no <A class=mw-redirect title=Back-propagation 
+href="http://en.wikipedia.org/wiki/Back-propagation">back-propagation</A> of 
+error signals through the connections of the network. See: <A 
+title="Cascade correlation algorithm" 
+href="http://en.wikipedia.org/wiki/Cascade_correlation_algorithm">Cascade 
+correlation algorithm</A>.</P>
+<P><A id=Neuro-fuzzy_networks name=Neuro-fuzzy_networks></A></P>
+<H4><SPAN class=editsection>[<A title="Edit section: Neuro-fuzzy networks" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=35">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Neuro-fuzzy networks</SPAN></H4>
+<P>A neuro-fuzzy network is a <A title="Fuzzy logic" 
+href="http://en.wikipedia.org/wiki/Fuzzy_logic">fuzzy</A> <A class=mw-redirect 
+title="Inference system" 
+href="http://en.wikipedia.org/wiki/Inference_system">inference system</A> in the 
+body of an artificial neural network. Depending on the <I>FIS</I> type, there 
+are several layers that simulate the processes involved in a <I>fuzzy 
+inference</I> like fuzzification, inference, aggregation and defuzzification. 
+Embedding an <I>FIS</I> in a general structure of an <I>ANN</I> has the benefit 
+of using available <I>ANN</I> training methods to find the parameters of a fuzzy 
+system.</P>
+<P><A id=Compositional_pattern-producing_networks 
+name=Compositional_pattern-producing_networks></A></P>
+<H4><SPAN class=editsection>[<A 
+title="Edit section: Compositional pattern-producing networks" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=36">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Compositional pattern-producing networks</SPAN></H4>
+<P><A title="Compositional pattern-producing network" 
+href="http://en.wikipedia.org/wiki/Compositional_pattern-producing_network">Compositional 
+pattern-producing networks</A> (CPPNs) are a variation of ANNs which differ in 
+their set of activation functions and how they are applied. While typical ANNs 
+often contain only <A title="Sigmoid function" 
+href="http://en.wikipedia.org/wiki/Sigmoid_function">sigmoid functions</A> (and 
+sometimes <A title="Gaussian function" 
+href="http://en.wikipedia.org/wiki/Gaussian_function">Gaussian functions</A>), 
+CPPNs can include both types of functions and many others. Furthermore, unlike 
+typical ANNs, CPPNs are applied across the entire space of possible inputs so 
+that they can represent a complete image. Since they are compositions of 
+functions, CPPNs in effect encode images at infinite resolution and can be 
+sampled for a particular display at whatever resolution is optimal.</P>
+<P><A id=One-shot_associative_memory name=One-shot_associative_memory></A></P>
+<H4><SPAN class=editsection>[<A 
+title="Edit section: One-shot associative memory" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=37">edit</A>]</SPAN> 
+<SPAN class=mw-headline>One-shot associative memory</SPAN></H4>
+<P>This type of network can add new patterns without the need for re-training. 
+It is done by creating a specific memory structure, which assigns each new 
+pattern to an orthogonal plane using adjacently connected hierarchical arrays 
+<SUP class=reference id=cite_ref-0><A title="" 
+href="http://en.wikipedia.org/wiki/Artificial_neural_network#cite_note-0"><SPAN>[</SPAN>1<SPAN>]</SPAN></A></SUP>. 
+The network offers real-time pattern recognition and high scalability, it 
+however requires parallel processing and is thus best suited for platforms such 
+as <A title="Wireless sensor network" 
+href="http://en.wikipedia.org/wiki/Wireless_sensor_network">Wireless sensor 
+networks</A> (WSN), <A title="Grid computing" 
+href="http://en.wikipedia.org/wiki/Grid_computing">Grid computing</A>, and <A 
+title=GPGPU href="http://en.wikipedia.org/wiki/GPGPU">GPGPUs</A>.</P>
+<P><A id=Theoretical_properties name=Theoretical_properties></A></P>
+<H2><SPAN class=editsection>[<A title="Edit section: Theoretical properties" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=38">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Theoretical properties</SPAN></H2>
+<P><A id=Computational_power name=Computational_power></A></P>
+<H3><SPAN class=editsection>[<A title="Edit section: Computational power" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=39">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Computational power</SPAN></H3>
+<P>The multi-layer perceptron (MLP) is a universal function approximator, as 
+proven by the <A title="Cybenko theorem" 
+href="http://en.wikipedia.org/wiki/Cybenko_theorem">Cybenko theorem</A>. 
+However, the proof is not constructive regarding the number of neurons required 
+or the settings of the weights.</P>
+<P>Work by <A title="Hava Siegelmann" 
+href="http://en.wikipedia.org/wiki/Hava_Siegelmann">Hava Siegelmann</A> and <A 
+title="Eduardo D. Sontag" 
+href="http://en.wikipedia.org/wiki/Eduardo_D._Sontag">Eduardo D. Sontag</A> has 
+provided a proof that a specific recurrent architecture with rational valued 
+weights (as opposed to the commonly used floating point approximations) has the 
+full power of a <A class=mw-redirect title="Universal Turing Machine" 
+href="http://en.wikipedia.org/wiki/Universal_Turing_Machine">Universal Turing 
+Machine</A><SUP class=reference id=cite_ref-1><A title="" 
+href="http://en.wikipedia.org/wiki/Artificial_neural_network#cite_note-1"><SPAN>[</SPAN>2<SPAN>]</SPAN></A></SUP> 
+using a finite number of neurons and standard linear connections. They have 
+further shown that the use of irrational values for weights results in a machine 
+with <A title=Hypercomputation 
+href="http://en.wikipedia.org/wiki/Hypercomputation">super-Turing</A> power.</P>
+<P><A id=Capacity name=Capacity></A></P>
+<H3><SPAN class=editsection>[<A title="Edit section: Capacity" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=40">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Capacity</SPAN></H3>
+<P>Artificial neural network models have a property called 'capacity', which 
+roughly corresponds to their ability to model any given function. It is related 
+to the amount of information that can be stored in the network and to the notion 
+of complexity.</P>
+<P><A id=Convergence name=Convergence></A></P>
+<H3><SPAN class=editsection>[<A title="Edit section: Convergence" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=41">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Convergence</SPAN></H3>
+<P>Nothing can be said in general about convergence since it depends on a number 
+of factors. Firstly, there may exist many local minima. This depends on the cost 
+function and the model. Secondly, the optimization method used might not be 
+guaranteed to converge when far away from a local minimum. Thirdly, for a very 
+large amount of data or parameters, some methods become impractical. In general, 
+it has been found that theoretical guarantees regarding convergence are an 
+unreliable guide to practical application.</P>
+<P><A id=Generalisation_and_statistics 
+name=Generalisation_and_statistics></A></P>
+<H3><SPAN class=editsection>[<A 
+title="Edit section: Generalisation and statistics" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=42">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Generalisation and statistics</SPAN></H3>
+<P>In applications where the goal is to create a system that generalises well in 
+unseen examples, the problem of overtraining has emerged. This arises in 
+overcomplex or overspecified systems when the capacity of the network 
+significantly exceeds the needed free parameters. There are two schools of 
+thought for avoiding this problem: The first is to use cross-validation and 
+similar techniques to check for the presence of overtraining and optimally 
+select hyperparameters such as to minimise the generalisation error. The second 
+is to use some form of <I>regularisation</I>. This is a concept that emerges 
+naturally in a probabilistic (Bayesian) framework, where the regularisation can 
+be performed by selecting a larger prior probability over simpler models; but 
+also in statistical learning theory, where the goal is to minimise over two 
+quantities: the 'empirical risk' and the 'structural risk', which roughly 
+correspond to the error over the training set and the predicted error in unseen 
+data due to overfitting.</P>
+<DIV class="thumb tright">
+<DIV class=thumbinner style="WIDTH: 202px"><A class=image 
+title="Confidence analysis of a neural network" 
+href="http://en.wikipedia.org/wiki/File:Synapse_deployment.jpg"><IMG 
+class=thumbimage height=154 alt="" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/200px-Synapse_deployment.jpg" 
+width=200 border=0></A> 
+<DIV class=thumbcaption>
+<DIV class=magnify><A class=internal title=Enlarge 
+href="http://en.wikipedia.org/wiki/File:Synapse_deployment.jpg"><IMG height=11 
+alt="" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/magnify-clip.png" 
+width=15></A></DIV>Confidence analysis of a neural network</DIV></DIV></DIV>
+<P>Supervised neural networks that use an <A title="Mean squared error" 
+href="http://en.wikipedia.org/wiki/Mean_squared_error">MSE</A> cost function can 
+use formal statistical methods to determine the confidence of the trained model. 
+The MSE on a validation set can be used as an estimate for variance. This value 
+can then be used to calculate the <A title="Confidence interval" 
+href="http://en.wikipedia.org/wiki/Confidence_interval">confidence interval</A> 
+of the output of the network, assuming a <A title="Normal distribution" 
+href="http://en.wikipedia.org/wiki/Normal_distribution">normal distribution</A>. 
+A confidence analysis made this way is statistically valid as long as the output 
+<A title="Probability distribution" 
+href="http://en.wikipedia.org/wiki/Probability_distribution">probability 
+distribution</A> stays the same and the network is not modified.</P>
+<P>By assigning a softmax activation function on the output layer of the neural 
+network (or a softmax component in a component-based neural network) for 
+categorical target variables, the outputs can be interpreted as posterior 
+probabilities. This is very useful in classification as it gives a certainty 
+measure on classifications.</P>
+<P>The softmax activation function: <IMG class=tex 
+alt="y_i=\frac{e^{x_i}}{\sum_{j=1}^c e^{x_j}}" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/02a0d787371e595719f83f8431ee898a.png"></P>
+<P><A id=Dynamic_properties name=Dynamic_properties></A></P>
+<H3><SPAN class=editsection>[<A title="Edit section: Dynamic properties" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=43">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Dynamic properties</SPAN></H3>
+<TABLE class="metadata plainlinks ambox ambox-content">
+  <TBODY>
+  <TR>
+    <TD class=mbox-image>
+      <DIV style="WIDTH: 52px"><A class=image title="Ambox content.png" 
+      href="http://en.wikipedia.org/wiki/File:Ambox_content.png"><IMG height=40 
+      alt="" 
+      src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/Ambox_content.png" 
+      width=40 border=0></A></DIV></TD>
+    <TD class=mbox-text>This article is <B>in need of attention from an expert 
+      on the subject</B>. <A title="Wikipedia:WikiProject Technology" 
+      href="http://en.wikipedia.org/wiki/Wikipedia:WikiProject_Technology">WikiProject 
+      Technology</A> or the <A title=Portal:Technology 
+      href="http://en.wikipedia.org/wiki/Portal:Technology">Technology 
+      Portal</A> may be able to help recruit one. <SMALL><I>(November 
+      2008)</I></SMALL></TD></TR></TBODY></TABLE>
+<P>Various techniques originally developed for studying disordered magnetic 
+systems (i.e. the <A title="Spin glass" 
+href="http://en.wikipedia.org/wiki/Spin_glass">spin glass</A>) have been 
+successfully applied to simple neural network architectures, such as the 
+Hopfield network. Influential work by E. Gardner and B. Derrida has revealed 
+many interesting properties about perceptrons with real-valued synaptic weights, 
+while later work by W. Krauth and M. Mezard has extended these principles to 
+binary-valued synapses.</P>
+<P><A id=See_also name=See_also></A></P>
+<H2><SPAN class=editsection>[<A title="Edit section: See also" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=44">edit</A>]</SPAN> 
+<SPAN class=mw-headline>See also</SPAN></H2>
+<TABLE class="metadata plainlinks mbox-small" 
+style="BORDER-RIGHT: #aaa 1px solid; BORDER-TOP: #aaa 1px solid; BORDER-LEFT: #aaa 1px solid; BORDER-BOTTOM: #aaa 1px solid; BACKGROUND-COLOR: #f9f9f9">
+  <TBODY>
+  <TR>
+    <TD class=mbox-image><A title="b:Special:Search/Artificial neural network" 
+      href="http://en.wikibooks.org/wiki/Special:Search/Artificial_neural_network"><IMG 
+      height=40 alt="Sister project" 
+      src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/40px-Wikibooks-logo-en-noslogan.svg.png" 
+      width=40 border=0></A></TD>
+    <TD class=mbox-text><A title=Wikibooks 
+      href="http://en.wikipedia.org/wiki/Wikibooks">Wikibooks</A> has a book on 
+      the topic of 
+      <DIV style="MARGIN-LEFT: 10px"><I><B><A class=extiw 
+      title="wikibooks:Artificial Neural Networks" 
+      href="http://en.wikibooks.org/wiki/Artificial_Neural_Networks">Artificial 
+      Neural Networks</A></B></I></DIV></TD></TR></TBODY></TABLE>
+<DIV style="-moz-column-count: 2; column-count: 2">
+<UL>
+  <LI><A title=20Q href="http://en.wikipedia.org/wiki/20Q">20Q</A> 
+  <LI><A title="Adaptive resonance theory" 
+  href="http://en.wikipedia.org/wiki/Adaptive_resonance_theory">Adaptive 
+  resonance theory</A> 
+  <LI><A title="Artificial life" 
+  href="http://en.wikipedia.org/wiki/Artificial_life">Artificial life</A> 
+  <LI><A title="Associative memory" 
+  href="http://en.wikipedia.org/wiki/Associative_memory">Associative memory</A> 
+  <LI><A class=mw-redirect title=Autoencoder 
+  href="http://en.wikipedia.org/wiki/Autoencoder">Autoencoder</A> 
+  <LI><A title="Biological neural network" 
+  href="http://en.wikipedia.org/wiki/Biological_neural_network">Biological 
+  neural network</A> 
+  <LI><A title="Biologically-inspired computing" 
+  href="http://en.wikipedia.org/wiki/Biologically-inspired_computing">Biologically-inspired 
+  computing</A> 
+  <LI><A class=mw-redirect title="Blue brain" 
+  href="http://en.wikipedia.org/wiki/Blue_brain">Blue brain</A> 
+  <LI><A title="Clinical decision support system" 
+  href="http://en.wikipedia.org/wiki/Clinical_decision_support_system">Clinical 
+  decision support system</A> 
+  <LI><A title="Connectionist expert system" 
+  href="http://en.wikipedia.org/wiki/Connectionist_expert_system">Connectionist 
+  expert system</A> 
+  <LI><A title="Decision tree" 
+  href="http://en.wikipedia.org/wiki/Decision_tree">Decision tree</A> 
+  <LI><A title="Expert system" 
+  href="http://en.wikipedia.org/wiki/Expert_system">Expert system</A> 
+  <LI><A title="Fuzzy logic" 
+  href="http://en.wikipedia.org/wiki/Fuzzy_logic">Fuzzy logic</A> 
+  <LI><A title="Genetic algorithm" 
+  href="http://en.wikipedia.org/wiki/Genetic_algorithm">Genetic algorithm</A> 
+  <LI><A class=new title="Gnod (page does not exist)" 
+  href="http://en.wikipedia.org/w/index.php?title=Gnod&amp;action=edit&amp;redlink=1">Gnod</A>, 
+  a Kohonen network application 
+  <LI><A title="Linear discriminant analysis" 
+  href="http://en.wikipedia.org/wiki/Linear_discriminant_analysis">Linear 
+  discriminant analysis</A> 
+  <LI><A title="Logistic regression" 
+  href="http://en.wikipedia.org/wiki/Logistic_regression">Logistic 
+  regression</A> 
+  <LI><A title=Memristor 
+  href="http://en.wikipedia.org/wiki/Memristor">Memristor</A> 
+  <LI><A title="Multilayer perceptron" 
+  href="http://en.wikipedia.org/wiki/Multilayer_perceptron">Multilayer 
+  perceptron</A> 
+  <LI><A class=mw-redirect title="Nearest neighbor (pattern recognition)" 
+  href="http://en.wikipedia.org/wiki/Nearest_neighbor_(pattern_recognition)">Nearest 
+  neighbor (pattern recognition)</A> 
+  <LI><A title="Neural network" 
+  href="http://en.wikipedia.org/wiki/Neural_network">Neural network</A> 
+  <LI><A title=Neuroevolution 
+  href="http://en.wikipedia.org/wiki/Neuroevolution">Neuroevolution</A>, <A 
+  class=mw-redirect title="NeuroEvolution of Augmented Topologies" 
+  href="http://en.wikipedia.org/wiki/NeuroEvolution_of_Augmented_Topologies">NeuroEvolution 
+  of Augmented Topologies</A> (NEAT) 
+  <LI><A title="Neural network software" 
+  href="http://en.wikipedia.org/wiki/Neural_network_software">Neural network 
+  software</A> 
+  <LI><A title=Ni1000 href="http://en.wikipedia.org/wiki/Ni1000">Ni1000</A> chip 
+
+  <LI><A title="Optical neural network" 
+  href="http://en.wikipedia.org/wiki/Optical_neural_network">Optical neural 
+  network</A> 
+  <LI><A title="Particle swarm optimization" 
+  href="http://en.wikipedia.org/wiki/Particle_swarm_optimization">Particle swarm 
+  optimization</A> 
+  <LI><A title=Perceptron 
+  href="http://en.wikipedia.org/wiki/Perceptron">Perceptron</A> 
+  <LI><A title="Predictive analytics" 
+  href="http://en.wikipedia.org/wiki/Predictive_analytics">Predictive 
+  analytics</A> 
+  <LI><A title="Principal components analysis" 
+  href="http://en.wikipedia.org/wiki/Principal_components_analysis">Principal 
+  components analysis</A> 
+  <LI><A title="Regression analysis" 
+  href="http://en.wikipedia.org/wiki/Regression_analysis">Regression 
+  analysis</A> 
+  <LI><A title="Simulated annealing" 
+  href="http://en.wikipedia.org/wiki/Simulated_annealing">Simulated 
+  annealing</A> 
+  <LI><A title="Systolic array" 
+  href="http://en.wikipedia.org/wiki/Systolic_array">Systolic array</A> 
+  <LI><A class=new title="Systolic automaton (page does not exist)" 
+  href="http://en.wikipedia.org/w/index.php?title=Systolic_automaton&amp;action=edit&amp;redlink=1">Systolic 
+  automaton</A> 
+  <LI><A class=new title="Time delay neural network (page does not exist)" 
+  href="http://en.wikipedia.org/w/index.php?title=Time_delay_neural_network&amp;action=edit&amp;redlink=1">Time 
+  delay neural network</A> (TDNN) 
+  <LI><A class=new title="Time delay dynamic neural units (page does not exist)" 
+  href="http://en.wikipedia.org/w/index.php?title=Time_delay_dynamic_neural_units&amp;action=edit&amp;redlink=1">Time 
+  delay dynamic neural units</A> (TmD-DNU) </LI></UL></DIV>
+<P><A id=Patents name=Patents></A></P>
+<H2><SPAN class=editsection>[<A title="Edit section: Patents" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=45">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Patents</SPAN></H2>
+<UL>
+  <LI>Arima, et al., <SPAN class=plainlinks><A class="external text" 
+  title=http://patft.uspto.gov/netacgi/nph-Parser?patentnumber=5293457 
+  href="http://patft.uspto.gov/netacgi/nph-Parser?patentnumber=5293457" 
+  rel=nofollow>U.S. Patent 5,293,457</A></SPAN><SPAN class="PDFlink noprint"><A 
+  class="external text" 
+  title=http://www.pat2pdf.org/pat2pdf/foo.pl?number=5293457 
+  href="http://www.pat2pdf.org/pat2pdf/foo.pl?number=5293457" 
+  rel=nofollow>&nbsp;</A></SPAN>,"<I>Neural network integrated circuit device 
+  having self-organizing function</I>". March 8, 1994. </LI></UL>
+<P><A id=Bibliography name=Bibliography></A></P>
+<H2><SPAN class=editsection>[<A title="Edit section: Bibliography" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=46">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Bibliography</SPAN></H2>
+<DIV class=references-small>
+<UL>
+  <LI><CITE class=book id=CITEREFBar-Yam.2C_Yaneer2003 
+  style="FONT-STYLE: normal"><A title="Yaneer Bar-Yam" 
+  href="http://en.wikipedia.org/wiki/Yaneer_Bar-Yam">Bar-Yam, Yaneer</A> (2003). 
+  <I><A class="external text" 
+  title=http://necsi.org/publications/dcs/Bar-YamChap2.pdf 
+  href="http://necsi.org/publications/dcs/Bar-YamChap2.pdf" 
+  rel=nofollow>Dynamics of Complex Systems, Chapter 2</A></I>.</CITE><SPAN 
+  class=Z3988 
+  title=ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=%5Bhttp%3A%2F%2Fnecsi.org%2Fpublications%2Fdcs%2FBar-YamChap2.pdf+Dynamics+of+Complex+Systems%2C+Chapter+2%5D&amp;rft.aulast=Bar-Yam%2C+Yaneer&amp;rft.au=Bar-Yam%2C+Yaneer&amp;rft.date=2003&amp;rfr_id=info:sid/en.wikipedia.org:Artificial_neural_network><SPAN 
+  style="DISPLAY: none">&nbsp;</SPAN></SPAN> </LI></UL>
+<UL>
+  <LI><CITE class=book id=CITEREFBar-Yam.2C_Yaneer2003 
+  style="FONT-STYLE: normal"><A title="Yaneer Bar-Yam" 
+  href="http://en.wikipedia.org/wiki/Yaneer_Bar-Yam">Bar-Yam, Yaneer</A> (2003). 
+  <I><A class="external text" 
+  title=http://necsi.org/publications/dcs/Bar-YamChap3.pdf 
+  href="http://necsi.org/publications/dcs/Bar-YamChap3.pdf" 
+  rel=nofollow>Dynamics of Complex Systems, Chapter 3</A></I>.</CITE><SPAN 
+  class=Z3988 
+  title=ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=%5Bhttp%3A%2F%2Fnecsi.org%2Fpublications%2Fdcs%2FBar-YamChap3.pdf+Dynamics+of+Complex+Systems%2C+Chapter+3%5D&amp;rft.aulast=Bar-Yam%2C+Yaneer&amp;rft.au=Bar-Yam%2C+Yaneer&amp;rft.date=2003&amp;rfr_id=info:sid/en.wikipedia.org:Artificial_neural_network><SPAN 
+  style="DISPLAY: none">&nbsp;</SPAN></SPAN> </LI></UL>
+<UL>
+  <LI><CITE class=book id=CITEREFBar-Yam.2C_Yaneer2005 
+  style="FONT-STYLE: normal"><A title="Yaneer Bar-Yam" 
+  href="http://en.wikipedia.org/wiki/Yaneer_Bar-Yam">Bar-Yam, Yaneer</A> (2005). 
+  <I><A class="external text" title=http://necsi.org/publications/mtw/ 
+  href="http://necsi.org/publications/mtw/" rel=nofollow>Making Things 
+  Work</A></I>.</CITE><SPAN class=Z3988 
+  title=ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=%5Bhttp%3A%2F%2Fnecsi.org%2Fpublications%2Fmtw%2F+Making+Things+Work%5D&amp;rft.aulast=Bar-Yam%2C+Yaneer&amp;rft.au=Bar-Yam%2C+Yaneer&amp;rft.date=2005&amp;rfr_id=info:sid/en.wikipedia.org:Artificial_neural_network><SPAN 
+  style="DISPLAY: none">&nbsp;</SPAN></SPAN> Please see Chapter 3 
+  <LI><CITE class="" id=CITEREFBhadeshia_H._K._D._H.1999 
+  style="FONT-STYLE: normal">Bhadeshia H. K. D. H. (1999). "<A 
+  class="external text" 
+  title=http://www.msm.cam.ac.uk/phase-trans/abstracts/neural.review.pdf 
+  href="http://www.msm.cam.ac.uk/phase-trans/abstracts/neural.review.pdf" 
+  rel=nofollow>Neural Networks in Materials Science</A>". <I>ISIJ 
+  International</I> <B>39</B>: 966–979. <A title="Digital object identifier" 
+  href="http://en.wikipedia.org/wiki/Digital_object_identifier">doi</A>:<SPAN 
+  class=neverexpand><A class="external text" 
+  title=http://dx.doi.org/10.2355%2Fisijinternational.39.966 
+  href="http://dx.doi.org/10.2355%2Fisijinternational.39.966" 
+  rel=nofollow>10.2355/isijinternational.39.966</A></SPAN>.</CITE><SPAN 
+  class=Z3988 
+  title=ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=%5Bhttp%3A%2F%2Fwww.msm.cam.ac.uk%2Fphase-trans%2Fabstracts%2Fneural.review.pdf+Neural+Networks+in+Materials+Science%5D&amp;rft.jtitle=ISIJ+International&amp;rft.aulast=Bhadeshia+H.+K.+D.+H.&amp;rft.au=Bhadeshia+H.+K.+D.+H.&amp;rft.date=1999&amp;rft.volume=39&amp;rft.pages=966%26ndash%3B979&amp;rft_id=info:doi/10.2355%2Fisijinternational.39.966&amp;rfr_id=info:sid/en.wikipedia.org:Artificial_neural_network><SPAN 
+  style="DISPLAY: none">&nbsp;</SPAN></SPAN> 
+  <LI>Bhagat, P.M. (2005) <I>Pattern Recognition in Industry</I>, Elsevier. <A 
+  class=internal 
+  href="http://en.wikipedia.org/wiki/Special:BookSources/0080445381">ISBN 
+  0-08-044538-1</A> </LI></UL>
+<UL>
+  <LI>Bishop, C.M. (1995) <I>Neural Networks for Pattern Recognition</I>, 
+  Oxford: Oxford University Press. <A class=internal 
+  href="http://en.wikipedia.org/wiki/Special:BookSources/0198538499">ISBN 
+  0-19-853849-9</A> (hardback) or <A class=internal 
+  href="http://en.wikipedia.org/wiki/Special:BookSources/0198538642">ISBN 
+  0-19-853864-2</A> (paperback) </LI></UL>
+<UL>
+  <LI>Cybenko, G.V. (1989). Approximation by Superpositions of a Sigmoidal 
+  function, <I>Mathematics of Control, Signals and Systems</I>, Vol. 2 pp. 
+  303-314. <A class="external text" 
+  title=http://actcomm.dartmouth.edu/gvc/papers/approx_by_superposition.pdf 
+  href="http://actcomm.dartmouth.edu/gvc/papers/approx_by_superposition.pdf" 
+  rel=nofollow>electronic version</A> </LI></UL>
+<UL>
+  <LI>Duda, R.O., Hart, P.E., Stork, D.G. (2001) <I>Pattern classification (2nd 
+  edition)</I>, Wiley, <A class=internal 
+  href="http://en.wikipedia.org/wiki/Special:BookSources/0471056693">ISBN 
+  0-471-05669-3</A> </LI></UL>
+<UL>
+  <LI><CITE class="" 
+  id=CITEREFEgmont-Petersen.2C_M..2C_de_Ridder.2C_D..2C_Handels.2C_H.2002 
+  style="FONT-STYLE: normal">Egmont-Petersen, M., de Ridder, D., Handels, H. 
+  (2002). "Image processing with neural networks - a review". <I>Pattern 
+  Recognition</I> <B>35</B> (10): 2279–2301. <A 
+  title="Digital object identifier" 
+  href="http://en.wikipedia.org/wiki/Digital_object_identifier">doi</A>:<SPAN 
+  class=neverexpand><A class="external text" 
+  title=http://dx.doi.org/10.1016%2FS0031-3203%2801%2900178-9 
+  href="http://dx.doi.org/10.1016%2FS0031-3203%2801%2900178-9" 
+  rel=nofollow>10.1016/S0031-3203(01)00178-9</A></SPAN>.</CITE><SPAN class=Z3988 
+  title=ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=Image+processing+with+neural+networks+-+a+review&amp;rft.jtitle=Pattern+Recognition&amp;rft.aulast=Egmont-Petersen%2C+M.%2C+de+Ridder%2C+D.%2C+Handels%2C+H.&amp;rft.au=Egmont-Petersen%2C+M.%2C+de+Ridder%2C+D.%2C+Handels%2C+H.&amp;rft.date=2002&amp;rft.volume=35&amp;rft.issue=10&amp;rft.pages=2279%26ndash%3B2301&amp;rft_id=info:doi/10.1016%2FS0031-3203%2801%2900178-9&amp;rfr_id=info:sid/en.wikipedia.org:Artificial_neural_network><SPAN 
+  style="DISPLAY: none">&nbsp;</SPAN></SPAN> </LI></UL>
+<UL>
+  <LI>Gurney, K. (1997) <I>An Introduction to Neural Networks</I> London: 
+  Routledge. <A class=internal 
+  href="http://en.wikipedia.org/wiki/Special:BookSources/1857286731">ISBN 
+  1-85728-673-1</A> (hardback) or <A class=internal 
+  href="http://en.wikipedia.org/wiki/Special:BookSources/1857285034">ISBN 
+  1-85728-503-4</A> (paperback) </LI></UL>
+<UL>
+  <LI>Haykin, S. (1999) <I>Neural Networks: A Comprehensive Foundation</I>, 
+  Prentice Hall, <A class=internal 
+  href="http://en.wikipedia.org/wiki/Special:BookSources/0132733501">ISBN 
+  0-13-273350-1</A> </LI></UL>
+<UL>
+  <LI>Fahlman, S, Lebiere, C (1991). <I>The Cascade-Correlation Learning 
+  Architecture</I>, created for <A title="National Science Foundation" 
+  href="http://en.wikipedia.org/wiki/National_Science_Foundation">National 
+  Science Foundation</A>, Contract Number EET-8716324, and <A class=mw-redirect 
+  title="Defense Advanced Research Projects Agency" 
+  href="http://en.wikipedia.org/wiki/Defense_Advanced_Research_Projects_Agency">Defense 
+  Advanced Research Projects Agency</A> (DOD), ARPA Order No. 4976 under 
+  Contract F33615-87-C-1499. <A class="external text" 
+  title=http://www.cs.iastate.edu/~honavar/fahlman.pdf 
+  href="http://www.cs.iastate.edu/~honavar/fahlman.pdf" rel=nofollow>electronic 
+  version</A> </LI></UL>
+<UL>
+  <LI>Hertz, J., Palmer, R.G., Krogh. A.S. (1990) <I>Introduction to the theory 
+  of neural computation</I>, Perseus Books. <A class=internal 
+  href="http://en.wikipedia.org/wiki/Special:BookSources/0201515601">ISBN 
+  0-201-51560-1</A> </LI></UL>
+<UL>
+  <LI>Lawrence, Jeanette (1994) <I>Introduction to Neural Networks</I>, 
+  California Scientific Software Press. <A class=internal 
+  href="http://en.wikipedia.org/wiki/Special:BookSources/1883157005">ISBN 
+  1-883157-00-5</A> </LI></UL>
+<UL>
+  <LI>Masters, Timothy (1994) <I>Signal and Image Processing with Neural 
+  Networks</I>, John Wiley &amp; Sons, Inc. <A class=internal 
+  href="http://en.wikipedia.org/wiki/Special:BookSources/0471049638">ISBN 
+  0-471-04963-8</A> </LI></UL>
+<UL>
+  <LI>Ness, Erik. 2005. <A class="external text" 
+  title=http://www.conbio.org/cip/article61WEB.cfm 
+  href="http://www.conbio.org/cip/article61WEB.cfm" rel=nofollow>SPIDA-Web</A>. 
+  <I>Conservation in Practice</I> 6(1):35-36. On the use of artificial neural 
+  networks in species taxonomy. </LI></UL>
+<UL>
+  <LI><A title="Brian D. Ripley" 
+  href="http://en.wikipedia.org/wiki/Brian_D._Ripley">Ripley, Brian D</A>. 
+  (1996) <I>Pattern Recognition and Neural Networks</I>, Cambridge </LI></UL>
+<UL>
+  <LI>Siegelmann, H.T. and <A title="Eduardo D. Sontag" 
+  href="http://en.wikipedia.org/wiki/Eduardo_D._Sontag">Sontag, E.D.</A> (1994). 
+  Analog computation via neural networks, <I>Theoretical Computer Science</I>, 
+  v. 131, no. 2, pp. 331-360. <A class="external text" 
+  title=http://www.math.rutgers.edu/~sontag/FTP_DIR/nets-real.pdf 
+  href="http://www.math.rutgers.edu/~sontag/FTP_DIR/nets-real.pdf" 
+  rel=nofollow>electronic version</A> </LI></UL>
+<UL>
+  <LI>Smith, Murray (1993) <I>Neural Networks for Statistical Modeling</I>, Van 
+  Nostrand Reinhold, <A class=internal 
+  href="http://en.wikipedia.org/wiki/Special:BookSources/0442013108">ISBN 
+  0-442-01310-8</A> </LI></UL>
+<UL>
+  <LI>Wasserman, Philip (1993) <I>Advanced Methods in Neural Computing</I>, Van 
+  Nostrand Reinhold, <A class=internal 
+  href="http://en.wikipedia.org/wiki/Special:BookSources/0442004613">ISBN 
+  0-442-00461-3</A> </LI></UL></DIV>
+<P><A id=Notes name=Notes></A></P>
+<H2><SPAN class=editsection>[<A title="Edit section: Notes" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=47">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Notes</SPAN></H2>
+<OL class=references>
+  <LI id=cite_note-0><B><A title="" 
+  href="http://en.wikipedia.org/wiki/Artificial_neural_network#cite_ref-0">^</A></B> 
+  B.B. Nasution, A.I. Khan, <A class="external text" 
+  title=http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=4359217 
+  href="http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=4359217" 
+  rel=nofollow>A Hierarchical Graph Neuron Scheme for Real-Time Pattern 
+  Recognition</A>, IEEE Transactions on Neural Networks, vol 19(2), 212-229, 
+  Feb. 2008 
+  <LI id=cite_note-1><B><A title="" 
+  href="http://en.wikipedia.org/wiki/Artificial_neural_network#cite_ref-1">^</A></B> 
+  <A class="external free" 
+  title=http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.47.8383 
+  href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.47.8383" 
+  rel=nofollow>http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.47.8383</A> 
+  </LI></OL>
+<P><A id=External_links name=External_links></A></P>
+<H2><SPAN class=editsection>[<A title="Edit section: External links" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=48">edit</A>]</SPAN> 
+<SPAN class=mw-headline>External links</SPAN></H2>
+<UL>
+  <LI><A class="external text" 
+  title=http://www.learnartificialneuralnetworks.com 
+  href="http://www.learnartificialneuralnetworks.com/" rel=nofollow>A close view 
+  to Artificial Neural Networks Algorithms</A> 
+  <LI><A class="external text" 
+  title=http://www.dmoz.org/Computers/Artificial_Intelligence/Neural_Networks/ 
+  href="http://www.dmoz.org/Computers/Artificial_Intelligence/Neural_Networks/" 
+  rel=nofollow>Neural Networks</A> at the <A title="Open Directory Project" 
+  href="http://en.wikipedia.org/wiki/Open_Directory_Project">Open Directory 
+  Project</A> 
+  <LI><A class="external text" 
+  title=http://www.msm.cam.ac.uk/phase-trans/abstracts/neural.review.html 
+  href="http://www.msm.cam.ac.uk/phase-trans/abstracts/neural.review.html" 
+  rel=nofollow>Neural Networks in Materials Science</A> 
+  <LI><A class="external text" 
+  title=http://www.ai-junkie.com/ann/evolved/nnt1.html 
+  href="http://www.ai-junkie.com/ann/evolved/nnt1.html" rel=nofollow>A great 
+  practical tutorial on Neural Networks</A> 
+  <LI><A class="external text" 
+  title=http://www.peltarion.com/doc/index.php?title=Applications_of_adaptive_systems 
+  href="http://www.peltarion.com/doc/index.php?title=Applications_of_adaptive_systems" 
+  rel=nofollow>Applications of neural networks</A> </LI></UL>
+<P><A id=Further_reading name=Further_reading></A></P>
+<H2><SPAN class=editsection>[<A title="Edit section: Further reading" 
+href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit&amp;section=49">edit</A>]</SPAN> 
+<SPAN class=mw-headline>Further reading</SPAN></H2>
+<UL>
+  <LI><A class="external text" 
+  title=http://publishing.royalsociety.org/neural-networks 
+  href="http://publishing.royalsociety.org/neural-networks" 
+  rel=nofollow>Dedicated issue of <I>Philosophical Transactions B</I> on Neural 
+  Networks and Perception. Some articles are freely available.</A> </LI></UL><!-- 
+NewPP limit report
+Preprocessor node count: 3694/1000000
+Post-expand include size: 31595/2048000 bytes
+Template argument size: 10182/2048000 bytes
+Expensive parser function count: 5/500
+--><!-- Saved in parser cache with key enwiki:pcache:idhash:21523-0!1!0!default!!en!2 and timestamp 20090320060146 -->
+<DIV class=printfooter>Retrieved from "<A 
+href="http://en.wikipedia.org/wiki/Artificial_neural_network">http://en.wikipedia.org/wiki/Artificial_neural_network</A>"</DIV>
+<DIV class=catlinks id=catlinks>
+<DIV id=mw-normal-catlinks><A title=Special:Categories 
+href="http://en.wikipedia.org/wiki/Special:Categories">Categories</A>: <SPAN 
+dir=ltr><A title="Category:Machine learning" 
+href="http://en.wikipedia.org/wiki/Category:Machine_learning">Machine 
+learning</A></SPAN> | <SPAN dir=ltr><A title="Category:Computational statistics" 
+href="http://en.wikipedia.org/wiki/Category:Computational_statistics">Computational 
+statistics</A></SPAN> | <SPAN dir=ltr><A title="Category:Neural networks" 
+href="http://en.wikipedia.org/wiki/Category:Neural_networks">Neural 
+networks</A></SPAN> | <SPAN dir=ltr><A 
+title="Category:Classification algorithms" 
+href="http://en.wikipedia.org/wiki/Category:Classification_algorithms">Classification 
+algorithms</A></SPAN> | <SPAN dir=ltr><A 
+title="Category:Optimization algorithms" 
+href="http://en.wikipedia.org/wiki/Category:Optimization_algorithms">Optimization 
+algorithms</A></SPAN> | <SPAN dir=ltr><A 
+title="Category:Computational neuroscience" 
+href="http://en.wikipedia.org/wiki/Category:Computational_neuroscience">Computational 
+neuroscience</A></SPAN></DIV>
+<DIV class=mw-hidden-cats-hidden id=mw-hidden-catlinks>Hidden categories: <SPAN 
+dir=ltr><A title="Category:Articles to be merged since November 2008" 
+href="http://en.wikipedia.org/wiki/Category:Articles_to_be_merged_since_November_2008">Articles 
+to be merged since November 2008</A></SPAN> | <SPAN dir=ltr><A 
+title="Category:All articles to be merged" 
+href="http://en.wikipedia.org/wiki/Category:All_articles_to_be_merged">All 
+articles to be merged</A></SPAN> | <SPAN dir=ltr><A 
+title="Category:Articles needing additional references from March 2009" 
+href="http://en.wikipedia.org/wiki/Category:Articles_needing_additional_references_from_March_2009">Articles 
+needing additional references from March 2009</A></SPAN> | <SPAN dir=ltr><A 
+title="Category:All articles with unsourced statements" 
+href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements">All 
+articles with unsourced statements</A></SPAN> | <SPAN dir=ltr><A 
+title="Category:Articles with unsourced statements since October 2008" 
+href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_since_October_2008">Articles 
+with unsourced statements since October 2008</A></SPAN> | <SPAN dir=ltr><A 
+title="Category:Articles with unsourced statements since September 2007" 
+href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_since_September_2007">Articles 
+with unsourced statements since September 2007</A></SPAN> | <SPAN dir=ltr><A 
+title="Category:Technology articles needing expert attention" 
+href="http://en.wikipedia.org/wiki/Category:Technology_articles_needing_expert_attention">Technology 
+articles needing expert attention</A></SPAN> | <SPAN dir=ltr><A 
+title="Category:Articles needing expert attention since November 2008" 
+href="http://en.wikipedia.org/wiki/Category:Articles_needing_expert_attention_since_November_2008">Articles 
+needing expert attention since November 2008</A></SPAN></DIV></DIV><!-- end content -->
+<DIV class=visualClear></DIV></DIV></DIV></DIV>
+<DIV id=column-one>
+<DIV class=portlet id=p-cactions>
+<H5>Views</H5>
+<DIV class=pBody>
+<UL>
+  <LI class=selected id=ca-nstab-main><A title="View the content page [c]" 
+  accessKey=c 
+  href="http://en.wikipedia.org/wiki/Artificial_neural_network">Article</A> 
+  <LI id=ca-talk><A title="Discussion about the content page [t]" accessKey=t 
+  href="http://en.wikipedia.org/wiki/Talk:Artificial_neural_network">Discussion</A> 
+
+  <LI id=ca-edit><A 
+  title="You can edit this page. &#10;Please use the preview button before saving. [e]" 
+  accessKey=e 
+  href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=edit">Edit 
+  this page</A> 
+  <LI id=ca-history><A title="Past versions of this page [h]" accessKey=h 
+  href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;action=history">History</A> 
+  </LI></UL></DIV></DIV>
+<DIV class=portlet id=p-personal>
+<H5>Personal tools</H5>
+<DIV class=pBody>
+<UL>
+  <LI id=pt-login><A 
+  title="You are encouraged to log in; however, it is not mandatory. [o]" 
+  accessKey=o 
+  href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=Artificial_neural_network">Log 
+  in / create account</A> </LI></UL></DIV></DIV>
+<DIV class=portlet id=p-logo><A title="Visit the main page [z]" 
+style="BACKGROUND-IMAGE: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png)" 
+accessKey=z href="http://en.wikipedia.org/wiki/Main_Page"></A></DIV>
+<SCRIPT type=text/javascript> if (window.isMSIE55) fixalpha(); </SCRIPT>
+
+<DIV class="generated-sidebar portlet" id=p-navigation>
+<H5>Navigation</H5>
+<DIV class=pBody>
+<UL>
+  <LI id=n-mainpage-description><A title="Visit the main page [z]" accessKey=z 
+  href="http://en.wikipedia.org/wiki/Main_Page">Main page</A> 
+  <LI id=n-contents><A title="Guides to browsing Wikipedia" 
+  href="http://en.wikipedia.org/wiki/Portal:Contents">Contents</A> 
+  <LI id=n-featuredcontent><A title="Featured content — the best of Wikipedia" 
+  href="http://en.wikipedia.org/wiki/Portal:Featured_content">Featured 
+  content</A> 
+  <LI id=n-currentevents><A 
+  title="Find background information on current events" 
+  href="http://en.wikipedia.org/wiki/Portal:Current_events">Current events</A> 
+  <LI id=n-randompage><A title="Load a random article [x]" accessKey=x 
+  href="http://en.wikipedia.org/wiki/Special:Random">Random article</A> 
+</LI></UL></DIV></DIV>
+<DIV class=portlet id=p-search>
+<H5><LABEL for=searchInput>Search</LABEL></H5>
+<DIV class=pBody id=searchBody>
+<FORM id=searchform action=/wiki/Special:Search>
+<DIV><INPUT id=searchInput title="Search Wikipedia [f]" accessKey=f name=search> 
+<INPUT class=searchButton id=searchGoButton title="Go to a page with this exact name if one exists" type=submit value=Go name=go>&nbsp; 
+<INPUT class=searchButton id=mw-searchButton title="Search Wikipedia for this text" type=submit value=Search name=fulltext> 
+</DIV></FORM></DIV></DIV>
+<DIV class="generated-sidebar portlet" id=p-interaction>
+<H5>Interaction</H5>
+<DIV class=pBody>
+<UL>
+  <LI id=n-aboutsite><A title="Find out about Wikipedia" 
+  href="http://en.wikipedia.org/wiki/Wikipedia:About">About Wikipedia</A> 
+  <LI id=n-portal><A 
+  title="About the project, what you can do, where to find things" 
+  href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal">Community 
+  portal</A> 
+  <LI id=n-recentchanges><A title="The list of recent changes in the wiki [r]" 
+  accessKey=r href="http://en.wikipedia.org/wiki/Special:RecentChanges">Recent 
+  changes</A> 
+  <LI id=n-contact><A title="How to contact Wikipedia" 
+  href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</A> 
+
+  <LI id=n-sitesupport><A title="Support us" 
+  href="http://wikimediafoundation.org/wiki/Donate">Donate to Wikipedia</A> 
+  <LI id=n-help><A title="Guidance on how to use and edit Wikipedia" 
+  href="http://en.wikipedia.org/wiki/Help:Contents">Help</A> 
+</LI></UL></DIV></DIV>
+<DIV class=portlet id=p-tb>
+<H5>Toolbox</H5>
+<DIV class=pBody>
+<UL>
+  <LI id=t-whatlinkshere><A 
+  title="List of all English Wikipedia pages containing links to this page [j]" 
+  accessKey=j 
+  href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Artificial_neural_network">What 
+  links here</A> 
+  <LI id=t-recentchangeslinked><A 
+  title="Recent changes in pages linked from this page [k]" accessKey=k 
+  href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Artificial_neural_network">Related 
+  changes</A> 
+  <LI id=t-upload><A title="Upload files [u]" accessKey=u 
+  href="http://en.wikipedia.org/wiki/Wikipedia:Upload">Upload file</A> 
+  <LI id=t-specialpages><A title="List of all special pages [q]" accessKey=q 
+  href="http://en.wikipedia.org/wiki/Special:SpecialPages">Special pages</A> 
+  <LI id=t-print><A title="Printable version of this page [p]" accessKey=p 
+  href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;printable=yes" 
+  rel=alternate>Printable version</A> 
+  <LI id=t-permalink><A title="Permanent link to this version of the page" 
+  href="http://en.wikipedia.org/w/index.php?title=Artificial_neural_network&amp;oldid=278067438">Permanent 
+  link</A>
+  <LI id=t-cite><A 
+  href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=Artificial_neural_network&amp;id=278067438">Cite 
+  this page</A> </LI></UL></DIV></DIV>
+<DIV class=portlet id=p-lang>
+<H5>Languages</H5>
+<DIV class=pBody>
+<UL>
+  <LI class=interwiki-ar><A 
+  href="http://ar.wikipedia.org/wiki/%D8%B4%D8%A8%D9%83%D8%A7%D8%AA_%D8%B9%D8%B5%D8%A8%D9%88%D9%86%D9%8A%D8%A9_%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%D8%A9">العربية</A> 
+
+  <LI class=interwiki-bg><A 
+  href="http://bg.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B2%D1%80%D0%BE%D0%BD%D0%BD%D0%B0_%D0%BC%D1%80%D0%B5%D0%B6%D0%B0">Български</A> 
+
+  <LI class=interwiki-ca><A 
+  href="http://ca.wikipedia.org/wiki/Xarxa_neuronal">Català</A> 
+  <LI class=interwiki-da><A 
+  href="http://da.wikipedia.org/wiki/Neuralt_netv%C3%A6rk">Dansk</A> 
+  <LI class=interwiki-de><A 
+  href="http://de.wikipedia.org/wiki/K%C3%BCnstliches_neuronales_Netz">Deutsch</A> 
+
+  <LI class=interwiki-es><A 
+  href="http://es.wikipedia.org/wiki/Red_neuronal_artificial">Español</A> 
+  <LI class=interwiki-fa><A 
+  href="http://fa.wikipedia.org/wiki/%D8%B4%D8%A8%DA%A9%D9%87_%D8%B9%D8%B5%D8%A8%DB%8C_%D9%85%D8%B5%D9%86%D9%88%D8%B9%DB%8C">فارسی</A> 
+
+  <LI class=interwiki-fr><A 
+  href="http://fr.wikipedia.org/wiki/R%C3%A9seau_de_neurones">Français</A> 
+  <LI class=interwiki-hr><A 
+  href="http://hr.wikipedia.org/wiki/Neuronska_mre%C5%BEa">Hrvatski</A> 
+  <LI class=interwiki-id><A 
+  href="http://id.wikipedia.org/wiki/Jaringan_saraf_tiruan">Bahasa Indonesia</A> 
+
+  <LI class=interwiki-it><A 
+  href="http://it.wikipedia.org/wiki/Rete_neurale">Italiano</A> 
+  <LI class=interwiki-he><A 
+  href="http://he.wikipedia.org/wiki/%D7%A8%D7%A9%D7%AA_%D7%A2%D7%A6%D7%91%D7%99%D7%AA_%D7%9E%D7%9C%D7%90%D7%9B%D7%95%D7%AA%D7%99%D7%AA">עברית</A> 
+
+  <LI class=interwiki-lt><A 
+  href="http://lt.wikipedia.org/wiki/Dirbtinis_neuroninis_tinklas">Lietuvių</A> 
+  <LI class=interwiki-nl><A 
+  href="http://nl.wikipedia.org/wiki/Neuraal_netwerk">Nederlands</A> 
+  <LI class=interwiki-ja><A 
+  href="http://ja.wikipedia.org/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">日本語</A> 
+
+  <LI class=interwiki-ko><A 
+  href="http://ko.wikipedia.org/wiki/%EC%9D%B8%EA%B3%B5%EC%8B%A0%EA%B2%BD%EB%A7%9D">한국어</A> 
+
+  <LI class=interwiki-pl><A 
+  href="http://pl.wikipedia.org/wiki/Sie%C4%87_neuronowa">Polski</A> 
+  <LI class=interwiki-pt><A 
+  href="http://pt.wikipedia.org/wiki/Rede_neural">Português</A> 
+  <LI class=interwiki-ru><A 
+  href="http://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B5%D1%82%D1%8C">Русский</A> 
+
+  <LI class=interwiki-sk><A 
+  href="http://sk.wikipedia.org/wiki/Neur%C3%B3nov%C3%A1_sie%C5%A5">Slovenčina</A> 
+
+  <LI class=interwiki-sl><A 
+  href="http://sl.wikipedia.org/wiki/Nevronska_mre%C5%BEa">Slovenščina</A> 
+  <LI class=interwiki-fi><A 
+  href="http://fi.wikipedia.org/wiki/Neuroverkot">Suomi</A> 
+  <LI class=interwiki-sv><A 
+  href="http://sv.wikipedia.org/wiki/Neurala_n%C3%A4tverk">Svenska</A> 
+  <LI class=interwiki-th><A 
+  href="http://th.wikipedia.org/wiki/%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%B2%E0%B8%97%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%A1">ไทย</A> 
+
+  <LI class=interwiki-vi><A 
+  href="http://vi.wikipedia.org/wiki/M%E1%BA%A1ng_n%C6%A1-ron_nh%C3%A2n_t%E1%BA%A1o">Tiếng 
+  Việt</A> 
+  <LI class=interwiki-uk><A 
+  href="http://uk.wikipedia.org/wiki/%D0%A8%D1%82%D1%83%D1%87%D0%BD%D1%96_%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D1%96_%D0%BC%D0%B5%D1%80%D0%B5%D0%B6%D1%96">Українська</A> 
+
+  <LI class=interwiki-zh><A 
+  href="http://zh.wikipedia.org/wiki/%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C">中文</A> 
+  </LI></UL></DIV></DIV></DIV><!-- end of the left (by default at least) column -->
+<DIV class=visualClear></DIV>
+<DIV id=footer>
+<DIV id=f-poweredbyico><A href="http://www.mediawiki.org/"><IMG 
+alt="Powered by MediaWiki" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/poweredby_mediawiki_88x31.png"></A></DIV>
+<DIV id=f-copyrightico><A href="http://wikimediafoundation.org/"><IMG 
+alt="Wikimedia Foundation" 
+src="Artificial%20neural%20network%20-%20Wikipedia,%20the%20free%20encyclopedia_files/wikimedia-button.png" 
+border=0></A></DIV>
+<UL id=f-list>
+  <LI id=lastmod>This page was last modified on 18 March 2009, at 09:45. 
+  <LI id=copyright>All text is available under the terms of the <A 
+  class=internal title="Wikipedia:Text of the GNU Free Documentation License" 
+  href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License">GNU 
+  Free Documentation License</A>. (See <B><A class=internal 
+  title=Wikipedia:Copyrights 
+  href="http://en.wikipedia.org/wiki/Wikipedia:Copyrights">Copyrights</A></B> 
+  for details.) <BR>Wikipedia® is a registered trademark of the <A 
+  href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</A>, a 
+  U.S. registered <A class=internal title=501(c)(3) 
+  href="http://en.wikipedia.org/wiki/501%28c%29#501.28c.29.283.29">501(c)(3)</A> 
+  <A 
+  href="http://wikimediafoundation.org/wiki/Deductibility_of_donations">tax-deductible</A> 
+  <A class=internal title="Non-profit organization" 
+  href="http://en.wikipedia.org/wiki/Non-profit_organization">nonprofit</A> <A 
+  title="Charitable organization" 
+  href="http://en.wikipedia.org/wiki/Charitable_organization">charity</A>.<BR>
+  <LI id=privacy><A title="wikimedia:Privacy policy" 
+  href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy policy</A> 
+  <LI id=about><A title=Wikipedia:About 
+  href="http://en.wikipedia.org/wiki/Wikipedia:About">About Wikipedia</A> 
+  <LI id=disclaimer><A title="Wikipedia:General disclaimer" 
+  href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer">Disclaimers</A> 
+  </LI></UL></DIV></DIV>
+<SCRIPT type=text/javascript>if (window.runOnloadHook) runOnloadHook();</SCRIPT>
+<!-- Served by srv151 in 0.085 secs. --></BODY></HTML>

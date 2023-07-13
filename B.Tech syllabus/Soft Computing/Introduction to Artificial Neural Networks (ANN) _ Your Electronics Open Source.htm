@@ -1,0 +1,776 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--$Id$-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+  <title>Introduction to Artificial Neural Networks (ANN) | Your Electronics Open Source</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Artificial Neural Networks (ANN) are basically computational models which are inspired from the architecture of real biological neural networks; at least this" />
+<meta name="keywords" content="ann,artificial neural networks" />
+<meta name="robots" content="index,follow" />
+<meta name="DC.title" content="Introduction to Artificial Neural Networks (ANN)" />
+<link rel="shortcut icon" href="/misc/favicon.ico" type="image/x-icon" />
+  <style type="text/css" media="all">@import "/modules/simplenews/simplenews.css";</style>
+<style type="text/css" media="all">@import "/modules/book/book.css";</style>
+<style type="text/css" media="all">@import "/modules/cck-5.x-1.10.tar/cck/content.css";</style>
+<style type="text/css" media="all">@import "/modules/node/node.css";</style>
+<style type="text/css" media="all">@import "/modules/system/defaults.css";</style>
+<style type="text/css" media="all">@import "/modules/system/system.css";</style>
+<style type="text/css" media="all">@import "/modules/tagadelic/tagadelic.css";</style>
+<style type="text/css" media="all">@import "/modules/user/user.css";</style>
+<style type="text/css" media="all">@import "/modules/cck-5.x-1.10.tar/cck/fieldgroup.css";</style>
+<style type="text/css" media="all">@import "/modules/comment/comment.css";</style>
+<style type="text/css" media="all">@import "/modules/quicktabs-5.x-1.4.tar/quicktabs/quicktabs.css";</style>
+<style type="text/css" media="all">@import "/modules/quicktabs-5.x-1.4.tar/quicktabs/tabstyles/basic/basic.css";</style>
+<style type="text/css" media="all">@import "/themes/newsflash/style.css";</style>
+<style type="text/css" media="all">@import "/themes/newsflash/css/blue.css";</style>
+<style type="text/css" media="all">@import "/themes/newsflash/css/suckerfish_blue.css";</style>
+  <script type="text/javascript" src="/misc/jquery.js"></script>
+<script type="text/javascript" src="/misc/drupal.js"></script>
+<script type="text/javascript" src="/modules/quicktabs-5.x-1.4.tar/quicktabs/js/quicktabs.js"></script>
+<script type="text/javascript" src="/themes/newsflash/js/suckerfish.js"></script>
+<script type="text/javascript">Drupal.extend({ settings: { "quicktabs": { "effect": "fade" } } });</script>
+  <script type="text/javascript"> </script>
+  
+   	<style type="text/css">
+      	#page {
+      width: 95%;
+		}
+      </style>
+   
+   	<style type="text/css">
+        #sidebar-left {
+          width : 80px;
+        }
+      </style>
+   
+   	<style type="text/css">
+        #sidebar-right {
+          width : 300px;
+        }
+      </style>
+   
+   	   <style type="text/css">
+         body {
+           font-family : Arial, Verdana, sans-serif;
+         }
+       </style>
+     
+     
+
+   
+</head>
+
+<body>
+    <div style="float:left; margin-left: 30px;">
+    <img src="/files/es.png"><a title="Espanol" target="_blank" href="http://es.emcelettronica.com"> Spanish</a>
+    <img style="margin-left: 5px;" src="/files/it.png"><a title="Italiano" target="_blank" href=   
+    "http://it.emcelettronica.com"> Italian</a>
+    </div>
+
+<!--
+    <div style="float:left; margin-left: 200px;">        
+    <a title="About" target="_blank" href="/about"> About</a> &bnsp;&bnsp;&bnsp;
+    <a title="Download" target="_blank" href="/download"> Download</a>
+    <a title="Espanol" target="_blank" href="http://es.emcelettronica.com"> Spanish</a>
+    <a title="Italiano" target="_blank" href="http://it.emcelettronica.com"> Italian</a>
+		</div>
+-->
+
+    <div style="float:right;margin-right: 30px;">
+		<table><tr><td>
+     <div style="color: #000;"><em>11596 Users</em> &nbsp;&nbsp;&nbsp;</div>     </td>
+<!--    AMUNG.US
+    <td>
+    <script type="text/javascript"
+    src="http://widgets.amung.us/small.js"></script><script type="text/javascript">WAU_small('vryk3cyv') 
+    </script>
+		</td>
+ END -->
+
+<!--    AMUNG.US  -->
+<td>
+<script type="text/javascript" src="http://widgets.amung.us/pro.js"></script>
+<script type="text/javascript" id="wau_scr_eaf8274a">
+    wau_add('sfnh', 'eaf8274a')
+</script>
+<noscript>
+    <img src="http://whos.amung.us/piwidget/sfnh/" />
+</noscript>
+</td>
+<!-- END -->
+		
+		</tr></table>
+		</div>
+		
+    <div style="clear:both;"></div>
+
+
+<div id="page">
+<table border="0" cellpadding="0" cellspacing="0" id="header">
+  <tr>
+    <td id="logo">
+
+      
+      <h1 class='site-name'><a href="/" title="Home">Your Electronics Open Source</a></h1>
+          </td>
+    <td id="menu">
+            <ul class="links-menu links" id="navlist">
+<li class=" first"><a href="http://application.emcelettronica.com/" title="Application Note">Applications</a></li>
+<li class=""><a href="http://news.emcelettronica.com" title="News">News</a></li>
+<li class=""><a href="http://datasheet.emcelettronica.com/" title="Datasheet">Datasheet</a></li>
+<li class=" last"><a href="http://www.google.com/coop/cse?cx=008025758855854363206%3Avj5gqb1c5ms" title="Ricerca avanzata">SEARCH</a></li>
+</ul>          </td>
+    <td>
+    <div align="center">
+    <a href="http://feeds.feedburner.com/emcelettronica/en"><img src="http://feeds.feedburner.com/~fc/emcelettronica/en?bg=FF9933&amp;fg=444444&amp;anim=1" height="26" width="88" style="border:0" alt="RSS-Feed" title="RSS-Feed Subscribe" /></a>
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><div></div></td>
+  </tr>
+</table>
+
+<table width="100%">
+ <tr>
+  <td width="80%">
+            <div id="suckerfishmenu" class="clear-block"><div class="block block-menu" id="block-menu-255">
+  <h2 class="title">SUCKERmenu</h2>  <div class="content">
+<ul class="menu">
+<li class="leaf"><a href="/about" title="About">About</a></li>
+<li class="leaf"><a href="/download" title="Download">Download</a></li>
+<li class="leaf"><a href="/contact" title="Contact Us">Contact</a></li>
+<li class="leaf"><a href="/your-electronics-open-source-team" title="Team">Team</a></li>
+<li class="expanded"><a href="http://dev.emcelettronica.com/story" title="Stories">Stories</a>
+<ul class="menu">
+<li class="leaf"><a href="/story/hardware" title="Hardware">Hardware</a></li>
+<li class="leaf"><a href="/story/linux" title="Linux">Linux</a></li>
+<li class="leaf"><a href="/story/microcontrollers" title="Microcontrollers">Microcontrollers</a></li>
+<li class="leaf"><a href="http://dev.emcelettronica.com/story/news" title="News">News</a></li>
+<li class="leaf"><a href="/story/programming" title="Programming">Programming</a></li>
+<li class="leaf"><a href="/story/technology" title="Technology">Technology</a></li>
+
+</ul>
+</li>
+<li class="leaf"><a href="http://dev.emcelettronica.com/node/add/story" title="Promote Yourself">Submit</a></li>
+
+</ul>
+</div></div>
+</div>
+        </td>   
+  <td width="20%" align="right">
+<div align=right style="margin-right: 5px;">
+<a href="/user/login">Login / Register</a></div>
+
+  </td>
+ </tr>  
+</table>
+
+	
+      
+
+
+<table border="0" cellpadding="0" cellspacing="0" id="content">
+  <tr>
+        <td valign="top">
+            <div id="main">
+
+        
+
+        
+
+        <h1 class="title">Introduction to Artificial Neural Networks (ANN)</h1>
+
+        
+        <div class="tabs"></div>
+                
+  <div id="under_title" class="region">
+    <div class="block block-block" id="block-block-63">
+    <div class="content"><div align="left">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7461672111731999";
+/* 250x250, creato 27/02/09 */
+google_ad_slot = "9100066959";
+google_ad_width = 250;
+google_ad_height = 250;
+//-->
+</script><script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div></div>
+  </div>
+        
+        <div class="node">
+  
+
+
+
+
+
+  
+
+
+
+  
+
+  <!--    <span class="submitted">Submitted by brumbarchris on January 14, 2009.</span> -->
+	
+	<span class="submitted">
+ By brumbarchris Jan 14th, 2009 </span>
+
+      <span class="taxonomy"><ul class="links inline"><li class="first taxonomy_term_1253"><a href="/category/technology" rel="tag" title="Article on technology" class="taxonomy_term_1253">Technology</a></li>
+<li class="taxonomy_term_1961"><a href="/category/ann" rel="tag" title="" class="taxonomy_term_1961">ann</a></li>
+<li class="last taxonomy_term_1962"><a href="/category/artificial-neural-networks" rel="tag" title="" class="taxonomy_term_1962">artificial neural networks</a></li>
+</ul></span>
+      
+   					
+			
+      <script type="text/javascript">digg_skin = 'compact'; digg_window = 'new';</script>
+      <script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script> 
+	
+      <script type="text/javascript" src="http://www.reddit.com/button.js?t=3"></script>
+
+					     
+
+
+		
+			
+				&nbsp;&nbsp;<a href="/printpdf/52057"><img alt="Download PDF version of the Article" title="Download PDF version of the 	Article" src="/files/pdf_icon30.gif" /></a>
+				 
+		  
+       
+    
+  
+  
+  
+  
+
+
+
+	
+<div class="content"><p>
+The development of ANN (Artificial Neural Networks) has started back in the 1940s, but due to some publications showed deficiencies of the early perceptron models, funding was withdrawn and many scientists left the field. The interest in neural networks re-emerged only after some important theoretical results were attained in the early eighties (most notably the discovery of error back-propagation), and new hardware developments increased the processing capacities. Today, ANN are successfully employed in the fields of identification and control systems, game-playing AI and decision making, pattern recognition (face recognition, voice recognition, object recognition), sequence recognition, health diagnosis, stock trade applications (automated trading systems) and even…e-mail spam filtering.</p>
+<p>The theory behind ANN is full of abstraction. There are several new notions for many of us, as they are not really the field of engineers, but rather mathematicians or theorists. But in many cases the networks finalize in a software or hardware implementation, which we can touch or see.</p>
+<p><b>Example 1</b><br />
+An ANN can be implemented as software on the PC, and its purpose could be to recognize a specific face. The input data could consist of an image of a human face taken by a webcam, and the output of the ANN could be a yes/no answer regarding the permission of that person to access a particular part of a building.</p>
+<p><b>Example 2</b><br />
+An ANN can be hardware implemented in an FPGA, which could act together with a microphone and ADC in order to recognize a specific voice command. If the network is correctly trained and implemented, it can also be used to recognize the command as being valid only coming from a particular person, recognizing the specific patterns of that voice.</p>
+<p><b>Example 3</b><br />
+An ANN can be used as a hardware-software system to decide whether a specific product is “good” or “bad”. For instance a company manufacturing video cameras can use such a network to decide if the image from a specific camera is acceptable or not. Rather than measuring all kind of parameters as focus or color sharpness or hue etc, the image from each camera may be fed to a ANN which would decide for itself if it is acceptable or not, based on previous training. Simplistically speaking, the training is accomplished by feeding the ANN a reasonable number of good images (acceptable for a human judge) and informing the ANN that these images are good; then the ANN would be fed a similar number of unacceptable images (for a human judge) and it would be informed that these images are “bad”. If the proper training algorithm is used and if the number if images used to train the camera is also appropriate, the ANN will be able from then on to decide by itself if a new image is good or bad.</p>
+<p>From an abstract point of view, the neural network is an interconnected group of nodes, similar to the huge networks of neurons in the human brain (although this comparison really simplifies the structure of the human brain).
+</p>
+<p><div align="center"><img src="/files/u4/Fig0050.png" alt="Artificial Neural Networks" width="350" height="313" /></div>
+</p>
+<p>
+The simplest possible “node” is a perceptron, which in the most basic case has only two inputs and an output:
+</p>
+<p><div align="center"><img src="/files/u4/Fig0051.png" alt="Artificial Neural Networks" width="309" height="182" /></div>
+</p>
+<p>
+Each ho the two inputs, x1 and x2 has a corresponding weight, so the output of the perceptron would be a function of the simple weighted sum of these inputs:</p>
+<div align="center">y=f(x1*w1+x2*w2)</div>
+<p>The function f is also defined exactly when the perceptron is actually implemented in software or hardware so you are really looking at a single layer neural network, which takes as inputs some numbers, and which returns also a number. The output of the network is thus dependent on the weights (w1 and w2). These should be adjusted so that the output of the perceptron suits the application, and the adjustment itself is done during the training phase.</p>
+<p>The reason for which such a concept is considered an artificial neural network, is its similar aspect to a real neural network, which is also based around basic nodes called neurons. The natural structure of a neuron and its environment is shown below with the elements that compose it: a set of incoming fibers - the dendrites (corresponding to the input values x1, x2 of the perceptron), the synapses (and the synaptic efficiency corresponds to the weights of the perceptron), the soma (corresponding to the arithmetical summation of the perceptron) and one outgoing fiber – the axon (roughly, the function f).
+</p>
+<p><div align="center"><img src="/files/u4/Fig0052.png" alt="Artificial Neural Networks" width="505" height="214" /></div>
+</p>
+<p>
+Perceptrons may be grouped together in larger neural networks, just as the human brain consists of about 100.000.000.000 neuron (enough for 1000 years of life – these neurons degrade in time, and nature has not provided us yet with a mechanism to replace them). Thus complicated artificial neural network may be built, and these can be used for various tasks.</p>
+<p>Of course the mathematical theory behind the ANN is stuffy enough to scare many people oriented to more practical purposes. But also these structures can have simple applications which may be considered the “hello world” of ANNs. I will suggest below one such application.</p>
+<p><b>Character recognition application</b><br />
+A relatively simple ANN may be trained to recognize the characters from 0 to 9. The characters can be considered as being drawn on a grid of 10x14 pixels, each pixel having a value of 0 (for white) or 1 (for black).
+</p>
+<p><div align="center"><img src="/files/u4/Fig0053.png" alt="Artificial Neural Networks" width="232" height="325" /></div>
+</p>
+<p>
+Thus the image may be decomposed in a 140 elements vector, and this vector may be fed to such an ANN with 140 inputs (having a reasonable number of perceptrons in its first layer, for instance 12 perceptrons with 5 inputs each) and with ten perceptrons in the output layer. Depending on which of the 10 characters from 0 to 9 is represented by the bitmap, only one of the 10 outputs of the ANN should be activated as being logic 1, all the others should be logic 0.
+</p>
+<p><div align="center"><img src="/files/u4/Fig0054.png" alt="Artificial Neural Networks" width="354" height="331" /></div>
+</p>
+<p>
+Thus a structure for the ANN is established. By no means should this be considered the best structure for this application; however, it will get the job done. There is heavy literature out there (quite abstract, but very scientific and theoretical) that will teach you how to choose the structure for the ANN to best suit the application you have in mind.</p>
+<p>OK, once the structure of the ANN is established, the next required job is to train it. Again, this is a science in itself, and training an ANN may involve quite complicated algorithms; luckily these are also somewhat off-the shelf and readily implemented in powerful development environments, like C or Matlab.</p>
+<p>The training of the ANN is a process in which the ANN “learns”; it basically means adjusting the weights of each perceptron in the network so that when presented with a known pattern (like for instance a clear character “2”, with no noise involved and no similarity to other characters) the network will activate the proper output. Basically, it means that the network is presented with character “2” and its weights will be adjusted according to a particular algorithm so that mathematically speaking, the output of the third perceptron in the output layer will be close to 1 and the outputs of all other 9 perceptrons will be 0. Of course the proper adjustment of the weights cannot be achieved in a single iteration, and training a ANN involves presenting it several times with known patterns and also with patterns which are affected by noise, like for instance the figure below:
+</p>
+<p><div align="center"><img src="/files/u4/Fig0055.png" alt="Artificial Neural Networks" width="231" height="331" /></div>
+</p>
+<p>
+If trained properly, the ANN should be capable of recognizing a noisy image, just like the human brain would.</p>
+<p>Due to their theoretical complexity, neural networks are not particularly popular with engineers; they are more the realm of mathematicians. However, if you are curious, give them a try. Imagine what complex algorithms would be involved if a conventional piece of software would have to be used in order to recognize the above characters. It might not be rocket science, but it complexity might grow exponentially with the resolution of the characters. ANNs provide a rather cheap (and even fast both in terms of implementation and in terms of execution) method for the problem<br />
+As I mentioned, Matlab has a pretty good toolbox regarding neural networks, which allow you to generate, train and even use an ANN with relative ease. The Matlab environment also includes some nice demos which are much more visual (and perhaps instructive) than the mathematical language conventionally employed to describe these networks.</p>
+<p>Further reading:<br />
+<a href="http://www.gc.ssr.upm.es/inves/neural/ann1/anntutorial.html" title="http://www.gc.ssr.upm.es/inves/neural/ann1/anntutorial.html">http://www.gc.ssr.upm.es/inves/neural/ann1/anntutorial.html</a><br />
+<a href="http://www.learnartificialneuralnetworks.com/" title="http://www.learnartificialneuralnetworks.com/">http://www.learnartificialneuralnetworks.com/</a><br />
+<a href="http://en.wikipedia.org/wiki/Artificial_neural_network" title="http://en.wikipedia.org/wiki/Artificial_neural_network">http://en.wikipedia.org/wiki/Artificial_neural_network</a><br />
+<a href="http://en.wikipedia.org/wiki/Neural_network_software" title="http://en.wikipedia.org/wiki/Neural_network_software">http://en.wikipedia.org/wiki/Neural_network_software</a><br />
+<a href="http://neurondotnet.freehostia.com/index.html" title="http://neurondotnet.freehostia.com/index.html">http://neurondotnet.freehostia.com/index.html</a><br />
+<a href="http://www.patternrecognition.co.za/sourcecode.html" title="http://www.patternrecognition.co.za/sourcecode.html">http://www.patternrecognition.co.za/sourcecode.html</a>
+</p>
+</div>
+     
+  
+  
+
+
+  
+
+
+
+
+  
+
+ 
+
+
+
+<!-- STORY  node_image pasted into the upper-content -->
+
+  
+<!-- END STORY  -->
+
+
+
+
+ 
+
+  
+  <div class="clear-block clear"></div>
+
+
+
+      <div class="links"><ul class="links inline"><li class="first blog_usernames_blog"><a href="/brumbarchris" title="Read brumbarchris&#039;s latest blog entries." class="blog_usernames_blog">brumbarchris&#039;s blog</a></li>
+<li class="comment_add"><a href="/comment/reply/52057#comment-form" title="Share your thoughts and opinions related to this posting." class="comment_add">Add new comment</a></li>
+<li class="last statistics_counter"><span class="statistics_counter">9791 reads</span></li>
+</ul>	</div>
+    
+
+
+
+
+  
+  <div style="float:right">
+  <!-- AddThis Button BEGIN -->
+<script type="text/javascript">addthis_pub  = 'emanuele';
+addthis_options= 'digg, reddit, myspace, facebook, stumbleupon, fark, furl, twitter, newsvine, slashdot, technorati, email, more';</script>
+<a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s9.addthis.com/button1-share.gif" width="125" height="16" border="0" alt="" /></a><script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script>
+<!-- AddThis Button END -->
+  		</div>
+ 
+
+
+</div>
+<div id="comments"><a id="comment-863"></a>
+<div class="comment clear-block">
+  
+
+  <h3><a href="/introduction-to-artificial-neural-networks-ann#comment-863" class="active">Sounds great and a money</a></h3>
+
+  <div class="submitted">
+    Submitted by Anonymous on February 8, 2009.  </div>
+
+  <div class="content">
+    <p>Sounds great and a money saver for companies.</p>
+  </div>
+
+  <ul class="links"><li class="first last comment_reply"><a href="/comment/reply/52057/863" class="comment_reply">reply</a></li>
+</ul></div>
+<a id="comment-930"></a>
+<div class="comment clear-block">
+  
+
+  <h3><a href="/introduction-to-artificial-neural-networks-ann#comment-930" class="active">citation</a></h3>
+
+  <div class="submitted">
+    Submitted by Anonymous (not verified) on February 20, 2009.  </div>
+
+  <div class="content">
+    <p>hi - is there a citation for this site. It provides good info on basics of ANN and I would like to reference it in a paper. Do you have the citation?</p>
+  </div>
+
+  <ul class="links"><li class="first last comment_reply"><a href="/comment/reply/52057/930" class="comment_reply">reply</a></li>
+</ul></div>
+<div class="indented"><a id="comment-931"></a>
+<div class="comment clear-block">
+  
+
+  <h3><a href="/introduction-to-artificial-neural-networks-ann#comment-931" class="active">Citation</a></h3>
+
+  <div class="submitted">
+    Submitted by Emanuele on February 21, 2009.  </div>
+
+  <div class="content">
+    <p>Hi, the citation for this article and for the website is: Author-Website-Link</p>
+<p><i>Brumbarchis from Your Electronics Open Source <br> http://dev.emcelettronica.com/introduction-to-artificial-neural-networks-ann</i></p>
+<p>Feel free to post here your references (Thesis, Magazine, Application Note...) I would like to go deep to the heart of the subject.</p>
+  </div>
+
+  <ul class="links"><li class="first last comment_reply"><a href="/comment/reply/52057/931" class="comment_reply">reply</a></li>
+</ul></div>
+<div class="indented"><a id="comment-945"></a>
+<div class="comment clear-block">
+  
+
+  <h3><a href="/introduction-to-artificial-neural-networks-ann#comment-945" class="active">reference</a></h3>
+
+  <div class="submitted">
+    Submitted by Prashant Serai (not verified) on February 23, 2009.  </div>
+
+  <div class="content">
+    <p>check out,<br />
+<a href="http://www.learnartificialneuralnetworks.com/" title="http://www.learnartificialneuralnetworks.com/">http://www.learnartificialneuralnetworks.com/</a></p>
+  </div>
+
+  <ul class="links"><li class="first last comment_reply"><a href="/comment/reply/52057/945" class="comment_reply">reply</a></li>
+</ul></div>
+<div class="indented"><a id="comment-979"></a>
+<div class="comment clear-block">
+  
+
+  <h3><a href="/introduction-to-artificial-neural-networks-ann#comment-979" class="active">Re: reference</a></h3>
+
+  <div class="submitted">
+    Submitted by brumbarchris on March 3, 2009.  </div>
+
+  <div class="content">
+    <p>Oh, there are loads of ANN tutorials out there. The thing about them (the ANNs) is that they are more like chess: takes you 5-10 minutes to learn the rules, but a lifetime to get to use them in a decent manner. Of course, this is not true for everybody, some smart guys manage to manage them in a good interval - a few years. What is sure is that the online tutorials are much better than the university courses I had a few years back. Yet, I guess it is always like this when you read something out of your own interest against when you learn something for a grade.</p>
+<p>Regards,<br />
+Cristian</p>
+  </div>
+
+  <ul class="links"><li class="first last comment_reply"><a href="/comment/reply/52057/979" class="comment_reply">reply</a></li>
+</ul></div>
+</div></div></div><a id="comment-1043"></a>
+<div class="comment clear-block">
+  
+
+  <h3><a href="/introduction-to-artificial-neural-networks-ann#comment-1043" class="active">140 inputs?  Ouch!  Reducing</a></h3>
+
+  <div class="submitted">
+    Submitted by <a href="http://matlabdatamining.blogspot.com/">Will Dwinnell</a> (not verified) on March 31, 2009.  </div>
+
+  <div class="content">
+    <p>140 inputs?  Ouch!  Reducing the number of model inputs would likely both: reduce training time and improve recognition accuracy.  One simple method of data reduction for grayscale raster images is to use vertical and horizintal profile projections (column and row totals, respectively).  This would reduce the number of model inputs from 140 to 24 (= 10 vertical + 14 horizontal), a reduction of nearly 6-to-1!  Other, fairly simple features could also be included with little computational overhead while maintaining substantial data reduction.  While accelerating model development, such features often improve class differentiation.</p>
+  </div>
+
+  <ul class="links"><li class="first last comment_reply"><a href="/comment/reply/52057/1043" class="comment_reply">reply</a></li>
+</ul></div>
+<div class="indented"><a id="comment-1049"></a>
+<div class="comment clear-block">
+  
+
+  <h3><a href="/introduction-to-artificial-neural-networks-ann#comment-1049" class="active">RE: 140 inputs? Ouch! Reducing</a></h3>
+
+  <div class="submitted">
+    Submitted by brumbarchris on March 31, 2009.  </div>
+
+  <div class="content">
+    <p>Will,<br />
+thank you for your points, you are right extensive optimisation can be performed on this example. But bear in mind it is ... only an example of what ANNs can do.</p>
+<p>ANNs are highly theoretical models and I must agree that there are many algorithms and optimization methods which, although not out of reach of the average engineer, do not present much of an attraction for many people who are used to see the result of their efforts much faster.</p>
+<p>Regards,<br />
+Cristian</p>
+  </div>
+
+  <ul class="links"><li class="first last comment_reply"><a href="/comment/reply/52057/1049" class="comment_reply">reply</a></li>
+</ul></div>
+</div></div>        
+                <div id="content-bottom"><div class="block block-block" id="block-block-58">
+    <div class="content"><div align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7461672111731999";
+/* LINK4-Footer-468x15, creato 24/12/08 */
+google_ad_slot = "2969396509";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script><script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+</div></div>
+</div>      </div>
+    </td>
+    <td id="sidebar-right">
+      <div class="block block-block" id="block-block-72">
+    <div class="content"><div align="center">
+<a alt="Semiconductors" target="_blank" href="http://www.arrow.com"><img src="/files/arrow.jpg" /></a>
+</div>
+</div></div>
+<div class="block block-block" id="block-block-62">
+    <div class="content"><div align="center">
+<form style="border:1px solid #ccc;padding:2px;text-align:center;background-color:#FF9933;" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=emcelettronica/en', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+<p>Enter your email address:</p>
+<p><input type="text" style="width:140px" name="email"/><input type="hidden" value="emcelettronica/en" name="uri"/><input type="hidden" name="loc" value="en_US"/><input type="submit" value="Subscribe" /></p>
+<p>Receive New Articles by Email</p>
+</form>
+</div>
+</div></div>
+<div class="block block-block" id="block-block-51">
+    <div class="content"><div align="center"><a target="_blank" href="http://www.farnell.com" onClick="javascript: pageTracker._trackPageview ('/outgoing/farnell_banner');"><img title="Components Store" alt="Farnell (24h delivery)" src="http://dev.emcelettronica.com/various/farnell_banneranimb.gif" border="0" ></a></div>
+</div></div>
+<div class="block block-block" id="block-block-59">
+    <div class="content"><div align="center">
+<a href="http://store.emcelettronica.com" target="_blank"><img src="/various/store_logo.png" alt="Store" title="Store" /></a>
+</div>
+</div></div>
+<div class="block block-menu" id="block-menu-356">
+  <h2 class="title">Featured Projects</h2>  <div class="content">
+<ul class="menu">
+<li class="leaf"><a href="/ipercode-howto-build-remote-control-using-rolling-code" title="Rolling code project">IperCODE - RollingCode</a></li>
+
+</ul>
+</div></div>
+<div class="block block-menu" id="block-menu-337">
+  <h2 class="title">Latest Tech Articles</h2>  <div class="content">
+<ul class="menu">
+<li class="leaf"><a href="/overview-automotive-buses" title="An overview of automotive buses">An overview of automotive buses</a></li>
+<li class="leaf"><a href="/constant-current-led-driver-programmable-pwm-control" title="Constant Current LED Driver with Programmable PWM Control">Constant Current LED Driver with Programmable PWM Control</a></li>
+<li class="leaf"><a href="/digital-filters-13" title="Digital Filters 1/3">Digital Filters 1/3</a></li>
+<li class="leaf"><a href="/digital-filters-23" title="Digital Filters 2/3">Digital Filters 2/3</a></li>
+<li class="leaf"><a href="/ethernet-47" title="Ethernet 4/7">Ethernet 4/7</a></li>
+<li class="leaf"><a href="/freescale-coldfire-microprocessor-overview" title="Freescale ColdFire Microprocessor - Overview">Freescale ColdFire Microprocessor - Overview</a></li>
+<li class="leaf"><a href="/high-speed-operational-amplifier" title="High Speed Operational Amplifier ">High Speed Operational Amplifier </a></li>
+<li class="leaf"><a href="/how-to-control-flat-panel-displays-embedded-panel-interface-standard" title="How to control flat panel displays with the Embedded Panel Interface standard">How to control flat panel displays with the Embedded Panel Interface standard</a></li>
+<li class="leaf"><a href="/how-to-implement-embedded-ethernet" title="How to Implement Embedded Ethernet">How to Implement Embedded Ethernet</a></li>
+<li class="leaf"><a href="/ieee1588-protocol-supported-freescale-semiconductor" title=" IEEE1588 Protocol Supported by Freescale Semiconductor"> IEEE1588 Protocol Supported by Freescale Semiconductor</a></li>
+<li class="leaf"><a href="/serial-port-communication-excel-vba" title="Serial Port Communication in Excel (VBA)">Serial Port Communication in Excel (VBA)</a></li>
+
+</ul>
+</div></div>
+<div class="block block-quicktabs" id="block-quicktabs-1">
+  <h2 class="title">Contents</h2>  <div class="content"><div class="quicktabs_wrapper"><ul class="quicktabs_tabs"><li><a href="#">Popular</a></li><li><a href="#">Comments</a></li><li><a href="#">Tutor+D</a></li></ul><div class="quicktabs_main"><div class="quicktabs"><div class="block block-statistics" id="block-statistics-0">
+ <div class="content"><div class="item-list"><h3>All time:</h3><ul><li><a href="/datasheet">Datasheet Free Download PDF</a></li><li><a href="/etube-electronics-youtube">ETUBE Electronics + YouTube</a></li><li><a href="/hacking-network-attached-storage-nas">Hacking a Network Attached Storage (NAS)</a></li><li><a href="/binary-60-seconds">Binary in 60 seconds</a></li><li><a href="/oled-tv-general-survey">OLED TV – General Survey</a></li><li><a href="/serial-port-communication-c">Serial Port Communication in C#</a></li><li><a href="/ball-control-touch-screen-using-microchip-microcontroller">Ball control on a touch screen (using a Microchip microcontroller)</a></li><li><a href="/boards-running-linux">Boards running Linux </a></li><li><a href="/usb-io-board-microchip-usb-port-drive">USB I/O Board (Microchip usb port drive)</a></li><li><a href="/gps-receiver-design">GPS receiver design</a></li><li><a href="/ac-power-filter-and-phone-line-filter-homemade-circuit-breaker">AC Power filter and phone line filter (homemade circuit breaker)</a></li><li><a href="/rtos-embedded-systems">RTOS for Embedded Systems </a></li><li><a href="/what-microcontroller-bootloader-and-how-it-works">What a Microcontroller Bootloader Is and How It Works?</a></li><li><a href="/top-pos-point-sale-resources">Top POS (Point Of Sale) Resources</a></li><li><a href="/kicad-free-and-open-source-eda-tool">KiCAD a Free and Open Source EDA Tool</a></li><li><a href="/howto-add-usb-to-anything-using-single-device">Howto Add USB to Anything Using a Single Device</a></li><li><a href="/diy-bug-fm-audio-transmitter-micro-spy">DIY Bug - FM Audio Transmitter [Micro spy]</a></li><li><a href="/solar-power-and-wind-energy-diy-projects">Solar power and wind energy - DIY projects</a></li><li><a href="/embedded-linux-linux-operating-system-microcontrollers">Embedded Linux - Linux Operating System for Microcontrollers </a></li><li><a href="/methods-tire-pressure-monitoring">Methods for Tire Pressure Monitoring</a></li></ul></div></div>
+</div>
+</div><div class="quicktabs"><div class="block block-views" id="block-views-comments_recent">
+ <div class="content"><div class='view view-comments-recent'><div class='view-content view-content-comments-recent'><div class="item-list"><ul><li><div class='view-item view-item-comments-recent'><div class='view-field view-data-comments-subject'><a href="/gnu-radio-open-source-software-defined-radio#comment-1080">As someone who has some</a></div><div class='view-field view-data-comments-name'>Anonymous (not verified)</div><div class='view-field view-data-comments-timestamp'>Apr 11 2009 - 04:10</div></div>
+</li><li><div class='view-item view-item-comments-recent'><div class='view-field view-data-comments-subject'><a href="/gnu-radio-open-source-software-defined-radio#comment-1079">Amazing stuff. </a></div><div class='view-field view-data-comments-name'>Serinox (not verified)</div><div class='view-field view-data-comments-timestamp'>Apr 11 2009 - 02:16</div></div>
+</li><li><div class='view-item view-item-comments-recent'><div class='view-field view-data-comments-subject'><a href="/gnu-radio-open-source-software-defined-radio#comment-1078">That's the (one) seriously disappointing aspect of this project</a></div><div class='view-field view-data-comments-name'>Epicanis (not verified)</div><div class='view-field view-data-comments-timestamp'>Apr 10 2009 - 22:33</div></div>
+</li><li><div class='view-item view-item-comments-recent'><div class='view-field view-data-comments-subject'><a href="/gnu-radio-open-source-software-defined-radio#comment-1077">Low Cost?</a></div><div class='view-field view-data-comments-name'>Anonymous (not verified)</div><div class='view-field view-data-comments-timestamp'>Apr 10 2009 - 21:54</div></div>
+</li><li><div class='view-item view-item-comments-recent'><div class='view-field view-data-comments-subject'><a href="/need-pcb-footprint-one-microchip-s-devices#comment-1076">Am I blind?</a></div><div class='view-field view-data-comments-name'>hovachek</div><div class='view-field view-data-comments-timestamp'>Apr 10 2009 - 21:28</div></div>
+</li><li><div class='view-item view-item-comments-recent'><div class='view-field view-data-comments-subject'><a href="/loongson-risc-netbook-and-soc#comment-1075">The power of RISC</a></div><div class='view-field view-data-comments-name'>slovati</div><div class='view-field view-data-comments-timestamp'>Apr 10 2009 - 17:57</div></div>
+</li><li><div class='view-item view-item-comments-recent'><div class='view-field view-data-comments-subject'><a href="/decibel-explained-and-helpful-tips#comment-1074">Insertion loss in RF systems</a></div><div class='view-field view-data-comments-name'>Diego Villa</div><div class='view-field view-data-comments-timestamp'>Apr 10 2009 - 17:37</div></div>
+</li><li><div class='view-item view-item-comments-recent'><div class='view-field view-data-comments-subject'><a href="/gnu-radio-open-source-software-defined-radio#comment-1073">Also popular among amateur radio enthusiasts</a></div><div class='view-field view-data-comments-name'>Diego Villa</div><div class='view-field view-data-comments-timestamp'>Apr 10 2009 - 15:14</div></div>
+</li><li><div class='view-item view-item-comments-recent'><div class='view-field view-data-comments-subject'><a href="/gnu-radio-open-source-software-defined-radio#comment-1072">You can first look for an</a></div><div class='view-field view-data-comments-name'>slovati</div><div class='view-field view-data-comments-timestamp'>Apr 10 2009 - 13:53</div></div>
+</li><li><div class='view-item view-item-comments-recent'><div class='view-field view-data-comments-subject'><a href="/gnu-radio-open-source-software-defined-radio#comment-1071">Timer Control</a></div><div class='view-field view-data-comments-name'>Betty339 (not verified)</div><div class='view-field view-data-comments-timestamp'>Apr 9 2009 - 23:34</div></div>
+</li></ul></div></div></div>
+</div>
+</div>
+</div><div class="quicktabs"><div class="block block-menu" id="block-menu-99">
+ <div class="content">
+<ul class="menu">
+<li class="leaf"><a href="/ce-marking" title="CE marking">CE mark</a></li>
+<li class="leaf"><a href="/etube-electronics-youtube" title="Electronics + YouTube">ETUBE</a></li>
+<li class="leaf"><a href="/ETUBE-PLUS" title="ETUBE+">ETUBE+</a></li>
+<li class="leaf"><a href="http://dev.emcelettronica.com/ftpmicro" title="Embedded web server">FTPmicro</a></li>
+<li class="leaf"><a href="/picmicro" title="Microcontroller PIC">PICmicro</a></li>
+<li class="leaf"><a href="/top-pos-point-sale-resources" title="Top POS Reference Designs">POS (PointOfSale)</a></li>
+<li class="leaf"><a href="/datasheet" title="Datasheet">Datasheet</a></li>
+
+</ul>
+</div>
+</div>
+</div></div></div></div></div>
+    </td>  </tr>
+</table>
+
+
+
+	
+                                 	   <div class="clr" id="section2">
+
+       <table class="sections" cellspacing="0" cellpadding="0">
+            <tr valign="top">
+
+                           <td class="section width33">
+                  <div class="block block-menu" id="block-menu-247">
+  <h2 class="title">Taxonomy Category Tags</h2>  <div class="content">
+<ul class="menu">
+<li class="leaf"><a href="/category/analog" title="Analog Electronics">ANALOG</a></li>
+<li class="leaf"><a href="/category/application-note" title="Application Designs">APPLICATION-NOTE</a></li>
+<li class="leaf"><a href="/category/databook" title="Databook">DATABOOK</a></li>
+<li class="leaf"><a href="/category/datasheet" title="Datasheet pdf">DATASHEET</a></li>
+<li class="leaf"><a href="/category/diy" title="Do It Yourself">DIY</a></li>
+<li class="leaf"><a href="/category/electronics-parts" title="Semiconductors and Components">Electronics Parts</a></li>
+<li class="leaf"><a href="/category/embedded" title="Embedded">EMBEDDED</a></li>
+<li class="leaf"><a href="/category/firmware" title="Firmware">FIRMWARE</a></li>
+<li class="leaf"><a href="/category/hack" title="Hacking">HACK</a></li>
+<li class="leaf"><a href="/category/hardware" title="Hardware">HARDWARE</a></li>
+<li class="leaf"><a href="/category/homemade" title="Homemade">HOMEMADE</a></li>
+<li class="leaf"><a href="/category/howto">HowTo</a></li>
+<li class="leaf"><a href="/category/linux" title="Linux">LINUX</a></li>
+<li class="leaf"><a href="/category/microcontrollers" title="Microcontrollers Microprocessors">MICROCONTROLLERS</a></li>
+<li class="leaf"><a href="/category/news" title="News">NEWS</a></li>
+<li class="leaf"><a href="/category/pcb" title="Printed Circuit Boards">PCB</a></li>
+<li class="leaf"><a href="/category/programming" title="Programming">PROGRAMMING</a></li>
+<li class="leaf"><a href="/category/projects" title="Electronics Projects">PROJECTS</a></li>
+<li class="leaf"><a href="/category/reference-design" title="Reference Designs">REFERENCE DESIGN</a></li>
+<li class="leaf"><a href="/category/robotics" title="Robotics Automations">ROBOTICS</a></li>
+<li class="leaf"><a href="/category/standards" title="International Standards Norms">STANDARDS</a></li>
+<li class="leaf"><a href="/category/technology" title="Technology">TECHNOLOGY</a></li>
+<li class="leaf"><a href="/category/tools" title="Development tools">TOOLS</a></li>
+<li class="leaf"><a href="/category/tutorials" title="Tutorial">TUTORIALS</a></li>
+<li class="leaf"><a href="/category/vintage" title="Vintage Electronics">VINTAGE</a></li>
+
+</ul>
+</div></div>
+               </td>
+              
+
+                           <td class="section width33 divider">
+                  <div class="block block-user" id="block-user-2">
+  <h2 class="title">Who's new</h2>  <div class="content"><div class="item-list"><ul><li>wezzien</li><li>miketurner</li><li>tjdadj</li><li>hotshottech</li><li>texca</li><li>yag1064</li><li>hovachek</li><li>mooza88</li><li>jcvr6876</li><li>Rush</li></ul></div></div></div>
+<div class="block block-user" id="block-user-3">
+  <h2 class="title">Who's online</h2>  <div class="content">There are currently <em>1 user</em> and <em>27 guests</em> online.<div class="item-list"><h3>Online users</h3><ul><li>wakamah</li></ul></div></div></div>
+               </td>
+              
+
+                           <td class="section width33 divider">
+                  <div class="block block-tagadelic" id="block-tagadelic-7">
+  <h2 class="title">Folksonomy Tag Cloud</h2>  <div class="content"><a href="/category/16-bit" class="tagadelic level1" rel="tag">16 bit</a> 
+<a href="/category/adi" class="tagadelic level1" rel="tag">ADI</a> 
+<a href="/category/amd" class="tagadelic level3" rel="tag">AMD</a> 
+<a href="/category/amplifier" class="tagadelic level2" rel="tag">amplifier</a> 
+<a href="/category/tags/analytics" class="tagadelic level1" rel="tag">analytics</a> 
+<a href="/category/tags/android" class="tagadelic level1" rel="tag">android</a> 
+<a href="/category/arduino" class="tagadelic level2" rel="tag">arduino</a> 
+<a href="/category/arm" class="tagadelic level4" rel="tag">ARM</a> 
+<a href="/category/atmel" class="tagadelic level3" rel="tag">atmel</a> 
+<a href="/category/tags/automotive" class="tagadelic level3" rel="tag">automotive</a> 
+<a href="/category/tags/avr" class="tagadelic level1" rel="tag">avr</a> 
+<a href="/category/battery" class="tagadelic level1" rel="tag">battery</a> 
+<a href="/taxonomy/term/1120" class="tagadelic level3" rel="tag">Capacitor</a> 
+<a href="/category/cmos" class="tagadelic level1" rel="tag">cmos</a> 
+<a href="/taxonomy/term/441" class="tagadelic level3" rel="tag">Design</a> 
+<a href="/category/tags/development" class="tagadelic level2" rel="tag">development</a> 
+<a href="/category/display" class="tagadelic level1" rel="tag">display</a> 
+<a href="/category/tags/diy" class="tagadelic level1" rel="tag">diy</a> 
+<a href="/taxonomy/term/428" class="tagadelic level3" rel="tag">dsPIC</a> 
+<a href="/category/eeprom" class="tagadelic level3" rel="tag">eeprom</a> 
+<a href="/category/ee-software" class="tagadelic level1" rel="tag">ee software</a> 
+<a href="/category/electronics" class="tagadelic level2" rel="tag">electronics</a> 
+<a href="/taxonomy/term/449" class="tagadelic level4" rel="tag">embedded</a> 
+<a href="/category/embedded-host" class="tagadelic level1" rel="tag">embedded host</a> 
+<a href="/category/tags/embedded-linux" class="tagadelic level1" rel="tag">embedded linux</a> 
+<a href="/category/tags/embedded-os" class="tagadelic level2" rel="tag">embedded os</a> 
+<a href="/category/tags/embedded-system" class="tagadelic level3" rel="tag">embedded system</a> 
+<a href="/category/ethernet" class="tagadelic level3" rel="tag">Ethernet</a> 
+<a href="/taxonomy/term/85" class="tagadelic level2" rel="tag">Fairchild</a> 
+<a href="/category/fpga" class="tagadelic level1" rel="tag">fpga</a> 
+<a href="/category/freescale" class="tagadelic level2" rel="tag">Freescale</a> 
+<a href="/category/tags/gm862" class="tagadelic level1" rel="tag">gm862</a> 
+<a href="/category/tags/google" class="tagadelic level1" rel="tag">google</a> 
+<a href="/category/tags/gsm" class="tagadelic level1" rel="tag">gsm</a> 
+<a href="/category/tags/howto" class="tagadelic level2" rel="tag">howto</a> 
+<a href="/category/tags/i2c" class="tagadelic level1" rel="tag">i2c</a> 
+<a href="/category/tags/intel" class="tagadelic level4" rel="tag">Intel</a> 
+<a href="/category/interface" class="tagadelic level1" rel="tag">interface</a> 
+<a href="/category/tags/internet" class="tagadelic level1" rel="tag">internet</a> 
+<a href="/category/tags/iphone" class="tagadelic level2" rel="tag">iphone</a> 
+<a href="/taxonomy/term/1029" class="tagadelic level3" rel="tag">Layout Guideline</a> 
+<a href="/category/lcd" class="tagadelic level3" rel="tag">lcd</a> 
+<a href="/category/led" class="tagadelic level3" rel="tag">LED</a> 
+<a href="/category/led-driver" class="tagadelic level2" rel="tag">LED Driver</a> 
+<a href="/category/tags/linux" class="tagadelic level5" rel="tag">linux</a> 
+<a href="/category/tags/maxim" class="tagadelic level5" rel="tag">maxim</a> 
+<a href="/category/mcu" class="tagadelic level3" rel="tag">mcu</a> 
+<a href="/category/tags/mems" class="tagadelic level2" rel="tag">mems</a> 
+<a href="/taxonomy/term/429" class="tagadelic level5" rel="tag">Microchip</a> 
+<a href="/category/tags/100336" class="tagadelic level6" rel="tag">microcontroller</a> 
+<a href="/taxonomy/term/233" class="tagadelic level4" rel="tag">Microcontrollers</a> 
+<a href="/category/mosfet" class="tagadelic level2" rel="tag">mosfet</a> 
+<a href="/category/tags/mp3" class="tagadelic level1" rel="tag">mp3</a> 
+<a href="/category/tags/mplab" class="tagadelic level2" rel="tag">mplab</a> 
+<a href="/category/tags/mplab-ide" class="tagadelic level1" rel="tag">mplab ide</a> 
+<a href="/category/tags/oled" class="tagadelic level1" rel="tag">oled</a> 
+<a href="/taxonomy/term/375" class="tagadelic level4" rel="tag">PCB</a> 
+<a href="/category/tags/pic" class="tagadelic level2" rel="tag">pic</a> 
+<a href="/category/tags/pic32" class="tagadelic level1" rel="tag">pic32</a> 
+<a href="/category/power-supply" class="tagadelic level3" rel="tag">power supply</a> 
+<a href="/category/processor" class="tagadelic level3" rel="tag">processor</a> 
+<a href="/taxonomy/term/392" class="tagadelic level1" rel="tag">programming</a> 
+<a href="/category/pwm" class="tagadelic level1" rel="tag">pwm</a> 
+<a href="/taxonomy/term/1070" class="tagadelic level2" rel="tag">Resistor</a> 
+<a href="/category/tags/robot-1" class="tagadelic level1" rel="tag">robot</a> 
+<a href="/category/tags/rtos" class="tagadelic level1" rel="tag">rtos</a> 
+<a href="/category/smps" class="tagadelic level3" rel="tag">smps</a> 
+<a href="/category/tags/sms" class="tagadelic level1" rel="tag">sms</a> 
+<a href="/category/tags/ssd" class="tagadelic level1" rel="tag">ssd</a> 
+<a href="/category/tags/tcpip" class="tagadelic level1" rel="tag">tcp/ip</a> 
+<a href="/category/tags/telit" class="tagadelic level1" rel="tag">telit</a> 
+<a href="/category/tips" class="tagadelic level2" rel="tag">tips</a> 
+<a href="/category/transistor" class="tagadelic level3" rel="tag">transistor</a> 
+<a href="/taxonomy/term/1027" class="tagadelic level2" rel="tag">Tutorial</a> 
+<a href="/category/tags/tv" class="tagadelic level1" rel="tag">tv</a> 
+<a href="/category/tags/unio" class="tagadelic level1" rel="tag">uni/o</a> 
+<a href="/category/tags/usb" class="tagadelic level6" rel="tag">USB</a> 
+<a href="/category/tags/video" class="tagadelic level1" rel="tag">video</a> 
+<a href="/category/tags/wireless" class="tagadelic level1" rel="tag">wireless</a> 
+<a href="/category/zetex" class="tagadelic level3" rel="tag">Zetex</a> 
+<div class='more-link'><a href="/tagadelic/chunk/7">more tags</a></div></div></div>
+               </td>
+              
+
+            </tr>
+         </table>
+
+         </div>  <!-- /section2 -->
+      
+<div id="footer">
+  
+<div class="block block-block" id="block-block-34">
+    <div class="content"><p><a target="_blank" href="http://dev.emcelettronica.com/trademarks" /> Trademarks </a></p>
+</div></div>
+
+</div>
+
+</div>
+
+<!-- 3DSTATS.COM  CODE V3.2  -->
+<!-- AUTODETECT PAGE NAME & URL -->
+<script type="text/javascript"><!--
+var A="00000127";
+var P="DetectName";
+var U="DetectUrl";
+//--></script>
+<script type="text/javascript" src="http://www.3dstats.com/cgi-bin/3dstrack.cgi?usr=00000127"></script>
+<noscript>
+<img src="http://www.3dstats.com/cgi-bin/connect.cgi?usr=00000127Pauto" border=0 height=0 width=0>
+</noscript>
+<!-- END 3dstats CODE V3.2 -->
+
+<!-- ANALYTICS -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-811279-6");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<!-- end ANALYTICS-->
+
+<!-- JQUERY per ANALYTICS outgoing links  -->
+<script type="text/javascript">
+$('a').each(function() {
+  var $a = $(this);
+  var href = $a.attr('href');
+ 
+  if ( (href.match(/^http/)) && (! href.match(document.domain)) ) {
+    $a.click(function() {
+      // get the post title if there is one
+      // and add it to the string for tracking
+      var postTitle = $a.parents('div.post').find('h2:first');
+      href = href.replace('http://',''); // cleanup for nice GA reports
+      href = (postTitle.length > 0) ? postTitle.text() + '/' + href : href;
+ 
+      pageTracker._trackPageview('/outgoing/' + href);
+    });
+  }
+ 
+});
+</script>
+<!-- END  -->
+
+</body>
+</html>

@@ -1,0 +1,813 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0034)http://en.wikipedia.org/wiki/Wi-Fi -->
+<HTML xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr" class="win chrome chrome4 webkit webkit5"><STYLE>/**
+ * Copyright 2009 Google Inc. All Rights Reserved.
+ *
+ * @fileoverview Css: Stylesheet for orkut extension.
+ *
+ * @author Megha Gupta
+ */
+
+.notificationContainer {
+  bottom:0;
+  overflow:hidden;
+  position:fixed;
+  right:0;
+  text-align:center;
+  width:205px;
+  z-index: 500;
+}
+
+.notificationPopup {
+  background-color: white;
+  border:3px solid lightBlue;
+  color: black;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  font-variant: normal;
+  margin-top: 2px;
+  margin-right: 5px;
+  max-height:200px;
+  overflow:hidden;
+  padding: 2px;
+  position: relative;
+  text-align: left;
+  width:194px;
+}
+
+.notificationPopup a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+.userThumbnail {
+  float: right;
+  cursor: pointer;
+}
+
+.photoThumbnail {
+  float: left;
+  margin-right: 3px;
+  cursor:pointer;
+}
+
+.orkutLogo {
+  float: left;
+  position:relative;
+  padding:2px;
+}
+
+.deleteIcon {
+  float: right;
+  cursor: pointer;
+}
+</STYLE><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Wi-Fi - Wikipedia, the free encyclopedia</TITLE>
+
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="generator" content="MediaWiki 1.16wmf4">
+<LINK rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit">
+<LINK rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit">
+<LINK rel="stylesheet" type="text/css" href="./Wi-Fi _files/combined.min.css">
+<LINK rel="stylesheet" type="text/css" href="./Wi-Fi _files/jquery-ui-1.7.2.css">
+<LINK rel="apple-touch-icon" href="http://en.wikipedia.org/apple-touch-icon.png">
+<LINK rel="shortcut icon" href="http://en.wikipedia.org/favicon.ico">
+<LINK rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)">
+<LINK rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/">
+<LINK rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&feed=atom">
+<LINK rel="stylesheet" href="./Wi-Fi _files/main-ltr.css" type="text/css" media="screen">
+<LINK rel="stylesheet" href="./Wi-Fi _files/shared.css" type="text/css" media="screen">
+<LINK rel="stylesheet" href="./Wi-Fi _files/commonPrint.css" type="text/css" media="print">
+<LINK rel="stylesheet" href="./Wi-Fi _files/index.php" type="text/css" media="all">
+<LINK rel="stylesheet" href="./Wi-Fi _files/index(1).php" type="text/css" media="print">
+<LINK rel="stylesheet" href="./Wi-Fi _files/index(2).php" type="text/css" media="handheld">
+<LINK rel="stylesheet" href="./Wi-Fi _files/index(3).php" type="text/css" media="all">
+<LINK rel="stylesheet" href="./Wi-Fi _files/index(4).php" type="text/css" media="all">
+<SCRIPT type="text/javascript">
+var skin="vector",
+stylepath="http://bits.wikimedia.org/skins-1.5",
+wgUrlProtocols="http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|irc\\:\\/\\/|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|news\\:|svn\\:\\/\\/",
+wgArticlePath="/wiki/$1",
+wgScriptPath="/w",
+wgScriptExtension=".php",
+wgScript="/w/index.php",
+wgVariantArticlePath=false,
+wgActionPaths={},
+wgServer="http://en.wikipedia.org",
+wgCanonicalNamespace="",
+wgCanonicalSpecialPageName=false,
+wgNamespaceNumber=0,
+wgPageName="Wi-Fi",
+wgTitle="Wi-Fi",
+wgAction="view",
+wgArticleId=63973,
+wgIsArticle=true,
+wgUserName=null,
+wgUserGroups=null,
+wgUserLanguage="en",
+wgContentLanguage="en",
+wgBreakFrames=false,
+wgCurRevisionId=364876674,
+wgVersion="1.16wmf4",
+wgEnableAPI=true,
+wgEnableWriteAPI=true,
+wgSeparatorTransformTable=["", ""],
+wgDigitTransformTable=["", ""],
+wgMainPageTitle="Main Page",
+wgFormattedNamespaces={"-2": "Media", "-1": "Special", "0": "", "1": "Talk", "2": "User", "3": "User talk", "4": "Wikipedia", "5": "Wikipedia talk", "6": "File", "7": "File talk", "8": "MediaWiki", "9": "MediaWiki talk", "10": "Template", "11": "Template talk", "12": "Help", "13": "Help talk", "14": "Category", "15": "Category talk", "100": "Portal", "101": "Portal talk", "108": "Book", "109": "Book talk"},
+wgNamespaceIds={"media": -2, "special": -1, "": 0, "talk": 1, "user": 2, "user_talk": 3, "wikipedia": 4, "wikipedia_talk": 5, "file": 6, "file_talk": 7, "mediawiki": 8, "mediawiki_talk": 9, "template": 10, "template_talk": 11, "help": 12, "help_talk": 13, "category": 14, "category_talk": 15, "portal": 100, "portal_talk": 101, "book": 108, "book_talk": 109, "wp": 4, "wt": 5, "image": 6, "image_talk": 7},
+wgSiteName="Wikipedia",
+wgCategories=["Articles containing potentially dated statements from 2010", "All articles containing potentially dated statements", "Articles containing potentially dated statements from 2008", "Articles containing potentially dated statements from May 2008", "Articles containing potentially dated statements from 2009", "All pages needing cleanup", "Wikipedia articles needing clarification from July 2009", "All articles with specifically-marked weasel-worded phrases", "Articles with specifically-marked weasel-worded phrases from March 2010", "All articles with unsourced statements", "Articles with unsourced statements from March 2010", "Articles containing potentially dated statements from 2007", "Articles with unsourced statements from May 2009", "Articles with unsourced statements from July 2009", "Wikipedia articles needing clarification from March 2010", "Wi-Fi"],
+wgMWSuggestTemplate="http://en.wikipedia.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest",
+wgDBname="enwiki",
+wgSearchNamespaces=[0],
+wgMWSuggestMessages=["with suggestions", "no suggestions"],
+wgRestrictionEdit=[],
+wgRestrictionMove=[],
+wgTrackingToken="8607422718f5fb1064e7d42d963969be",
+wgClickTrackingIsThrottled=true,
+wgNotice="",
+wgNoticeLocal="";
+</SCRIPT><SCRIPT src="./Wi-Fi _files/wikibits.js" type="text/javascript"></SCRIPT>
+<SCRIPT type="text/javascript" src="./Wi-Fi _files/jquery.min.js"></SCRIPT>
+<SCRIPT src="./Wi-Fi _files/ajax.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="./Wi-Fi _files/mwsuggest.js" type="text/javascript"></SCRIPT>
+<SCRIPT type="text/javascript">var wgVectorPreferences = {
+	"collapsiblenav": {
+		"enable": 1
+	},
+	"editwarning": {
+		"enable": 1
+	}
+};
+var wgVectorEnabledModules = {
+	"collapsiblenav": true,
+	"collapsibletabs": true,
+	"editwarning": true,
+	"footercleanup": false,
+	"simplesearch": true
+};</SCRIPT>
+<SCRIPT src="./Wi-Fi _files/plugins.combined.min.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="./Wi-Fi _files/ClickTracking.js" type="text/javascript"></SCRIPT>
+<SCRIPT src="./Wi-Fi _files/Vector.combined.min.js" type="text/javascript"></SCRIPT>
+<SCRIPT type="text/javascript">mw.usability.addMessages({'vector-editwarning-warning':'Leaving this page may cause you to lose any changes you have made.\nIf you are logged in, you can disable this warning in the \"Editing\" section of your preferences.','vector-simplesearch-search':'Search','vector-simplesearch-containing':'containing...'});</SCRIPT>
+<SCRIPT type="text/javascript" src="./Wi-Fi _files/centralnotice.js"></SCRIPT><STYLE type="text/css">
+#centralNotice .siteNoticeSmall{display:none;}
+#centralNotice .siteNoticeSmallAnon{display:none;}
+#centralNotice .siteNoticeSmallUser{display:none;}
+#centralNotice.collapsed .siteNoticeBig{display:none;}
+#centralNotice.collapsed .siteNoticeSmall{display:block;}
+#centralNotice.collapsed .siteNoticeSmallUser{display:block;}
+#centralNotice.collapsed .siteNoticeSmallAnon{display:block;}
+#centralNotice.anonnotice .siteNoticeSmallUser{display:none !important;}
+#centralNotice.usernotice .siteNoticeSmallAnon{display:none !important;}
+</STYLE>
+
+
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/skins-1.5/vector/csshover.htc")}</style><![endif]-->
+<SCRIPT src="./Wi-Fi _files/index(5).php" type="text/javascript"></SCRIPT><SCRIPT src="./Wi-Fi _files/index(6).php" type="text/javascript"></SCRIPT>
+
+</HEAD><BODY class="mediawiki ltr ns-0 ns-subject page-Wi-Fi skin-vector">
+		<DIV id="page-base" class="noprint"></DIV>
+		<DIV id="head-base" class="noprint"></DIV>
+		<!-- content -->
+		<DIV id="content"><DIV style="visibility: hidden; display: none; width: 602px; height: 402px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; background-color: white; position: absolute; right: 2em; top: 1em; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: gray; border-right-color: gray; border-bottom-color: gray; border-left-color: gray; z-index: 13; "><IFRAME scrolling="no" frameborder="0" style="z-index: 14; position: absolute; right: 1px; top: 1px; width: 600px; height: 400px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; "></IFRAME><IMG title="close" src="./Wi-Fi _files/Button_hide.png" style="z-index: 15; position: absolute; right: 11px; top: 9px; width: 18px; cursor: pointer; "></DIV>
+			<A id="top"></A>
+			<DIV id="mw-js-message" style="display:none;"></DIV>
+						<!-- sitenotice -->
+			<DIV id="siteNotice"><SCRIPT type="text/javascript">if (wgNotice != '') document.writeln(wgNotice);</SCRIPT></DIV>
+			<!-- /sitenotice -->
+						<!-- firstHeading -->
+			<H1 id="firstHeading" class="firstHeading">Wi-Fi</H1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<DIV id="bodyContent">
+				<!-- tagline -->
+				<H3 id="siteSub">From Wikipedia, the free encyclopedia</H3>
+				<!-- /tagline -->
+				<!-- subtitle -->
+				<DIV id="contentSub"></DIV>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<DIV id="jump-to-nav">
+					Jump to:<A href="http://en.wikipedia.org/wiki/Wi-Fi#head">navigation</A>,
+					<A href="http://en.wikipedia.org/wiki/Wi-Fi#p-search">search</A>
+				</DIV>
+				<!-- /jumpto -->
+								<!-- bodytext -->
+				<DIV class="dablink">For the radio station, see <A href="http://en.wikipedia.org/wiki/WIFI_(AM)" title="WIFI (AM)">WIFI (AM)</A>.</DIV>
+<DIV class="thumb tright">
+<DIV class="thumbinner" style="width:222px;"><A href="http://en.wikipedia.org/wiki/File:Wi-Fi_Logo.svg" class="image"><IMG alt="" src="./Wi-Fi _files/220px-Wi-Fi_Logo.svg.png" width="220" height="141" class="thumbimage"></A>
+<DIV class="thumbcaption">
+<DIV class="magnify"><A href="http://en.wikipedia.org/wiki/File:Wi-Fi_Logo.svg" class="internal" title="Enlarge"><IMG src="./Wi-Fi _files/magnify-clip.png" width="15" height="11" alt=""></A></DIV>
+Wi-Fi logo</DIV>
+</DIV>
+</DIV>
+<P><B>Wi-Fi</B> (pronounced <SPAN title="Pronunciation in the International Phonetic Alphabet (IPA)" class="IPA"><A href="http://en.wikipedia.org/wiki/Wikipedia:IPA_for_English" title="Wikipedia:IPA for English">/ˈwaɪfaɪ/</A></SPAN>) is a <A href="http://en.wikipedia.org/wiki/Trademark" title="Trademark">trademark</A> of the <A href="http://en.wikipedia.org/wiki/Wi-Fi_Alliance" title="Wi-Fi Alliance">Wi-Fi Alliance</A> that manufacturers may use to brand certified products that belong to a class of <A href="http://en.wikipedia.org/wiki/Wireless_LAN" title="Wireless LAN">wireless local area network</A> (WLAN) devices based on the <A href="http://en.wikipedia.org/wiki/IEEE_802.11" title="IEEE 802.11">IEEE 802.11</A> standards. Because of the close relationship with its underlying standard, the term <I>Wi-Fi</I> is often used as a synonym for IEEE 802.11 technology.<SUP id="cite_ref-0" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-0"><SPAN>[</SPAN>1<SPAN>]</SPAN></A></SUP><SUP id="cite_ref-1" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-1"><SPAN>[</SPAN>2<SPAN>]</SPAN></A></SUP></P>
+<P>The Wi-Fi Alliance, a global association of companies, promotes WLAN technology and certifies products if they conform to certain standards of interoperability. Not every IEEE 802.11-compliant device is submitted for certification to the Wi-Fi Alliance, sometimes because of costs associated with the certification process. The lack of the Wi-Fi logo does not necessarily imply a device is incompatible with Wi-Fi devices.</P>
+<P>As of 2010<SUP class="plainlinks noprint asof-tag update" style="display:none;"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit" class="external text" rel="nofollow">[update]</A></SUP>, IEEE 802.11 devices are installed in many <A href="http://en.wikipedia.org/wiki/Personal_computer" title="Personal computer">personal computers</A>, <A href="http://en.wikipedia.org/wiki/Video_game_console" title="Video game console">video game consoles</A>, <A href="http://en.wikipedia.org/wiki/Smartphone" title="Smartphone">smartphones</A>, <A href="http://en.wikipedia.org/wiki/Printer_(computing)" title="Printer (computing)">printers</A>, and other <A href="http://en.wikipedia.org/wiki/Peripheral" title="Peripheral">peripherals</A>, and virtually all <A href="http://en.wikipedia.org/wiki/Laptop" title="Laptop">laptop</A> or palm-sized computers.</P>
+<DIV class="thumb tright">
+<DIV class="thumbinner" style="width:302px;"><A href="http://en.wikipedia.org/wiki/File:Linksys_WRT54G_V1.jpg" class="image"><IMG alt="" src="./Wi-Fi _files/300px-Linksys_WRT54G_V1.jpg" width="300" height="225" class="thumbimage"></A>
+<DIV class="thumbcaption">
+<DIV class="magnify"><A href="http://en.wikipedia.org/wiki/File:Linksys_WRT54G_V1.jpg" class="internal" title="Enlarge"><IMG src="./Wi-Fi _files/magnify-clip.png" width="15" height="11" alt=""></A></DIV>
+-- a typical consumer-quality Wi-Fi router</DIV>
+</DIV>
+</DIV>
+<TABLE id="toc" class="toc">
+<TBODY><TR>
+<TD>
+<DIV id="toctitle">
+<H2>Contents</H2>
+ <SPAN class="toctoggle">[<A id="togglelink" class="internal" href="javascript:toggleToc()">hide</A>]</SPAN></DIV>
+<UL>
+<LI class="toclevel-1 tocsection-1"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Uses"><SPAN class="tocnumber">1</SPAN> <SPAN class="toctext">Uses</SPAN></A>
+<UL>
+<LI class="toclevel-2 tocsection-2"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Internet_access"><SPAN class="tocnumber">1.1</SPAN> <SPAN class="toctext">Internet access</SPAN></A>
+<UL>
+<LI class="toclevel-3 tocsection-3"><A href="http://en.wikipedia.org/wiki/Wi-Fi#City-wide_Wi-Fi"><SPAN class="tocnumber">1.1.1</SPAN> <SPAN class="toctext">City-wide Wi-Fi</SPAN></A></LI>
+<LI class="toclevel-3 tocsection-4"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Campus-wide_Wi-Fi"><SPAN class="tocnumber">1.1.2</SPAN> <SPAN class="toctext">Campus-wide Wi-Fi</SPAN></A></LI>
+</UL>
+</LI>
+<LI class="toclevel-2 tocsection-5"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Direct_computer-to-computer_communications"><SPAN class="tocnumber">1.2</SPAN> <SPAN class="toctext">Direct computer-to-computer communications</SPAN></A></LI>
+<LI class="toclevel-2 tocsection-6"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Future_directions"><SPAN class="tocnumber">1.3</SPAN> <SPAN class="toctext">Future directions</SPAN></A></LI>
+</UL>
+</LI>
+<LI class="toclevel-1 tocsection-7"><A href="http://en.wikipedia.org/wiki/Wi-Fi#History"><SPAN class="tocnumber">2</SPAN> <SPAN class="toctext">History</SPAN></A></LI>
+<LI class="toclevel-1 tocsection-8"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Wi-Fi_certification"><SPAN class="tocnumber">3</SPAN> <SPAN class="toctext">Wi-Fi certification</SPAN></A></LI>
+<LI class="toclevel-1 tocsection-9"><A href="http://en.wikipedia.org/wiki/Wi-Fi#The_Wi-Fi_name"><SPAN class="tocnumber">4</SPAN> <SPAN class="toctext">The Wi-Fi name</SPAN></A></LI>
+<LI class="toclevel-1 tocsection-10"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Advantages_and_challenges"><SPAN class="tocnumber">5</SPAN> <SPAN class="toctext">Advantages and challenges</SPAN></A>
+<UL>
+<LI class="toclevel-2 tocsection-11"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Operational_advantages"><SPAN class="tocnumber">5.1</SPAN> <SPAN class="toctext">Operational advantages</SPAN></A></LI>
+<LI class="toclevel-2 tocsection-12"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Limitations"><SPAN class="tocnumber">5.2</SPAN> <SPAN class="toctext">Limitations</SPAN></A></LI>
+<LI class="toclevel-2 tocsection-13"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Reach"><SPAN class="tocnumber">5.3</SPAN> <SPAN class="toctext">Reach</SPAN></A></LI>
+<LI class="toclevel-2 tocsection-14"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Mobility"><SPAN class="tocnumber">5.4</SPAN> <SPAN class="toctext">Mobility</SPAN></A></LI>
+<LI class="toclevel-2 tocsection-15"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Data_security_risks"><SPAN class="tocnumber">5.5</SPAN> <SPAN class="toctext">Data security risks</SPAN></A></LI>
+<LI class="toclevel-2 tocsection-16"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Population"><SPAN class="tocnumber">5.6</SPAN> <SPAN class="toctext">Population</SPAN></A></LI>
+<LI class="toclevel-2 tocsection-17"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Channel_pollution"><SPAN class="tocnumber">5.7</SPAN> <SPAN class="toctext">Channel pollution</SPAN></A></LI>
+</UL>
+</LI>
+<LI class="toclevel-1 tocsection-18"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Hardware"><SPAN class="tocnumber">6</SPAN> <SPAN class="toctext">Hardware</SPAN></A>
+<UL>
+<LI class="toclevel-2 tocsection-19"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Standard_devices"><SPAN class="tocnumber">6.1</SPAN> <SPAN class="toctext">Standard devices</SPAN></A></LI>
+<LI class="toclevel-2 tocsection-20"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Distance_records"><SPAN class="tocnumber">6.2</SPAN> <SPAN class="toctext">Distance records</SPAN></A></LI>
+<LI class="toclevel-2 tocsection-21"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Embedded_systems"><SPAN class="tocnumber">6.3</SPAN> <SPAN class="toctext">Embedded systems</SPAN></A></LI>
+</UL>
+</LI>
+<LI class="toclevel-1 tocsection-22"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Network_security"><SPAN class="tocnumber">7</SPAN> <SPAN class="toctext">Network security</SPAN></A>
+<UL>
+<LI class="toclevel-2 tocsection-23"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Securing_methods"><SPAN class="tocnumber">7.1</SPAN> <SPAN class="toctext">Securing methods</SPAN></A></LI>
+<LI class="toclevel-2 tocsection-24"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Piggybacking"><SPAN class="tocnumber">7.2</SPAN> <SPAN class="toctext">Piggybacking</SPAN></A></LI>
+</UL>
+</LI>
+<LI class="toclevel-1 tocsection-25"><A href="http://en.wikipedia.org/wiki/Wi-Fi#See_also"><SPAN class="tocnumber">8</SPAN> <SPAN class="toctext">See also</SPAN></A></LI>
+<LI class="toclevel-1 tocsection-26"><A href="http://en.wikipedia.org/wiki/Wi-Fi#References"><SPAN class="tocnumber">9</SPAN> <SPAN class="toctext">References</SPAN></A></LI>
+<LI class="toclevel-1 tocsection-27"><A href="http://en.wikipedia.org/wiki/Wi-Fi#Further_reading"><SPAN class="tocnumber">10</SPAN> <SPAN class="toctext">Further reading</SPAN></A></LI>
+<LI class="toclevel-1 tocsection-28"><A href="http://en.wikipedia.org/wiki/Wi-Fi#External_links"><SPAN class="tocnumber">11</SPAN> <SPAN class="toctext">External links</SPAN></A></LI>
+</UL>
+</TD>
+</TR>
+</TBODY></TABLE>
+<SCRIPT type="text/javascript">
+//<![CDATA[
+if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } 
+//]]>
+</SCRIPT>
+<H2><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=1" title="Edit section: Uses">edit</A>]</SPAN> <SPAN class="mw-headline" id="Uses">Uses</SPAN></H2>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=2" title="Edit section: Internet access">edit</A>]</SPAN> <SPAN class="mw-headline" id="Internet_access">Internet access</SPAN></H3>
+<DIV class="thumb tright">
+<DIV class="thumbinner" style="width:222px;"><A href="http://en.wikipedia.org/wiki/File:WIFI_Amp_Setup.JPG" class="image"><IMG alt="" src="./Wi-Fi _files/220px-WIFI_Amp_Setup.JPG" width="220" height="330" class="thumbimage"></A>
+<DIV class="thumbcaption">
+<DIV class="magnify"><A href="http://en.wikipedia.org/wiki/File:WIFI_Amp_Setup.JPG" class="internal" title="Enlarge"><IMG src="./Wi-Fi _files/magnify-clip.png" width="15" height="11" alt=""></A></DIV>
+A roof-mounted Wi-Fi antenna</DIV>
+</DIV>
+</DIV>
+<P>A Wi-Fi enabled device such as a <A href="http://en.wikipedia.org/wiki/Personal_computer" title="Personal computer">personal computer</A>, <A href="http://en.wikipedia.org/wiki/Video_game_console" title="Video game console">video game console</A>, <A href="http://en.wikipedia.org/wiki/Mobile_phone" title="Mobile phone">mobile phone</A>, <A href="http://en.wikipedia.org/wiki/Digital_audio_player" title="Digital audio player">MP3 player</A> or <A href="http://en.wikipedia.org/wiki/Personal_digital_assistant" title="Personal digital assistant">personal digital assistant</A> can connect to the <A href="http://en.wikipedia.org/wiki/Internet" title="Internet">Internet</A> when within range of a <A href="http://en.wikipedia.org/wiki/Wireless_network" title="Wireless network">wireless network</A> connected to the Internet. The coverage of one or more (interconnected) <A href="http://en.wikipedia.org/wiki/Wireless_access_point" title="Wireless access point">access points</A>&nbsp;— called <A href="http://en.wikipedia.org/wiki/Hotspot_(Wi-Fi)" title="Hotspot (Wi-Fi)">hotspots</A>&nbsp;— can comprise an area as small as a few rooms or as large as many square miles. Coverage in the larger area may depend on a group of access points with overlapping coverage. Wi-Fi technology has been used in <A href="http://en.wikipedia.org/wiki/Wireless_mesh_network" title="Wireless mesh network">wireless mesh networks</A>, for example, in London, UK.<SUP id="cite_ref-2" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-2"><SPAN>[</SPAN>3<SPAN>]</SPAN></A></SUP></P>
+<P>In addition to private use in homes and offices, Wi-Fi can provide public access at <A href="http://en.wikipedia.org/wiki/Hotspot_(Wi-Fi)" title="Hotspot (Wi-Fi)">Wi-Fi hotspots</A> provided either free-of-charge or to subscribers to various commercial services. Organizations and <A href="http://en.wikipedia.org/wiki/Business" title="Business">businesses</A> - such as those running airports, hotels and restaurants - often provide free-use hotspots to attract or assist clients. Enthusiasts or authorities who wish to provide services or even to promote <A href="http://en.wikipedia.org/wiki/Commerce" title="Commerce">business</A> in selected areas sometimes provide free Wi-Fi access. As of 2008<SUP class="plainlinks noprint asof-tag update" style="display:none;"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit" class="external text" rel="nofollow">[update]</A></SUP> more than 300 metropolitan-wide Wi-Fi (<A href="http://en.wikipedia.org/wiki/Municipal_wireless_network" title="Municipal wireless network">Muni-Fi</A>) projects had started.<SUP id="cite_ref-3" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-3"><SPAN>[</SPAN>4<SPAN>]</SPAN></A></SUP> As of May 2008<SUP class="plainlinks noprint asof-tag update" style="display:none;"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit" class="external text" rel="nofollow">[update]</A></SUP> the <A href="http://en.wikipedia.org/wiki/Czech_Republic" title="Czech Republic">Czech Republic</A> had 879 Wi-Fi based <A href="http://en.wikipedia.org/wiki/Wireless_Internet_service_provider" title="Wireless Internet service provider">Wireless Internet service providers</A>.<SUP id="cite_ref-4" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-4"><SPAN>[</SPAN>5<SPAN>]</SPAN></A></SUP><SUP id="cite_ref-5" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-5"><SPAN>[</SPAN>6<SPAN>]</SPAN></A></SUP></P>
+<P><A href="http://en.wikipedia.org/wiki/Router" title="Router">Routers</A> that incorporate a <A href="http://en.wikipedia.org/wiki/Digital_subscriber_line" title="Digital subscriber line" class="mw-redirect">digital subscriber line</A> modem or a <A href="http://en.wikipedia.org/wiki/Cable_modem" title="Cable modem">cable modem</A> and a Wi-Fi access point, often set up in homes and other premises, can provide <A href="http://en.wikipedia.org/wiki/Internet" title="Internet">Internet</A>-access and <A href="http://en.wikipedia.org/wiki/Internetworking" title="Internetworking">internetworking</A> to all devices connected (wirelessly or by cable) to them. One can also connect Wi-Fi devices in <A href="http://en.wikipedia.org/wiki/Wireless_ad_hoc_network" title="Wireless ad hoc network">ad-hoc mode</A> for client-to-client connections without a router. Wi-Fi also connects places that would traditionally not have network access, for example bathrooms, kitchens and garden sheds.</P>
+<H4><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=3" title="Edit section: City-wide Wi-Fi">edit</A>]</SPAN> <SPAN class="mw-headline" id="City-wide_Wi-Fi">City-wide Wi-Fi</SPAN></H4>
+<DIV class="rellink">Further information: <A href="http://en.wikipedia.org/wiki/Municipal_wireless_network" title="Municipal wireless network">Municipal wireless network</A></DIV>
+<TABLE class="metadata plainlinks mbox-small" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<TBODY><TR>
+<TD class="mbox-image"><A href="http://en.wikibooks.org/wiki/Special:Search/Wi-Fi" title="Search Wikibooks"><IMG alt="Search Wikibooks" src="./Wi-Fi _files/40px-Wikibooks-logo-en-noslogan.svg.png" width="40" height="40"></A></TD>
+<TD class="mbox-text" style="">Wikibooks has a book on the topic of
+<DIV style="margin-left:10px;"><I><B><A href="http://en.wikibooks.org/wiki/Nets,_Webs_and_the_Information_Infrastructure" class="extiw" title="wikibooks:Nets, Webs and the Information Infrastructure">Nets, Webs and the Information Infrastructure</A></B></I></DIV>
+</TD>
+</TR>
+</TBODY></TABLE>
+<DIV class="thumb tright">
+<DIV class="thumbinner" style="width:222px;"><A href="http://en.wikipedia.org/wiki/File:Metro_Wireless_Node.jpg" class="image"><IMG alt="" src="./Wi-Fi _files/220px-Metro_Wireless_Node.jpg" width="220" height="165" class="thumbimage"></A>
+<DIV class="thumbcaption">
+<DIV class="magnify"><A href="http://en.wikipedia.org/wiki/File:Metro_Wireless_Node.jpg" class="internal" title="Enlarge"><IMG src="./Wi-Fi _files/magnify-clip.png" width="15" height="11" alt=""></A></DIV>
+An outdoor Wi-Fi access point in Minneapolis</DIV>
+</DIV>
+</DIV>
+<DIV class="thumb tright">
+<DIV class="thumbinner" style="width:222px;"><A href="http://en.wikipedia.org/wiki/File:Toronto_WiFi.jpg" class="image"><IMG alt="" src="./Wi-Fi _files/220px-Toronto_WiFi.jpg" width="220" height="145" class="thumbimage"></A>
+<DIV class="thumbcaption">
+<DIV class="magnify"><A href="http://en.wikipedia.org/wiki/File:Toronto_WiFi.jpg" class="internal" title="Enlarge"><IMG src="./Wi-Fi _files/magnify-clip.png" width="15" height="11" alt=""></A></DIV>
+An outdoor Wi-Fi access point in Toronto</DIV>
+</DIV>
+</DIV>
+<P>In the early 2000s, many cities around the world announced plans for city-wide Wi-Fi networks. This proved to be much more difficult than their promoters initially envisioned with the result that most of these projects were either canceled or placed on indefinite hold. A few were successful, for example in 2005, <A href="http://en.wikipedia.org/wiki/Sunnyvale,_California" title="Sunnyvale, California">Sunnyvale, California</A> became the first city in the <A href="http://en.wikipedia.org/wiki/United_States" title="United States">United States</A> to offer city-wide free Wi-Fi.<SUP id="cite_ref-6" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-6"><SPAN>[</SPAN>7<SPAN>]</SPAN></A></SUP> (As of 2009<SUP class="plainlinks noprint asof-tag update" style="display:none;"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit" class="external text" rel="nofollow">[update]</A></SUP> few of the Municipal Wi-Fi firms have entered the field of <A href="http://en.wikipedia.org/wiki/Smart_grid" title="Smart grid">smart grid</A> networks.<SUP id="cite_ref-7" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-7"><SPAN>[</SPAN>8<SPAN>]</SPAN></A></SUP><SUP class="noprint Inline-Template" title="The text in the vicinity of this tag needs clarification or removal of jargon from July 2009" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify">clarification needed</A></I>]</SUP>)</P>
+<P>In May, 2010, London, UK Mayor Boris Johnson pledged London-wide Wi-Fi by 2012.<SUP id="cite_ref-8" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-8"><SPAN>[</SPAN>9<SPAN>]</SPAN></A></SUP> Both the City of London, UK<SUP id="cite_ref-9" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-9"><SPAN>[</SPAN>10<SPAN>]</SPAN></A></SUP> and Islington <SUP id="cite_ref-10" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-10"><SPAN>[</SPAN>11<SPAN>]</SPAN></A></SUP> already have extensive outdoor Wi-Fi coverage.</P>
+<H4><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=4" title="Edit section: Campus-wide Wi-Fi">edit</A>]</SPAN> <SPAN class="mw-headline" id="Campus-wide_Wi-Fi">Campus-wide Wi-Fi</SPAN></H4>
+<P><A href="http://en.wikipedia.org/wiki/Carnegie_Mellon_University" title="Carnegie Mellon University">Carnegie Mellon University</A> built the first wireless Internet network in the world at their <A href="http://en.wikipedia.org/wiki/Pittsburgh" title="Pittsburgh">Pittsburgh</A> campus in 1994,<SUP id="cite_ref-11" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-11"><SPAN>[</SPAN>12<SPAN>]</SPAN></A></SUP> long before Wi-Fi branding originated in 1999. Most campuses now have wireless Internet.</P>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=5" title="Edit section: Direct computer-to-computer communications">edit</A>]</SPAN> <SPAN class="mw-headline" id="Direct_computer-to-computer_communications">Direct computer-to-computer communications</SPAN></H3>
+<P>Wi-Fi also allows communications directly from one computer to another without the involvement of an access point. This is called the <I>ad-hoc</I> mode of Wi-Fi transmission. This <A href="http://en.wikipedia.org/wiki/Wireless_ad_hoc_network" title="Wireless ad hoc network">wireless ad-hoc network</A> mode has proven popular with <A href="http://en.wikipedia.org/wiki/Multiplayer_video_game" title="Multiplayer video game">multiplayer</A> <A href="http://en.wikipedia.org/wiki/Handheld_game_console" title="Handheld game console">handheld game consoles</A>, such as the <A href="http://en.wikipedia.org/wiki/Nintendo_DS" title="Nintendo DS">Nintendo DS</A>, <A href="http://en.wikipedia.org/wiki/Digital_camera" title="Digital camera">digital cameras</A>, and other <A href="http://en.wikipedia.org/wiki/Consumer_electronics" title="Consumer electronics">consumer electronics</A> devices.</P>
+<P>Similarly, the Wi-Fi Alliance promotes a pending specification called <I><A href="http://en.wikipedia.org/wiki/Wi-Fi_Direct" title="Wi-Fi Direct">Wi-Fi Direct</A></I> for file transfers and media sharing through a new discovery- and security-methodology.<SUP id="cite_ref-12" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-12"><SPAN>[</SPAN>13<SPAN>]</SPAN></A></SUP></P>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=6" title="Edit section: Future directions">edit</A>]</SPAN> <SPAN class="mw-headline" id="Future_directions">Future directions</SPAN></H3>
+<P>As of 2010<SUP class="plainlinks noprint asof-tag update" style="display:none;"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit" class="external text" rel="nofollow">[update]</A></SUP> Wi-Fi technology has spread widely within business and industrial sites. In business environments, just like other environments, increasing the number of Wi-Fi access points provides network redundancy, support for fast <A href="http://en.wikipedia.org/wiki/Roaming" title="Roaming">roaming</A> and increased overall network-capacity by using more channels or by defining smaller <A href="http://en.wikipedia.org/wiki/Cellular_network" title="Cellular network">cells</A>. Wi-Fi enables wireless voice-applications (<A href="http://en.wikipedia.org/wiki/Voice_over_WLAN" title="Voice over WLAN">VoWLAN</A> or WVOIP). Over the years, Wi-Fi implementations have moved toward "thin" access points, with more of the <A href="http://en.wikipedia.org/wiki/Network_intelligence" title="Network intelligence">network intelligence</A> housed in a centralized network appliance, relegating individual access points to the role of "dumb" transceivers. Outdoor applications may utilize <A href="http://en.wikipedia.org/wiki/Mesh_networking" title="Mesh networking">mesh</A> topologies. As of 2007 Wi-Fi installations can provide a secure <A href="http://en.wikipedia.org/wiki/Gateway_(telecommunications)" title="Gateway (telecommunications)">computer networking gateway</A>, <A href="http://en.wikipedia.org/wiki/Firewall_(computer)" title="Firewall (computer)" class="mw-redirect">firewall</A>, <A href="http://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol" title="Dynamic Host Configuration Protocol">DHCP</A> server, <A href="http://en.wikipedia.org/wiki/Intrusion_detection_system" title="Intrusion detection system">intrusion detection system</A>, and other functions.</P>
+<H2><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=7" title="Edit section: History">edit</A>]</SPAN> <SPAN class="mw-headline" id="History">History</SPAN></H2>
+<P>Wi-Fi uses both single-carrier <A href="http://en.wikipedia.org/wiki/Direct-sequence_spread_spectrum" title="Direct-sequence spread spectrum">direct-sequence spread spectrum</A> radio technology (part of the larger family of <A href="http://en.wikipedia.org/wiki/Spread_spectrum" title="Spread spectrum">spread spectrum</A> systems) and multi-carrier <A href="http://en.wikipedia.org/wiki/Orthogonal_frequency-division_multiplexing" title="Orthogonal frequency-division multiplexing">orthogonal frequency-division multiplexing</A> (OFDM) radio technology. The deregulation of certain radio-frequencies<SUP class="noprint Inline-Template" title="The material in the vicinity of this tag may use weasel words or too-vague attribution. from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Avoid_weasel_words" title="Wikipedia:Avoid weasel words" class="mw-redirect">by whom?</A></I>]</SUP> for unlicensed spread spectrum deployment enabled the development of Wi-Fi products, Wi-Fi's onetime competitor <A href="http://en.wikipedia.org/wiki/HomeRF" title="HomeRF">HomeRF</A>, <A href="http://en.wikipedia.org/wiki/Bluetooth" title="Bluetooth">Bluetooth</A>, and many other products such as some types of cordless telephones.</P>
+<P>In the US, the <A href="http://en.wikipedia.org/wiki/Federal_Communications_Commission" title="Federal Communications Commission">FCC</A> first made unlicensed spread spectrum available in rules adopted on May 9, 1985.<SUP id="cite_ref-13" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-13"><SPAN>[</SPAN>14<SPAN>]</SPAN></A></SUP> Many other countries later copied or adapted these FCC regulations, enabling use of this technology in all major countries.<SUP class="Template-Fact" title="This claim needs references to reliable sources from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">citation needed</A></I>]</SUP> The FCC action was proposed by Michael Marcus of the FCC staff in 1980 and the subsequent regulatory action took 5 more years. It was part of a broader proposal to allow civil use of spread spectrum technology and was opposed at the time by mainstream equipment manufacturers and many radio system operators.<SUP id="cite_ref-14" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-14"><SPAN>[</SPAN>15<SPAN>]</SPAN></A></SUP></P>
+<P>Wi-Fi technology has its origins in a 1985 ruling by the U.S. Federal Communications Commission that released several bands of the radio spectrum for unlicensed use.<SUP id="cite_ref-15" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-15"><SPAN>[</SPAN>16<SPAN>]</SPAN></A></SUP> In 1991 <A href="http://en.wikipedia.org/wiki/NCR_Corporation" title="NCR Corporation">NCR Corporation</A>/<A href="http://en.wikipedia.org/wiki/AT%26T" title="AT&amp;T">AT&amp;T</A> (later <A href="http://en.wikipedia.org/wiki/Lucent_Technologies" title="Lucent Technologies">Lucent Technologies</A> and <A href="http://en.wikipedia.org/wiki/Agere_Systems" title="Agere Systems">Agere Systems</A>) invented the precursor to 802.11 / Wi-Fi in <A href="http://en.wikipedia.org/wiki/Nieuwegein" title="Nieuwegein">Nieuwegein</A>, the Netherlands. The inventors initially intended to use the technology for cashier systems; the first wireless products were brought on the market under the name <A href="http://en.wikipedia.org/wiki/WaveLAN" title="WaveLAN">WaveLAN</A> with raw data rates of 1 Mbit/s and 2 Mbit/s. <A href="http://en.wikipedia.org/wiki/Vic_Hayes" title="Vic Hayes">Vic Hayes</A>, who held the chair of IEEE 802.11 for 10 years and has been called the "father of Wi-Fi" was involved in designing the initial 802.11b and 802.11a standards within the <A href="http://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers" title="Institute of Electrical and Electronics Engineers">IEEE</A>.</P>
+<P>Europe leads overall in uptake of wireless-phone technology,<SUP class="Template-Fact" title="This claim needs references to reliable sources from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">citation needed</A></I>]</SUP> but the US leads in Wi-Fi systems partly because it leads in laptop computer usage. As of July 2005, there were at least 68,643 Wi-Fi locations worldwide, a majority in the US, followed by the UK and Germany. The US and Western Europe have about 80% of the worldwide Wi-Fi users. Plans are underway in metropolitan areas of the US to provide free public Wi-Fi coverage. Even with these large numbers and more expansion, the extent of actual Wi-Fi usage is lower than expected. <A href="http://en.wikipedia.org/wiki/Forrester_Research" title="Forrester Research">Jupiter Research</A> found that only 15% of people have used Wi-Fi and only 6% in a public place.<SUP id="cite_ref-16" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-16"><SPAN>[</SPAN>17<SPAN>]</SPAN></A></SUP></P>
+<H2><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=8" title="Edit section: Wi-Fi certification">edit</A>]</SPAN> <SPAN class="mw-headline" id="Wi-Fi_certification">Wi-Fi certification</SPAN></H2>
+<DIV class="rellink relarticle mainarticle">Main article: <A href="http://en.wikipedia.org/wiki/Wi-Fi_Alliance" title="Wi-Fi Alliance">Wi-Fi Alliance</A></DIV>
+<P>Wi-Fi technology builds on IEEE 802.11 standards. The <A href="http://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers" title="Institute of Electrical and Electronics Engineers">IEEE</A> develops and publishes these standards, but does not test equipment for compliance with them. The non-profit Wi-Fi Alliance formed in 1999 to fill this void — to establish and enforce standards for interoperability and <A href="http://en.wikipedia.org/wiki/Backward_compatibility" title="Backward compatibility">backward compatibility</A>, and to promote wireless local-area-network technology. As of 2009<SUP class="plainlinks noprint asof-tag update" style="display:none;"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit" class="external text" rel="nofollow">[update]</A></SUP> the Wi-Fi Alliance consisted of more than 300 companies from around the world.<SUP id="cite_ref-17" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-17"><SPAN>[</SPAN>18<SPAN>]</SPAN></A></SUP><SUP id="cite_ref-18" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-18"><SPAN>[</SPAN>19<SPAN>]</SPAN></A></SUP> Manufacturers with membership in the Wi-Fi Alliance, whose products pass the certification process, gain the right to mark those products with the Wi-Fi logo.</P>
+<P>Specifically, the certification process requires conformance to the IEEE 802.11 radio standards, the <A href="http://en.wikipedia.org/wiki/Wi-Fi_Protected_Access" title="Wi-Fi Protected Access">WPA and WPA2</A> security standards, and the <A href="http://en.wikipedia.org/wiki/Extensible_Authentication_Protocol" title="Extensible Authentication Protocol">EAP</A> authentication standard. Certification may optionally include tests of IEEE 802.11 draft standards, interaction with cellular-phone technology in converged devices, and features relating to security set-up, multimedia, and power-saving.<SUP id="cite_ref-19" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-19"><SPAN>[</SPAN>20<SPAN>]</SPAN></A></SUP></P>
+<H2><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=9" title="Edit section: The Wi-Fi name">edit</A>]</SPAN> <SPAN class="mw-headline" id="The_Wi-Fi_name">The <I>Wi-Fi</I> name</SPAN></H2>
+<P>The term <I>Wi-Fi</I> suggests <I>Wireless Fidelity</I>, resembling the long-established audio-equipment classification term <I>high fidelity</I> (in use since the 1930s<SUP id="cite_ref-20" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-20"><SPAN>[</SPAN>21<SPAN>]</SPAN></A></SUP>) or <I><A href="http://en.wikipedia.org/wiki/High_fidelity" title="High fidelity">Hi-Fi</A></I> (used since 1950<SUP id="cite_ref-21" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-21"><SPAN>[</SPAN>22<SPAN>]</SPAN></A></SUP>). Even the Wi-Fi Alliance itself has often used the phrase <I>Wireless Fidelity</I> in its press releases<SUP id="cite_ref-22" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-22"><SPAN>[</SPAN>23<SPAN>]</SPAN></A></SUP><SUP id="cite_ref-23" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-23"><SPAN>[</SPAN>24<SPAN>]</SPAN></A></SUP> and documents;<SUP id="cite_ref-wifi_securing_2003_24-0" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-wifi_securing_2003-24"><SPAN>[</SPAN>25<SPAN>]</SPAN></A></SUP><SUP id="cite_ref-wifi_deployment_2004_25-0" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-wifi_deployment_2004-25"><SPAN>[</SPAN>26<SPAN>]</SPAN></A></SUP> the term also appears in a white paper on Wi-Fi from <A href="http://en.wikipedia.org/wiki/Information_Technology_Association_of_America" title="Information Technology Association of America">ITAA</A>.<SUP id="cite_ref-26" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-26"><SPAN>[</SPAN>27<SPAN>]</SPAN></A></SUP> However, based on Phil Belanger's<SUP id="cite_ref-27" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-27"><SPAN>[</SPAN>28<SPAN>]</SPAN></A></SUP> statement, the term Wi-Fi was never supposed to mean anything at all.<SUP id="cite_ref-boing_28-0" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-boing-28"><SPAN>[</SPAN>29<SPAN>]</SPAN></A></SUP><SUP id="cite_ref-wifi_debunked_29-0" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-wifi_debunked-29"><SPAN>[</SPAN>30<SPAN>]</SPAN></A></SUP></P>
+<P>The term <I>Wi-Fi</I>, first used commercially in August 1999,<SUP id="cite_ref-30" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-30"><SPAN>[</SPAN>31<SPAN>]</SPAN></A></SUP> was coined by a brand-consulting firm called <A href="http://en.wikipedia.org/wiki/Interbrand" title="Interbrand">Interbrand</A> Corporation that the Alliance had hired to determine a name that was "a little catchier than 'IEEE 802.11b Direct Sequence'".<SUP id="cite_ref-31" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-31"><SPAN>[</SPAN>32<SPAN>]</SPAN></A></SUP><SUP id="cite_ref-boing_28-1" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-boing-28"><SPAN>[</SPAN>29<SPAN>]</SPAN></A></SUP><SUP id="cite_ref-wifi_debunked_29-1" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-wifi_debunked-29"><SPAN>[</SPAN>30<SPAN>]</SPAN></A></SUP> Belanger also stated that Interbrand invented <I>Wi-Fi</I> as a <A href="http://en.wikipedia.org/wiki/Pun" title="Pun">play on words</A> with <I><A href="http://en.wikipedia.org/wiki/High_fidelity" title="High fidelity">Hi-Fi</A></I>, and also created the <A href="http://en.wikipedia.org/wiki/Yin_and_yang" title="Yin and yang">yin-yang</A>-style Wi-Fi logo.</P>
+<P>The Wi-Fi Alliance initially used an <A href="http://en.wikipedia.org/wiki/Advertising_slogan" title="Advertising slogan">advertising slogan</A> for Wi-Fi, "The Standard for Wireless Fidelity",<SUP id="cite_ref-boing_28-2" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-boing-28"><SPAN>[</SPAN>29<SPAN>]</SPAN></A></SUP> but later removed the phrase from their marketing. Despite this, some documents from the Alliance dated 2003 and 2004 still contain the term <I>Wireless Fidelity</I>.<SUP id="cite_ref-wifi_securing_2003_24-1" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-wifi_securing_2003-24"><SPAN>[</SPAN>25<SPAN>]</SPAN></A></SUP><SUP id="cite_ref-wifi_deployment_2004_25-1" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-wifi_deployment_2004-25"><SPAN>[</SPAN>26<SPAN>]</SPAN></A></SUP> There was no official statement related to the dropping of the term.</P>
+<P>The yin-yang logo indicates the certification of a product for <A href="http://en.wikipedia.org/wiki/Interoperability" title="Interoperability">interoperability</A>.<SUP id="cite_ref-wifi_securing_2003_24-2" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-wifi_securing_2003-24"><SPAN>[</SPAN>25<SPAN>]</SPAN></A></SUP></P>
+<H2><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=10" title="Edit section: Advantages and challenges">edit</A>]</SPAN> <SPAN class="mw-headline" id="Advantages_and_challenges">Advantages and challenges</SPAN></H2>
+<DIV class="thumb tright">
+<DIV class="thumbinner" style="width:222px;"><A href="http://en.wikipedia.org/wiki/File:WiFi-detector.jpg" class="image"><IMG alt="" src="./Wi-Fi _files/220px-WiFi-detector.jpg" width="220" height="165" class="thumbimage"></A>
+<DIV class="thumbcaption">
+<DIV class="magnify"><A href="http://en.wikipedia.org/wiki/File:WiFi-detector.jpg" class="internal" title="Enlarge"><IMG src="./Wi-Fi _files/magnify-clip.png" width="15" height="11" alt=""></A></DIV>
+A keychain-size Wi-Fi detector</DIV>
+</DIV>
+</DIV>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=11" title="Edit section: Operational advantages">edit</A>]</SPAN> <SPAN class="mw-headline" id="Operational_advantages">Operational advantages</SPAN></H3>
+<P>Wi-Fi allows the deployment of <A href="http://en.wikipedia.org/wiki/Local_area_network" title="Local area network">local area networks</A> (LANs) without wires for client devices, typically reducing the costs of network deployment and expansion. Spaces where cables cannot be run, such as outdoor areas and historical buildings, can host wireless LANs.</P>
+<P>As of 2010<SUP class="plainlinks noprint asof-tag update" style="display:none;"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit" class="external text" rel="nofollow">[update]</A></SUP> manufacturers are building wireless network adapters into most laptops. The price of <A href="http://en.wikipedia.org/wiki/Chipset" title="Chipset">chipsets</A> for Wi-Fi continues to drop, making it an economical networking option included in even more devices.<SUP class="Template-Fact" title="This claim needs references to reliable sources from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">citation needed</A></I>]</SUP> Wi-Fi has become widespread in corporate infrastructures.<SUP class="Template-Fact" title="This claim needs references to reliable sources from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">citation needed</A></I>]</SUP></P>
+<P>Different competitive brands of access points and client network-interfaces can inter-operate at a basic level of service. Products designated as "Wi-Fi Certified" by the Wi-Fi Alliance are backwards compatible. "Wi-Fi" designates a globally operative set of standards: unlike <A href="http://en.wikipedia.org/wiki/Mobile_phone" title="Mobile phone">mobile phones</A>, any standard Wi-Fi device will work anywhere in the world.</P>
+<P>Wi-Fi operates in more than 220,000 public hotspots and in tens of millions of homes and corporate and university campuses worldwide.<SUP id="cite_ref-32" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-32"><SPAN>[</SPAN>33<SPAN>]</SPAN></A></SUP> The current version of <A href="http://en.wikipedia.org/wiki/Wi-Fi_Protected_Access" title="Wi-Fi Protected Access">Wi-Fi Protected Access</A> encryption (WPA2) as of 2010<SUP class="plainlinks noprint asof-tag update" style="display:none;"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit" class="external text" rel="nofollow">[update]</A></SUP> is considered<SUP class="noprint Inline-Template" title="The material in the vicinity of this tag may use weasel words or too-vague attribution. from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Avoid_weasel_words" title="Wikipedia:Avoid weasel words" class="mw-redirect">by whom?</A></I>]</SUP> secure, provided users employ a strong <A href="http://en.wikipedia.org/wiki/Passphrase" title="Passphrase">passphrase</A>. New protocols for <A href="http://en.wikipedia.org/wiki/Quality_of_service" title="Quality of service">quality-of-service</A> (<A href="http://en.wikipedia.org/wiki/Wireless_Multimedia_Extensions" title="Wireless Multimedia Extensions">WMM</A>) make Wi-Fi more suitable for latency-sensitive applications (such as voice and video); and power saving mechanisms (WMM Power Save) improve battery operation.</P>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=12" title="Edit section: Limitations">edit</A>]</SPAN> <SPAN class="mw-headline" id="Limitations">Limitations</SPAN></H3>
+<P>Spectrum assignments and operational limitations do not operate consistently worldwide. Most of Europe allows for an additional 2 channels beyond those permitted in the U.S. for the 2.4 GHz band. (1–13 vs. 1–11); Japan has one more on top of that (1–14). Europe, as of 2007<SUP class="plainlinks noprint asof-tag update" style="display:none;"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit" class="external text" rel="nofollow">[update]</A></SUP>, was essentially homogeneous in this respect. A very confusing aspect is the fact that a Wi-Fi signal actually occupies five channels in the 2.4 GHz band resulting in only three non-overlapped channels in the U.S.: 1, 6, 11, and three or four in Europe: 1, 5, 9, 13. <A href="http://en.wikipedia.org/wiki/Equivalent_isotropically_radiated_power" title="Equivalent isotropically radiated power">Equivalent isotropically radiated power</A> (EIRP) in the EU is limited to 20 <A href="http://en.wikipedia.org/wiki/DBm" title="DBm">dBm</A> (100&nbsp;mW).</P>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=13" title="Edit section: Reach">edit</A>]</SPAN> <SPAN class="mw-headline" id="Reach">Reach</SPAN></H3>
+<DIV class="rellink boilerplate seealso">See also: <A href="http://en.wikipedia.org/wiki/Long-range_Wi-Fi" title="Long-range Wi-Fi">Long-range Wi-Fi</A></DIV>
+<P>Wi-Fi networks have limited range. A typical <A href="http://en.wikipedia.org/wiki/Wireless_router" title="Wireless router">wireless router</A> using <A href="http://en.wikipedia.org/wiki/IEEE_802.11#802.11b" title="IEEE 802.11">802.11b</A> or <A href="http://en.wikipedia.org/wiki/IEEE_802.11#802.11g" title="IEEE 802.11">802.11g</A> with a stock antenna might have a range of 32 m (120 ft) indoors and 95 m (300 ft) outdoors. The new IEEE 802.11n however, can exceed that range by more than two times.<SUP class="Template-Fact" title="This claim needs references to reliable sources from May 2009" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">citation needed</A></I>]</SUP> Range also varies with frequency band. Wi-Fi in the 2.4 GHz frequency block has slightly better range than Wi-Fi in the 5 GHz frequency block. Outdoor ranges - through use of directional antennas - can be improved with antennas located several kilometres or more from their base. In general, the maximum amount of power that a Wi-Fi device can transmit is limited by local regulations, such as <A href="http://en.wikipedia.org/wiki/Title_47_CFR_Part_15" title="Title 47 CFR Part 15">FCC Part 15</A><SUP id="cite_ref-33" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-33"><SPAN>[</SPAN>34<SPAN>]</SPAN></A></SUP> in USA.</P>
+<P>Wi-Fi performance decreases roughly quadratically<SUP class="Template-Fact" title="This claim needs references to reliable sources from July 2009" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">citation needed</A></I>]</SUP> as distance increases at constant radiation levels.</P>
+<P>Due to reach requirements for wireless LAN applications, Wi-Fi has as fairly high power-consumption compared to some other standards. Technologies such as <A href="http://en.wikipedia.org/wiki/Bluetooth" title="Bluetooth">Bluetooth</A> (designed to support wireless <A href="http://en.wikipedia.org/wiki/Personal_area_network" title="Personal area network">PAN</A> applications) provide a much shorter <A href="http://en.wikipedia.org/wiki/Radio_propagation" title="Radio propagation">propagation</A> range of &lt;10m<SUP id="cite_ref-34" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-34"><SPAN>[</SPAN>35<SPAN>]</SPAN></A></SUP> and so in general have a lower power-consumption. Other low-power technologies such as <A href="http://en.wikipedia.org/wiki/ZigBee" title="ZigBee">ZigBee</A> have fairly long range, but much lower data rate. The high power-consumption of Wi-Fi makes battery life in mobile devices a concern.</P>
+<P>Researchers have developed a number of "no new wires" technologies to provide alternatives to Wi-Fi for applications in which Wi-Fi's indoor range is not adequate and where installing new wires (such as <A href="http://en.wikipedia.org/wiki/Category_5_cable" title="Category 5 cable">CAT-5</A>) is not possible or cost-effective. For example, the <A href="http://en.wikipedia.org/wiki/ITU-T" title="ITU-T">ITU-T</A> <A href="http://en.wikipedia.org/wiki/G.hn" title="G.hn">G.hn</A> standard for high speed <A href="http://en.wikipedia.org/wiki/Local_area_network" title="Local area network">Local area networks</A> uses existing home wiring (<A href="http://en.wikipedia.org/wiki/Ethernet_over_coax" title="Ethernet over coax">coaxial cables</A>, phone lines and <A href="http://en.wikipedia.org/wiki/Power_line_communication" title="Power line communication">power lines</A>). Although <A href="http://en.wikipedia.org/wiki/G.hn" title="G.hn">G.hn</A> does not provide some of the advantages of Wi-Fi (such as mobility or outdoor use), it's designed<SUP class="noprint Inline-Template" title="The material in the vicinity of this tag may use weasel words or too-vague attribution. from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Avoid_weasel_words" title="Wikipedia:Avoid weasel words" class="mw-redirect">by whom?</A></I>]</SUP> for applications (such as <A href="http://en.wikipedia.org/wiki/IPTV" title="IPTV">IPTV</A> distribution) where indoor range is more important than mobility.</P>
+<P>Due to the complex nature of <A href="http://en.wikipedia.org/wiki/Radio_propagation" title="Radio propagation">radio propagation</A> at typical Wi-Fi frequencies, particularly the effects of signal reflection off trees and buildings, algorithms can only approximately predict Wi-Fi signal strength for any given area in relation to a transmitter.<SUP id="cite_ref-35" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-35"><SPAN>[</SPAN>36<SPAN>]</SPAN></A></SUP> This effect does not apply equally to <A href="http://en.wikipedia.org/wiki/Long-range_Wi-Fi" title="Long-range Wi-Fi">long-range Wi-Fi</A>, since longer links typically operate from towers that broadcast above the surrounding foliage.</P>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=14" title="Edit section: Mobility">edit</A>]</SPAN> <SPAN class="mw-headline" id="Mobility">Mobility</SPAN></H3>
+<DIV class="thumb tright">
+<DIV class="thumbinner" style="width:222px;"><A href="http://en.wikipedia.org/wiki/File:Wimax.svg" class="image"><IMG alt="" src="./Wi-Fi _files/220px-Wimax.svg.png" width="220" height="145" class="thumbimage"></A>
+<DIV class="thumbcaption">
+<DIV class="magnify"><A href="http://en.wikipedia.org/wiki/File:Wimax.svg" class="internal" title="Enlarge"><IMG src="./Wi-Fi _files/magnify-clip.png" width="15" height="11" alt=""></A></DIV>
+Speed vs. Mobility of wireless systems: Wi-Fi, <A href="http://en.wikipedia.org/wiki/High_Speed_Packet_Access" title="High Speed Packet Access">HSPA</A>, <A href="http://en.wikipedia.org/wiki/Universal_Mobile_Telecommunications_System" title="Universal Mobile Telecommunications System">UMTS</A>, <A href="http://en.wikipedia.org/wiki/GSM" title="GSM">GSM</A></DIV>
+</DIV>
+</DIV>
+<P>The very limited practical range of Wi-Fi essentially confines mobile use to such applications as inventory-taking machines in warehouses or in retail spaces, <A href="http://en.wikipedia.org/wiki/Barcode" title="Barcode">barcode</A>-reading devices at check-out stands, or receiving/shipping stations. Mobile use of Wi-Fi over wider ranges is limited to move, use,<SUP class="noprint Inline-Template" title="The text in the vicinity of this tag needs clarification or removal of jargon from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Please_clarify" title="Wikipedia:Please clarify">clarification needed</A></I>]</SUP> as for instance in an automobile moving from one hotspot to another (known as <A href="http://en.wikipedia.org/wiki/Wardriving" title="Wardriving">Wardriving</A>). Other wireless technologies are more suitable as illustrated in the graphic.</P>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=15" title="Edit section: Data security risks">edit</A>]</SPAN> <SPAN class="mw-headline" id="Data_security_risks">Data security risks</SPAN></H3>
+<P>The most common wireless <A href="http://en.wikipedia.org/wiki/Encryption" title="Encryption">encryption</A>-standard, <A href="http://en.wikipedia.org/wiki/Wired_Equivalent_Privacy" title="Wired Equivalent Privacy">Wired Equivalent Privacy</A> or WEP, has been <A href="http://en.wikipedia.org/wiki/Fluhrer,_Mantin_and_Shamir_attack" title="Fluhrer, Mantin and Shamir attack">shown</A> to be easily breakable even when correctly configured. <A href="http://en.wikipedia.org/wiki/Wi-Fi_Protected_Access" title="Wi-Fi Protected Access">Wi-Fi Protected Access</A> (WPA and WPA2) encryption, which became available in devices in 2003, aimed to solve this problem. Wi-Fi <A href="http://en.wikipedia.org/wiki/Wireless_access_point" title="Wireless access point">access points</A> typically default to an encryption-free (<I>open</I>) mode. Novice users benefit from a zero-configuration device that works out-of-the-box, but this default does not enable any <A href="http://en.wikipedia.org/wiki/Wireless_security#Counteracting_risks" title="Wireless security">wireless security</A>, providing open wireless access to a LAN. To turn security on requires the user to configure the device, usually via a software <A href="http://en.wikipedia.org/wiki/Graphical_user_interface" title="Graphical user interface">graphical user interface</A> (GUI). On unencrypted Wi-Fi networks connecting devices can monitor and record data (including personal information), but such networks may use other means of protection, such as a <A href="http://en.wikipedia.org/wiki/Virtual_private_network" title="Virtual private network">virtual private network</A> or secure <A href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">Hypertext Transfer Protocol</A> (<A href="http://en.wikipedia.org/wiki/HTTP_Secure" title="HTTP Secure">HTTPS</A>) and <A href="http://en.wikipedia.org/wiki/Transport_Layer_Security" title="Transport Layer Security">Transport Layer Security</A>.</P>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=16" title="Edit section: Population">edit</A>]</SPAN> <SPAN class="mw-headline" id="Population">Population</SPAN></H3>
+<P>Many 2.4 GHz <A href="http://en.wikipedia.org/wiki/IEEE_802.11#802.11b" title="IEEE 802.11">802.11b</A> and <A href="http://en.wikipedia.org/wiki/IEEE_802.11#802.11g" title="IEEE 802.11">802.11g</A> access-points default to the same channel on initial startup, contributing to congestion on certain channels. To change the channel of operation for an access point requires the user to configure the device.</P>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=17" title="Edit section: Channel pollution">edit</A>]</SPAN> <SPAN class="mw-headline" id="Channel_pollution">Channel pollution</SPAN></H3>
+<DIV class="rellink boilerplate seealso">For more details on this topic, see <A href="http://en.wikipedia.org/wiki/Electromagnetic_interference_at_2.4_GHz" title="Electromagnetic interference at 2.4 GHz">Electromagnetic interference at 2.4 GHz</A>.</DIV>
+<P><A href="http://en.wikipedia.org/wiki/Market" title="Market">Market forces</A> may drive a process of standardization. Interoperability issues between non-Wi-Fi brands or proprietary deviations from the standard can still disrupt connections or lower throughput speeds on all devices within range, including any non-Wi-Fi or proprietary product. Moreover, the usage of the <A href="http://en.wikipedia.org/wiki/ISM_band" title="ISM band">ISM band</A> in the 2.45 GHz range is also common to <A href="http://en.wikipedia.org/wiki/Bluetooth" title="Bluetooth">Bluetooth</A>, <A href="http://en.wikipedia.org/wiki/Personal_area_network" title="Personal area network">WPAN</A>-<A href="http://en.wikipedia.org/wiki/Chirp_spread_spectrum" title="Chirp spread spectrum">CSS</A>, <A href="http://en.wikipedia.org/wiki/ZigBee" title="ZigBee">ZigBee</A>, and any new system will take its share.</P>
+<P>Wi-Fi pollution, or an excessive number of access points in the area, especially on the same or neighboring channel, can prevent access and interfere with other devices' use of other access points, caused by overlapping channels in the 802.11g/b spectrum, as well as with decreased <A href="http://en.wikipedia.org/wiki/Signal-to-noise_ratio" title="Signal-to-noise ratio">signal-to-noise ratio</A> (SNR) between access points. This can become a problem in high-density areas, such as large apartment complexes or office buildings with many Wi-Fi access points. Additionally, other devices use the 2.4 GHz band: microwave ovens, security cameras, <A href="http://en.wikipedia.org/wiki/ZigBee" title="ZigBee">ZigBee</A> devices, <A href="http://en.wikipedia.org/wiki/Bluetooth" title="Bluetooth">Bluetooth</A> devices and (in some countries) <A href="http://en.wikipedia.org/wiki/Amateur_radio" title="Amateur radio">Amateur radio</A>, <A href="http://en.wikipedia.org/wiki/Video_sender" title="Video sender">video senders</A>, cordless phones and <A href="http://en.wikipedia.org/wiki/Baby_monitor" title="Baby monitor">baby monitors</A>, all of which can cause significant additional interference. It is also an issue when municipalities<SUP id="cite_ref-36" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-36"><SPAN>[</SPAN>37<SPAN>]</SPAN></A></SUP> or other large entities (such as universities) seek to provide large area coverage. This openness is also important to the success and widespread use of 2.4 GHz Wi-Fi.</P>
+<H2><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=18" title="Edit section: Hardware">edit</A>]</SPAN> <SPAN class="mw-headline" id="Hardware">Hardware</SPAN></H2>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=19" title="Edit section: Standard devices">edit</A>]</SPAN> <SPAN class="mw-headline" id="Standard_devices">Standard devices</SPAN></H3>
+<DIV class="thumb tright">
+<DIV class="thumbinner" style="width:252px;"><A href="http://en.wikipedia.org/wiki/File:RouterBoard_112_with_U.FL-RSMA_pigtail_and_R52_miniPCI_Wi-Fi_card.jpg" class="image"><IMG alt="" src="./Wi-Fi _files/250px-RouterBoard_112_with_U.FL-RSMA_pigtail_and_R52_miniPCI_Wi-Fi_card.jpg" width="250" height="139" class="thumbimage"></A>
+<DIV class="thumbcaption">
+<DIV class="magnify"><A href="http://en.wikipedia.org/wiki/File:RouterBoard_112_with_U.FL-RSMA_pigtail_and_R52_miniPCI_Wi-Fi_card.jpg" class="internal" title="Enlarge"><IMG src="./Wi-Fi _files/magnify-clip.png" width="15" height="11" alt=""></A></DIV>
+An <A href="http://en.wikipedia.org/wiki/Embedded_system" title="Embedded system">embedded</A> RouterBoard 112 with <A href="http://en.wikipedia.org/wiki/Hirose_U.FL" title="Hirose U.FL">U.FL</A>-<A href="http://en.wikipedia.org/wiki/SMA_connector" title="SMA connector">RSMA</A> pigtail and R52 <A href="http://en.wikipedia.org/wiki/Conventional_PCI" title="Conventional PCI">mini PCI</A> Wi-Fi card widely used by <A href="http://en.wikipedia.org/wiki/Wireless" title="Wireless">wireless</A> <A href="http://en.wikipedia.org/wiki/Internet" title="Internet">Internet</A> service providers (<A href="http://en.wikipedia.org/wiki/Wireless_Internet_service_provider" title="Wireless Internet service provider">WISPs</A>) in the <A href="http://en.wikipedia.org/wiki/Czech_Republic" title="Czech Republic">Czech Republic</A></DIV>
+</DIV>
+</DIV>
+<DIV class="thumb tright">
+<DIV class="thumbinner" style="width:222px;"><A href="http://en.wikipedia.org/wiki/File:3GN_.jpg" class="image"><IMG alt="" src="./Wi-Fi _files/220px-3GN_.jpg" width="220" height="165" class="thumbimage"></A>
+<DIV class="thumbcaption">
+<DIV class="magnify"><A href="http://en.wikipedia.org/wiki/File:3GN_.jpg" class="internal" title="Enlarge"><IMG src="./Wi-Fi _files/magnify-clip.png" width="15" height="11" alt=""></A></DIV>
+OSBRiDGE 3GN - <A href="http://en.wikipedia.org/wiki/IEEE_802.11n-2009" title="IEEE 802.11n-2009">802.11n</A> Access Point and <A href="http://en.wikipedia.org/wiki/High-Speed_Downlink_Packet_Access" title="High-Speed Downlink Packet Access">UMTS/GSM</A> Gateway in one device</DIV>
+</DIV>
+</DIV>
+<DIV class="thumb tright">
+<DIV class="thumbinner" style="width:222px;"><A href="http://en.wikipedia.org/wiki/File:Wireless_adaptor_USB.jpg" class="image"><IMG alt="" src="./Wi-Fi _files/220px-Wireless_adaptor_USB.jpg" width="220" height="100" class="thumbimage"></A>
+<DIV class="thumbcaption">
+<DIV class="magnify"><A href="http://en.wikipedia.org/wiki/File:Wireless_adaptor_USB.jpg" class="internal" title="Enlarge"><IMG src="./Wi-Fi _files/magnify-clip.png" width="15" height="11" alt=""></A></DIV>
+<A href="http://en.wikipedia.org/wiki/Universal_Serial_Bus" title="Universal Serial Bus">USB</A> wireless adapter</DIV>
+</DIV>
+</DIV>
+<P>A <A href="http://en.wikipedia.org/wiki/Wireless_access_point" title="Wireless access point">wireless access point</A> (WAP) connects a group of wireless devices to an adjacent wired <A href="http://en.wikipedia.org/wiki/Local_area_network" title="Local area network">LAN</A>. An access point resembles a <A href="http://en.wikipedia.org/wiki/Ethernet_hub" title="Ethernet hub">network hub</A>, relaying <A href="http://en.wikipedia.org/wiki/Data_(computing)" title="Data (computing)">data</A> between connected wireless devices in addition to a (usually) single connected wired device, most often an ethernet hub or switch, allowing wireless devices to communicate with other wired devices.</P>
+<P><A href="http://en.wikipedia.org/wiki/Wireless_network_interface_card" title="Wireless network interface card">Wireless adapters</A> allow devices to connect to a wireless network. These adapters connect to devices using various external or internal interconnects such as <A href="http://en.wikipedia.org/wiki/Conventional_PCI" title="Conventional PCI">PCI</A>, <A href="http://en.wikipedia.org/wiki/Conventional_PCI" title="Conventional PCI">miniPCI</A>, <A href="http://en.wikipedia.org/wiki/Universal_Serial_Bus" title="Universal Serial Bus">USB</A>, <A href="http://en.wikipedia.org/wiki/ExpressCard" title="ExpressCard">ExpressCard</A>, Cardbus and <A href="http://en.wikipedia.org/wiki/PC_Card" title="PC Card">PC Card</A>. As of 2010<SUP class="plainlinks noprint asof-tag update" style="display:none;"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit" class="external text" rel="nofollow">[update]</A></SUP>, most newer laptop computers come equipped with internal adapters. Internal cards are generally more difficult to install.</P>
+<P>Wireless <A href="http://en.wikipedia.org/wiki/Router" title="Router">routers</A> integrate a Wireless Access Point, ethernet <A href="http://en.wikipedia.org/wiki/Network_switch" title="Network switch">switch</A>, and internal router firmware application that provides <A href="http://en.wikipedia.org/wiki/Internet_Protocol" title="Internet Protocol">IP</A> <A href="http://en.wikipedia.org/wiki/Routing" title="Routing">routing</A>, <A href="http://en.wikipedia.org/wiki/Network_address_translation" title="Network address translation">NAT</A>, and <A href="http://en.wikipedia.org/wiki/Domain_Name_System" title="Domain Name System">DNS</A> forwarding through an integrated <A href="http://en.wikipedia.org/wiki/Wide_area_network" title="Wide area network">WAN</A>-interface. A wireless router allows wired and wireless ethernet LAN devices to connect to a (usually) single WAN device such as a <A href="http://en.wikipedia.org/wiki/Cable_modem" title="Cable modem">cable modem</A> or a <A href="http://en.wikipedia.org/wiki/DSL_modem" title="DSL modem">DSL modem</A>. A wireless router allows all three devices, mainly the access point and router, to be configured through one central utility. This utility is usually an integrated <A href="http://en.wikipedia.org/wiki/Web_server" title="Web server">web server</A> that is accessible to wired and wireless LAN clients and often optionally to WAN clients. This utility may also be an application that is run on a desktop computer such as Apple's <A href="http://en.wikipedia.org/wiki/AirPort" title="AirPort">AirPort</A>.</P>
+<P>Wireless <A href="http://en.wikipedia.org/wiki/Bridging_(networking)" title="Bridging (networking)">network bridges</A> connect a wired network to a wireless network. A bridge differs from an access point: an access point connects wireless devices to a wired network at the <A href="http://en.wikipedia.org/wiki/OSI_model#Layer_2:_Data_Link_Layer" title="OSI model">data-link layer</A>. Two wireless bridges may be used to connect two wired networks over a wireless link, useful in situations where a wired connection may be unavailable, such as between two separate homes.</P>
+<P>Wireless range-extenders or wireless repeaters can extend the range of an existing wireless network. Strategically placed range-extenders can elongate a signal area or allow for the signal area to reach around barriers such as those pertaining in L-shaped corridors. Wireless devices connected through repeaters will suffer from an increased latency for each hop. Additionally, a wireless device connected to any of the repeaters in the chain will have a throughput limited by the "weakest link" between the two nodes in the chain from which the connection originates to where the connection ends.</P>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=20" title="Edit section: Distance records">edit</A>]</SPAN> <SPAN class="mw-headline" id="Distance_records">Distance records</SPAN></H3>
+<P>Distance records (using non-standard devices) include 382&nbsp;km (237 mi) in June 2007, held by Ermanno Pietrosemoli and EsLaRed of Venezuela, transferring about 3 MB of data between the mountain-tops of <A href="http://en.wikipedia.org/wiki/Pico_El_%C3%81guila" title="Pico El &Aacute;guila">El Águila</A> and Platillon.<SUP id="cite_ref-37" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-37"><SPAN>[</SPAN>38<SPAN>]</SPAN></A></SUP><SUP id="cite_ref-38" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-38"><SPAN>[</SPAN>39<SPAN>]</SPAN></A></SUP> The <A href="http://en.wikipedia.org/wiki/Swedish_National_Space_Board" title="Swedish National Space Board">Swedish Space Agency</A> transferred data 310&nbsp;km (193 mi), using 6 watt amplifiers to reach an overhead stratospheric balloon.<SUP id="cite_ref-39" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-39"><SPAN>[</SPAN>40<SPAN>]</SPAN></A></SUP></P>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=21" title="Edit section: Embedded systems">edit</A>]</SPAN> <SPAN class="mw-headline" id="Embedded_systems">Embedded systems</SPAN></H3>
+<DIV class="thumb tright">
+<DIV class="thumbinner" style="width:222px;"><A href="http://en.wikipedia.org/wiki/File:Ezurio_wism2_small.jpg" class="image"><IMG alt="" src="./Wi-Fi _files/220px-Ezurio_wism2_small.jpg" width="220" height="213" class="thumbimage"></A>
+<DIV class="thumbcaption">
+<DIV class="magnify"><A href="http://en.wikipedia.org/wiki/File:Ezurio_wism2_small.jpg" class="internal" title="Enlarge"><IMG src="./Wi-Fi _files/magnify-clip.png" width="15" height="11" alt=""></A></DIV>
+Embedded serial-to-Wi-Fi module</DIV>
+</DIV>
+</DIV>
+<P>Increasingly in the last few years (particularly as of 2007<SUP class="plainlinks noprint asof-tag update" style="display:none;"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit" class="external text" rel="nofollow">[update]</A></SUP>), embedded Wi-Fi modules have become available that incorporate a real-time operating system and provide a simple means of wirelessly enabling any device which has and communicates via a serial port.<SUP id="cite_ref-40" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-40"><SPAN>[</SPAN>41<SPAN>]</SPAN></A></SUP> This allows the design of simple monitoring devices. An example is a portable ECG device monitoring a patient at home. This Wi-Fi-enabled device can communicate via the Internet. <SUP id="cite_ref-41" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-41"><SPAN>[</SPAN>42<SPAN>]</SPAN></A></SUP></P>
+<P>These Wi-Fi modules are designed<SUP class="noprint Inline-Template" title="The material in the vicinity of this tag may use weasel words or too-vague attribution. from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Avoid_weasel_words" title="Wikipedia:Avoid weasel words" class="mw-redirect">by whom?</A></I>]</SUP> so that implementers need only minimal Wi-Fi knowledge to provide Wi-Fi connectivity for their products.</P>
+<H2><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=22" title="Edit section: Network security">edit</A>]</SPAN> <SPAN class="mw-headline" id="Network_security">Network security</SPAN></H2>
+<P>The main issue with wireless network security is its simplified access to the network compared to traditional wired networks such as <A href="http://en.wikipedia.org/wiki/Ethernet" title="Ethernet">ethernet</A>.<SUP class="Template-Fact" title="This claim needs references to reliable sources from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">citation needed</A></I>]</SUP> With wired networking one must either gain access to a building (physically connecting into the internal network) or break through an external <A href="http://en.wikipedia.org/wiki/Firewall_(computing)" title="Firewall (computing)">firewall</A>. Most business networks protect sensitive data and systems by attempting to disallow external access. Thus gaining wireless connectivity provides an attack vector, particularly if the network lacks encryption or if the intruder can defeat any encryption.<SUP id="cite_ref-42" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-42"><SPAN>[</SPAN>43<SPAN>]</SPAN></A></SUP></P>
+<P>Attackers who have gained access to a Wi-Fi network can use DNS spoofing attacks very effectively against any other user of the network, because they can see the DNS requests made, and often respond with a spoofed answer before the queried DNS server has a chance to reply.<SUP id="cite_ref-43" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-43"><SPAN>[</SPAN>44<SPAN>]</SPAN></A></SUP></P>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=23" title="Edit section: Securing methods">edit</A>]</SPAN> <SPAN class="mw-headline" id="Securing_methods">Securing methods</SPAN></H3>
+<P>A common but unproductive measure to deter unauthorized users involves suppressing the access point's <A href="http://en.wikipedia.org/wiki/Service_set_(802.11_network)" title="Service set (802.11 network)">SSID</A> broadcast, "hiding" it. This is ineffective as a security method because the SSID is broadcast in the clear in response to a client SSID query. Another unproductive method is to only allow computers with known <A href="http://en.wikipedia.org/wiki/MAC_address" title="MAC address">MAC addresses</A> to join the network.<SUP id="cite_ref-44" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-44"><SPAN>[</SPAN>45<SPAN>]</SPAN></A></SUP> But intruders can defeat this method because they can often (though not always) set MAC addresses with minimal effort (<A href="http://en.wikipedia.org/wiki/MAC_spoofing" title="MAC spoofing">MAC spoofing</A>). If eavesdroppers have the ability to change their MAC address, then they may join the network by <A href="http://en.wikipedia.org/wiki/Spoofing_attack" title="Spoofing attack">spoofing</A> an authorized address.</P>
+<P><A href="http://en.wikipedia.org/wiki/Wired_Equivalent_Privacy" title="Wired Equivalent Privacy">Wired Equivalent Privacy</A> (WEP) encryption was designed<SUP class="noprint Inline-Template" title="The material in the vicinity of this tag may use weasel words or too-vague attribution. from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Avoid_weasel_words" title="Wikipedia:Avoid weasel words" class="mw-redirect">by whom?</A></I>]</SUP> to protect against casual snooping, but is now deprecated. Tools such as <A href="http://en.wikipedia.org/wiki/AirSnort" title="AirSnort">AirSnort</A> or <A href="http://en.wikipedia.org/wiki/Aircrack-ng" title="Aircrack-ng">Aircrack-ng</A> can quickly recover WEP encryption keys. Once it has seen 5-10 million encrypted packets, AirSnort can determine the encryption password in under a second;<SUP id="cite_ref-45" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-45"><SPAN>[</SPAN>46<SPAN>]</SPAN></A></SUP> newer tools such as aircrack-ptw can use <A href="http://en.wikipedia.org/wiki/RC4#Klein.27s_Attack" title="RC4">Klein's attack</A> to crack a WEP key with a 50% success rate using only 40,000 packets.</P>
+<P>To counteract this in 2002, the <A href="http://en.wikipedia.org/wiki/Wi-Fi_Alliance" title="Wi-Fi Alliance">Wi-Fi Alliance</A> approved <A href="http://en.wikipedia.org/wiki/Wi-Fi_Protected_Access" title="Wi-Fi Protected Access">Wi-Fi Protected Access</A> (WPA) which uses <A href="http://en.wikipedia.org/wiki/Temporal_Key_Integrity_Protocol" title="Temporal Key Integrity Protocol">TKIP</A> as a stopgap solution for legacy equipment. Though more secure than WEP, it has outlived its designed lifetime and has known attack vectors.</P>
+<P>In 2004, the IEEE ratified the full <A href="http://en.wikipedia.org/wiki/IEEE_802.11i-2004" title="IEEE 802.11i-2004">IEEE 802.11i</A> (<A href="http://en.wikipedia.org/wiki/WPA2" title="WPA2" class="mw-redirect">WPA2</A>) encryption standards. If used with a <A href="http://en.wikipedia.org/wiki/IEEE_802.1X" title="IEEE 802.1X">802.1X</A> server or in <A href="http://en.wikipedia.org/wiki/Pre-shared_key" title="Pre-shared key">pre-shared key</A> mode with a <A href="http://en.wikipedia.org/wiki/Password_strength" title="Password strength">strong and uncommon passphrase</A> WPA2 is still considered<SUP class="noprint Inline-Template" title="The material in the vicinity of this tag may use weasel words or too-vague attribution. from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Avoid_weasel_words" title="Wikipedia:Avoid weasel words" class="mw-redirect">by whom?</A></I>]</SUP> secure, as of 2009<SUP class="plainlinks noprint asof-tag update" style="display:none;"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit" class="external text" rel="nofollow">[update]</A></SUP>.</P>
+<H3><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=24" title="Edit section: Piggybacking">edit</A>]</SPAN> <SPAN class="mw-headline" id="Piggybacking">Piggybacking</SPAN></H3>
+<DIV class="rellink relarticle mainarticle">Main article: <A href="http://en.wikipedia.org/wiki/Piggybacking_(internet_access)" title="Piggybacking (internet access)" class="mw-redirect">Piggybacking (internet access)</A></DIV>
+<P>Piggybacking refers to access to a wireless Internet connection by bringing one's own computer within the range of another's wireless connection, and using that service without the subscriber's explicit permission or knowledge.</P>
+<P>During the early popular adoption of <A href="http://en.wikipedia.org/wiki/IEEE_802.11" title="IEEE 802.11">802.11</A>, providing open access points for anyone within range to use was encouraged<SUP class="noprint Inline-Template" title="The material in the vicinity of this tag may use weasel words or too-vague attribution. from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Avoid_weasel_words" title="Wikipedia:Avoid weasel words" class="mw-redirect">by whom?</A></I>]</SUP> to cultivate <A href="http://en.wikipedia.org/wiki/Wireless_community_network" title="Wireless community network">wireless community networks</A>,<SUP id="cite_ref-46" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-46"><SPAN>[</SPAN>47<SPAN>]</SPAN></A></SUP> particularly since people on average use only a fraction of their downstream bandwidth at any given time.</P>
+<P>Recreational logging and mapping of other people's access points has become known as <A href="http://en.wikipedia.org/wiki/Wardriving" title="Wardriving">wardriving</A>. It is also common for people to use open (unencrypted) Wi-Fi networks as a free service, termed <A href="http://en.wikipedia.org/wiki/Piggybacking_(internet_access)" title="Piggybacking (internet access)" class="mw-redirect">piggybacking</A>. Indeed, many access points are intentionally installed without security turned on so that they can be used as a free service. Providing access to one's Internet connection in this fashion may breach the Terms of Service or contract with the <A href="http://en.wikipedia.org/wiki/Internet_service_provider" title="Internet service provider">ISP</A>. These activities do not result in sanctions in most jurisdictions; however, legislation and <A href="http://en.wikipedia.org/wiki/Case_law" title="Case law">case law</A> differ considerably across the world. A proposal to leave <A href="http://en.wikipedia.org/wiki/Graffiti" title="Graffiti">graffiti</A> describing available services was called<SUP class="noprint Inline-Template" title="The material in the vicinity of this tag may use weasel words or too-vague attribution. from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Avoid_weasel_words" title="Wikipedia:Avoid weasel words" class="mw-redirect">by whom?</A></I>]</SUP> <A href="http://en.wikipedia.org/wiki/Warchalking" title="Warchalking">warchalking</A>. A <A href="http://en.wikipedia.org/wiki/Florida" title="Florida">Florida</A> court case determined that owner laziness was not to be a valid excuse.<SUP id="cite_ref-47" class="reference"><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_note-47"><SPAN>[</SPAN>48<SPAN>]</SPAN></A></SUP></P>
+<P>Piggybacking often occurs unintentionally, most access points are configured<SUP class="noprint Inline-Template" title="The material in the vicinity of this tag may use weasel words or too-vague attribution. from March 2010" style="white-space:nowrap;">[<I><A href="http://en.wikipedia.org/wiki/Wikipedia:Avoid_weasel_words" title="Wikipedia:Avoid weasel words" class="mw-redirect">by whom?</A></I>]</SUP> without encryption by default, and operating systems such as <A href="http://en.wikipedia.org/wiki/Windows_XP" title="Windows XP">Windows XP SP2</A>, <A href="http://en.wikipedia.org/wiki/Mac_OS_X" title="Mac OS X">Mac OS X</A> or <A href="http://en.wikipedia.org/wiki/Ubuntu_(operating_system)" title="Ubuntu (operating system)">Ubuntu Linux</A> may be configured to automatically connect to any available wireless network. A user who happens to start up a laptop in the vicinity of an access point may find the computer has joined the network without any visible indication. Moreover, a user intending to join one network may instead end up on another one if the latter has a stronger signal. In combination with automatic discovery of other network resources (see <A href="http://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol" title="Dynamic Host Configuration Protocol">DHCP</A> and <A href="http://en.wikipedia.org/wiki/Zero_configuration_networking" title="Zero configuration networking">Zeroconf</A>) this could possibly lead wireless users to send sensitive data to the wrong middle-man when seeking a destination (<I>see <A href="http://en.wikipedia.org/wiki/Man-in-the-middle_attack" title="Man-in-the-middle attack">Man-in-the-middle attack</A></I>). For example, a user could inadvertently use an insecure network to log in to a <A href="http://en.wikipedia.org/wiki/Website" title="Website">website</A>, thereby making the login credentials available to anyone listening, if the website uses an insecure protocol such as <A href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" title="Hypertext Transfer Protocol">HTTP</A>.</P>
+<H2><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=25" title="Edit section: See also">edit</A>]</SPAN> <SPAN class="mw-headline" id="See_also">See also</SPAN></H2>
+<UL>
+<LI><A href="http://en.wikipedia.org/wiki/List_of_WLAN_channels" title="List of WLAN channels">List of WLAN channels</A></LI>
+<LI><A href="http://en.wikipedia.org/wiki/San_Francisco_Digital_Inclusion_Strategy" title="San Francisco Digital Inclusion Strategy">San Francisco Digital Inclusion Strategy</A></LI>
+<LI><A href="http://en.wikipedia.org/wiki/Wi-Fi_operating_system_support" title="Wi-Fi operating system support">Wi-Fi operating system support</A></LI>
+<LI><A href="http://en.wikipedia.org/wiki/WiMAX" title="WiMAX">WiMAX</A></LI>
+<LI><A href="http://en.wikipedia.org/wiki/Wireless_electronic_devices_and_health" title="Wireless electronic devices and health">Wireless electronic devices and health</A></LI>
+</UL>
+<H2><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=26" title="Edit section: References">edit</A>]</SPAN> <SPAN class="mw-headline" id="References">References</SPAN></H2>
+<DIV class="references-small references-column-count references-column-count-2" style="-moz-column-count:2; column-count:2;">
+<OL class="references">
+<LI id="cite_note-0"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-0">^</A></B> <SPAN class="citation web"><A href="http://www.webopedia.com/TERM/W/Wi_Fi.html" class="external text" rel="nofollow">"Wi-Fi"</A><SPAN class="printonly">. <A href="http://www.webopedia.com/TERM/W/Wi_Fi.html" class="external free" rel="nofollow">http://www.webopedia.com/TERM/W/Wi_Fi.html</A></SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Wi-Fi&amp;rft.atitle=&amp;rft_id=http%3A%2F%2Fwww.webopedia.com%2FTERM%2FW%2FWi_Fi.html&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-1"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-1">^</A></B> <SPAN class="citation web"><A href="http://www.techpluto.com/wifi-info/" class="external text" rel="nofollow">"Basic Facts About Wi-Fi and its Advancement"</A><SPAN class="printonly">. <A href="http://www.techpluto.com/wifi-info/" class="external free" rel="nofollow">http://www.techpluto.com/wifi-info/</A></SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Basic+Facts+About+Wi-Fi+and+its+Advancement&amp;rft.atitle=&amp;rft_id=http%3A%2F%2Fwww.techpluto.com%2Fwifi-info%2F&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-2"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-2">^</A></B> <SPAN class="citation news"><A href="http://news.bbc.co.uk/2/hi/technology/6577307.stm" class="external text" rel="nofollow">"Switch on for Square Mile wi-fi"</A>. news.bbc.co.uk. 2007-04-23<SPAN class="printonly">. <A href="http://news.bbc.co.uk/2/hi/technology/6577307.stm" class="external free" rel="nofollow">http://news.bbc.co.uk/2/hi/technology/6577307.stm</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2007-11-08</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Switch+on+for+Square+Mile+wi-fi&amp;rft.atitle=&amp;rft.date=2007-04-23&amp;rft.pub=news.bbc.co.uk&amp;rft_id=http%3A%2F%2Fnews.bbc.co.uk%2F2%2Fhi%2Ftechnology%2F6577307.stm&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-3"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-3">^</A></B> <SPAN class="citation web"><A href="http://www.muniwireless.com/initiatives/2008/01/02/7483/" class="external text" rel="nofollow">"MuniWireless&nbsp;» City Initiatives Directory"</A>. www.muniwireless.com<SPAN class="printonly">. <A href="http://www.muniwireless.com/initiatives/2008/01/02/7483/" class="external free" rel="nofollow">http://www.muniwireless.com/initiatives/2008/01/02/7483/</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-03-12</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=MuniWireless+%C2%BB+City+Initiatives+Directory&amp;rft.atitle=&amp;rft.pub=www.muniwireless.com&amp;rft_id=http%3A%2F%2Fwww.muniwireless.com%2Finitiatives%2F2008%2F01%2F02%2F7483%2F&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-4"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-4">^</A></B> <SPAN class="citation web"><A href="http://translate.google.com/translate?u=http%3A%2F%2Fwww.internetprovsechny.cz%2Fwifi-poskytovatele.php&hl=cs&ie=UTF8&sl=cs&tl=en" class="external text" rel="nofollow">"Wi-Fi: Poskytovatelé bezdrátového připojení"</A>. internetprovsechny.cz<SPAN class="printonly">. <A href="http://translate.google.com/translate?u=http%3A%2F%2Fwww.internetprovsechny.cz%2Fwifi-poskytovatele.php&hl=cs&ie=UTF8&sl=cs&tl=en" class="external free" rel="nofollow">http://translate.google.com/translate?u=http%3A%2F%2Fwww.internetprovsechny.cz%2Fwifi-poskytovatele.php&amp;hl=cs&amp;ie=UTF8&amp;sl=cs&amp;tl=en</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-03-17</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Wi-Fi%3A+Poskytovatel%C3%A9+bezdr%C3%A1tov%C3%A9ho+p%C5%99ipojen%C3%AD&amp;rft.atitle=&amp;rft.pub=internetprovsechny.cz&amp;rft_id=http%3A%2F%2Ftranslate.google.com%2Ftranslate%3Fu%3Dhttp%253A%252F%252Fwww.internetprovsechny.cz%252Fwifi-poskytovatele.php%26hl%3Dcs%26ie%3DUTF8%26sl%3Dcs%26tl%3Den&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-5"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-5">^</A></B> <SPAN class="citation web"><A href="http://translate.google.com/translate?u=http%3A%2F%2Fwww.bezdratovepripojeni.cz&hl=cs&ie=UTF8&sl=cs&tl=en" class="external text" rel="nofollow">"Bezdrátové připojení k internetu"</A>. bezdratovepripojeni.cz<SPAN class="printonly">. <A href="http://translate.google.com/translate?u=http%3A%2F%2Fwww.bezdratovepripojeni.cz&hl=cs&ie=UTF8&sl=cs&tl=en" class="external free" rel="nofollow">http://translate.google.com/translate?u=http%3A%2F%2Fwww.bezdratovepripojeni.cz&amp;hl=cs&amp;ie=UTF8&amp;sl=cs&amp;tl=en</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-05-18</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Bezdr%C3%A1tov%C3%A9+p%C5%99ipojen%C3%AD+k+internetu&amp;rft.atitle=&amp;rft.pub=bezdratovepripojeni.cz&amp;rft_id=http%3A%2F%2Ftranslate.google.com%2Ftranslate%3Fu%3Dhttp%253A%252F%252Fwww.bezdratovepripojeni.cz%26hl%3Dcs%26ie%3DUTF8%26sl%3Dcs%26tl%3Den&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-6"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-6">^</A></B> <SPAN class="citation web"><A href="http://www.unstrung.com/document.asp?doc_id=85119&WT.svl=wire1_1" class="external text" rel="nofollow">"Sunnyvale Uses MetroFi"</A>. unstrung.com<SPAN class="printonly">. <A href="http://www.unstrung.com/document.asp?doc_id=85119&WT.svl=wire1_1" class="external free" rel="nofollow">http://www.unstrung.com/document.asp?doc_id=85119&amp;WT.svl=wire1_1</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-07-16</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Sunnyvale+Uses+MetroFi&amp;rft.atitle=&amp;rft.pub=unstrung.com&amp;rft_id=http%3A%2F%2Fwww.unstrung.com%2Fdocument.asp%3Fdoc_id%3D85119%26WT.svl%3Dwire1_1&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-7"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-7">^</A></B> <SPAN class="citation web"><A href="http://gigaom.com/2009/05/28/muni-wi-fi-firms-find-new-life-in-smart-grid/" class="external text" rel="nofollow">"Muni Wi-Fi Firms Find New Life In Smart Grid"</A>. GigaOm<SPAN class="printonly">. <A href="http://gigaom.com/2009/05/28/muni-wi-fi-firms-find-new-life-in-smart-grid/" class="external free" rel="nofollow">http://gigaom.com/2009/05/28/muni-wi-fi-firms-find-new-life-in-smart-grid/</A></SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Muni+Wi-Fi+Firms+Find+New+Life+In+Smart+Grid&amp;rft.atitle=&amp;rft.pub=GigaOm&amp;rft_id=http%3A%2F%2Fgigaom.com%2F2009%2F05%2F28%2Fmuni-wi-fi-firms-find-new-life-in-smart-grid%2F&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-8"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-8">^</A></B> <SPAN class="citation news"><A href="http://news.bbc.co.uk/2/hi/uk_news/england/london/8692103.stm" class="external text" rel="nofollow">"London-wide wi-fi by 2012 pledge"</A>. <I>BBC News</I>. 2010-05-19<SPAN class="printonly">. <A href="http://news.bbc.co.uk/2/hi/uk_news/england/london/8692103.stm" class="external free" rel="nofollow">http://news.bbc.co.uk/2/hi/uk_news/england/london/8692103.stm</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2010-05-19</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.genre=article&amp;rft.atitle=London-wide+wi-fi+by+2012+pledge&amp;rft.jtitle=BBC+News&amp;rft.date=2010-05-19&amp;rft_id=http%3A%2F%2Fnews.bbc.co.uk%2F2%2Fhi%2Fuk_news%2Fengland%2Flondon%2F8692103.stm&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-9"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-9">^</A></B> <SPAN class="citation news"><A href="http://www.govtech.com/dc/118717" class="external text" rel="nofollow">"City of London Fires Up Europe's Most Advanced Wi-Fi Network"</A>. www.govtech.com<SPAN class="printonly">. <A href="http://www.govtech.com/dc/118717" class="external free" rel="nofollow">http://www.govtech.com/dc/118717</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2007-05-14</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=City+of+London+Fires+Up+Europe%27s+Most+Advanced+Wi-Fi+Network&amp;rft.atitle=&amp;rft.pub=www.govtech.com&amp;rft_id=http%3A%2F%2Fwww.govtech.com%2Fdc%2F118717&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-10"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-10">^</A></B> <SPAN class="citation news"><A href="http://www.zdnet.co.uk/news/networking/2005/04/18/london-gets-a-mile-of-free-wi-fi-39195421/" class="external text" rel="nofollow">"London gets a mile of free Wi-Fi"</A>. .zdnet.co.uk<SPAN class="printonly">. <A href="http://www.zdnet.co.uk/news/networking/2005/04/18/london-gets-a-mile-of-free-wi-fi-39195421/" class="external free" rel="nofollow">http://www.zdnet.co.uk/news/networking/2005/04/18/london-gets-a-mile-of-free-wi-fi-39195421/</A></SPAN><SPAN class="reference-accessdate">. Retrieved 200-04-18</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=London+gets+a+mile+of+free+Wi-Fi&amp;rft.atitle=&amp;rft.pub=.zdnet.co.uk&amp;rft_id=http%3A%2F%2Fwww.zdnet.co.uk%2Fnews%2Fnetworking%2F2005%2F04%2F18%2Flondon-gets-a-mile-of-free-wi-fi-39195421%2F&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-11"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-11">^</A></B> <SPAN class="citation web"><A href="http://www.cmu.edu/homepage/computing/2009/summer/wi-fi-origins.shtml" class="external text" rel="nofollow">"Wi-Fi Origins"</A><SPAN class="printonly">. <A href="http://www.cmu.edu/homepage/computing/2009/summer/wi-fi-origins.shtml" class="external free" rel="nofollow">http://www.cmu.edu/homepage/computing/2009/summer/wi-fi-origins.shtml</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-07-16</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Wi-Fi+Origins&amp;rft.atitle=&amp;rft_id=http%3A%2F%2Fwww.cmu.edu%2Fhomepage%2Fcomputing%2F2009%2Fsummer%2Fwi-fi-origins.shtml&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-12"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-12">^</A></B> <SPAN class="citation web"><A href="http://www.networkworld.com/news/2009/101409-wi-fi-direct.html?hpg1=bn" class="external text" rel="nofollow">"Wi-Fi Direct allows device-to-device links"</A><SPAN class="printonly">. <A href="http://www.networkworld.com/news/2009/101409-wi-fi-direct.html?hpg1=bn" class="external free" rel="nofollow">http://www.networkworld.com/news/2009/101409-wi-fi-direct.html?hpg1=bn</A></SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Wi-Fi+Direct+allows+device-to-device+links&amp;rft.atitle=&amp;rft_id=http%3A%2F%2Fwww.networkworld.com%2Fnews%2F2009%2F101409-wi-fi-direct.html%3Fhpg1%3Dbn&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-13"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-13">^</A></B> <SPAN class="citation web"><A href="http://www.marcus-spectrum.com/documents/81413RO.txt" class="external text" rel="nofollow">"Authorization of Spread Spectrum Systems Under Parts 15 and 90 of the FCC Rules and Regulations"</A> (TXT). Federal Communications Commission. June 18, 1985<SPAN class="printonly">. <A href="http://www.marcus-spectrum.com/documents/81413RO.txt" class="external free" rel="nofollow">http://www.marcus-spectrum.com/documents/81413RO.txt</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2007-08-31</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Authorization+of+Spread+Spectrum+Systems+Under+Parts+15+and+90+of+the+FCC+Rules+and+Regulations&amp;rft.atitle=&amp;rft.date=June+18%2C+1985&amp;rft.pub=Federal+Communications+Commission&amp;rft_id=http%3A%2F%2Fwww.marcus-spectrum.com%2Fdocuments%2F81413RO.txt&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-14"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-14">^</A></B> <SPAN class="citation web"><A href="http://www.iep.gmu.edu/UnlicensedWireless.php" class="external text" rel="nofollow">"The Genesis of Unlicensed Wireless Policy"</A>. George Mason University. April 4, 2008<SPAN class="printonly">. <A href="http://www.iep.gmu.edu/UnlicensedWireless.php" class="external free" rel="nofollow">http://www.iep.gmu.edu/UnlicensedWireless.php</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-04-20</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=The+Genesis+of+Unlicensed+Wireless+Policy&amp;rft.atitle=&amp;rft.date=April+4%2C+2008&amp;rft.pub=George+Mason+University&amp;rft_id=http%3A%2F%2Fwww.iep.gmu.edu%2FUnlicensedWireless.php&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-15"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-15">^</A></B> <SPAN class="citation web"><A href="http://www.britannica.com/EBchecked/topic/1473553/Wi-Fi" class="external text" rel="nofollow">"http://www.britannica.com/EBchecked/topic/1473553/Wi-Fi"</A> (TXT). Encyclopædia Britannica.<SPAN class="printonly">. <A href="http://www.britannica.com/EBchecked/topic/1473553/Wi-Fi" class="external free" rel="nofollow">http://www.britannica.com/EBchecked/topic/1473553/Wi-Fi</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2010-02-3</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=http%3A%2F%2Fwww.britannica.com%2FEBchecked%2Ftopic%2F1473553%2FWi-Fi&amp;rft.atitle=&amp;rft.pub=Encyclop%C3%A6dia+Britannica.&amp;rft_id=http%3A%2F%2Fwww.britannica.com%2FEBchecked%2Ftopic%2F1473553%2FWi-Fi&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-16"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-16">^</A></B> Castells, Manuel, Mireia Fernández- Ardévol, Jack Qiu, and Araba Sey. Mobile Communication and Society. Cambridge, MA: MIT Press, 2007. 27-28. Print.</LI>
+<LI id="cite_note-17"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-17">^</A></B> <SPAN class="citation web"><A href="http://www.wi-fi.org/organization.php" class="external text" rel="nofollow">"Wi-Fi Alliance: Organization"</A>. www.wi-fi.org<SPAN class="printonly">. <A href="http://www.wi-fi.org/organization.php" class="external free" rel="nofollow">http://www.wi-fi.org/organization.php</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2009-10-22</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Wi-Fi+Alliance%3A+Organization&amp;rft.atitle=&amp;rft.pub=www.wi-fi.org&amp;rft_id=http%3A%2F%2Fwww.wi-fi.org%2Forganization.php&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-18"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-18">^</A></B> <SPAN class="citation web"><A href="http://www.wi-fi.org/wp/wifi-alliance-certification/" class="external text" rel="nofollow">"Wi-Fi Alliance: White Papers"</A>. www.wi-fi.org<SPAN class="printonly">. <A href="http://www.wi-fi.org/wp/wifi-alliance-certification/" class="external free" rel="nofollow">http://www.wi-fi.org/wp/wifi-alliance-certification/</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2009-10-22</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Wi-Fi+Alliance%3A+White+Papers&amp;rft.atitle=&amp;rft.pub=www.wi-fi.org&amp;rft_id=http%3A%2F%2Fwww.wi-fi.org%2Fwp%2Fwifi-alliance-certification%2F&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-19"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-19">^</A></B> <SPAN class="citation web"><A href="http://www.wi-fi.org/certification_programs.php" class="external text" rel="nofollow">"Wi-Fi Alliance: Programs"</A>. www.wi-fi.org<SPAN class="printonly">. <A href="http://www.wi-fi.org/certification_programs.php" class="external free" rel="nofollow">http://www.wi-fi.org/certification_programs.php</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2009-10-22</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Wi-Fi+Alliance%3A+Programs&amp;rft.atitle=&amp;rft.pub=www.wi-fi.org&amp;rft_id=http%3A%2F%2Fwww.wi-fi.org%2Fcertification_programs.php&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-20"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-20">^</A></B> <SPAN class="citation book"><I><A href="http://en.wikipedia.org/wiki/Oxford_English_Dictionary" title="Oxford English Dictionary">Oxford English Dictionary</A></I> (2 ed.). Oxford: <A href="http://en.wikipedia.org/wiki/Oxford_University_Press" title="Oxford University Press">Oxford University Press</A>. 1989. <A href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</A>&nbsp;<A href="http://en.wikipedia.org/wiki/Special:BookSources/0198611862" title="Special:BookSources/0198611862">0198611862</A>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=%5B%5BOxford+English+Dictionary%5D%5D&amp;rft.date=1989&amp;rft.edition=2&amp;rft.place=Oxford&amp;rft.pub=%5B%5BOxford+University+Press%5D%5D&amp;rft.isbn=0198611862&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-21"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-21">^</A></B> <SPAN class="citation book"><I><A href="http://en.wikipedia.org/wiki/Oxford_English_Dictionary" title="Oxford English Dictionary">Oxford English Dictionary</A></I> (2 ed.). Oxford: <A href="http://en.wikipedia.org/wiki/Oxford_University_Press" title="Oxford University Press">Oxford University Press</A>. 1989. <A href="http://en.wikipedia.org/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</A>&nbsp;<A href="http://en.wikipedia.org/wiki/Special:BookSources/0198611862" title="Special:BookSources/0198611862">0198611862</A>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=book&amp;rft.btitle=%5B%5BOxford+English+Dictionary%5D%5D&amp;rft.date=1989&amp;rft.edition=2&amp;rft.place=Oxford&amp;rft.pub=%5B%5BOxford+University+Press%5D%5D&amp;rft.isbn=0198611862&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-22"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-22">^</A></B> <SPAN class="citation web"><A href="http://www.wi-fi.org/news_articles.php?f=media_news&news_id=64" class="external text" rel="nofollow">"Wireless Ethernet Compatibility Alliance (WECA) Awards New Wi-Fi Interoperability Certification"</A>. Wi-Fi Alliance. 2000-05-08<SPAN class="printonly">. <A href="http://www.wi-fi.org/news_articles.php?f=media_news&news_id=64" class="external free" rel="nofollow">http://www.wi-fi.org/news_articles.php?f=media_news&amp;news_id=64</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2009-11-30</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Wireless+Ethernet+Compatibility+Alliance+%28WECA%29+Awards+New+Wi-Fi+Interoperability+Certification&amp;rft.atitle=&amp;rft.date=2000-05-08&amp;rft.pub=Wi-Fi+Alliance&amp;rft_id=http%3A%2F%2Fwww.wi-fi.org%2Fnews_articles.php%3Ff%3Dmedia_news%26news_id%3D64&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-23"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-23">^</A></B> <SPAN class="citation web"><A href="http://www.wi-fi.org/news_articles.php?f=media_news&news_id=62" class="external text" rel="nofollow">"Six Wi-Fi Interoperability Certifications Awarded By The Wireless Ethernet Compatibility Alliance (WECA)"</A>. Wi-Fi Alliance. 2000-07-19<SPAN class="printonly">. <A href="http://www.wi-fi.org/news_articles.php?f=media_news&news_id=62" class="external free" rel="nofollow">http://www.wi-fi.org/news_articles.php?f=media_news&amp;news_id=62</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2009-11-30</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Six+Wi-Fi+Interoperability+Certifications+Awarded+By+The+Wireless+Ethernet+Compatibility+Alliance+%28WECA%29&amp;rft.atitle=&amp;rft.date=2000-07-19&amp;rft.pub=Wi-Fi+Alliance&amp;rft_id=http%3A%2F%2Fwww.wi-fi.org%2Fnews_articles.php%3Ff%3Dmedia_news%26news_id%3D62&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-wifi_securing_2003-24">^ <A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-wifi_securing_2003_24-0"><SUP><I><B>a</B></I></SUP></A> <A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-wifi_securing_2003_24-1"><SUP><I><B>b</B></I></SUP></A> <A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-wifi_securing_2003_24-2"><SUP><I><B>c</B></I></SUP></A> <SPAN class="citation web"><A href="http://www.wi-fi.org/files/wp_4_Securing%20Wireless%20Networks_2-6-03.pdf" class="external text" rel="nofollow">"Securing Wi-Fi Wireless Networks with Today’s Technologies"</A>. Wi-Fi Alliance. 2003-02-06<SPAN class="printonly">. <A href="http://www.wi-fi.org/files/wp_4_Securing%20Wireless%20Networks_2-6-03.pdf" class="external free" rel="nofollow">http://www.wi-fi.org/files/wp_4_Securing%20Wireless%20Networks_2-6-03.pdf</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2009-11-30</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Securing+Wi-Fi+Wireless+Networks+with+Today%E2%80%99s+Technologies&amp;rft.atitle=&amp;rft.date=2003-02-06&amp;rft.pub=Wi-Fi+Alliance&amp;rft_id=http%3A%2F%2Fwww.wi-fi.org%2Ffiles%2Fwp_4_Securing%2520Wireless%2520Networks_2-6-03.pdf&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-wifi_deployment_2004-25">^ <A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-wifi_deployment_2004_25-0"><SUP><I><B>a</B></I></SUP></A> <A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-wifi_deployment_2004_25-1"><SUP><I><B>b</B></I></SUP></A> <SPAN class="citation web"><A href="http://www.wi-fi.org/files/wp_6_WPA%20Deployment%20for%20Public%20Access_10-28-04.pdf" class="external text" rel="nofollow">"WPA™ Deployment Guidelines for Public Access Wi-Fi® Networks"</A>. Wi-Fi Alliance. 2004-10-28<SPAN class="printonly">. <A href="http://www.wi-fi.org/files/wp_6_WPA%20Deployment%20for%20Public%20Access_10-28-04.pdf" class="external free" rel="nofollow">http://www.wi-fi.org/files/wp_6_WPA%20Deployment%20for%20Public%20Access_10-28-04.pdf</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2009-11-30</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=WPA%E2%84%A2+Deployment+Guidelines+for+Public+Access+Wi-Fi%C2%AE+Networks&amp;rft.atitle=&amp;rft.date=2004-10-28&amp;rft.pub=Wi-Fi+Alliance&amp;rft_id=http%3A%2F%2Fwww.wi-fi.org%2Ffiles%2Fwp_6_WPA%2520Deployment%2520for%2520Public%2520Access_10-28-04.pdf&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-26"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-26">^</A></B> <SPAN class="citation web"><A href="http://www.itaa.org/isec/docs/innovation/wifiwhitepaper.pdf" class="external text" rel="nofollow">"Wireless Fidelity (WiFi) Technology"</A>. <A href="http://en.wikipedia.org/wiki/Information_Technology_Association_of_America" title="Information Technology Association of America">ITAA</A>. January 2004<SPAN class="printonly">. <A href="http://www.itaa.org/isec/docs/innovation/wifiwhitepaper.pdf" class="external free" rel="nofollow">http://www.itaa.org/isec/docs/innovation/wifiwhitepaper.pdf</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2009-11-30</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Wireless+Fidelity+%28WiFi%29+Technology&amp;rft.atitle=&amp;rft.date=January+2004&amp;rft.pub=%5B%5BInformation+Technology+Association+of+America%7CITAA%5D%5D&amp;rft_id=http%3A%2F%2Fwww.itaa.org%2Fisec%2Fdocs%2Finnovation%2Fwifiwhitepaper.pdf&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-27"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-27">^</A></B> Phil Belanger is the founding member of the Wi-Fi Alliance</LI>
+<LI id="cite_note-boing-28">^ <A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-boing_28-0"><SUP><I><B>a</B></I></SUP></A> <A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-boing_28-1"><SUP><I><B>b</B></I></SUP></A> <A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-boing_28-2"><SUP><I><B>c</B></I></SUP></A> <SPAN class="citation web"><A href="http://www.boingboing.net/2005/11/08/wifi_isnt_short_for_.html" class="external text" rel="nofollow">"WiFi isn't short for "Wireless Fidelity""</A>. boingboing.net<SPAN class="printonly">. <A href="http://www.boingboing.net/2005/11/08/wifi_isnt_short_for_.html" class="external free" rel="nofollow">http://www.boingboing.net/2005/11/08/wifi_isnt_short_for_.html</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2007-08-31</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=WiFi+isn%27t+short+for+%22Wireless+Fidelity%22&amp;rft.atitle=&amp;rft.pub=boingboing.net&amp;rft_id=http%3A%2F%2Fwww.boingboing.net%2F2005%2F11%2F08%2Fwifi_isnt_short_for_.html&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-wifi_debunked-29">^ <A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-wifi_debunked_29-0"><SUP><I><B>a</B></I></SUP></A> <A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-wifi_debunked_29-1"><SUP><I><B>b</B></I></SUP></A> <SPAN class="citation web"><A href="http://www.wi-fiplanet.com/columns/article.php/3674591" class="external text" rel="nofollow">"Wireless Fidelity' Debunked"</A>. Wi-Fi Planet. 2007-04-27<SPAN class="printonly">. <A href="http://www.wi-fiplanet.com/columns/article.php/3674591" class="external free" rel="nofollow">http://www.wi-fiplanet.com/columns/article.php/3674591</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2007-08-31</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Wireless+Fidelity%27+Debunked&amp;rft.atitle=&amp;rft.date=2007-04-27&amp;rft.pub=Wi-Fi+Planet&amp;rft_id=http%3A%2F%2Fwww.wi-fiplanet.com%2Fcolumns%2Farticle.php%2F3674591&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-30"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-30">^</A></B> U.S. Patent and Trademark Office.</LI>
+<LI id="cite_note-31"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-31">^</A></B> <SPAN class="citation web"><A href="http://www.teleclick.ca/2005/12/what-is-the-true-meaning-of-wi-fi/" class="external text" rel="nofollow">"What is the True Meaning of Wi-Fi?"</A>. Teleclick<SPAN class="printonly">. <A href="http://www.teleclick.ca/2005/12/what-is-the-true-meaning-of-wi-fi/" class="external free" rel="nofollow">http://www.teleclick.ca/2005/12/what-is-the-true-meaning-of-wi-fi/</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2007-08-31</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=What+is+the+True+Meaning+of+Wi-Fi%3F&amp;rft.atitle=&amp;rft.pub=Teleclick&amp;rft_id=http%3A%2F%2Fwww.teleclick.ca%2F2005%2F12%2Fwhat-is-the-true-meaning-of-wi-fi%2F&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-32"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-32">^</A></B> <SPAN class="citation web"><A href="http://www.jiwire.com/search-hotspot-locations.htm" class="external text" rel="nofollow">"Wi-Fi Finder"</A>. jiwire.com<SPAN class="printonly">. <A href="http://www.jiwire.com/search-hotspot-locations.htm" class="external free" rel="nofollow">http://www.jiwire.com/search-hotspot-locations.htm</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-04-20</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Wi-Fi+Finder&amp;rft.atitle=&amp;rft.pub=jiwire.com&amp;rft_id=http%3A%2F%2Fwww.jiwire.com%2Fsearch-hotspot-locations.htm&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-33"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-33">^</A></B> <A href="http://www.hallikainen.com/FccRules/2007/15/249/" class="external text" rel="nofollow">FCC Sec.15.249 Operation within the bands 902–928 MHz, 2400–2483.5 MHz, 5725–5875 MHZ, and 24.0–24.25 GHz.</A></LI>
+<LI id="cite_note-34"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-34">^</A></B> See for example IEEE Standard 802.15.4 section 1.2 scope</LI>
+<LI id="cite_note-35"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-35">^</A></B> <SPAN class="citation web"><A href="http://www.alyrica.net/node/20" class="external text" rel="nofollow">"WiFi Mapping Software: Footprint"</A>. Alyrica Networks, Inc.<SPAN class="printonly">. <A href="http://www.alyrica.net/node/20" class="external free" rel="nofollow">http://www.alyrica.net/node/20</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-04-27</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=WiFi+Mapping+Software%3A+Footprint&amp;rft.atitle=&amp;rft.pub=Alyrica+Networks%2C+Inc.&amp;rft_id=http%3A%2F%2Fwww.alyrica.net%2Fnode%2F20&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-36"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-36">^</A></B> <SPAN class="citation web">Wilson, Tracy V.. <A href="http://computer.howstuffworks.com/municipal-wifi.htm" class="external text" rel="nofollow">"How Municipal WiFi Works"</A>. computer.howstuffworks.com<SPAN class="printonly">. <A href="http://computer.howstuffworks.com/municipal-wifi.htm" class="external free" rel="nofollow">http://computer.howstuffworks.com/municipal-wifi.htm</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-03-12</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=How+Municipal+WiFi+Works&amp;rft.atitle=&amp;rft.aulast=Wilson&amp;rft.aufirst=Tracy+V.&amp;rft.au=Wilson%2C%26%2332%3BTracy+V.&amp;rft.pub=computer.howstuffworks.com&amp;rft_id=http%3A%2F%2Fcomputer.howstuffworks.com%2Fmunicipal-wifi.htm&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-37"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-37">^</A></B> <SPAN class="citation web"><A href="http://interred.wordpress.com/2007/06/18/ermanno-pietrosemoli-has-set-a-new-record-for-the-longest-communication-wi-fi-link/" class="external text" rel="nofollow">"Ermanno Pietrosemoli has set a new record for the longest communication Wi-Fi link"</A><SPAN class="printonly">. <A href="http://interred.wordpress.com/2007/06/18/ermanno-pietrosemoli-has-set-a-new-record-for-the-longest-communication-wi-fi-link/" class="external free" rel="nofollow">http://interred.wordpress.com/2007/06/18/ermanno-pietrosemoli-has-set-a-new-record-for-the-longest-communication-wi-fi-link/</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-03-10</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Ermanno+Pietrosemoli+has+set+a+new+record+for+the+longest+communication+Wi-Fi+link&amp;rft.atitle=&amp;rft_id=http%3A%2F%2Finterred.wordpress.com%2F2007%2F06%2F18%2Fermanno-pietrosemoli-has-set-a-new-record-for-the-longest-communication-wi-fi-link%2F&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-38"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-38">^</A></B> <SPAN class="citation web"><A href="http://www.apc.org/en/news/strategic/world/wireless-technology-irreplaceable-providing-access" class="external text" rel="nofollow">"Wireless technology is irreplaceable for providing access in remote and scarcely populated regions"</A><SPAN class="printonly">. <A href="http://www.apc.org/en/news/strategic/world/wireless-technology-irreplaceable-providing-access" class="external free" rel="nofollow">http://www.apc.org/en/news/strategic/world/wireless-technology-irreplaceable-providing-access</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-03-10</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Wireless+technology+is+irreplaceable+for+providing+access+in+remote+and+scarcely+populated+regions&amp;rft.atitle=&amp;rft_id=http%3A%2F%2Fwww.apc.org%2Fen%2Fnews%2Fstrategic%2Fworld%2Fwireless-technology-irreplaceable-providing-access&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-39"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-39">^</A></B> <SPAN class="citation web"><A href="http://www.eslared.org.ve/articulos/Long%20Distance%20WiFi%20Trial.pdf" class="external text" rel="nofollow">"Long Distance WiFi Trial"</A> (PDF)<SPAN class="printonly">. <A href="http://www.eslared.org.ve/articulos/Long%20Distance%20WiFi%20Trial.pdf" class="external free" rel="nofollow">http://www.eslared.org.ve/articulos/Long%20Distance%20WiFi%20Trial.pdf</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-03-10</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Long+Distance+WiFi+Trial&amp;rft.atitle=&amp;rft_id=http%3A%2F%2Fwww.eslared.org.ve%2Farticulos%2FLong%2520Distance%2520WiFi%2520Trial.pdf&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-40"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-40">^</A></B> <SPAN class="citation web"><A href="http://edageek.com/2008/04/18/embedded-wifi-radio/" class="external text" rel="nofollow">"Quatech Rolls Out Airborne Embedded 802.11 Radio for M2M Market"</A><SPAN class="printonly">. <A href="http://edageek.com/2008/04/18/embedded-wifi-radio/" class="external free" rel="nofollow">http://edageek.com/2008/04/18/embedded-wifi-radio/</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-04-29</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Quatech+Rolls+Out+Airborne+Embedded+802.11+Radio+for+M2M+Market&amp;rft.atitle=&amp;rft_id=http%3A%2F%2Fedageek.com%2F2008%2F04%2F18%2Fembedded-wifi-radio%2F&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-41"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-41">^</A></B> <SPAN class="citation web"><A href="http://www.cieonline.co.uk/cie2/articlen.asp?pid=1810&id=19742" class="external text" rel="nofollow">"CIE article on embedded WiFi for M2M applications"</A><SPAN class="printonly">. <A href="http://www.cieonline.co.uk/cie2/articlen.asp?pid=1810&id=19742" class="external free" rel="nofollow">http://www.cieonline.co.uk/cie2/articlen.asp?pid=1810&amp;id=19742</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-08-27</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=CIE+article+on+embedded+WiFi+for+M2M+applications&amp;rft.atitle=&amp;rft_id=http%3A%2F%2Fwww.cieonline.co.uk%2Fcie2%2Farticlen.asp%3Fpid%3D1810%26id%3D19742&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-42"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-42">^</A></B> <SPAN class="citation web"><A href="http://networkbits.net/wireless-printing/80211-g-pros-cons-of-a-wireless-network-in-a-business-environment/" class="external text" rel="nofollow">"802.11 X Wireless Network in a Business Environment -- Pros and Cons."</A>. NetworkBits.net<SPAN class="printonly">. <A href="http://networkbits.net/wireless-printing/80211-g-pros-cons-of-a-wireless-network-in-a-business-environment/" class="external free" rel="nofollow">http://networkbits.net/wireless-printing/80211-g-pros-cons-of-a-wireless-network-in-a-business-environment/</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-04-08</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=802.11+X+Wireless+Network+in+a+Business+Environment+--+Pros+and+Cons.&amp;rft.atitle=&amp;rft.pub=NetworkBits.net&amp;rft_id=http%3A%2F%2Fnetworkbits.net%2Fwireless-printing%2F80211-g-pros-cons-of-a-wireless-network-in-a-business-environment%2F&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-43"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-43">^</A></B> <SPAN class="citation web"><A href="http://en.wikipedia.org/wiki/Daniel_J._Bernstein" title="Daniel J. Bernstein">Bernstein, Daniel J.</A> (2002). <A href="http://cr.yp.to/djbdns/forgery.html" class="external text" rel="nofollow">"DNS forgery"</A><SPAN class="printonly">. <A href="http://cr.yp.to/djbdns/forgery.html" class="external free" rel="nofollow">http://cr.yp.to/djbdns/forgery.html</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2010-03-24</SPAN>. "An attacker with access to your network can easily forge responses to your computer's DNS requests."</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=DNS+forgery&amp;rft.atitle=&amp;rft.aulast=Bernstein&amp;rft.aufirst=Daniel+J.&amp;rft.au=Bernstein%2C%26%2332%3BDaniel+J.&amp;rft.date=2002&amp;rft_id=http%3A%2F%2Fcr.yp.to%2Fdjbdns%2Fforgery.html&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-44"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-44">^</A></B> <SPAN class="citation web">Mateti, Prabhaker (2005). <A href="http://www.cs.wright.edu/~pmateti/InternetSecurity/Lectures/WirelessHacks/Mateti-WirelessHacks.htm#_Toc77524658" class="external text" rel="nofollow">"Hacking Techniques in Wireless Networks"</A>. Dayton, Ohio: Department of Computer Science and Engineering Wright State University<SPAN class="printonly">. <A href="http://www.cs.wright.edu/~pmateti/InternetSecurity/Lectures/WirelessHacks/Mateti-WirelessHacks.htm#_Toc77524658" class="external free" rel="nofollow">http://www.cs.wright.edu/~pmateti/InternetSecurity/Lectures/WirelessHacks/Mateti-WirelessHacks.htm#_Toc77524658</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2010-02-28</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Hacking+Techniques+in+Wireless+Networks&amp;rft.atitle=&amp;rft.aulast=Mateti&amp;rft.aufirst=Prabhaker&amp;rft.au=Mateti%2C%26%2332%3BPrabhaker&amp;rft.date=2005&amp;rft.place=Dayton%2C+Ohio&amp;rft.pub=Department+of+Computer+Science+and+Engineering+Wright+State+University&amp;rft_id=http%3A%2F%2Fwww.cs.wright.edu%2F%7Epmateti%2FInternetSecurity%2FLectures%2FWirelessHacks%2FMateti-WirelessHacks.htm%23_Toc77524658&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-45"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-45">^</A></B> <SPAN class="citation web"><A href="http://www.wirelessve.org/entries/show/WVE-2005-0020" class="external text" rel="nofollow">"Wireless Vulnerabilities &amp; Exploits"</A>. wirelessve.org<SPAN class="printonly">. <A href="http://www.wirelessve.org/entries/show/WVE-2005-0020" class="external free" rel="nofollow">http://www.wirelessve.org/entries/show/WVE-2005-0020</A></SPAN><SPAN class="reference-accessdate">. Retrieved 2008-04-15</SPAN>.</SPAN><SPAN class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.genre=bookitem&amp;rft.btitle=Wireless+Vulnerabilities+%26+Exploits&amp;rft.atitle=&amp;rft.pub=wirelessve.org&amp;rft_id=http%3A%2F%2Fwww.wirelessve.org%2Fentries%2Fshow%2FWVE-2005-0020&amp;rfr_id=info:sid/en.wikipedia.org:Wi-Fi"><SPAN style="display: none;">&nbsp;</SPAN></SPAN></LI>
+<LI id="cite_note-46"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-46">^</A></B> <A href="http://nocat.net/" class="external text" rel="nofollow">NoCat's goal is to bring you Infinite Bandwidth Everywhere for Free</A></LI>
+<LI id="cite_note-47"><B><A href="http://en.wikipedia.org/wiki/Wi-Fi#cite_ref-47">^</A></B> See the wikinews article mentioned in this section.</LI>
+</OL>
+</DIV>
+<H2><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=27" title="Edit section: Further reading">edit</A>]</SPAN> <SPAN class="mw-headline" id="Further_reading">Further reading</SPAN></H2>
+<UL>
+<LI><A href="http://en.wikipedia.org/wiki/File:Wireless_Networking_in_the_Developing_World.pdf" title="File:Wireless Networking in the Developing World.pdf"><I>Wireless Networking in the Developing World</I></A> (PDF book)</LI>
+</UL>
+<H2><SPAN class="editsection">[<A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit&section=28" title="Edit section: External links">edit</A>]</SPAN> <SPAN class="mw-headline" id="External_links">External links</SPAN></H2>
+<TABLE class="metadata plainlinks mbox-small" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<TBODY><TR>
+<TD class="mbox-image"><A href="http://commons.wikimedia.org/wiki/Special:Search/Wi-Fi" title="Search Wikimedia Commons"><IMG alt="Search Wikimedia Commons" src="./Wi-Fi _files/30px-Commons-logo.svg.png" width="30" height="40"></A></TD>
+<TD class="mbox-text" style="">Wikimedia Commons has media related to: <I><B><A href="http://commons.wikimedia.org/wiki/Category:Wi-Fi" class="extiw" title="commons:Category:Wi-Fi">Wi-Fi</A></B></I></TD>
+</TR>
+</TBODY></TABLE>
+<TABLE class="metadata plainlinks mbox-small" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<TBODY><TR>
+<TD class="mbox-image"><A href="http://en.wikinews.org/wiki/Special:Search/Wi-Fi" title="Search Wikinews"><IMG alt="Search Wikinews" src="./Wi-Fi _files/40px-Wikinews-logo.svg.png" width="40" height="23"></A></TD>
+<TD class="mbox-text" style="">Wikinews has related news: <I><B><A href="http://en.wikinews.org/wiki/Special:Search/Wi-Fi" class="extiw" title="wikinews:Special:Search/Wi-Fi">Wi-Fi</A></B></I></TD>
+</TR>
+</TBODY></TABLE>
+<TABLE class="metadata plainlinks mbox-small" style="border:1px solid #aaa; background-color:#f9f9f9;">
+<TBODY><TR>
+<TD class="mbox-image"><A href="http://en.wiktionary.org/wiki/Special:Search/Wi-Fi" title="Search Wiktionary"><IMG alt="Search Wiktionary" src="./Wi-Fi _files/37px-Wiktionary-logo-en.svg.png" width="37" height="40"></A></TD>
+<TD class="mbox-text" style="">Look up <I><B><A href="http://en.wiktionary.org/wiki/Special:Search/wi-fi" class="extiw" title="wiktionary:Special:Search/wi-fi">wi-fi</A></B></I> in <A href="http://en.wikipedia.org/wiki/Wiktionary" title="Wiktionary">Wiktionary</A>, the free dictionary.</TD>
+</TR>
+</TBODY></TABLE>
+<UL>
+<LI><A href="http://wi-fi.org/" class="external text" rel="nofollow">The Wi-Fi Alliance</A></LI>
+</UL>
+<P><BR></P>
+<TABLE class="wikitable collapsible" border="1" cellpadding="5" cellspacing="0" id="collapsibleTable0">
+<TBODY><TR>
+<TH colspan="9"><SPAN class="collapseButton">[<A id="collapseButton0" href="javascript:collapseTable(0);">hide</A>]</SPAN>Internet access</TH>
+</TR>
+<TR>
+<TH rowspan="2">Network type</TH>
+<TH colspan="5">Wired</TH>
+<TH colspan="3">Wireless</TH>
+</TR>
+<TR>
+<TH>Optical</TH>
+<TH>Coaxial cable</TH>
+<TH>Twisted pair</TH>
+<TH>Phone line</TH>
+<TH>Power line</TH>
+<TH>Unlicensed terrestrial bands</TH>
+<TH>Licensed terrestrial bands</TH>
+<TH>Satellite</TH>
+</TR>
+<TR>
+<TH><A href="http://en.wikipedia.org/wiki/Local_area_network" title="Local area network">LAN</A></TH>
+<TD><A href="http://en.wikipedia.org/wiki/Ethernet" title="Ethernet">Ethernet</A></TD>
+<TD><A href="http://en.wikipedia.org/wiki/G.hn" title="G.hn">G.hn</A></TD>
+<TD><A href="http://en.wikipedia.org/wiki/Ethernet" title="Ethernet">Ethernet</A></TD>
+<TD><A href="http://en.wikipedia.org/wiki/HomePNA" title="HomePNA">HomePNA</A> <SPAN style="font-weight:bold;">&nbsp;·</SPAN>  <A href="http://en.wikipedia.org/wiki/G.hn" title="G.hn">G.hn</A></TD>
+<TD><A href="http://en.wikipedia.org/wiki/G.hn" title="G.hn">G.hn</A></TD>
+<TD><STRONG class="selflink">Wi-Fi</STRONG><SPAN style="font-weight:bold;">&nbsp;·</SPAN>  <A href="http://en.wikipedia.org/wiki/Bluetooth" title="Bluetooth">Bluetooth</A><SPAN style="font-weight:bold;">&nbsp;·</SPAN>  <A href="http://en.wikipedia.org/wiki/Digital_Enhanced_Cordless_Telecommunications" title="Digital Enhanced Cordless Telecommunications">DECT</A><SPAN style="font-weight:bold;">&nbsp;·</SPAN>  <A href="http://en.wikipedia.org/wiki/Wireless_USB" title="Wireless USB">Wireless USB</A></TD>
+<TD>
+<TD>
+</TR>
+<TR>
+<TH><A href="http://en.wikipedia.org/wiki/Wide_area_network" title="Wide area network">WAN</A></TH>
+<TD><A href="http://en.wikipedia.org/wiki/Passive_optical_network" title="Passive optical network">PON</A><SPAN style="font-weight:bold;">&nbsp;·</SPAN>  <A href="http://en.wikipedia.org/wiki/Ethernet" title="Ethernet">Ethernet</A></TD>
+<TD><A href="http://en.wikipedia.org/wiki/DOCSIS" title="DOCSIS">DOCSIS</A></TD>
+<TD><A href="http://en.wikipedia.org/wiki/Ethernet" title="Ethernet">Ethernet</A></TD>
+<TD><A href="http://en.wikipedia.org/wiki/Dial-up_Internet_access" title="Dial-up Internet access">Dial-up</A><SPAN style="font-weight:bold;">&nbsp;·</SPAN>  <A href="http://en.wikipedia.org/wiki/Integrated_services_digital_network" title="Integrated services digital network" class="mw-redirect">ISDN</A><SPAN style="font-weight:bold;">&nbsp;·</SPAN>  <A href="http://en.wikipedia.org/wiki/Digital_Subscriber_Line" title="Digital Subscriber Line">DSL</A></TD>
+<TD><A href="http://en.wikipedia.org/wiki/Power_line_communication#Internet_access_.28broadband_over_powerlines.29" title="Power line communication">BPL</A></TD>
+<TD><A href="http://en.wikipedia.org/wiki/Municipal_wireless_network" title="Municipal wireless network">Muni Wi-Fi</A></TD>
+<TD><A href="http://en.wikipedia.org/wiki/General_Packet_Radio_Service" title="General Packet Radio Service">GPRS</A><SPAN style="font-weight:bold;">&nbsp;·</SPAN>  <A href="http://en.wikipedia.org/wiki/IBurst" title="IBurst">iBurst</A><SPAN style="font-weight:bold;">&nbsp;·</SPAN>  <A href="http://en.wikipedia.org/wiki/WiBro" title="WiBro">WiBro</A>/<A href="http://en.wikipedia.org/wiki/WiMAX" title="WiMAX">WiMAX</A><SPAN style="font-weight:bold;">&nbsp;·</SPAN>  <A href="http://en.wikipedia.org/wiki/UMTS-TDD" title="UMTS-TDD">UMTS-TDD</A>, <A href="http://en.wikipedia.org/wiki/High_Speed_Packet_Access" title="High Speed Packet Access">HSPA</A><SPAN style="font-weight:bold;">&nbsp;·</SPAN>  <A href="http://en.wikipedia.org/wiki/Evolution-Data_Optimized" title="Evolution-Data Optimized">EVDO</A><SPAN style="font-weight:bold;">&nbsp;·</SPAN>  <A href="http://en.wikipedia.org/wiki/3GPP_Long_Term_Evolution" title="3GPP Long Term Evolution">LTE</A></TD>
+<TD><A href="http://en.wikipedia.org/wiki/Satellite_Internet_access" title="Satellite Internet access">Satellite</A></TD>
+</TR>
+</TBODY></TABLE>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 22040/1000000
+Post-expand include size: 175252/2048000 bytes
+Template argument size: 61556/2048000 bytes
+Expensive parser function count: 30/500
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:63973-0!1!0!default!!en!4 and timestamp 20100531043304 -->
+<DIV class="printfooter">
+Retrieved from "<A href="./Wi-Fi _files/Wi-Fi .htm">http://en.wikipedia.org/wiki/Wi-Fi</A>"</DIV>
+				<!-- /bodytext -->
+								<!-- catlinks -->
+				<DIV id="catlinks" class="catlinks"><DIV id="mw-normal-catlinks"><A href="http://en.wikipedia.org/wiki/Special:Categories" title="Special:Categories">Categories</A>: <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:Wi-Fi" title="Category:Wi-Fi">Wi-Fi</A></SPAN></DIV><DIV id="mw-hidden-catlinks" class="mw-hidden-cats-hidden">Hidden categories: <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_2010" title="Category:Articles containing potentially dated statements from 2010">Articles containing potentially dated statements from 2010</A></SPAN> | <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:All_articles_containing_potentially_dated_statements" title="Category:All articles containing potentially dated statements">All articles containing potentially dated statements</A></SPAN> | <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_2008" title="Category:Articles containing potentially dated statements from 2008">Articles containing potentially dated statements from 2008</A></SPAN> | <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_May_2008" title="Category:Articles containing potentially dated statements from May 2008">Articles containing potentially dated statements from May 2008</A></SPAN> | <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_2009" title="Category:Articles containing potentially dated statements from 2009">Articles containing potentially dated statements from 2009</A></SPAN> | <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:All_pages_needing_cleanup" title="Category:All pages needing cleanup">All pages needing cleanup</A></SPAN> | <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_July_2009" title="Category:Wikipedia articles needing clarification from July 2009">Wikipedia articles needing clarification from July 2009</A></SPAN> | <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:All_articles_with_specifically-marked_weasel-worded_phrases" title="Category:All articles with specifically-marked weasel-worded phrases">All articles with specifically-marked weasel-worded phrases</A></SPAN> | <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:Articles_with_specifically-marked_weasel-worded_phrases_from_March_2010" title="Category:Articles with specifically-marked weasel-worded phrases from March 2010">Articles with specifically-marked weasel-worded phrases from March 2010</A></SPAN> | <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</A></SPAN> | <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_March_2010" title="Category:Articles with unsourced statements from March 2010">Articles with unsourced statements from March 2010</A></SPAN> | <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:Articles_containing_potentially_dated_statements_from_2007" title="Category:Articles containing potentially dated statements from 2007">Articles containing potentially dated statements from 2007</A></SPAN> | <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_May_2009" title="Category:Articles with unsourced statements from May 2009">Articles with unsourced statements from May 2009</A></SPAN> | <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:Articles_with_unsourced_statements_from_July_2009" title="Category:Articles with unsourced statements from July 2009">Articles with unsourced statements from July 2009</A></SPAN> | <SPAN dir="ltr"><A href="http://en.wikipedia.org/wiki/Category:Wikipedia_articles_needing_clarification_from_March_2010" title="Category:Wikipedia articles needing clarification from March 2010">Wikipedia articles needing clarification from March 2010</A></SPAN></DIV></DIV>				<!-- /catlinks -->
+												<DIV class="visualClear"></DIV>
+			</DIV>
+			<!-- /bodyContent -->
+		</DIV>
+		<!-- /content -->
+		<!-- header -->
+		<DIV id="head" class="noprint">
+			
+<!-- 0 -->
+<DIV id="p-personal" class="">
+	<H5>Personal tools</H5>
+	<UL>
+					<LI id="pt-prefswitch-link-anon"><A href="http://en.wikipedia.org/w/index.php?title=Special:UsabilityInitiativePrefSwitch&from=Wi-Fi" title="Learn about new features" class="no-text-transform">New features</A></LI>
+					<LI id="pt-login"><A href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Wi-Fi" title="You are encouraged to log in; however, it is not mandatory. [alt-o]" accesskey="o">Log in / create account</A></LI>
+			</UL>
+</DIV>
+
+<!-- /0 -->
+			<DIV id="left-navigation">
+				
+<!-- 0 -->
+<DIV id="p-namespaces" class="vectorTabs">
+	<H5>Namespaces</H5>
+	<UL>
+					<LI id="ca-nstab-main" class="selected"><A href="./Wi-Fi _files/Wi-Fi .htm" title="View the content page [alt-c]" accesskey="c"><SPAN>Article</SPAN></A></LI>
+					<LI id="ca-talk"><A href="http://en.wikipedia.org/wiki/Talk:Wi-Fi" title="Discussion about the content page [alt-t]" accesskey="t"><SPAN>Discussion</SPAN></A></LI>
+			</UL>
+</DIV>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<DIV id="p-variants" class="vectorMenu emptyPortlet">
+		<H5><SPAN>Variants</SPAN><A href="http://en.wikipedia.org/wiki/Wi-Fi#"></A></H5>
+	<DIV class="menu">
+		<UL>
+					</UL>
+	</DIV>
+</DIV>
+
+<!-- /1 -->
+			</DIV>
+			<DIV id="right-navigation">
+				
+<!-- 0 -->
+<DIV id="p-views" class="vectorTabs">
+	<H5>Views</H5>
+	<UL>
+					<LI id="ca-view" class="selected"><A href="./Wi-Fi _files/Wi-Fi .htm"><SPAN>Read</SPAN></A></LI>
+					<LI id="ca-edit"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=edit" title="You can edit this page. 
+Please use the preview button before saving. [alt-e]" accesskey="e"><SPAN>Edit</SPAN></A></LI>
+					<LI id="ca-history" class="collapsible "><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&action=history" title="Past versions of this page [alt-h]" accesskey="h"><SPAN>View history</SPAN></A></LI>
+			</UL>
+</DIV>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<DIV id="p-cactions" class="vectorMenu emptyPortlet">
+	<H5><SPAN>Actions</SPAN><A href="http://en.wikipedia.org/wiki/Wi-Fi#"></A></H5>
+	<DIV class="menu">
+		<UL>
+					</UL>
+	</DIV>
+</DIV>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<DIV id="p-search">
+	<H5><LABEL for="searchInput">Search</LABEL></H5>
+	<FORM action="http://en.wikipedia.org/w/index.php" id="searchform">
+		<INPUT type="hidden" name="title" value="Special:Search">
+				<DIV id="simpleSearch">
+			<INPUT id="searchInput" name="search" type="text" title="Search Wikipedia [alt-f]" accesskey="f" value="" tabindex="1" autocomplete="off">
+			<BUTTON id="searchButton" type="submit" name="button" title="Search Wikipedia for this text">&nbsp;</BUTTON>
+		<LABEL style="position: absolute; bottom: 0px; padding-top: 0.25em; padding-right: 0.25em; padding-bottom: 0.25em; padding-left: 0.25em; color: rgb(153, 153, 153); cursor: text; left: 0px; ">Search</LABEL></DIV>
+			</FORM>
+</DIV>
+
+<!-- /2 -->
+			</DIV>
+		</DIV>
+		<!-- /header -->
+		<!-- panel -->
+			<DIV id="panel" class="noprint collapsible-nav">
+				<!-- logo -->
+					<DIV id="p-logo"><A style="background-image: url(http://upload.wikimedia.org/wikipedia/commons/d/d6/Wikipedia-logo-v2-en.png);" href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page"></A></DIV>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<DIV class="portal expanded" id="p-navigation">
+	<H5 tabindex="2">Navigation</H5>
+	<DIV class="body" style="display: block; ">
+				<UL>
+					<LI id="n-mainpage-description"><A href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [alt-z]" accesskey="z">Main page</A></LI>
+					<LI id="n-contents"><A href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</A></LI>
+					<LI id="n-featuredcontent"><A href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content &mdash; the best of Wikipedia">Featured content</A></LI>
+					<LI id="n-currentevents"><A href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</A></LI>
+					<LI id="n-randompage"><A href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [alt-x]" accesskey="x">Random article</A></LI>
+				</UL>
+			</DIV>
+</DIV>
+
+<!-- /navigation -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- interaction -->
+<DIV class="portal expanded" id="p-interaction">
+	<H5 tabindex="3">Interaction</H5>
+	<DIV class="body" style="display: block; ">
+				<UL>
+					<LI id="n-aboutsite"><A href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</A></LI>
+					<LI id="n-portal"><A href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</A></LI>
+					<LI id="n-recentchanges"><A href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [alt-r]" accesskey="r">Recent changes</A></LI>
+					<LI id="n-contact"><A href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact Wikipedia</A></LI>
+					<LI id="n-sitesupport"><A href="http://wikimediafoundation.org/wiki/Support_Wikipedia/en" title="Support us">Donate to Wikipedia</A></LI>
+					<LI id="n-help"><A href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</A></LI>
+				</UL>
+			</DIV>
+</DIV>
+
+<!-- /interaction -->
+
+<!-- TOOLBOX -->
+<DIV class="portal collapsed" id="p-tb">
+	<H5 tabindex="4">Toolbox</H5>
+	<DIV class="body">
+		<UL>
+					<LI id="t-whatlinkshere"><A href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/Wi-Fi" title="List of all English Wikipedia pages containing links to this page [alt-j]" accesskey="j">What links here</A></LI>
+						<LI id="t-recentchangeslinked"><A href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/Wi-Fi" title="Recent changes in pages linked from this page [alt-k]" accesskey="k">Related changes</A></LI>
+																																					<LI id="t-upload"><A href="http://en.wikipedia.org/wiki/Wikipedia:Upload" title="Upload files [alt-u]" accesskey="u">Upload file</A></LI>
+											<LI id="t-specialpages"><A href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="List of all special pages [alt-q]" accesskey="q">Special pages</A></LI>
+											<LI id="t-permalink"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&oldid=364876674" title="Permanent link to this revision of the page">Permanent link</A></LI>
+				<LI id="t-cite"><A href="http://en.wikipedia.org/w/index.php?title=Special:Cite&page=Wi-Fi&id=364876674" title="Information on how to cite this page">Cite this page</A></LI>		</UL>
+	</DIV>
+</DIV>
+
+<!-- /TOOLBOX -->
+
+<!-- coll-print_export -->
+<DIV class="portal collapsed" id="p-coll-print_export">
+	<H5 tabindex="5">Print/export</H5>
+	<DIV class="body">
+				<UL id="collectionPortletList"><LI id="coll-create_a_book"><A href="http://en.wikipedia.org/w/index.php?title=Special:Book&bookcmd=book_creator&referer=Wi-Fi" title="Create a book or page collection" rel="nofollow">Create a book</A></LI><LI id="coll-download-as-rl"><A href="http://en.wikipedia.org/w/index.php?title=Special:Book&bookcmd=render_article&arttitle=Wi-Fi&oldid=364876674&writer=rl" title="Download a PDF version of this wiki page" rel="nofollow">Download as PDF</A></LI><LI id="t-print"><A href="http://en.wikipedia.org/w/index.php?title=Wi-Fi&printable=yes" title="Printable version of this page [alt-p]" accesskey="p">Printable version</A></LI></UL>			</DIV>
+</DIV>
+
+<!-- /coll-print_export -->
+
+<!-- LANGUAGES -->
+<DIV class="portal collapsed" id="p-lang">
+	<H5 tabindex="6">Languages</H5>
+	<DIV class="body">
+		<UL>
+					<LI class="interwiki-ar"><A href="http://ar.wikipedia.org/wiki/%D9%88%D8%A7%D9%8A_%D9%81%D8%A7%D9%8A">العربية</A></LI>
+					<LI class="interwiki-be-x-old"><A href="http://be-x-old.wikipedia.org/wiki/Wi-Fi">Беларуская (тарашкевіца)</A></LI>
+					<LI class="interwiki-bs"><A href="http://bs.wikipedia.org/wiki/Wi-Fi">Bosanski</A></LI>
+					<LI class="interwiki-bg"><A href="http://bg.wikipedia.org/wiki/Wi-Fi">Български</A></LI>
+					<LI class="interwiki-ca"><A href="http://ca.wikipedia.org/wiki/Wi-Fi">Català</A></LI>
+					<LI class="interwiki-cs"><A href="http://cs.wikipedia.org/wiki/Wi-Fi">Česky</A></LI>
+					<LI class="interwiki-da"><A href="http://da.wikipedia.org/wiki/Wi-Fi">Dansk</A></LI>
+					<LI class="interwiki-de"><A href="http://de.wikipedia.org/wiki/Wi-Fi">Deutsch</A></LI>
+					<LI class="interwiki-et"><A href="http://et.wikipedia.org/wiki/WiFi">Eesti</A></LI>
+					<LI class="interwiki-es"><A href="http://es.wikipedia.org/wiki/Wi-Fi">Español</A></LI>
+					<LI class="interwiki-eo"><A href="http://eo.wikipedia.org/wiki/Wifi">Esperanto</A></LI>
+					<LI class="interwiki-eu"><A href="http://eu.wikipedia.org/wiki/Wi-Fi">Euskara</A></LI>
+					<LI class="interwiki-fa"><A href="http://fa.wikipedia.org/wiki/%D9%88%D8%A7%DB%8C-%D9%81%D8%A7%DB%8C">فارسی</A></LI>
+					<LI class="interwiki-fr"><A href="http://fr.wikipedia.org/wiki/Wi-Fi">Français</A></LI>
+					<LI class="interwiki-gl"><A href="http://gl.wikipedia.org/wiki/Wi-fi">Galego</A></LI>
+					<LI class="interwiki-ko"><A href="http://ko.wikipedia.org/wiki/Wi-Fi">한국어</A></LI>
+					<LI class="interwiki-hr"><A href="http://hr.wikipedia.org/wiki/Wi-Fi">Hrvatski</A></LI>
+					<LI class="interwiki-id"><A href="http://id.wikipedia.org/wiki/Wi-Fi">Bahasa Indonesia</A></LI>
+					<LI class="interwiki-is"><A href="http://is.wikipedia.org/wiki/Wi-Fi">Íslenska</A></LI>
+					<LI class="interwiki-it"><A href="http://it.wikipedia.org/wiki/Wi-Fi">Italiano</A></LI>
+					<LI class="interwiki-he"><A href="http://he.wikipedia.org/wiki/Wi-Fi">עברית</A></LI>
+					<LI class="interwiki-kn"><A href="http://kn.wikipedia.org/wiki/%E0%B2%B5%E0%B3%88-%E0%B2%AB%E0%B3%88">ಕನ್ನಡ</A></LI>
+					<LI class="interwiki-lt"><A href="http://lt.wikipedia.org/wiki/Wi-Fi">Lietuvių</A></LI>
+					<LI class="interwiki-hu"><A href="http://hu.wikipedia.org/wiki/Wi-Fi">Magyar</A></LI>
+					<LI class="interwiki-mk"><A href="http://mk.wikipedia.org/wiki/Wi-Fi">Македонски</A></LI>
+					<LI class="interwiki-mr"><A href="http://mr.wikipedia.org/wiki/%E0%A4%B5%E0%A4%BE%E0%A4%AF-%E0%A4%AB%E0%A4%BE%E0%A4%AF">मराठी</A></LI>
+					<LI class="interwiki-ms"><A href="http://ms.wikipedia.org/wiki/Wi-Fi">Bahasa Melayu</A></LI>
+					<LI class="interwiki-nl"><A href="http://nl.wikipedia.org/wiki/Wi-Fi">Nederlands</A></LI>
+					<LI class="interwiki-ja"><A href="http://ja.wikipedia.org/wiki/Wi-Fi">日本語</A></LI>
+					<LI class="interwiki-pl"><A href="http://pl.wikipedia.org/wiki/Wi-Fi">Polski</A></LI>
+					<LI class="interwiki-pt"><A href="http://pt.wikipedia.org/wiki/Wi-Fi">Português</A></LI>
+					<LI class="interwiki-ro"><A href="http://ro.wikipedia.org/wiki/Wi-Fi">Română</A></LI>
+					<LI class="interwiki-ru"><A href="http://ru.wikipedia.org/wiki/Wi-Fi">Русский</A></LI>
+					<LI class="interwiki-sq"><A href="http://sq.wikipedia.org/wiki/Wi-Fi">Shqip</A></LI>
+					<LI class="interwiki-simple"><A href="http://simple.wikipedia.org/wiki/Wi-Fi">Simple English</A></LI>
+					<LI class="interwiki-sk"><A href="http://sk.wikipedia.org/wiki/Wi-Fi">Slovenčina</A></LI>
+					<LI class="interwiki-sr"><A href="http://sr.wikipedia.org/wiki/WiFi">Српски / Srpski</A></LI>
+					<LI class="interwiki-sv"><A href="http://sv.wikipedia.org/wiki/Wi-Fi">Svenska</A></LI>
+					<LI class="interwiki-tl"><A href="http://tl.wikipedia.org/wiki/Wi-Fi">Tagalog</A></LI>
+					<LI class="interwiki-ta"><A href="http://ta.wikipedia.org/wiki/%E0%AE%92%E0%AE%AF%E0%AF%8D-%E0%AE%83%E0%AE%B5%E0%AF%88">தமிழ்</A></LI>
+					<LI class="interwiki-th"><A href="http://th.wikipedia.org/wiki/%E0%B8%A7%E0%B8%B2%E0%B8%A2%E0%B8%9F%E0%B8%B2%E0%B8%A2">ไทย</A></LI>
+					<LI class="interwiki-tr"><A href="http://tr.wikipedia.org/wiki/Wi-Fi">Türkçe</A></LI>
+					<LI class="interwiki-uk"><A href="http://uk.wikipedia.org/wiki/Wi-Fi">Українська</A></LI>
+					<LI class="interwiki-vi"><A href="http://vi.wikipedia.org/wiki/Wi-Fi">Tiếng Việt</A></LI>
+					<LI class="interwiki-yi"><A href="http://yi.wikipedia.org/wiki/Wi-Fi">ייִדיש</A></LI>
+					<LI class="interwiki-zh"><A href="http://zh.wikipedia.org/wiki/Wi-Fi">中文</A></LI>
+				</UL>
+	</DIV>
+</DIV>
+
+<!-- /LANGUAGES -->
+			</DIV>
+		<!-- /panel -->
+		<!-- footer -->
+		<DIV id="footer">
+											<UL id="footer-info">
+																	<LI id="footer-info-lastmod"> This page was last modified on 29 May 2010 at 17:35.<BR></LI>
+																							<LI id="footer-info-copyright">Text is available under the <A rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</A><A rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></A>;
+additional terms may apply.
+See <A href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</A> for details.<BR>
+Wikipedia® is a registered trademark of the <A href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</A>, a non-profit organization.<BR></LI><LI class="noprint"><A class="internal" href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact us</A></LI>
+															</UL>
+															<UL id="footer-places">
+																	<LI id="footer-places-privacy"><A href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</A></LI>
+																							<LI id="footer-places-about"><A href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</A></LI>
+																							<LI id="footer-places-disclaimer"><A href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</A></LI>
+															</UL>
+										<UL id="footer-icons" class="noprint">
+								<LI id="footer-icon-poweredby"><A href="http://www.mediawiki.org/"><IMG src="./Wi-Fi _files/poweredby_mediawiki_88x31.png" height="31" width="88" alt="Powered by MediaWiki"></A></LI>
+												<LI id="footer-icon-copyright"><A href="http://wikimediafoundation.org/"><IMG src="./Wi-Fi _files/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"></A></LI>
+							</UL>
+			<DIV style="clear:both"></DIV>
+		</DIV>
+		<!-- /footer -->
+		<!-- fixalpha -->
+		<SCRIPT type="text/javascript"> if ( window.isMSIE55 ) fixalpha(); </SCRIPT>
+		<!-- /fixalpha -->
+		
+<SCRIPT type="text/javascript">if (window.runOnloadHook) runOnloadHook();</SCRIPT>
+		<!-- Served by srv209 in 0.053 secs. -->			
+
+<DIV style="top: 71px; width: 185px; display: none; left: auto; right: 36px; " class="suggestions"><DIV class="suggestions-results"></DIV><DIV class="suggestions-special"></DIV></DIV></BODY></HTML>

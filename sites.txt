@@ -1,0 +1,7 @@
+1. Java Certification by Khalid Moughal
+2. www.javaranch.com - look around for SCJP links - good collection of mocks/study material. Also cattle roundup - mock test. Site by Kathy sierra.
+3. www.jchq.com - good mock test
+4. www.javacert.com - good resource for mocks/study materials
+
+
+http://it-ebooks.info

@@ -1,0 +1,933 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!-- saved from url=(0066)http://www.willassen.no/msl/node4.html#SECTION00410000000000000000 -->
+<HTML><STYLE>/**
+ * Copyright 2009 Google Inc. All Rights Reserved.
+ *
+ * @fileoverview Css: Stylesheet for orkut extension.
+ *
+ * @author Megha Gupta
+ */
+
+.notificationContainer {
+  bottom:0;
+  overflow:hidden;
+  position:fixed;
+  right:0;
+  text-align:center;
+  width:205px;
+  z-index: 500;
+}
+
+.notificationPopup {
+  background-color: white;
+  border:3px solid lightBlue;
+  color: black;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  font-variant: normal;
+  margin-top: 2px;
+  margin-right: 5px;
+  max-height:200px;
+  overflow:hidden;
+  padding: 2px;
+  position: relative;
+  text-align: left;
+  width:194px;
+}
+
+.notificationPopup a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+.userThumbnail {
+  float: right;
+  cursor: pointer;
+}
+
+.photoThumbnail {
+  float: left;
+  margin-right: 3px;
+  cursor:pointer;
+}
+
+.orkutLogo {
+  float: left;
+  position:relative;
+  padding:2px;
+}
+
+.deleteIcon {
+  float: right;
+  cursor: pointer;
+}
+</STYLE><HEAD><META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>The GSM system</TITLE>
+<META name="description" content="The GSM system">
+<META name="keywords" content="diplom">
+<META name="resource-type" content="document">
+<META name="distribution" content="global">
+
+<LINK rel="STYLESHEET" href="./The GSM system_files/diplom.css">
+<LINK rel="next" href="http://www.willassen.no/msl/node5.html">
+<LINK rel="previous" href="http://www.willassen.no/msl/node3.html">
+<LINK rel="up" href="http://www.willassen.no/msl/diplom.html">
+<LINK rel="next" href="http://www.willassen.no/msl/node5.html">
+</HEAD><BODY bgcolor="#eeeeee">
+<!--Navigation Panel-->
+<A name="tex2html392" href="http://www.willassen.no/msl/node5.html">
+<IMG width="37" height="24" align="BOTTOM" border="0" alt="next" src="./The GSM system_files/next_motif.gif"></A> 
+<A name="tex2html389" href="http://www.willassen.no/msl/diplom.html">
+<IMG width="26" height="24" align="BOTTOM" border="0" alt="up" src="./The GSM system_files/up_motif.gif"></A> 
+<A name="tex2html383" href="http://www.willassen.no/msl/node3.html">
+<IMG width="63" height="24" align="BOTTOM" border="0" alt="previous" src="./The GSM system_files/previous_motif.gif"></A> 
+<A name="tex2html391" href="http://www.willassen.no/msl/node1.html">
+<IMG width="65" height="24" align="BOTTOM" border="0" alt="contents" src="./The GSM system_files/contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A name="tex2html393" href="http://www.willassen.no/msl/node5.html">Systems for position information</A>
+<B> Up:</B> <A name="tex2html390" href="http://www.willassen.no/msl/diplom.html">A method for implementing</A>
+<B> Previous:</B> <A name="tex2html384" href="http://www.willassen.no/msl/node3.html">Motivation for Mobile Station</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+<!--Table of Child-Links-->
+<A name="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+<UL>
+<LI><A name="tex2html394" href="./The GSM system_files/The GSM system.htm">
+History</A>
+</LI><LI><A name="tex2html395" href="http://www.willassen.no/msl/node4.html#SECTION00420000000000000000">
+Overview of the GSM system</A>
+<UL>
+<LI><A name="tex2html396" href="http://www.willassen.no/msl/node4.html#SECTION00421000000000000000">
+Entities of the GSM system</A>
+</LI><LI><A name="tex2html397" href="http://www.willassen.no/msl/node4.html#SECTION00422000000000000000">
+The Mobile Station</A>
+</LI><LI><A name="tex2html398" href="http://www.willassen.no/msl/node4.html#SECTION00423000000000000000">
+The Base Transciever Station</A>
+</LI><LI><A name="tex2html399" href="http://www.willassen.no/msl/node4.html#SECTION00424000000000000000">
+The Base Station Controller</A>
+</LI><LI><A name="tex2html400" href="http://www.willassen.no/msl/node4.html#SECTION00425000000000000000">
+The Mobile Switching Centre</A>
+</LI><LI><A name="tex2html401" href="http://www.willassen.no/msl/node4.html#SECTION00426000000000000000">
+The Location Registers</A>
+</LI><LI><A name="tex2html402" href="http://www.willassen.no/msl/node4.html#SECTION00427000000000000000">
+The Equipment Identity Register</A>
+</LI></UL>
+</LI><LI><A name="tex2html403" href="http://www.willassen.no/msl/node4.html#SECTION00430000000000000000">
+Services</A>
+</LI><LI><A name="tex2html404" href="http://www.willassen.no/msl/node4.html#SECTION00440000000000000000">
+Cells and location areas</A>
+</LI><LI><A name="tex2html405" href="http://www.willassen.no/msl/node4.html#SECTION00450000000000000000">
+Identification</A>
+<UL>
+<LI><A name="tex2html406" href="http://www.willassen.no/msl/node4.html#SECTION00451000000000000000">
+Identification of subscribers</A>
+</LI><LI><A name="tex2html407" href="http://www.willassen.no/msl/node4.html#SECTION00452000000000000000">
+Identification of areas</A>
+</LI><LI><A name="tex2html408" href="http://www.willassen.no/msl/node4.html#SECTION00453000000000000000">
+Identification of mobile equipment</A>
+</LI><LI><A name="tex2html409" href="http://www.willassen.no/msl/node4.html#SECTION00454000000000000000">
+Identification of network equipment</A>
+</LI></UL>
+</LI><LI><A name="tex2html410" href="http://www.willassen.no/msl/node4.html#SECTION00460000000000000000">
+The radio interface</A>
+</LI><LI><A name="tex2html411" href="http://www.willassen.no/msl/node4.html#SECTION00470000000000000000">
+Signalling</A>
+<UL>
+<LI><A name="tex2html412" href="http://www.willassen.no/msl/node4.html#SECTION00471000000000000000">
+MS-BSS-MSC</A>
+</LI><LI><A name="tex2html413" href="http://www.willassen.no/msl/node4.html#SECTION00472000000000000000">
+MAP and ISUP</A>
+</LI><LI><A name="tex2html414" href="http://www.willassen.no/msl/node4.html#SECTION00473000000000000000">
+Call setup</A>
+</LI><LI><A name="tex2html415" href="http://www.willassen.no/msl/node4.html#SECTION00474000000000000000">
+Handover</A>
+</LI></UL>
+</LI><LI><A name="tex2html416" href="http://www.willassen.no/msl/node4.html#SECTION00480000000000000000">
+The Operations and Management system</A>
+<UL>
+<LI><A name="tex2html417" href="http://www.willassen.no/msl/node4.html#SECTION00481000000000000000">
+GSM Q3 and proprietary protocols</A>
+</LI><LI><A name="tex2html418" href="http://www.willassen.no/msl/node4.html#SECTION00482000000000000000">
+The O&amp;M trace function</A>
+</LI></UL></LI></UL>
+<!--End of Table of Child-Links-->
+<HR>
+<H1><A name="SECTION00400000000000000000">
+The GSM system</A>
+</H1>
+<P></P><H1><A name="SECTION00410000000000000000">
+History</A>
+</H1>
+<P>
+In the beginning of the 1980s several different systems for mobile
+communications were developed in Europe. The need for a common system
+that allowed roaming between countries was early recognized. In 1982 a
+number of European countries created a new standardization
+organisation called ``Groupe Speciale Mobile'' (GSM). The mandate of
+this group was to develop a standard to be common for the countries
+that created it. In 1988 the GSM was included in the European
+Telecommunication Standards Institute (ETSI), and the standards
+developed by GSM thus became standards for all telecommunication
+administrations in Europe.
+</P><P>
+The main work with the GSM took place from 1988 - 1990 and resulted in
+12 series of specifications that in great detail specified the inner
+workings of GSM. In 1990, when phase 1 of the specifications was
+finished, there were three dominating automatic systems for mobile
+communications in the world [<A href="http://www.willassen.no/msl/node16.html#bjugan">20</A>] :
+</P><P></P><UL>
+<LI> American AMPS from 1984, with networks in the US.
+</LI><LI> British TACS from 1985, with network in Britain.
+</LI><LI> Nordic NMT from 1981, with networks in the nordic countries.
+</LI></UL>
+<P>
+Unlike these systems, the GSM is a fully digital system, allowing both
+speech and data services and allowing roaming across networks and
+countries. These features made GSM a very popular system, not only in
+european countries but also elsewhere. The term GSM has been chosen as
+a trademark for the system, meaning ``Global System for Mobile
+communications'', whereas the group within ETSI working with the
+standards has been renamed SMG (Special Mobile Group). Today GSM
+is the largest system for mobile communications in the world, and exist
+on all continents. From 1995, the specifications of GSM has
+moved into phase 2.
+</P><P></P><H1><A name="SECTION00420000000000000000">
+Overview of the GSM system</A>
+</H1>
+<P>
+The GSM system is specified in 12 series of specifications. For phase
+1, these specifications constitute over 4000 pages. Although much of
+the information in the specifications is redundant, it is impossible
+for most people to learn the GSM system from the specifications. It
+will therefore be given a short overview of the GSM system in this
+thesis, as well as the details necessary to understand the proposed
+solution to the location problem. For further reading, the books
+[<A href="http://www.willassen.no/msl/node16.html#bjugan">20</A>] and [<A href="http://www.willassen.no/msl/node16.html#mouly">27</A>] give good understanding of the inner
+workings of the GSM system without moving into too great detail.
+</P><P></P><H2><A name="SECTION00421000000000000000">
+Entities of the GSM system</A>
+</H2>
+<P>
+<BR>
+</P><DIV align="CENTER"><A name="181">&nbsp;</A>
+<TABLE>
+<CAPTION><STRONG>Figure:</STRONG>
+<A name="entiteterfigur">&nbsp;</A>Entities of the GSM system.</CAPTION>
+<TBODY><TR><TD><IMG width="631" height="321" src="./The GSM system_files/img1.gif" alt="\begin{figure}
+\centering
+ 
+\epsfig {file=teori/entiteter.eps, width=14cm}
+
+ \end{figure}"></TD></TR>
+</TBODY></TABLE>
+</DIV>
+<BR>
+<P>
+The GSM system consists of a number of separate entities
+[<A href="http://www.willassen.no/msl/node16.html#gsm0302">11</A>]. These are shown in figure
+<A href="http://www.willassen.no/msl/node4.html#entiteterfigur"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>.  The entities are connected through interfaces
+with their own names according to the specifications, these names are
+shown on the figure. In the following, each of the different entities
+will be described.
+</P><P></P><H2><A name="SECTION00422000000000000000">
+The Mobile Station</A>
+</H2>
+<P>
+The Mobile Station (MS) is the user equipment in GSM. The MS is what
+the user can see of the GSM system, the cellular phone
+itself. Production of Mobile Stations is done by many different
+manufacturers, and there will almost always be a wide range of different
+Mobile Stations in a mobile network. Therefore the specifications 
+specify the workings of the MS in great detail. On the radio interface
+the specifications series 05 specify the workings of the link-level,
+defining the frequencies and the access methods between the MS and the
+network. Series 04 specifies the higher layers of the radio-interface,
+defining signalling procedures for call control, and information exchange.
+The radio-interface will be described in <A href="http://www.willassen.no/msl/node4.html#radioint"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>. In order to
+verify the conformal of the specifications by Mobile Stations,
+equipment must obtain type approval from the standardization body
+[<A href="http://www.willassen.no/msl/node16.html#gsm1110">17</A>].
+</P><P>
+The MSs in GSM are independent from networks-providers. The identity of the
+subscriber is obtained from a SIM (Subscriber Identity Module) that
+has to be inserted into the MS to make it work. The SIM contains the
+IMSI (International Mobile Subscriber Identity) which uniquely
+intentifies the subscriber to the network. It also contains
+information necessary to encrypt the connections on the radio
+interface. The MS itself is identified by an IMEI (International
+Mobile Equipment Identity), which can be obtained by the network upon
+request. Without the SIM, calls to and from the mobile station is not
+allowed. This has one exception. Calls to the international emergency
+number, 112, is allowed without the SIM [<A href="http://www.willassen.no/msl/node16.html#mouly">27</A>].
+</P><P></P><H2><A name="SECTION00423000000000000000">
+The Base Transciever Station</A>
+</H2>
+<P>
+The Base Transciever Station (BTS) is the entity corresponding to one
+site communicating with the Mobile Stations. Usually, the BTS will
+have an antenna with several TRXs (radio transcievers) that each communicate on one radio
+frequency. The link-level signalling on the radio-channels is
+interpreted in the BTS, whereas most of the higher-level signalling is
+forwarded to the BSC and MSC (see <A href="http://www.willassen.no/msl/node4.html#signalering"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>). Speech and
+data-transmissions from the MS is recoded is the BTS from the special
+encoding used on the radio interface (<A href="http://www.willassen.no/msl/node4.html#radioint"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>) to the standard
+64 kbit/s encoding used in telecommunication networks. Like the
+radio-interface, the Abis interface between the BTS and the BSC is
+highly standardized ([<A href="http://www.willassen.no/msl/node16.html#gsm0808">10</A>] and others), allowing BTSs and
+BSCs from different manufacturers in one network.
+</P><P></P><H2><A name="SECTION00424000000000000000">
+The Base Station Controller</A>
+</H2>
+<P>
+Each Base Station Controller (BSC) control the magnitude of several
+hundred BTSs.  The BSC takes care of a number of different
+procedures regarding call setup, location update and handover for each
+MS. The handover control procedures will come especially into focus in
+this thesis. It is the BSC that decides when handover is
+necessary. This is accomplished by analyzing the measurement results
+that are sent from the MS during a call and ordering the MS to perform
+handover if this is necessary. The continous analyzing of measurements
+from many MSs requires considerable computational power. This put
+strong constraints on the design of the BSC.
+</P><P></P><H2><A name="SECTION00425000000000000000">
+The Mobile Switching Centre</A>
+</H2>
+<P>
+The Mobile Switching Centre is a normal ISDN-switch with extended
+functionality to handle mobile subscribers. The basic function of the
+MSC is to switch speech and data connections between BSCs, other MSCs,
+other GSM-networks and external non-mobile-networks. The MSC also
+handles a number of functions assosiated with mobile subscribers,
+among others registration, location updating and handover. There will
+normally exist only a few BSCs per MSC, due to the large number of
+BTSs connected to the BSC. The MSC and BSCs are connected via the
+highly standardized A-interface [<A href="http://www.willassen.no/msl/node16.html#gsm0808">10</A>]. However, due to the
+lack of standardization on Operation and Mangement protocols, network
+providers usually choose BSCs, MSCs and Location Registers from one
+manufacturer.
+</P><P></P><H2><A name="SECTION00426000000000000000">
+The Location Registers</A>
+</H2>
+<P>
+With each MSC, there is associated a Visitors Location Register
+(VLR). The VLR can be associated with one or several MSCs. The VLR
+stores data about all customers who are roaming withing the location
+area of that MSC. This data is updated with the location update
+procedure initiated from the MS through the MSC, or directly from the
+subscriber Home Location Register (HLR). The HLR is the home register
+of the subscriber. Subscribtion information, allowed services,
+authentication information and localization of the subscriber are at
+all times stored in the HLR. This information may be obtained by the
+VLR/MSC when necessary. When the subscriber roams into the location
+area of another VLR/MSC, the HLR is updated. At mobile terminated
+calls, the HLR is interrogated to find which MSC the MS is registered
+with.  Because the HLR is a centralized database that need to be
+accessed during every call setup and data transmission in the GSM
+network, this entity need to have a very large data transmission
+capacity. [<A href="http://www.willassen.no/msl/node16.html#palat">28</A>] suggests a scheme for distributing the data in
+the HLR in order to reduce the load.
+</P><P>
+The communication between MSC, VLR and HLR is done using the MAP
+(Mobile Application Part) of the Signalling System 7. The MAP is
+defined in [<A href="http://www.willassen.no/msl/node16.html#gsm0902">16</A>] and will be further discussed in
+<A href="http://www.willassen.no/msl/node4.html#signalering"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>.
+</P><P></P><H2><A name="SECTION00427000000000000000">The Equipment Identity Register</A>
+<A name="eir">&nbsp;</A>
+</H2>
+<P>
+The Equipment Identity Register (EIR) is an optional register. 
+Its purpose is to register IMEIs of mobile stations in use. By
+implementing the EIR the network provider can blacklist malfunctioning
+MSs or even receive reports to the operations centre when stolen
+mobile stations are used to make calls.
+</P><P></P><H1><A name="SECTION00430000000000000000">
+Services</A>
+</H1>
+<P>
+The services in GSM can be categorized in two main groups [<A href="http://www.willassen.no/msl/node16.html#bjugan">20</A>]:
+</P><P></P><UL>
+<LI> Tele services
+</LI><LI> Bearer services
+</LI></UL>
+<P>
+The bearer services are parted into nine groups of transparent and
+non-transparent data-transmission services. Since the
+data-transmission capabilities of GSM is of little relevance to our
+problem, it will not be further discussed here.
+</P><P>
+The tele-services group consists of the basic speech transmission, the
+point-to-point short message service and the broadcast short message
+service. The speech transmission resembles normal telephony. Speech is
+digitalized in the Mobile Station, coded and sent across the
+radio-channel. In the network, the speech is recoded to the A-law
+coding used in telephone networks.
+</P><P>
+The point-to-point short message service let the user send short
+messages to other users. These messages are relayed via a Short
+Message Centre (SMC), whose address has to be coded in the MS. Short
+messages may be sent separately or concurrently with speech
+transmission [<A href="http://www.willassen.no/msl/node16.html#mouly">27</A>].
+</P><P>
+The broadcast short message service let the network provider define
+short messages on a cell-by-cell basis that are sent to all the Mobile
+Stations in that cell. Although this service is not widely used, some
+providers use it to broadcast information about the cell the MS is
+currently camping on. As this is position-specific it has some
+relevance to the MSL problem.
+</P><P>
+In addition to these services, some supplementary services are
+defined. These include call forwarding, blocking of outgoing and
+incoming calls. The supplementary services are generally of little
+relevance to the location problem.
+</P><P></P><H1><A name="SECTION00440000000000000000">
+Cells and location areas</A>
+</H1>
+<P>
+In GSM it is distinguished between cells and location areas. A cell is
+defined as the area in which one can communicate with a certain base
+station. In other words, the cell is related to the BTS. When not
+communicating, the MS does not need to actively announce a shift from
+one cell to another. If the MS is enganged in communication, a
+handover must be performed in order to change from one cell to
+another.
+</P><P>
+A location area is the area assosiated with one VLR. On networks where
+there is a one-one mapping between MSCs and VLRS, the location area
+corresponds to the area controlled by one MSC. On a change of location
+area, the MS need to perform a location update in order to register
+its presence in the new VLR and erase its presence in the old VLR. In
+this case, the HLR also needs to be updated. If the MS is engaged in
+communication, a handover must be performed between the different
+MSCs. Note that handover between MSCs belonging to different
+network-providers is impossible.
+</P><P>
+<BR>
+</P><DIV align="CENTER"><A name="183">&nbsp;</A>
+<TABLE>
+<CAPTION><STRONG>Figure:</STRONG>
+<A name="celler">&nbsp;</A>A possible cell configuration.</CAPTION>
+<TBODY><TR><TD><IMG src="./The GSM system_files/celler.gif"></TD></TR>
+</TBODY></TABLE>
+</DIV>
+<BR>
+<P>
+Figure <A href="http://www.willassen.no/msl/node4.html#celler"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A> shows a possible cell configuration within one
+location area [<A href="http://www.willassen.no/msl/node16.html#bjugan">20</A>]. The use of a number of small cells within
+one large operating on different frequencies is typical. The small
+cells will take the majority of the traffic, while the large cell will
+cover all the ``holes'' between the small cells. Different cell-types
+can be classified according to their coverage dimension. This
+classification is summarized in table <A href="http://www.willassen.no/msl/node4.html#storrelser"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>.
+</P><P>
+<BR>
+</P><DIV align="CENTER">
+<P>
+</P><DIV align="CENTER">
+<A name="184">&nbsp;</A>
+<TABLE cellpadding="3" border="1">
+<CAPTION><STRONG>Table:</STRONG>
+<A name="storrelser">&nbsp;</A>Different cell-types</CAPTION>
+<TBODY><TR valign="TOP"><TD align="LEFT" nowrap="">Cell type</TD>
+<TD align="LEFT" nowrap="">Antenna location</TD>
+<TD align="LEFT" nowrap="">Cell Dimension (km)</TD>
+</TR>
+<TR valign="TOP"><TD align="LEFT" nowrap="">Large macrocell</TD>
+<TD align="LEFT" nowrap="">Above rooftop level</TD>
+<TD align="LEFT" nowrap="">3-30</TD>
+</TR>
+<TR valign="TOP"><TD align="LEFT" nowrap="">Small macrocell</TD>
+<TD align="LEFT" nowrap="">Above rooftop level</TD>
+<TD align="LEFT" nowrap="">1-3</TD>
+</TR>
+<TR valign="TOP"><TD align="LEFT" nowrap="">Microcell</TD>
+<TD align="LEFT" nowrap="">Below or about rooftop level</TD>
+<TD align="LEFT" nowrap="">0.1-1</TD>
+</TR>
+<TR valign="TOP"><TD align="LEFT" nowrap="">Picocell</TD>
+<TD align="LEFT" nowrap="">Below rooftop level</TD>
+<TD align="LEFT" nowrap="">0.01-1</TD>
+</TR>
+<TR valign="TOP"><TD align="LEFT" nowrap="">Nanocell</TD>
+<TD align="LEFT" nowrap="">Below rooftop level</TD>
+<TD align="LEFT" nowrap="">0.01-0.001</TD>
+</TR>
+</TBODY></TABLE></DIV>
+</DIV>
+<BR><H1><A name="SECTION00450000000000000000">
+Identification</A>
+</H1>
+<P>
+An important part of the location problem is the problem of finding
+where in the network the MS resides. It is therefore necessary to have
+an overview of the different types of identification and adressing
+that are specified in GSM.
+</P><P></P><H2><A name="SECTION00451000000000000000">Identification of subscribers</A>
+<A name="msisdnavsnitt">&nbsp;</A>
+</H2>
+<P>
+<BR>
+</P><DIV align="CENTER"><A name="186">&nbsp;</A>
+<TABLE>
+<CAPTION><STRONG>Figure:</STRONG>
+<A name="imsi">&nbsp;</A>Structure of the IMSI.</CAPTION>
+<TBODY><TR><TD><IMG src="./The GSM system_files/imsi.gif"></TD></TR>
+</TBODY></TABLE>
+</DIV>
+<BR>
+<P>
+Each mobile subscriber is identified by an International Mobile
+Subscriber Identity [<A href="http://www.willassen.no/msl/node16.html#gsm0303">8</A>]. As shown in figure <A href="http://www.willassen.no/msl/node4.html#imsi"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>
+the IMSI is composed my a 3-digit Mobile Country Code (MCC) which
+identifies the country, a 2-digit Mobile Network Code (MNC) which
+identifies the GSM network within that country, and a MSIN of up to 10
+digits. The MSIN uniquely identifies the subscriber within one
+network, and the MNC+MSIN (called National Mobile Subscriber Identity,
+NMSI) identifies the subscriber within a country. The MCCs are given
+in [<A href="http://www.willassen.no/msl/node16.html#e212">3</A>], the MNCs are administered by the telecommunications
+administration in each country. During registration, the network can
+assign a Temporary Mobile Subscriber Identity, TMSI to the
+subscriber. The TMSI consists of 4 octets.
+</P><P>
+<BR>
+</P><DIV align="CENTER"><A name="187">&nbsp;</A>
+<TABLE>
+<CAPTION><STRONG>Figure:</STRONG>
+<A name="msisdn">&nbsp;</A>Structure of the MSISDN.</CAPTION>
+<TBODY><TR><TD><IMG src="./The GSM system_files/msisdn.gif"></TD></TR>
+</TBODY></TABLE>
+</DIV>
+<BR>
+<P>
+In addition to the IMSI, all mobile subscribers need an international
+isdn-number (MSISDN) so it can be reached from the international phone
+network. This number follows the ITU-T E.164 [<A href="http://www.willassen.no/msl/node16.html#e164">4</A>]
+recommendation as seen in figure <A href="http://www.willassen.no/msl/node4.html#msisdn"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>. It consists of the
+Country Code (CC), the National Destination Code (NDC) and the
+subscriber number (SN).
+</P><P>
+When an external call is routed towars a Mobile Station, the VLR
+assigns a Mobile Station Roaming Number (MSRN) to the MS. This number
+is an international significant ISDN number similar to MSISDN. The NDC
+of this number points to the area in which the relevant MSC is
+located. The CC, NDC and first parts of SN digits of the MSRN uniquely
+identify the MSC the MS is registered with [<A href="http://www.willassen.no/msl/node16.html#gsm0303">8</A>].
+</P><P></P><H2><A name="SECTION00452000000000000000">
+Identification of areas</A>
+</H2>
+<P>
+<BR>
+</P><DIV align="CENTER"><A name="188">&nbsp;</A>
+<TABLE>
+<CAPTION><STRONG>Figure:</STRONG>
+<A name="cgi">&nbsp;</A>Structure of the LAI and CGI.</CAPTION>
+<TBODY><TR><TD><IMG src="./The GSM system_files/cgi.gif"></TD></TR>
+</TBODY></TABLE>
+</DIV>
+<BR>
+<P>
+Areas and cells are identified using Location Area Identificaitons (LAI)
+and Cell Global Identifications (CGI) [<A href="http://www.willassen.no/msl/node16.html#gsm0303">8</A>]. The composition of
+these are shown in figure <A href="http://www.willassen.no/msl/node4.html#cgi"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>. The MCC and MNC are similar to
+the codes used in the IMSI. Within each network, there will be a set
+of location areas identified with the Location Area Code (LAC) which
+is a fixed two-octet number. The Cell Identity identifies the cell
+within a Location Area and is also a fixed two-octet number. The full
+CGI globally identifies a cell.
+</P><P>
+<BR>
+</P><DIV align="CENTER"><A name="189">&nbsp;</A>
+<TABLE>
+<CAPTION><STRONG>Figure:</STRONG>
+<A name="bsic">&nbsp;</A>Structure of the BSIC.</CAPTION>
+<TBODY><TR><TD><IMG src="./The GSM system_files/bsic.gif"></TD></TR>
+</TBODY></TABLE>
+</DIV>
+<BR>
+<P>
+Each base-station also has its own BSIC, this code is at all times
+transmitted on the broadcast channel, so the Mobile Stations can
+distinguish between base stations. The BSIC is composed of a 3-bit
+Network Colour Code (NCC) and a 3-bit Base station Colour Code. The
+NCC is assigned to each network provider so the MS can sort out which
+base-stations it is allowed to camp on. The NCC of different providers
+must be different, also in national border-areas. A scheme for this is
+given in the appendix of [<A href="http://www.willassen.no/msl/node16.html#gsm0303">8</A>]. The BCCs of each base
+stations are assigned by the network operator, and must be assigned
+such that no neighbour stations have equal BCC and thus equal BSIC.
+</P><P></P><H2><A name="SECTION00453000000000000000">
+Identification of mobile equipment</A>
+</H2>
+<P>
+<BR>
+</P><DIV align="CENTER"><A name="190">&nbsp;</A>
+<TABLE>
+<CAPTION><STRONG>Figure:</STRONG>
+<A name="imei">&nbsp;</A>Structure of the IMEI.</CAPTION>
+<TBODY><TR><TD><IMG src="./The GSM system_files/imei.gif"></TD></TR>
+</TBODY></TABLE>
+</DIV>
+<BR>
+<P>
+Each Mobile Station is identified by the International Mobile
+Equipment Identification as shown in figure <A href="http://www.willassen.no/msl/node4.html#imei"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>. The IMEI
+consists of a Type Approval Code (TAC) which identifies the type of
+mobile equipment, and that is has been type approved according to
+[<A href="http://www.willassen.no/msl/node16.html#gsm1110">17</A>]. The Final Assembly Code (FAC) identifies the place of
+the final assembly of the unit. The SNR is the serial number of the
+unit in question, and the spare digit is 0.
+</P><P></P><H2><A name="SECTION00454000000000000000">
+Identification of network equipment</A>
+</H2>
+<P>
+Each equipment entity in the network is assigned its own identity
+according to [<A href="http://www.willassen.no/msl/node16.html#gsm1220">9</A>]. Although mandatory, these identities will
+be implementation specific as will be discussed in <A href="http://www.willassen.no/msl/node4.html#oogm"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>. It is
+worth mentioning at this point that the network equipment usually can
+be identified uniquely by other identification codes. The HLR can be
+uniquely identified by the first digits in the MSISDN or the IMSI. The
+MSRN uniquely identifies the MSC and the VLR. The LAI is enough to
+identify the VLR, whereas the CGI identifies MSC, BSC and BTS
+uniquely. It is also worth to note that the BSIC not identifies a base
+station uniquely unless there is information about how the BSIC was
+obtained.
+</P><P></P><H1><A name="SECTION00460000000000000000">The radio interface</A>
+<A name="radioint">&nbsp;</A>
+</H1>
+<P>
+The radio interface in GSM uses a combination between frequency (FDMA)
+and time (TDMA) multiplexing. The frequency division in GSM 900
+allocates 125 frequencies in each direction for GSM. The uplink (MS to
+BTS) frequencies is in the area 890 - 915 MHz and the downlink (BTS to
+MS) frequencies in the are 935-960 MHz. The carrier frequencies are
+separated with 200 kHz on each side. The frequencies are allocated in
+pair, so that each uplink/downlink pair is separated with exactly 45
+MHz.
+</P><P>
+<BR>
+</P><DIV align="CENTER"><A name="192">&nbsp;</A>
+<TABLE>
+<CAPTION><STRONG>Figure:</STRONG>
+<A name="tafig">&nbsp;</A>The synchronization of TDMA frames.</CAPTION>
+<TBODY><TR><TD><IMG src="./The GSM system_files/tdma.gif"></TD></TR>
+</TBODY></TABLE>
+</DIV>
+<BR>
+<P>
+Each of the carrier frequencies are divided into 8 logical channels,
+using TDMA. A TDMA frame contains one time-frame from each of the
+eight channels, and lasts 4.615 ms. The time-frames from each channel
+lasts 0.577 ms [<A href="http://www.willassen.no/msl/node16.html#bjugan">20</A>]. The total bitrate for all 8 channels is
+270.833 kbit/s, whereas the bitrate for each channel is 22.8 kbit/s
+[<A href="http://www.willassen.no/msl/node16.html#bjugan">20</A>].
+</P><P>
+In order to get the TDMA scheme to work, the time-frames from
+each mobile station must be synchronized when received by the BTS (see
+figure <A href="http://www.willassen.no/msl/node4.html#tafig"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>). This synchronization is achieved by using the
+concept of Timing Advance (TA), defined in [<A href="http://www.willassen.no/msl/node16.html#gsm0510">13</A>]. The degree
+of synchronization is measured by the BTS on the uplink, by checking
+the position of the training sequence. This training sequence is
+mandatory in all frames transmitted from the MS. From these
+measurements, the BTS can calculate the Timing-Advance and send it
+back to the MS in the first downlink transmission. From the TA value
+received from the BTS, the MS know when to send the frame, so that it
+can arrive at the BTS in synchronism. The values of the TA is
+continously calculated and transmitted to the MS during the lifetime
+of a connection.
+</P><P>
+The TA can take values from  to <IMG width="44" height="24" align="MIDDLE" border="0" src="./The GSM system_files/img5.gif" alt="$233 \mu s$">. These values are coded by 6
+bits, where [<A href="http://www.willassen.no/msl/node16.html#gsm0510">13</A>] defines 0 to be no timing-advance, and 63
+to be the maximum timing advance. This gives a time-difference of
+<IMG width="117" height="28" align="MIDDLE" border="0" src="./The GSM system_files/img6.gif" alt="$233/63 = 3.70 \mu s$">.</P><P></P><H1><A name="SECTION00470000000000000000">Signalling</A>
+<A name="signalering">&nbsp;</A>
+</H1>
+<P>
+In order to be able to implement Mobile Station Location (MSL) in a
+GSM network, it is very important to understand the signalling
+protocols and procedures used in GSM. In this section, an overview of
+the signalling protocols and some important signalling sequences will
+be given.
+</P><P></P><H2><A name="SECTION00471000000000000000">
+MS-BSS-MSC</A>
+</H2>
+<P>
+<BR>
+</P><DIV align="CENTER"><A name="194">&nbsp;</A>
+<TABLE>
+<CAPTION><STRONG>Figure:</STRONG>
+<A name="prfig">&nbsp;</A>Signalling protocols from MS via BTS and BSC to
+ MSC.</CAPTION>
+<TBODY><TR><TD><IMG width="629" height="289" src="./The GSM system_files/img7.gif" alt="\begin{figure}
+\centering
+ 
+\epsfig {file=teori/protokoller.eps, width=14cm}
+
+ \end{figure}"></TD></TR>
+</TBODY></TABLE>
+</DIV>
+<BR>
+<P>
+Figure <A href="http://www.willassen.no/msl/node4.html#prfig"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A> shows an overview of the signalling protocols in
+the GSM network between the entities MS and MSC [<A href="http://www.willassen.no/msl/node16.html#bjugan">20</A>].  Above
+the lower layers in the BSS, is the Radio Resources Protocol (RR).
+This protocol deals with the allocation, deallocation and
+parameters of the radio-channel and is crucial in the setup of all
+communication with the MS. Above this layer is the Mobility Management
+(MM) and Circuit Mode Connection Call Protocol (CM or CC). The MM
+deals with administration of localization and handover. The CM
+administrates the setup and termination of calls. There also exist
+protocols between the different entities in the network intended for
+network internal messages. These are BTS Management protocol (BTSM)
+across the Abis interface and the BSSAP (BSS Application Part) across
+the A interface. The BSSAP is divided into BSSMAP (BSS Management
+Application Part) and DTAP (Direct Transfer Application Part). The
+lower layers of the A interface are the transport layers of the ITU-T
+signalling system 7, SCCP and MTP [<A href="http://www.willassen.no/msl/node16.html#gsm0808">10</A>].
+</P><P></P><H2><A name="SECTION00472000000000000000">
+MAP and ISUP</A>
+</H2>
+<P>
+All functional signalling between the MSCs, the VLRs, the HLR and the
+EIR uses the Mobile Application Part protocol (MAP). The MAP is a
+beast of a protocol specified in the 784 pages long GSM 09.02
+[<A href="http://www.willassen.no/msl/node16.html#gsm0902">16</A>]. MAP includes all signalling procedures required for
+location updates, localization of customers and many other functions
+that are special for mobile networks. To be compatible with external
+networks, call setup is normally performed by ISUP (ISDN User Part)
+[<A href="http://www.willassen.no/msl/node16.html#riksaasen">29</A>]. The ISUP is defined in [<A href="http://www.willassen.no/msl/node16.html#q761">1</A>]. Both MAP and 
+ISUP use the transport protocols in the SS7,
+the MTP and the SCCP, defined in [<A href="http://www.willassen.no/msl/node16.html#q711">2</A>] and successors.
+</P><P></P><H2><A name="SECTION00473000000000000000">Call setup</A>
+<A name="callsetup">&nbsp;</A>
+</H2>
+<P>
+To get an idea of the complexity of the signalling procedures and show 
+some of the signals that later will be used, the
+complete signal-sequence for a mobile-terminated call will be shown
+here.  Diagram <A href="http://www.willassen.no/msl/node4.html#isdngsm"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A> shows the signalling sequence between the
+ISDN network and the GSM network.
+</P><P>
+<BR>
+</P><DIV align="CENTER"><A name="196">&nbsp;</A>
+<TABLE>
+<CAPTION><STRONG>Figure:</STRONG>
+<A name="isdngsm">&nbsp;</A>Signalling between ISDN and GSM at a mobile
+ terminated call setup.</CAPTION>
+<TBODY><TR><TD><IMG src="./The GSM system_files/isdn-gsm.gif"></TD></TR>
+</TBODY></TABLE>
+</DIV>
+<BR>
+<P>
+As we can see on diagram <A href="http://www.willassen.no/msl/node4.html#isdngsm"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>, the procedure starts when the
+Gateway MSC (GSMC) receives the ISUP IAM message from the remote
+network. The GMSC must then ask the HLR for a roaming number using MAP
+procedures. Further, the HLR sends this request to the VLR, which
+assigns a roaming number to the IMSI in question, and returns it. The
+GMSC can now forward the call setup request (IAM) to the MSC the MS in
+question is registered with. When the setup between the MSC and the MS
+is finished, the user is alerted (the cell phone is ringing) and a
+notification of this is sent to the caller via the ISUP ACM. When the
+receiver accepts the call, the ISUP ANU is sent to the caller, and the
+connection is established.
+</P><P>
+<BR>
+</P><DIV align="CENTER"><A name="197">&nbsp;</A>
+<TABLE>
+<CAPTION><STRONG>Figure:</STRONG>
+<A name="siggsm">&nbsp;</A>Signalling between the MSC and the MS.</CAPTION>
+<TBODY><TR><TD><IMG src="./The GSM system_files/gsmoppsett.gif"></TD></TR>
+</TBODY></TABLE>
+</DIV>
+<BR>
+<P>
+Figure <A href="http://www.willassen.no/msl/node4.html#siggsm"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A> shows in detail what happens between the MSC and
+the MS. The paging request is sent out on all the base stations in the
+location area. When the MS discovers that it is being paged it
+requests a channel on the radio interface, and the BSC assigns
+one. When the channel is active, the MS sends the PAG RESP indicating
+that it has been paged, and is ready to answer the paging. When the
+MSC receives this, it commences with authentication of the MS. The
+authentication parameters received from the MS must be checked with
+the HLR, thus the MSC requests these from the HLR with the ``Send
+Parameters'' request. Meanwhile, encryption can be initiated with the
+CIPH MODE signals. If the authentication was successful, the call
+setup is sent to the MS, which responds with the CALL CONF, where its
+indicated if the MS can respond this call type. If this is successful,
+a traffic channel is allocated with the ASS signals, and the call
+commences with alerting and connection. Optionally, the MSC can
+request the MS for its IMEI, and check if it is blacklisted in the
+EIR. This is shown in figure <A href="http://www.willassen.no/msl/node4.html#siggsm"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>.
+</P><P></P><H2><A name="SECTION00474000000000000000">Handover</A>
+<A name="handoverkap">&nbsp;</A>
+</H2>
+<P>
+Handover procedures are defined for each of the following cases:
+</P><P></P><UL>
+<LI> Intra-cell handover. The connections is transferred to another
+channel on the same BTS.
+</LI><LI> Intern inter-cell handover. The connection is transferred to
+another BTS on the same BSC.
+</LI><LI> MSC intern handover. The connection is transferred between
+BTSs belonging to two different BSCs within one MSC.
+</LI><LI> MSC extern handover. The connection is transferred to a BTS
+within another MSC.
+</LI></UL>
+<P>
+The decision to perform a handover is made in the BSC. At all times
+during a connection, the MS send reports for received signal level for
+all the BTSs it can receive. These reports are sent to the BTS using
+the MEAS REP signal in the RR protocol. The reporting of measurements
+are normally sent over every SACCH frame, which is every 480 ms. If
+the SACCH is used for other transmissions, at least every second SACCH
+frame is to be used for measurement reports [<A href="http://www.willassen.no/msl/node16.html#gsm0508">18</A>] . This
+means that the measurements are updated at least once a second.
+These reports are usually not analyzed in the BTS, but forwarded
+directly to the BSC using the MEAS RES signal in the BTSM
+protocol. Based on these measurements, the BSC can initiate the
+handover procedure. Figure <A href="http://www.willassen.no/msl/node4.html#interhando"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A> shows the signalling
+sequence when performing an intern inter-cell handover.
+</P><P>
+<BR>
+</P><DIV align="CENTER"><A name="199">&nbsp;</A>
+<TABLE>
+<CAPTION><STRONG>Figure:</STRONG>
+<A name="interhando">&nbsp;</A>Intern inter-cell handover.</CAPTION>
+<TBODY><TR><TD><IMG width="632" height="414" src="./The GSM system_files/img10.gif" alt="\begin{figure}
+\centering
+ 
+\epsfig {file=teori/handover.eps, width=14cm}
+
+ \end{figure}"></TD></TR>
+</TBODY></TABLE>
+</DIV>
+<BR>
+<P>
+The figure shows that the procedure starts by allocating the channel
+in the new BTS. The BSC then orders the MS over to the new channel by
+sending the HANDO CMD. The MS immediately switches to the new BTS and
+starts transmitting HANDO ACC on the new channel. When this is
+detected, the PHY INF message containing the physical information
+about the channel is sent, and the layer 2 connection can be
+established with the SABM - UA sequence. The handover is complete, and
+the previous radiochannel can be released. If the MS does not get any answer
+after transmittng HANDO ACC on the new channel for some time, it will
+return to the old channel. For this reason, the BSC cannot release the
+old channel before the handover is completed.
+</P><P></P><H1><A name="SECTION00480000000000000000">The Operations and Management system</A>
+<A name="oogm">&nbsp;</A>
+</H1>
+<P></P><H2><A name="SECTION00481000000000000000">
+GSM Q3 and proprietary protocols</A>
+</H2>
+<P>
+Operations and Management systems are extremely important in GSM
+networks. When an operator extends its network in order to establish
+coverage over large areas, the network can quickly grow to contain
+tenths or even hundreds of thousands of entities. An operations and
+management system ties the management of all these entities together
+into one or several Operations and Management Centres. Through such
+systems, the operator can configure switches, add new base-stations,
+perform software maintenance, add subscribers and perform many other
+tasks.
+</P><P>
+Unfortunately, the GSM-specifications does not specify a detailed
+protocol suite for Operations and Maintenance purposes. But the series
+12 of the specifications give an outline for an Operations and
+Maintenance protocol. It also dictates many O&amp;M-functions that must be
+implemented in GSM-equipment [<A href="http://www.willassen.no/msl/node16.html#gsm1200">12</A>]. The protocols defined in
+the 12-series is called GSM Q3 and builds on the ITU-T specified
+Telecommunication Management Network (TMN) specified in [<A href="http://www.willassen.no/msl/node16.html#m3010">5</A>].
+</P><P>
+Most manufacturers of GSM network equipment use their own proprietary
+protocol in their O&amp;M implementation. Therefore, the network operators
+must either choose all network components from one manufacturer, or
+there must exist one Operations &amp; Management Centre  (OMC) for each equipment
+type. However, all proprietary implementations of OM protocols must
+follow the principles given in GSM Q3, and it is thus possible to find
+general solutions to operations and management problems in the GSM Q3
+specification.
+</P><P></P><H2><A name="SECTION00482000000000000000">The O&amp;M trace function</A>
+<A name="tracekap">&nbsp;</A>
+</H2>
+<P>
+Subscriber tracing is a compulsory O&amp;M function described in GSM
+specification 12.08 [<A href="http://www.willassen.no/msl/node16.html#gsm1208">19</A>]. Several different trace types
+exist:
+</P><P></P><UL>
+<LI> Tracing of a native subscriber in home network
+</LI><LI> Tracing of a native subscriber roaming in other networks
+</LI><LI> Tracing of a foreign subscriber in home network
+</LI><LI> Tracing of equipment based on IMEI.
+</LI></UL>
+<P>
+A trace is activated by sending the TRACE_ACTIVATION message from the
+OMC in question to the HLR or a VLR. In this message the subscriber to
+be traced is identified by the IMSI, and a number of parameters to
+identify the trace type, the OMC id and others is given. If the trace
+activation is sent to the HLR, the HLR will send a
+MAP_ACTIVATE_TRACE_MODE to the VLR the subscriber is registered with,
+if any. The VLR will in turn inform the MSC using
+MAP_TRACE_SUBSCRIBER_ACTIVITY which in turn will inform the BSC using
+the BSSMAP MSC_INVOKE_TRACE message. The complete trace activation
+procedure is outlined in figure <A href="http://www.willassen.no/msl/node4.html#starttracefig"><IMG align="BOTTOM" border="1" alt="[*]" src="./The GSM system_files/cross_ref_motif.gif"></A>
+</P><P>
+<BR>
+</P><DIV align="CENTER"><A name="202">&nbsp;</A>
+<TABLE>
+<CAPTION><STRONG>Figure:</STRONG>
+<A name="starttracefig">&nbsp;</A>Signalling on trace activation.</CAPTION>
+<TBODY><TR><TD><IMG width="632" height="159" src="./The GSM system_files/img11.gif" alt="\begin{figure}
+\centering
+ 
+\epsfig {file=teori/trace.eps, width=14cm}
+
+ \end{figure}"></TD></TR>
+</TBODY></TABLE>
+</DIV>
+<BR>
+<P>
+After the trace activation, the entities of the GSM system will report
+all datas relevant to the traced subscriber to the OMC. The
+contents of the reports are defined in [<A href="http://www.willassen.no/msl/node16.html#gsm1208">19</A>], and can
+include:
+</P><P></P><UL>
+<LI> IDs for MSC, BSC, BTS and TRX
+</LI><LI> cell and location IDs.
+</LI><LI> All radio measurements received from the MS
+</LI><LI> Actual TA used on the link
+</LI><LI> All parameters leading to handover
+</LI></UL>
+<P>
+It can be specified in the trace invocation, that the trace shall
+continue on handover. In this case, the BSC will inform the new base
+station that trace is invoked when handover is performed. The OMC will
+then receive trace reports from the new BSC after the handover.
+</P><P>
+The trace procedures have a number of important applications relating
+to the management of subscribers in a GSM network. As it will be
+discovered, the trace procedures are useful for implementing Mobile
+Station Location.
+</P><P></P><HR>
+<!--Navigation Panel-->
+<A name="tex2html392" href="http://www.willassen.no/msl/node5.html">
+<IMG width="37" height="24" align="BOTTOM" border="0" alt="next" src="./The GSM system_files/next_motif.gif"></A> 
+<A name="tex2html389" href="http://www.willassen.no/msl/diplom.html">
+<IMG width="26" height="24" align="BOTTOM" border="0" alt="up" src="./The GSM system_files/up_motif.gif"></A> 
+<A name="tex2html383" href="http://www.willassen.no/msl/node3.html">
+<IMG width="63" height="24" align="BOTTOM" border="0" alt="previous" src="./The GSM system_files/previous_motif.gif"></A> 
+<A name="tex2html391" href="http://www.willassen.no/msl/node1.html">
+<IMG width="65" height="24" align="BOTTOM" border="0" alt="contents" src="./The GSM system_files/contents_motif.gif"></A>  
+<BR>
+<B> Next:</B> <A name="tex2html393" href="http://www.willassen.no/msl/node5.html">Systems for position information</A>
+<B> Up:</B> <A name="tex2html390" href="http://www.willassen.no/msl/diplom.html">A method for implementing</A>
+<B> Previous:</B> <A name="tex2html384" href="http://www.willassen.no/msl/node3.html">Motivation for Mobile Station</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+<I>Svein Yngvar Willassen</I>
+<BR><I>12/3/1998</I>
+</ADDRESS>
+
+
+</BODY></HTML>

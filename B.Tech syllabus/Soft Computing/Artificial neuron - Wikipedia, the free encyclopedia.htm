@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta name="generator" content="MediaWiki 1.15alpha" />
+		<meta name="keywords" content="Artificial neuron,Articles with unsourced statements since March 2008,ADALINE,Activation function,Artificial neural network,Axon,Backpropagation,Biological neuron models,Boolean,Bounded function,Conjunctive normal form" />
+		<link rel="canonical" href="/wiki/Artificial_neuron" />
+		<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Artificial_neuron&amp;action=edit" />
+		<link rel="edit" title="Edit this page" href="/w/index.php?title=Artificial_neuron&amp;action=edit" />
+		<link rel="apple-touch-icon" href="http://en.wikipedia.org/apple-touch-icon.png" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)" />
+		<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<link rel="alternate" type="application/rss+xml" title="Wikipedia RSS Feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=rss" />
+		<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom Feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+		<title>Artificial neuron - Wikipedia, the free encyclopedia</title>
+		<link rel="stylesheet" href="/skins-1.5/common/shared.css?207xx" type="text/css" media="screen" />
+		<link rel="stylesheet" href="/skins-1.5/common/commonPrint.css?207xx" type="text/css" media="print" />
+		<link rel="stylesheet" href="/skins-1.5/monobook/main.css?207xx" type="text/css" media="screen" />
+		<link rel="stylesheet" href="/skins-1.5/chick/main.css?207xx" type="text/css" media="handheld" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins-1.5/monobook/IE50Fixes.css?207xx" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="/skins-1.5/monobook/IE55Fixes.css?207xx" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="/skins-1.5/monobook/IE60Fixes.css?207xx" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="/skins-1.5/monobook/IE70Fixes.css?207xx" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" />
+		<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="print" />
+		<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Handheld.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="handheld" />
+		<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" />
+		<link rel="stylesheet" href="/w/index.php?title=-&amp;action=raw&amp;maxage=2678400&amp;gen=css" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins-1.5/common/IEFixes.js?207xx"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "/skins-1.5";
+		var wgArticlePath = "/wiki/$1";
+		var wgScriptPath = "/w";
+		var wgScript = "/w/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://en.wikipedia.org";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "Artificial_neuron";
+		var wgTitle = "Artificial neuron";
+		var wgAction = "view";
+		var wgArticleId = "349771";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = 276720721;
+		var wgVersion = "1.15alpha";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgMWSuggestTemplate = "http://en.wikipedia.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}\x26suggest";
+		var wgDBname = "enwiki";
+		var wgSearchNamespaces = [0];
+		var wgMWSuggestMessages = ["with suggestions", "no suggestions"];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="/skins-1.5/common/wikibits.js?207xx"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="/skins-1.5/common/ajax.js?207xx"></script>
+		<script type="text/javascript" src="/skins-1.5/common/mwsuggest.js?207xx"></script>
+<script type="text/javascript">/*<![CDATA[*/
+var wgNotice='';var wgNoticeLocal='';
+/*]]>*/</script>		<script type="text/javascript" src="http://upload.wikimedia.org/centralnotice/wikipedia/en/centralnotice.js?207xx"></script>
+		<script type="text/javascript" src="/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-Artificial_neuron skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="siteNotice"><script type='text/javascript'>if (wgNotice != '') document.writeln(wgNotice);</script></div>		<h1 id="firstHeading" class="firstHeading">Artificial neuron</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From Wikipedia, the free encyclopedia</h3>
+			<div id="contentSub">&nbsp;&nbsp;(Redirected from <a href="/w/index.php?title=Artificial_neurons&amp;redirect=no" title="Artificial neurons">Artificial neurons</a>)</div>
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
+			<p>An <b>artificial neuron</b> is a mathematical function conceived as a crude model, or abstraction of biological <a href="/wiki/Neuron" title="Neuron">neurons</a>. Artificial neurons are the constitutive units in an <a href="/wiki/Artificial_neural_network" title="Artificial neural network">artificial neural network</a>. Depending on the specific model used, it can receive different names, such as <b>semi-linear unit</b>, <b>Nv neuron</b>, <b>binary neuron</b>, <b>linear threshold function</b> or <b>McCulloch-Pitts neuron</b>. The artificial neuron receives one or more inputs (representing the one or more <a href="/wiki/Dendrite" title="Dendrite">dendrites</a>) and sums them to produce an output (<a href="/wiki/Synapse" title="Synapse" class="mw-redirect">synapse</a>). Usually the sums of each node are weighted, and the sum is passed through a <a href="/wiki/Non-linear" title="Non-linear" class="mw-redirect">non-linear</a> function known as an <a href="/wiki/Activation_function" title="Activation function">activation function</a> or <a href="/wiki/Transfer_function" title="Transfer function">transfer function</a>. The transfer functions usually have a <a href="/wiki/Sigmoid_function" title="Sigmoid function">sigmoid shape</a>, but they may also take the form of other non-linear functions, <a href="/wiki/Piecewise" title="Piecewise">piecewise</a> linear functions, or <a href="#Step_function" title="">step functions</a>. They are also often <a href="/wiki/Monotonic_function" title="Monotonic function">monotonically increasing</a>, <a href="/wiki/Continuous_function" title="Continuous function">continuous</a>, <a href="/wiki/Differentiable_function" title="Differentiable function" class="mw-redirect">differentiable</a> and <a href="/wiki/Bounded_function" title="Bounded function">bounded</a>.</p>
+<p>The artificial neuron transfer function should not be confused with a linear system's <a href="/wiki/Transfer_function" title="Transfer function">transfer function</a>.</p>
+<table id="toc" class="toc" summary="Contents">
+<tr>
+<td>
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1"><a href="#Basic_structure"><span class="tocnumber">1</span> <span class="toctext">Basic structure</span></a></li>
+<li class="toclevel-1"><a href="#History"><span class="tocnumber">2</span> <span class="toctext">History</span></a></li>
+<li class="toclevel-1"><a href="#Types_of_transfer_functions"><span class="tocnumber">3</span> <span class="toctext">Types of transfer functions</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Step_function"><span class="tocnumber">3.1</span> <span class="toctext">Step function</span></a></li>
+<li class="toclevel-2"><a href="#Linear_combination"><span class="tocnumber">3.2</span> <span class="toctext">Linear combination</span></a></li>
+<li class="toclevel-2"><a href="#Sigmoid"><span class="tocnumber">3.3</span> <span class="toctext">Sigmoid</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Pseudocode_Algorithm"><span class="tocnumber">4</span> <span class="toctext">Pseudocode Algorithm</span></a></li>
+<li class="toclevel-1"><a href="#Spreadsheet_Example"><span class="tocnumber">5</span> <span class="toctext">Spreadsheet Example</span></a></li>
+<li class="toclevel-1"><a href="#Criticism"><span class="tocnumber">6</span> <span class="toctext">Criticism</span></a></li>
+<li class="toclevel-1"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1"><a href="#Further_reading"><span class="tocnumber">8</span> <span class="toctext">Further reading</span></a></li>
+<li class="toclevel-1"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+//<![CDATA[
+ if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } 
+//]]>
+</script>
+<p><a name="Basic_structure" id="Basic_structure"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Artificial_neuron&amp;action=edit&amp;section=1" title="Edit section: Basic structure">edit</a>]</span> <span class="mw-headline">Basic structure</span></h2>
+<p>For a given artificial neuron, let there be <span class="texhtml"><i>m</i> + 1</span> inputs with signals <span class="texhtml"><i>x</i><sub>0</sub></span> through <span class="texhtml"><i>x</i><sub><i>m</i></sub></span> and weights <span class="texhtml"><i>w</i><sub>0</sub></span> through <span class="texhtml"><i>w</i><sub><i>m</i></sub></span>. Usually, the <span class="texhtml"><i>x</i><sub>0</sub></span> input is assigned the value <span class="texhtml">+ 1</span>, which makes it a <i>bias</i> input with <span class="texhtml"><i>w</i><sub><i>k</i>0</sub> = <i>b</i><sub><i>k</i></sub></span>. This leaves only <span class="texhtml"><i>m</i></span> actual inputs to the neuron: from <span class="texhtml"><i>x</i><sub>1</sub></span> to <span class="texhtml"><i>x</i><sub><i>m</i></sub></span>.</p>
+<p>The output of <span class="texhtml"><i>k</i></span>-th neuron is:</p>
+<dl>
+<dd><img class="tex" alt="y_k =  \varphi \left( \sum_{j=0}^m w_{kj} x_j \right)" src="http://upload.wikimedia.org/math/8/4/4/8444f80ebc7c70ca9b6a376d4c80074b.png" /></dd>
+</dl>
+<p>Where <img class="tex" alt="\varphi" src="http://upload.wikimedia.org/math/3/5/3/3538eb9c84efdcbd130c4c953781cfdb.png" /> (Phi) is the transfer function.</p>
+<p><a href="/wiki/File:Artificial_neuron.png" class="image" title="Image:artificial neuron.png"><img alt="Image:artificial neuron.png" src="http://upload.wikimedia.org/wikipedia/commons/b/b0/Artificial_neuron.png" width="272" height="187" border="0" /></a></p>
+<p>The output is analogous to the <a href="/wiki/Axon" title="Axon">axon</a> of a biological neuron, and its value propagates to input of the next layer, through a synapse. It may also exit the system, possibly as part of an output vector.</p>
+<p><a name="History" id="History"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Artificial_neuron&amp;action=edit&amp;section=2" title="Edit section: History">edit</a>]</span> <span class="mw-headline">History</span></h2>
+<p>The first artificial neuron was the Threshold Logic Unit (TLU) first proposed by <a href="/wiki/Warren_McCulloch" title="Warren McCulloch" class="mw-redirect">Warren McCulloch</a> and <a href="/wiki/Walter_Pitts" title="Walter Pitts">Walter Pitts</a> in 1943. As a transfer function, it employed a threshold, equivalent to using the <a href="/wiki/Heaviside_step_function" title="Heaviside step function">Heaviside step function</a>. Initially, only a simple model was considered, with binary inputs and outputs, some restrictions on the possible weights, and a more flexible threshold value. Since the beginning it was already noticed that any boolean function could be implemented by networks of such devices, what is easily seen from the fact that one can implement the AND and OR functions, and use them in the disjunctive or the <a href="/wiki/Conjunctive_normal_form" title="Conjunctive normal form">conjunctive normal form</a>.</p>
+<p>Researchers also soon realized that cyclic networks, with <a href="/wiki/Feedback" title="Feedback">feedbacks</a> through neurons, could define dynamical systems with memory, but most of the research concentrated (and still does) on strictly feed-forward networks because of the smaller difficulty they present.</p>
+<p>One important and pioneering artificial neural network that used the linear threshold function was the <a href="/wiki/Perceptron" title="Perceptron">perceptron</a>, developed by <a href="/wiki/Frank_Rosenblatt" title="Frank Rosenblatt">Frank Rosenblatt</a>. This model already considered more flexible weight values in the neurons, and was used in machines with adaptive capabilities. The representation of the threshold values as a bias term was introduced by <a href="/wiki/Widrow" title="Widrow" class="mw-redirect">Widrow</a> in 1960<sup class="noprint Template-Fact"><span title="This claim needs references to reliable sources&#160;since March 2008" style="white-space: nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">citation needed</a></i>]</span></sup>.</p>
+<p>In the late 1980s, when research on neural networks regained strength, neurons with more continuous shapes started to be considered. The possibility of differentiating the activation function allows the direct use of the <a href="/wiki/Gradient_descent" title="Gradient descent">gradient descent</a> and other optimization algorithms for the adjustment of the weights. Neural networks also started to be used as a general function approximation model.</p>
+<p><a name="Types_of_transfer_functions" id="Types_of_transfer_functions"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Artificial_neuron&amp;action=edit&amp;section=3" title="Edit section: Types of transfer functions">edit</a>]</span> <span class="mw-headline">Types of transfer functions</span></h2>
+<p>The transfer function of a neuron is chosen to have a number of properties which either enhance or simplify the network containing the neuron. Crucially, for instance, any <a href="/wiki/Multilayer_perceptron" title="Multilayer perceptron">multilayer perceptron</a> using a <i>linear</i> transfer function has an equivalent single-layer network; a non-linear function is therefore necessary to gain the advantages of a multi-layer network.</p>
+<p>Below, <i>u</i> refers in all cases to the weighted sum of all the inputs to the neuron, i.e. for <i>n</i> inputs,</p>
+<dl>
+<dd><img class="tex" alt="
+u = \sum_{i = 1}^n w_{i} x_{i}
+" src="http://upload.wikimedia.org/math/1/4/5/145b11dfd9d6e4e117d77e54076a9d88.png" /></dd>
+</dl>
+<p>where <b>w</b> is a vector of <i>synaptic weights</i> and <b>x</b> is a vector of inputs.</p>
+<p><a name="Step_function" id="Step_function"></a></p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Artificial_neuron&amp;action=edit&amp;section=4" title="Edit section: Step function">edit</a>]</span> <span class="mw-headline">Step function</span></h3>
+<p>The output <i>y</i> of this transfer function is binary, depending on whether the input meets a specified threshold, <i>θ</i>. The "signal" is sent, i.e. the output is set to one, if the activation meets the threshold.</p>
+<dl>
+<dd><img class="tex" alt="y = \left\{ \begin{matrix} 1 &amp; \mbox{if }u \ge \theta \\ 0 &amp; \mbox{if }u &lt; \theta \end{matrix} \right." src="http://upload.wikimedia.org/math/2/5/0/2505964b342bc8b249f54c448b1a3314.png" /></dd>
+</dl>
+<p>This function is used in <a href="/wiki/Perceptron" title="Perceptron">perceptrons</a> and often shows up in many other models. It performs a division of the <a href="/wiki/Vector_space" title="Vector space">space</a> of inputs by a <a href="/wiki/Hyperplane" title="Hyperplane">hyperplane</a>. It is specially useful in the last layer of a network intended to perform binary classification of the inputs. It can be approximated from other sigmoidal functions by assigning large values to the weights.</p>
+<p>See: <a href="/wiki/Heaviside_step_function" title="Heaviside step function">Heaviside step function</a></p>
+<p><a name="Linear_combination" id="Linear_combination"></a></p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Artificial_neuron&amp;action=edit&amp;section=5" title="Edit section: Linear combination">edit</a>]</span> <span class="mw-headline"><a href="/wiki/Linear_combination" title="Linear combination">Linear combination</a></span></h3>
+<p>In this case, the output unit is simply the weighted sum of its inputs plus a <i>bias</i> term. A number of such linear neurons perform a linear transformation of the input vector. This is usually more useful in the first layers of a network. A number of analysis tools exist based on linear models, such as <a href="/wiki/Harmonic_analysis" title="Harmonic analysis">harmonic analysis</a>, and they can all be used in neural networks with this linear neuron. The bias term allows us to make <a href="/wiki/Homogeneous_coordinates" title="Homogeneous coordinates">affine transformations</a> to the data.</p>
+<p>See: <a href="/wiki/Linear_Transformation" title="Linear Transformation" class="mw-redirect">Linear Transformation</a>, <a href="/wiki/Harmonic_Analysis" title="Harmonic Analysis" class="mw-redirect">Harmonic Analysis</a>, <a href="/wiki/Linear_filter" title="Linear filter">Linear filter</a>, <a href="/wiki/Wavelets" title="Wavelets" class="mw-redirect">Wavelets</a>, <a href="/wiki/Principal_Component_Analysis" title="Principal Component Analysis" class="mw-redirect">Principal Component Analysis</a>, <a href="/wiki/Independent_Component_Analysis" title="Independent Component Analysis" class="mw-redirect">Independent Component Analysis</a>, <a href="/wiki/Deconvolution" title="Deconvolution">Deconvolution</a>.</p>
+<p><a name="Sigmoid" id="Sigmoid"></a></p>
+<h3><span class="editsection">[<a href="/w/index.php?title=Artificial_neuron&amp;action=edit&amp;section=6" title="Edit section: Sigmoid">edit</a>]</span> <span class="mw-headline"><a href="/wiki/Sigmoid_function" title="Sigmoid function">Sigmoid</a></span></h3>
+<p>A fairly simple non-linear function, the <a href="/wiki/Sigmoid_function" title="Sigmoid function">logistic function</a> also has an easily calculated derivative, which can be important when calculating the weight updates in the network. It thus makes the network more easily manipulable mathematically, and was attractive to early computer scientists who needed to minimize the computational load of their simulations. It is commonly seen in <a href="/w/index.php?title=Multilayer_perceptrons&amp;action=edit&amp;redlink=1" class="new" title="Multilayer perceptrons (page does not exist)">multilayer perceptrons</a> using a <a href="/wiki/Backpropagation" title="Backpropagation">backpropagation</a> algorithm.</p>
+<p><br />
+See: <a href="/wiki/Sigmoid_function" title="Sigmoid function">Sigmoid function</a></p>
+<p><a name="Pseudocode_Algorithm" id="Pseudocode_Algorithm"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Artificial_neuron&amp;action=edit&amp;section=7" title="Edit section: Pseudocode Algorithm">edit</a>]</span> <span class="mw-headline"><a href="/wiki/Pseudocode" title="Pseudocode">Pseudocode</a> Algorithm</span></h2>
+<p>The following is a simple pseudocode implementation of a single TLU which takes <a href="/wiki/Boolean" title="Boolean">boolean</a> inputs (true or false), and returns a single <a href="/wiki/Boolean" title="Boolean">boolean</a> output when activated. An <a href="/wiki/Object_oriented" title="Object oriented" class="mw-redirect">object oriented</a> model is used. No method of training is defined, since several exist. If a purely functional model were used, the class TLU below would be replaced with a function TLU with input parameters threshold, weights, and inputs that returned a <a href="/wiki/Boolean" title="Boolean">boolean</a> value.</p>
+<pre>
+ <b>class</b> TLU <b>defined as:</b>
+  <b>data member</b> threshold <b>:</b> number
+  <b>data member</b> weights <b>: list of</b> numbers <b>of size</b> X
+  <b>function member</b> fire( inputs <b>: list of</b> booleans <b>of size</b> X ) <b>:</b> boolean <b>defined as:</b>
+   <b>variable</b> T <b>:</b> number
+   T <b>←</b> 0
+   <b>for each</b> i <b>in</b> 1 <b>to</b> X <b>:</b>
+    <b>if</b> inputs(i) <b>is</b> true <b>:</b>
+     T <b>←</b> T + weights(i)
+    <b>end if</b>
+   <b>end for each</b>
+   <b>if</b> T &gt; threshold <b>:</b>
+    <b>return</b> true
+   <b>else:</b>
+    <b>return</b> false
+   <b>end if</b>
+  <b>end function</b>
+ <b>end class</b>
+</pre>
+<p><a name="Spreadsheet_Example" id="Spreadsheet_Example"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Artificial_neuron&amp;action=edit&amp;section=8" title="Edit section: Spreadsheet Example">edit</a>]</span> <span class="mw-headline">Spreadsheet Example</span></h2>
+<table class="wikitable">
+<tr>
+<td width="47" height="13" valign="bottom"></td>
+<td width="42" valign="bottom"></td>
+<td width="37" colspan="3" align="center" valign="bottom">Input</td>
+<td width="21" colspan="2" align="center" valign="bottom">Initial</td>
+<td width="39" colspan="2" align="center" valign="bottom">Output</td>
+<td width="35" valign="bottom"></td>
+<td width="64" valign="bottom"></td>
+<td width="38" valign="bottom"></td>
+<td width="50" valign="bottom"></td>
+<td width="41" colspan="2" align="center" valign="bottom">Final</td>
+</tr>
+<tr>
+<td height="38" valign="bottom">Threshold</td>
+<td valign="bottom">Learning Rate</td>
+<td colspan="2" align="center" valign="bottom">Sensor values</td>
+<td valign="bottom">Desired output</td>
+<td colspan="2" align="center" valign="bottom">Weights</td>
+<td colspan="2" align="center" valign="bottom">Calculated</td>
+<td align="center" valign="bottom">Sum</td>
+<td align="center" valign="bottom">Network</td>
+<td align="center" valign="bottom">Error</td>
+<td align="center" valign="bottom">Correction</td>
+<td colspan="2" align="center" valign="bottom">Weights</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="13">TH</td>
+<td>LR</td>
+<td>X1</td>
+<td>X2</td>
+<td>Z</td>
+<td>w1</td>
+<td>w2</td>
+<td>C1</td>
+<td>C2</td>
+<td>S</td>
+<td>N</td>
+<td>E</td>
+<td>R</td>
+<td>W1</td>
+<td>W2</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="13"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>X1 x w1</td>
+<td>X2 x w2</td>
+<td>C1+C2</td>
+<td>IF(S&gt;TH,1,0)</td>
+<td>Z-N</td>
+<td>LR x E</td>
+<td>R+w1</td>
+<td>R+w2</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="13">0.5</td>
+<td>0.2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.1</td>
+<td>0.3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.1</td>
+<td>0.3</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="13">0.5</td>
+<td>0.2</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0.1</td>
+<td>0.3</td>
+<td>0</td>
+<td>0.3</td>
+<td>0.3</td>
+<td>0</td>
+<td>1</td>
+<td>0.2</td>
+<td>0.3</td>
+<td>0.5</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="13">0.5</td>
+<td>0.2</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0.3</td>
+<td>0.5</td>
+<td>0.3</td>
+<td>0</td>
+<td>0.3</td>
+<td>0</td>
+<td>1</td>
+<td>0.2</td>
+<td>0.5</td>
+<td>0.7</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="13">0.5</td>
+<td>0.2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0.5</td>
+<td>0.7</td>
+<td>0.5</td>
+<td>0.7</td>
+<td>1.2</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0.5</td>
+<td>0.7</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="13">0.5</td>
+<td>0.2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.5</td>
+<td>0.7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.5</td>
+<td>0.7</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="13">0.5</td>
+<td>0.2</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0.5</td>
+<td>0.7</td>
+<td>0</td>
+<td>0.7</td>
+<td>0.7</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0.5</td>
+<td>0.7</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="13">0.5</td>
+<td>0.2</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0.5</td>
+<td>0.7</td>
+<td>0.5</td>
+<td>0</td>
+<td>0.5</td>
+<td>0</td>
+<td>1</td>
+<td>0.2</td>
+<td>0.7</td>
+<td>0.9</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="13">0.5</td>
+<td>0.2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0.7</td>
+<td>0.9</td>
+<td>0.7</td>
+<td>0.9</td>
+<td>1.6</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0.7</td>
+<td>0.9</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="13">0.5</td>
+<td>0.2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.7</td>
+<td>0.9</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.7</td>
+<td>0.9</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="13">0.5</td>
+<td>0.2</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0.7</td>
+<td>0.9</td>
+<td>0</td>
+<td>0.9</td>
+<td>0.9</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0.7</td>
+<td>0.9</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="13">0.5</td>
+<td>0.2</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0.7</td>
+<td>0.9</td>
+<td>0.7</td>
+<td>0</td>
+<td>0.7</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0.7</td>
+<td>0.9</td>
+</tr>
+<tr align="center" valign="bottom">
+<td height="13">0.5</td>
+<td>0.2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0.7</td>
+<td>0.9</td>
+<td>0.7</td>
+<td>0.9</td>
+<td>1.6</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0.7</td>
+<td>0.9</td>
+</tr>
+</table>
+<p>Supervised neural network training for an OR gate.</p>
+<p>Note: Initial weight equals final weight of previous iteration.</p>
+<p><a name="Criticism" id="Criticism"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Artificial_neuron&amp;action=edit&amp;section=9" title="Edit section: Criticism">edit</a>]</span> <span class="mw-headline">Criticism</span></h2>
+<p>The artificial neuron is criticized by E.Izhikevich<sup class="noprint Template-Fact"><span title="This claim needs references to reliable sources&#160;since March 2008" style="white-space: nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed">citation needed</a></i>]</span></sup> for not being biologically realistic. Although this argument is technically correct, it is largely academic, as artificial neurons are not intended to perfectly model <a href="/wiki/Biological_neuron_models" title="Biological neuron models" class="mw-redirect">biological neurons</a>, but rather to perform complex non-linear computations.</p>
+<p><a name="See_also" id="See_also"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Artificial_neuron&amp;action=edit&amp;section=10" title="Edit section: See also">edit</a>]</span> <span class="mw-headline">See also</span></h2>
+<ul>
+<li><a href="/wiki/Neural_network" title="Neural network">Neural network</a></li>
+<li><a href="/wiki/Perceptron" title="Perceptron">Perceptron</a></li>
+<li><a href="/wiki/ADALINE" title="ADALINE">ADALINE</a></li>
+<li><a href="/wiki/Biological_neuron_models" title="Biological neuron models" class="mw-redirect">Biological neuron models</a></li>
+<li><a href="/wiki/Connectionism" title="Connectionism">Connectionism</a></li>
+</ul>
+<p><a name="Further_reading" id="Further_reading"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Artificial_neuron&amp;action=edit&amp;section=11" title="Edit section: Further reading">edit</a>]</span> <span class="mw-headline">Further reading</span></h2>
+<div class="references-small" style="margin-left:1.5em;">
+<ul>
+<li><a href="/wiki/Warren_McCulloch" title="Warren McCulloch" class="mw-redirect">McCulloch, W</a>. and <a href="/wiki/Walter_Pitts" title="Walter Pitts">Pitts, W</a>. (1943). <i>A logical calculus of the ideas immanent in nervous activity.</i> Bulletin of Mathematical Biophysics, 7:115 - 133.</li>
+</ul>
+</div>
+<p><a name="External_links" id="External_links"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=Artificial_neuron&amp;action=edit&amp;section=12" title="Edit section: External links">edit</a>]</span> <span class="mw-headline">External links</span></h2>
+<ul>
+<li><a href="http://www.mind.ilstu.edu/curriculum/modOverview.php?modGUI=212" class="external autonumber" title="http://www.mind.ilstu.edu/curriculum/modOverview.php?modGUI=212" rel="nofollow">[1]</a> (A good general overview, especially for teaching)</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 202/1000000
+Post-expand include size: 2325/2048000 bytes
+Template argument size: 746/2048000 bytes
+Expensive parser function count: 2/500
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:349771-0!1!0!default!!en!2 and timestamp 20090404164234 -->
+<div class="printfooter">
+Retrieved from "<a href="http://en.wikipedia.org/wiki/Artificial_neuron">http://en.wikipedia.org/wiki/Artificial_neuron</a>"</div>
+			<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>:&#32;<span dir='ltr'><a href="/wiki/Category:Neural_networks" title="Category:Neural networks">Neural networks</a></span> | <span dir='ltr'><a href="/wiki/Category:American_inventions" title="Category:American inventions">American inventions</a></span></div><div id="mw-hidden-catlinks" class="mw-hidden-cats-hidden">Hidden categories:&#32;<span dir='ltr'><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></span> | <span dir='ltr'><a href="/wiki/Category:Articles_with_unsourced_statements_since_March_2008" title="Category:Articles with unsourced statements since March 2008">Articles with unsourced statements since March 2008</a></span></div></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="/wiki/Artificial_neuron" title="View the content page [c]" accesskey="c">Article</a></li>
+				 <li id="ca-talk"><a href="/wiki/Talk:Artificial_neuron" title="Discussion about the content page [t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-edit"><a href="/w/index.php?title=Artificial_neuron&amp;action=edit" title="You can edit this page. &#10;Please use the preview button before saving. [e]" accesskey="e">Edit this page</a></li>
+				 <li id="ca-history"><a href="/w/index.php?title=Artificial_neuron&amp;action=history" title="Past versions of this page [h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Artificial_neuron" title="You are encouraged to log in; however, it is not mandatory. [o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+				<li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+				<li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content — the best of Wikipedia">Featured content</a></li>
+				<li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+				<li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/w/index.php" id="searchform"><div>
+				<input type='hidden' name="title" value="Special:Search"/>
+				<input id="searchInput" name="search" type="text" title="Search Wikipedia [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" title="Go to a page with this exact name if one exists" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search Wikipedia for this text" />
+			</div></form>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-interaction'>
+		<h5>Interaction</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+				<li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="The list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+				<li id="n-contact"><a href="/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact Wikipedia</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Donate" title="Support us">Donate to Wikipedia</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Artificial_neuron" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Artificial_neuron" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+<li id="t-upload"><a href="/wiki/Wikipedia:Upload" title="Upload files [u]" accesskey="u">Upload file</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="List of all special pages [q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="/w/index.php?title=Artificial_neuron&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="/w/index.php?title=Artificial_neuron&amp;oldid=276720721" title="Permanent link to this version of the page">Permanent link</a></li><li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=Artificial_neuron&amp;id=276720721">Cite this page</a></li>			</ul>
+		</div>
+	</div>
+	<div id="p-lang" class="portlet">
+		<h5>Languages</h5>
+		<div class="pBody">
+			<ul>
+				<li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/K%C3%BCnstliches_Neuron">Deutsch</a></li>
+				<li class="interwiki-es"><a href="http://es.wikipedia.org/wiki/Neurona_de_McCulloch-Pitts">Español</a></li>
+				<li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Neurone_formel">Français</a></li>
+				<li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%B5%8C">日本語</a></li>
+				<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Neuron_McCullocha-Pittsa">Polski</a></li>
+				<li class="interwiki-ru"><a href="http://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D0%BD">Русский</a></li>
+			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="/skins-1.5/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="/images/wikimedia-button.png" border="0" alt="Wikimedia Foundation"/></a></div>
+			<ul id="f-list">
+					<li id="lastmod"> This page was last modified on 12 March 2009, at 11:03.</li>
+					<li id="copyright">All text is available under the terms of the <a class='internal' href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_the_GNU_Free_Documentation_License" title="Wikipedia:Text of the GNU Free Documentation License">GNU Free Documentation License</a>. (See <b><a class='internal' href="http://en.wikipedia.org/wiki/Wikipedia:Copyrights" title="Wikipedia:Copyrights">Copyrights</a></b> for details.) <br /> Wikipedia&reg; is a registered trademark of the <a href="http://www.wikimediafoundation.org">Wikimedia Foundation, Inc.</a>, a U.S. registered <a class='internal' href="http://en.wikipedia.org/wiki/501%28c%29#501.28c.29.283.29" title="501(c)(3)">501(c)(3)</a> <a href="http://wikimediafoundation.org/wiki/Deductibility_of_donations">tax-deductible</a> <a class='internal' href="http://en.wikipedia.org/wiki/Non-profit_organization" title="Non-profit organization">nonprofit</a> <a href="http://en.wikipedia.org/wiki/Charitable_organization" title="Charitable organization">charity</a>.<br /></li>
+					<li id="privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+					<li id="disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served by srv178 in 0.397 secs. --></body></html>

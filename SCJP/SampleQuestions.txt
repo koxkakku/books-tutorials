@@ -1,0 +1,2199 @@
+Question
+301  of 500
+
+Topic: String Concepts
+
+Which one of the following is not legal?
+	System.out.println("st".concat("ep"));
+	System.out.println("st" + "ep");
+	System.out.println(’s’ + ’t’ + ’e’ + ’p’);
+	//System.out.println("st" + new String(’e’ + ’p’));
+Question
+302  of 500
+
+Topic: String Concepts
+
+What will be written to the standard output when the following program is run?
+import static java.lang.System.out;
+public class TestOutput {
+    public static void main(String[] args) {
+        String space = " ";
+
+        String composite = space + "windows" + space + space;
+        composite.concat("server");
+
+        String trimmed = composite.trim();
+
+        out.println(trimmed.length());
+    }
+}
+	//7
+	9
+	13
+	15
+Question
+303  of 500
+
+Topic: String Concepts
+
+Which expression will evaluate to true?
+	//"Hello there".toLowerCase().equals("hello there")
+	"HELLO THERE".equals("hello there")
+	("hello".concat("there")).equals("hello there")
+	"Hello There".compareTo("hello there") == 0
+Question
+304  of 500
+
+Topic: String Concepts
+
+Given the following code snippet,
+4. String d = "bookkeeper";
+5. d.substring(1,7);
+6. d = "w" + d;
+7. d.append("woo");
+8. System.out.println(d);
+What is the result? Assume, the code given above is a portion of the code present in a method.
+	wookkeewoo
+	wbookkeewoo
+	//Compilation fails.
+	An exception is thrown at runtime.
+Question
+305  of 500
+
+Topic: Package, Import, Jar Concepts
+
+Which is true about the import statement in Java?
+	When .* is used in an import statement, all the classes in that package and the sub-packages will be imported.
+	The import statements must appear before any package statement is declared.
+	//The import statement must be the first statement after any package declaration in a file.
+	The import statement is mandatory when using classes of other packages since there is no other way to use a class.
+Question
+306  of 500
+
+Topic: Package, Import, Jar Concepts
+
+The JAR files are packaged using the following format
+	TAR
+	//ZIP
+	ARJ
+	CAB
+Question
+307  of 500
+
+Topic: Package, Import, Jar Concepts
+
+In order to run a jar file, say "app.jar" using the command "java -jar app.jar", what condition should be satisfied?
+	app.jar should be given executable permission
+	//The manifest file of the jar should specify the class whose main method should be executed.
+	"-jar" is an invalid option for java command and an error will be displayed.
+	There should be a class "app.class" with the same name as the jar file for the command to work.
+Question
+308  of 500
+
+Topic: Package, Import, Jar Concepts
+
+Which one of the following is not a valid header in the manifest of jar file?
+	Specification-Title
+	Application-Version
+	Implementation-Vendor
+	Name
+Question
+309  of 500
+
+Topic: Package, Import, Jar Concepts
+
+A special file which is present inside the JAR that contain information about the files packaged in a JAR file is known as
+	Metafest
+	Metadata
+	//Manifest
+	Manidata
+Question
+310  of 500
+
+Topic: Package, Import, Jar Concepts
+
+You decide that you wish to add your application’s class to a group of classes that are stored in the location /examples/basics.
+Complete the code to do this
+	//package examples.basics;
+	import examples.basics;
+	import package examples.basics;
+	package examples/basics;
+Question
+311  of 500
+
+Topic: Package, Import, Jar Concepts
+
+We want the code in Test.java to access the example.basics.Utilities class which is stored within the example.jar file in the directory /jars. How would you compile your code?
+	//javac -classpath /jars/example.jar Test.java
+	javac -classpath /jars/example Test.java
+	javac -classpath /jars/ Test.java
+	javac -classpath /jars Test.java
+Question
+312  of 500
+
+Topic: Package, Import, Jar Concepts
+
+Suppose you are creating a class named Button that you want to include in a group of related classes called controls.
+Identify the correct code that includes the class in that group.
+	//package controls;
+	public class Button
+	package Button;
+	import controls;
+Question
+313  of 500
+
+Topic: Package, Import, Jar Concepts
+
+Which is true about the package statement in Java?
+	It can appear anywhere in the file as long as the syntax is correct.
+	It should appear after all the import statements but before the class declaration.
+	There can be more than one package statement.
+	//It should be the first non-comment line in the Java source file.
+Question
+314  of 500
+
+Topic: Package, Import, Jar Concepts
+
+Following is a file format which enables to bundle multiple files into a single file
+	JPG
+	PNG
+	TIF
+	//JAR
+Question
+315  of 500
+
+Topic: Package, Import, Jar Concepts
+
+Which is the manifest header that is used to specify the application’s entry point in a JAR file?
+	Class-Path
+	Entry-Class
+	Start-Class
+	//Main-Class
+Question
+316  of 500
+
+Topic: Package, Import, Jar Concepts
+
+Suppose a class named App1 is located in the samples.messages package. You have compiled the class. How do you execute the class?
+	java App1
+	//java samples.messages.App1
+	javac samples.messages.App1
+	java samples.messages.App1.class
+Question
+317  of 500
+
+Topic: Command Line, System Properties
+
+Why is the main() method special in a Java program?
+	//It is where the Java interpreter starts the whole program running.
+	Only the main() method may create objects.
+	Every class must have a main() method.
+	The main() method must be the only static method in a program.
+Question
+318  of 500
+
+Topic: Command Line, System Properties
+
+Given the following code:
+
+public class Test {
+    public static void main(String[] args)
+    {
+        System.out.println(args[0]);
+    }
+}
+If the above code is compiled and run as follows
+java Test Hello 1 2 3
+
+What would be the output ?
+	java
+	Test
+	//Hello
+	Hello 1 2 3
+Question
+319  of 500
+
+Topic: Command Line, System Properties
+
+Given the below mentioned code
+and the command-line invocation as,
+
+java CommandArgsThree 1 2 3
+
+1. public class CommandArgsThree {
+2.     public static void main(String [] args) {
+3.         String [][] argCopy = new String[2][2];
+4.          int x;
+5.          argCopy[0] = args;
+6.          x = argCopy[0].length;
+7.          for (int y = 0; y < x; y++) {
+8.              System.out.print(" " + argCopy[0][y]);
+9.          }
+10.    }
+11. }
+What is the result?
+	0 0
+	1 2
+	0 0 0
+	//1 2 3
+Question
+320  of 500
+
+Topic: Command Line, System Properties
+
+Given the below mentioned code
+and the command-line invocation as,
+
+java CommandArgsTwo 1 2 3
+
+1. public class CommandArgsTwo {
+2.     public static void main(String [] argh) {
+3.         String [] args;
+4.         int x;
+5.         x = argh.length;
+6.         for (int y = 1; y <= x; y++) {
+7.             System.out.print(" " + argh[y]);
+8.         }
+9.     }
+10. }
+What is the result?
+	0 1 2
+	1 2 3
+	0 0 0
+	//An exception is thrown at runtime
+Question
+321  of 500
+
+Topic: Command Line, System Properties
+
+Given the following code:
+
+public class Test {
+    public static void main(String[] args)
+    {
+        System.out.println(args.length);
+    }
+}
+If the above code is compiled and run as follows
+java Test Hello 1 2 3
+
+What would be the output ?
+	6
+	5
+	//4
+	3
+Question
+322  of 500
+
+Topic: Command Line, System Properties
+
+Given A.java contains
+class A {public static void main(String... args) {}} // 1
+
+and B.java contains
+class B {protected static void main(String[] args) {}} // 2
+
+What is the result of attempting to compile each of the two class declarations and invoke each main method from the command line?
+	Compile-time error at line 1.
+	Compile-time error at line 2.
+	An attempt to run A from the command line fails.
+	//An attempt to run B from the command line fails.
+Question
+323  of 500
+
+Topic: Command Line, System Properties
+
+Given the below mentioned code
+and the command-line invocation as,
+
+java CommandArgs 1 2 3 4
+
+1. public class CommandArgs {
+2.     public static void main(String [] args) {
+3.         String s1 = args[1];
+4.         String s2 = args[2];
+5.         String s3 = args[3];
+6.         String s4 = args[4];
+7.         System.out.print(" args[2] = " + s2);
+8.     }
+9. }
+What is the result?
+	args[2] = 2
+	args[2] = 3
+	args[2] = 1
+	//An exception is thrown at runtime
+Question
+324  of 500
+
+Topic: Command Line, System Properties
+
+Given the following code:
+
+public class Foo {
+    public static void main(String[] args)
+    {
+        System.out.println(args[1]);
+    }
+}
+
+If the above code is compiled and run as follows
+java Foo Apples 9 8 7
+
+What would be the output ?
+	java
+	Foo
+	Apples
+	//9
+Question
+325  of 500
+
+Topic: Command Line, System Properties
+
+Given the below mentioned code
+and the command-line invocation as,
+
+java CommandArgsFour 9 6 3
+
+public class CommandArgsFour {
+    public static void main(String [] argh) {
+        String [] args;
+        int a;
+        a = argh.length;
+        for (int b= 1; b < a; b++) {
+            System.out.print(" " + argh[b]);
+        }
+   }
+}
+What is the result?
+	null null
+	9 6
+	//6 3
+	An exception is thrown at runtime
+Question
+326  of 500
+
+Topic: Command Line, System Properties
+
+Given the below mentioned code
+and the command-line invocation as,
+
+java CommandArgsFive 9 8 7 6
+
+public class CommandArgsFive {
+    public static void main(String [] args) {
+        Integer i1 = new Integer(args[1]);
+        Integer i2 = new Integer(args[2]);
+        Integer i3 = new Integer(args[3]);
+        Integer i4 = new Integer(args[4]);
+        System.out.print(" args[3] = " + i3);
+    }
+}
+What is the result?
+	args[3] = 8
+	args[3] = 7
+	args[3] = null
+	//An exception is thrown at runtime
+Question
+327  of 500
+
+Topic: Data Types
+
+Which of the following is not true regarding LONG values?
+	a) A table can contain only one LONG column
+	//b) LONG columns can appear in where clauses
+	c) Stored function can not return a LONG value
+	d) LONG columns cannot be indexed
+Question
+328  of 500
+
+Topic: Data Types
+
+A table can have column of boolean data type.
+	a) TRUE
+	//b) FALSE
+Question
+329  of 500
+
+Topic: Data Types
+
+Oracle Table can have a boolean data type for its column(s)?
+	a) TRUE
+	//b) FALSE
+Question
+330  of 500
+
+Topic: Data Types
+
+A long column can store data upto
+	a) 2 Megabytes
+	//b) 2 Gigabytes
+	c) 2000 bytes
+	d) None of the above
+Question
+331  of 500
+
+Topic: Data Types
+
+BFILE data type can store upto a maximum of
+	a) 1 GB
+	b) 2 GB
+	c) 4 GB
+	//d) None of the above
+Question
+332  of 500
+
+Topic: Data Types
+
+Create table tab_name(col1 long, col2 long); The above statement will create a table tab_name
+	a) TRUE
+	//b) FALSE
+Question
+333  of 500
+
+Topic: Data Types
+
+CREATE TABLE table_name(column_name CHAR); What will be the length of the column column_name in the table table_name
+	//a) 1
+	b) 2
+	c) 10
+	d) 2000
+Question
+334  of 500
+
+Topic: Data Types
+
+Which all are DATETIME data types that can be used when specifying column definitions?
+	a) TIMESTAMP
+	b) INTERVAL MONTH TO DAY
+	c) DATE
+	//d) A & C
+Question
+335  of 500
+
+Topic: Data Types
+
+CREATE TABLE table_name(column_name CHAR);
+The above SQL statement will throw an error as length for CHAR data type is not specified
+	a) TRUE
+	//b) FALSE
+Question
+336  of 500
+
+Topic: Data Types
+
+Which of the following is not a valid data type in Oracle 10g?
+	a) DATE
+	b) TIMESTAMP(3)
+	c) TIMESTAMP(6)
+	//d) TIME
+Question
+337  of 500
+
+Topic: Data Types
+
+What is the maximum length of a CHAR data type
+	a) 2000
+	b) 4000
+	//c) 8000
+	d) No limit
+Question
+338  of 500
+
+Topic: Data Types
+
+Assume we want to store patient's image onto the hospital database while creating the patient table which of the following data types should be used for storing image within the database.
+	a) CLOB
+	b) BFILE
+	//c) BLOB
+	d) NCLOB
+Question
+339  of 500
+
+Topic: Data Types
+
+Which of the following is a not Unicode-only datatype?
+	//a) CHAR
+	b) NCHAR
+	c) NVARCHAR2
+	d) All of the above
+Question
+340  of 500
+
+Topic: Data Types
+
+How many columns are allowed in Oracle10g table?
+	a) 255
+	b) 10000
+	//c) 1000
+	d) there is no limit (infinite)
+Question
+341  of 500
+
+Topic: Data Types
+
+What is the maximum legth we can give to VARCHAR2( )?
+	a) 2000
+	//b) 4000
+	c) 1000
+	d) there is no limit (infinite)
+Question
+342  of 500
+
+Topic: Data Types
+
+Which data type(s) can hold a null value?
+	a) VARCHAR2( )
+	b) NUMBER( )
+	c) DATE
+	//d) All of the above
+Question
+343  of 500
+
+Topic: Data Types
+
+Which of the following is a Unicode-only datatype?
+	a) Char
+	//b) NCHAR
+	c) VARCHAR2
+	d) None
+Question
+344  of 500
+
+Topic: Data Types
+
+What would be the value stored in database, if 123.89 is stored in a column of datatype NUMBER(6,-2)?
+	a) 123
+	//b) 100
+	c) 120
+	d) 123.9
+Question
+345  of 500
+
+Topic: Data Types
+
+Which of the following datatype is stored as an external file on the server?
+	a) BLOB
+	b) NCLOB
+	c) CLOB
+	//d) BFILE
+Question
+346  of 500
+
+Topic: Data Types
+
+Which of the following SQL functions can operate on any datatype?
+	//a) MAX
+	b) LOWER
+	c) LPAD
+	d) ADD_MONTHS
+Question
+347  of 500
+
+Topic: Data Types
+
+Which of the following can be stored in a NUMBER(8,2) datatype?
+	//a) 999999.99
+	b) 999999.999
+	c) 9999999.99
+	d) 99999.999
+Question
+348  of 500
+
+Topic: Data Types
+
+Which of the following datatypes cannot be used with any of the built-in functions?
+	a) NUMBER
+	//b) LONG RAW
+	c) VARCHAR2
+	d) BOOLEAN
+Question
+349  of 500
+
+Topic: Data Types
+
+Which datatype can be used for loop counters?
+	a) LONG
+	b) FLOAT
+	//c) PLS_INTEGER
+	d) ROWID
+Question
+350  of 500
+
+Topic: Data Types
+
+Which datatype is used to store unstructured binary data outside the database?
+	a) BLOB
+	b) CLOB
+	c) NCLOB
+	//d) BFILE
+Question
+351  of 500
+
+Topic: Data Types
+
+Which of the following SQL functions is used to convert a string from one CHARACTERSET to another?
+	a) CAST
+	//b) CONVERT
+	c) TO_CHAR
+	d) REPLACE
+Question
+352  of 500
+
+Topic: Data Types
+
+Which of the following is a pseudocolumn?
+	//a) ROWID
+	b) NUMBER
+	c) CHAR
+	d) VARCHAR2
+Question
+353  of 500
+
+Topic: Data Retrieval Manipulation
+
+What is the output for the following query?
+select NULL + 5 from dual ;
+	//a) NULL
+	b) 5
+	c) Will give an Error
+	d) 0
+Question
+354  of 500
+
+Topic: Data Retrieval Manipulation
+
+What is the output for the following query?
+Select round(15.193,-1) from dual;
+	//a) 20
+	b) 10
+	c) 15.2
+	d) 15
+Question
+355  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following will slow down the query most:-
+	a) name=Ram
+	b) name like Ram%
+	c) name like %Ram%
+	d) None of the above
+Question
+356  of 500
+
+Topic: Data Retrieval Manipulation
+
+What is the output for the following query?
+select NULL||'ORACLE L.1.1' from dual ;
+	//a) NULL
+	b) ORACLE L.1.1
+	c) A and B
+	d) None of the above
+Question
+357  of 500
+
+Topic: Data Retrieval Manipulation
+
+In SQL string length constraints for VARCHAR2 must be in range
+	a) 1 .. 2000
+	//b) 1 .. 4000
+	c) 1 .. 32767
+	d) None of the above
+Question
+358  of 500
+
+Topic: Data Retrieval Manipulation
+
+select name from salesreps where sales between 1000 and 2000;
+	a) Query will display the name from the salesreps table whose sales is >1000 and sales < 2000
+	//b) Query will display the name from the salesreps table whose sales is >=1000 and sales <= 2000
+	c) Query will display the name from the salesreps table whose sales is >=1000 and sales < 2000
+	d) Query will display the name from the salesreps table whose sales is >1000 and sales <= 2000
+Question
+359  of 500
+
+Topic: Data Retrieval Manipulation
+
+Table A has 120 rows ; Table B has no rows .
+How many rows will be returned by the following SQL statement
+SELECT * FROM A,B;
+	//a) 0
+	b) 120
+	c) 121
+	d) None of the above
+Question
+360  of 500
+
+Topic: Data Retrieval Manipulation
+
+Distinguish between case and decode
+	//a) case can be used wherever decode is used
+	b) decode can be used wherever case is used
+	c) In "case" we can only use equal operation and in "decode" we can use all relational opeations
+	d) none of the above
+Question
+361  of 500
+
+Topic: Data Retrieval Manipulation
+
+If a table (table_name) contains the values 10,20,30,null,null for a column col1,What will the output of the below select statement.
+Select count(col1) from table_name;
+	a) 3
+	//b) 5
+	c) 2
+	d) None
+Question
+362  of 500
+
+Topic: Data Retrieval Manipulation
+
+When does a foreign key constraint enforce domain integrity?
+	//a) During inserts
+	b) During select
+	c) During optimization
+	d) During create
+Question
+363  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following query will print Even number of records ?
+	a) select * from emp where (rowid,1)
+	b) select * from emp where (rowid,1) in (select rowid, mod(rownum,2) from emp)
+	c) select * from emp where (rowid,0) in (select rowid, mod(rownum,2) from emp)
+	d) select * from emp where (rowid,0)
+Question
+364  of 500
+
+Topic: Data Retrieval Manipulation
+
+COALESCE (expr1, expr2) is equivalent to
+	//a) CASE WHEN expr1 IS NOT NULL THEN expr1 ELSE expr2 END
+	b) CASE WHEN expr1 IS NULL THEN expr1 ELSE expr2 END
+	c) CASE WHEN expr1 IS NULL THEN expr2 ELSE expr1 END
+	d) CASE WHEN expr1 IS NOT NULL THEN expr2 ELSE expr1 END
+Question
+365  of 500
+
+Topic: Data Retrieval Manipulation
+
+In NVL2(expr1,expr2,expr3), if expr1 is not null, then NVL2 returns
+	a) expr1
+	//b) expr2
+	c) expr3
+	d) null
+Question
+366  of 500
+
+Topic: Data Retrieval Manipulation
+
+The EMP table contains these columns:
+LAST NAME VARCHAR2(25)
+SALARY NUMBER(6,2)
+DEPARTMENT_ID NUMBER(6)
+You need to display the employees who have not been assigned to any department.
+You write the SELECT statement:
+SELECT LAST_NAME, SALARY, DEPARTMENT_ID
+FROM EMP
+WHERE DEPARTMENT_ID = NULL;
+What is true about this SQL statement?
+	a) The SQL statement displays the desired results.
+	b) The column in the WHERE clause should be changed to display the desired results.
+	c) The operator in the WHERE clause should be changed to display the desired results.
+	d) The WHERE clause should be changed to use an outer join to display the desired results.
+Question
+367  of 500
+
+Topic: Data Retrieval Manipulation
+
+What is true about ORDER BY clause?
+	a) Can appear only at the very end of the statement
+	b) Will accept the column name, aliases from the first SELECT statement
+	c) Will accept the positional notation
+	//d) All of the above
+Question
+368  of 500
+
+Topic: Data Retrieval Manipulation
+
+Group functions ignore null values.
+	//a) TRUE
+	b) FALSE
+Question
+369  of 500
+
+Topic: Data Retrieval Manipulation
+
+select 1,5 from dual
+intersect
+select 1,5 from dual;
+What will be the output of the above statement?
+	//a) 1 5
+	b) null null
+	c) 0 0
+	d) None of the above
+Question
+370  of 500
+
+Topic: Data Retrieval Manipulation
+
+What is the output of the below sql statement 
+select * from dual;
+	//a) NULL
+	b) SYSDATE
+	c) 'X'
+	d) Number of Tables
+Question
+371  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which are true about aggregate functions?
+	a) You can use aggregate functions in any clause of a SELECT statement.
+	b) You can use aggregate functions only in the column list of the SELECT clause and in the WHERE clause of a SELECT statement.
+	c) You can mix single row columns with aggregate functions in the column list of a SELECT statement by grouping on the single row columns.
+	//d) You can use aggregate functions on a table, only by grouping the whole table as one single group.
+Question
+372  of 500
+
+Topic: Data Retrieval Manipulation
+
+Examine the following statements.
+Insert into tableXYZ values (1, 2, 3);
+Create table ABC (sno CHAR(1));
+Rollback;
+What happens to the row inserted into tableXYZ?
+	//a) Record available in the table
+	b) Record not available in the table
+	c) Record available in table with inconsistent state
+	d) none of the above
+Question
+373  of 500
+
+Topic: Data Retrieval Manipulation
+
+1 select 1 from dual
+2  minus
+3  select 'a' from dual ;                                       
+
+       The above statement will through error on line
+	//a) 1
+	b) 2
+	c) 3
+	d) None of the above
+Question
+374  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which SQL function can be used instead of the IF construct?
+	a) Coalesce
+	//b) Decode
+	c) Nullif
+	d) B and C
+Question
+375  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following is multiple-row comparison operator?
+	a) IN
+	b) ANY
+	c) ALL
+	//d) All of the above
+Question
+376  of 500
+
+Topic: Data Retrieval Manipulation
+
+The escape identifier(s) used by LIKE condition in where clause is(are) :
+	a) *
+	//b) % and _
+	c) \
+	d) % and *
+Question
+377  of 500
+
+Topic: Data Retrieval Manipulation
+
+select 1,5 from dual
+minus
+select 1,5 from dual;
+What will be the output of the above statement
+	a) 0 0
+	b) null null
+	//c) No rows selected
+	d) None of the above
+Question
+378  of 500
+
+Topic: Data Retrieval Manipulation
+
+Evaluate the SQL statement:
+SELECT ROUND(45.953, -1), TRUNC(45.936, 2) FROM Dual;
+Which values are displayed?
+	a) 46 and 45
+	b) 46 and 45.93
+	//c) 50 and 45.93
+	d) 45 and 45.93
+Question
+379  of 500
+
+Topic: Data Retrieval Manipulation
+
+The maximum number of components in the DECODE function, including expr,searches, results, and default, is
+	a) 265
+	b) 250
+	//c) 255
+	d) 275
+Question
+380  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which clause appears only in the last component of a query?
+	a) WHERE
+	b) GROUP BY
+	//c) ORDER BY
+	d) HAVING
+Question
+381  of 500
+
+Topic: Data Retrieval Manipulation
+
+What is the output of SIGN(a) function? If a is less than '0'.
+	a) 1
+	//b) -1
+	c) 0
+	d) 2.414
+Question
+382  of 500
+
+Topic: Data Retrieval Manipulation
+
+Examine the structure of the EMPLOYEES table:
+EMPLOYEE_ID NUMBER Primary Key
+FIRST_NAME VARCHAR2(25)
+LAST_NAME VARCHAR2(25)
+Which statement inserts a row into the table?
+	//a) INSERT INTO employees (employee_id, first_name, last_name) VALUES ( 1000, 'John',' ');
+	b) INSERT INTO employees( first_name, last_name)VALUES(John,Smith);
+	c) INSERT INTO employees( first_name, last_name, employee_id) VALUES ( 1000, John, Smith);
+	d) INSERT INTO employees VALUES ( NULL, John,Smith);
+Question
+383  of 500
+
+Topic: Data Retrieval Manipulation
+
+What DML operations can perform using Merge Statement
+	a) Insert
+	b) Update
+	//c) a & b
+	d) None of the above
+Question
+384  of 500
+
+Topic: Data Retrieval Manipulation
+
+which of the following is data query language?
+	a) INSERT
+	b) UPDATE
+	c) SELECT
+	//d) All the above
+Question
+385  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following statement is true regarding ORDER BY clause?
+	//a) The sort is in ascending order by default.
+	b) The sort is in descending order by default.
+	c) The ORDER BY clause must precede the WHERE clause.
+	d) The ORDER BY clause is executed on the client side.
+Question
+386  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which is character manipulation function?
+	//a) TRIM
+	b) TRUNC
+	c) TO_DATE
+	d) CASE
+Question
+387  of 500
+
+Topic: Data Retrieval Manipulation
+
+which one of following commands does not belongs to DML?
+	//a) truncate
+	b) delete
+	c) update
+	d) merge
+Question
+388  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which SQL statement returns a numeric value?
+	a) SELECT ADD_MONTHS(MAX(hire_Date), 6) FROM EMP;
+	b) SELECT ROUND(hire_date) FROM EMP;
+	c) SELECT sysdate-hire_date FROM EMP;
+	d) SELECT TO_NUMBER(hire_date + 7) FROM EMP;
+Question
+389  of 500
+
+Topic: Data Retrieval Manipulation
+
+Evaluate the SQL statement:
+SELECT ROUND(TRUNC(MOD(1600,10),-1),2)FROM dual;
+What will be displayed?
+	//a) 0
+	b) 1
+	c) 2
+	d) An error statement
+Question
+390  of 500
+
+Topic: Data Retrieval Manipulation
+
+What would be the output of the below query?
+select decode(substr('TECHNOLOGY',2,3),'CH','PASS','FAIL') from dual;
+	a) PASS
+	//b) FAIL
+	c) No output
+	d) Error
+Question
+391  of 500
+
+Topic: Data Retrieval Manipulation
+
+If a table (table_name) contains the values 10,20,30,null,null for a column col1,What will the output of the below select statement.
+Select count(*) from table_name;
+	//a) 5
+	b) 3
+	c) 2
+	d) None
+Question
+392  of 500
+
+Topic: Data Retrieval Manipulation
+
+Certain DML privileges are required for merge statement.Which of the following is true?
+	//INSERT and UPDATE object privileges on the target table and the SELECT object privilege on the source table
+	INSERT,DELETE and UPDATE object privileges on the target table and the SELECT object privilege on the source table
+	SELECT,INSERT and UPDATE object privileges on the target table and the SELECT object privilege on the source table
+	SELECT,INSERT and UPDATE object privileges on the target table and the SELECT,UPDATE object privilege on the source table
+Question
+393  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which operator is used to return all distinct rows that are selected by the first query but not by the second?
+	//a) MINUS
+	b) intersect
+	c) union
+	d) None of the above
+Question
+394  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which operator is used to comment a single line within the query?
+	a) %%
+	//b) --
+	c) $$
+	d) COMMENT
+Question
+395  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which SELECT statement displays 2000 in the format “$2,000.00??
+	//a) SELECT TO CNAR(2000, ‘$9,999.00’) FROM dual;
+	b) SELECT TO CNAR(2000, ‘$#,###.##’) FROM dual;
+	c) SELECT TO CNAR(2000, ‘$2,000.00’) FROM dual;
+	d) SELECT TO CNAR(2000, ‘$N,NNN.NN’) FROM dual;
+Question
+396  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following is the right statement to get maximum salary from employees table?
+	//a) SELECT MAX(salary) FROM employees;
+	b) SELECT salary FROM employees;
+	c) SELECT salary (MAX) "Maximum" FROM employees;
+	d) SELECT salary "Maximum" FROM employees;
+Question
+397  of 500
+
+Topic: Data Retrieval Manipulation
+
+Unique Constraint violation error occurs during ?
+	//a) INSERTS
+	b) SELECT
+	c) DELETE
+	d) All of the above
+Question
+398  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following syntax enables an existing constraint ?
+	a) ALTER TABLE table_name ENABLE constraint_name;
+	b) ALTER TABLE table_name STATUS = ENABLE CONSTRAINT constraint_name;
+	//c) ALTER TABLE table_name ENABLE CONSTRAINT constraint_name;
+	d) ALTER TABLE table_name STATUS ENABLE CONSTRAINT constraint_name;
+Question
+399  of 500
+
+Topic: Data Retrieval Manipulation
+
+State TRUE or FALSE:
+Oracle SQL Function "MOD(n2,n1)" returns the remainder of n2 divided by n1
+	//a) TRUE
+	b) FALSE
+Question
+400  of 500
+
+Topic: Data Retrieval Manipulation
+
+Oracle Server implicitly creates a unique index for ?
+	a) NOT NULL & PRIMARY KEY
+	b) PRIMARY KEY & FOREIGN KEY
+	c) CHECK & UNIQUE
+	//d) UNIQUE & PRIMARY KEY
+Question
+401  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following SELECT statement will display the result 'World' from the string 'Hello World'?
+	a) SELECT SUBSTR( 'Hello World',7) FROM DUAL;
+	b) SELECT LEFT('Hello World',5) FROM DUAL;
+	c) SELECT RIGHT('Hello World',5) FROM DUAL;
+	//d) All of the above
+Question
+402  of 500
+
+Topic: Data Retrieval Manipulation
+
+SELECT * FROM employees
+WHERE hire_date < TO_DATE ('01-JAN-1999', 'DD-MON-YYYY') AND salary > 3500;
+The above SQL statement retrieves ?
+	a) Only those hired before 1999 and earning less than $3500 a month are returned
+	b) Only those hired after 1999 and earning more than $3500 a month are returned
+	c) Only those hired after 1999 and earning more than $3500 a month are returned
+	//d) Only those hired before 1999 and earning more than $3500 a month are returned
+Question
+403  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following SQL statements can calculate and return the absolute value
+of -33?
+	a) SELECT ABS("-33") Absolute FROM DUAL;
+	b) SELECT ABS('-33') "Absolute" FROM DUAL;
+	//c) SELECT ABS(-33) "Absolute" FROM DUAL;
+	d) None of the above
+Question
+404  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following SQL statement will display system date in the format "Monday, 01 June, 2001" ?
+	a) SELECT TO_DATE (SYSDATE, 'FMDAY, DD Month, YYYY') FROM dual;
+	b) SELECT TO_CHAR (SYSDATE, 'FMDD, DY Month, YYYY') FROM dual;
+	c) SELECT TO_CHAR (SYSDATE, 'FMDY, DDD Month, YYYY') FROM dual;
+	//d) SELECT TO_CHAR (SYSDATE, 'FMDay, DD Month, YYYY') FROM dual;
+Question
+405  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which SQL statement would you use to remove a view called EMP_DEPT_VU from your schema?
+	a) DELETE VIEW emp_dept_vu;
+	//b) DROP VIEW emp_dept_vu;
+	c) DROP emp_dept_vu;
+	d) DELETE emp_dept_vu;
+Question
+406  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which SELECT statement should you use to extract the year from the system date and display it in the format "1998"?
+	a) SELECT TO_DATE(SYSDATE, 'yyyy') FROM dual;
+	b) SELECT TO_CHAR(SYSDATE, 'yyyy') FROM dual;
+	c) SELECT DECODE(SUBSTR(SYSDATE, 8), 'YYYY') FROM dual;
+	d) SELECT DECODE(SUBSTR(SYSDATE, 8), 'year') FROM dual;
+Question
+407  of 500
+
+Topic: Data Retrieval Manipulation
+
+Evaluate this SQL statement:
+SELECT ename, sal FROM EMP;
+The SAL column stores the monthly salary of the employee. Which of the following query calculates the annual compensation as "monthly salary plus a monthly bonus of $100, multiplied by 12"?
+	a) SELECT ename, sal, (12*sal)+100 FROM emp;
+	b) SELECT ename, sal+(100*12) FROM emp;
+	//c) SELECT ename, sal, 12*(sal+100) FROM emp;
+	d) None of the above
+Question
+408  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following transaction control statement prevents more than one user from updating data in a table ?
+	//a) LOCK
+	b) COMMIT
+	c) ROLLBACK
+	d) SAVEPOINT
+Question
+409  of 500
+
+Topic: Data Retrieval Manipulation
+
+You are granted the CREATE VIEW privilege. What does this privilege allow you to do?
+	a) Create a table view
+	b) Create a view in ANY schema
+	//c) Create a view in your schema
+	d) Create a view only of it is based on tables that you created.
+Question
+410  of 500
+
+Topic: Data Retrieval Manipulation
+
+An inline view is a SELECT statement that is given an alias and is embedded in the _______________ clause of another SELECT statement.
+	//a) FROM
+	b) WHERE
+	c) SELECT
+	d) CASE
+Question
+411  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which SELECT statement will display the next value of the PARTS_ID_SEQ sequence by
+actually retrieving the value from the sequence?
+	a) SELECT NEXTVAL(parts_id_seq) FROM DUAL;
+	b) SELECT parts_id_seq.NEXTVAL FROM inventory;
+	//c) SELECT parts_id_seq.NEXTVAL FROM DUAL;
+	d) SELECT NEXTVAL(parts_id_seq) FROM inventory;
+Question
+412  of 500
+
+Topic: Data Retrieval Manipulation
+
+The EMP table contains these columns:
+EMPLOYEE_ID NUMBER(4)
+LAST_NAME VARCHAR2 (25)
+JOB_ID VARCHAR2(10)
+You want to search for strings that contain 'SA' in the JOB_ID column. Which SQL statement do you use?
+	//a) SELECT employee_id, last_name, job_id FROM EMP WHERE job_id LIKE '%SA%';
+	b) SELECT employee_id, last_name, job_id FROM EMP WHERE job_id LIKE '%SA';
+	c) SELECT employee_id, last_name, job_id FROM EMP WHERE job_id LIKE 'SA%';
+	d) None of the above
+Question
+413  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following Oracle Function retrieves maximum salary from EMP table ?
+	//a) MAX
+	b) MIN
+	c) AVG
+	d) None of the above
+Question
+414  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following Oracle Function retrieves average salary from EMP table ?
+	a) MAX
+	b) MIN
+	//c) AVG
+	d) None of the above
+Question
+415  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following UPDATE statement is TRUE
+	//a) UPDATE emp SET empno=12 , empname = 'JOHN' WHERE empno=1;
+	b) UPDATE SET empno=12 , EMPNAME = 'JOHN' ON emp WHERE EMPNO=1;
+	c) UPDATE SET empno=12 , EMPNAME = 'JOHN' FROM emp WHERE EMPNO=1
+	d) None of the above
+Question
+416  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following operation will not make an entry in the log file
+	//a) TRUNCATE
+	b) DELETE
+	c) INSERT
+	d) UPDATE
+Question
+417  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which command is used to delete the table information from RECYCLEBIN
+	a) Drop table from recyclebin
+	//b) Purge recyclebin
+	c) Delete recyclebin
+	d) None of the above
+Question
+418  of 500
+
+Topic: Data Retrieval Manipulation
+
+Space is allocated to temporary table during _________________
+	a) Creation of temp table
+	//b) First DML operation
+	c) Compilation of table
+	d) Data Dictionary updation.
+Question
+419  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following clause allows Oracle to perform similar operations on dependant objects of a table
+	a) ALL
+	b) CACHE
+	//c) CASCADE
+	d) COALESCE
+Question
+420  of 500
+
+Topic: Data Retrieval Manipulation
+
+which of the following statement will help to delete the child record when a parent is getting deleted.
+	//a) ALTER TABLE DEPT ADD FOREIGN KEY (empno) REFERENCES emp(empno) ON DELETE CASCADE;
+	b) ALTER TABLE DEPT ADD FOREIGN KEY (empno) REFERENCES emp(empno) ON DELETE ALL;
+	c) ALTER TABLE DEPT ADD FOREIGN KEY (empno) REFERENCES emp(empno) DELETE ALL;
+	d) ALTER TABLE DEPT ADD FOREIGN KEY (empno) REFERENCES emp(empno) AFTER DELETE CASCADE ;
+Question
+421  of 500
+
+Topic: Data Retrieval Manipulation
+
+Which of the following is NOT TRUE about the PURGE clause in delete statement
+	//a) Deletes the data from child tables
+	b) Drops the table and releases the space associated with it in a single step
+	c) Database does not place the table and its dependent objects into the recycle bin
+	d) All the above
+Question
+422  of 500
+
+Topic: Data Retrieval Manipulation
+
+In a SELECT statement that includes a WHERE clause, where is the GROUP BY clause placed in the SELECT statement?
+	a) Immediately after the SELECT clause
+	b) Before the WHERE clause
+	//c) After the WHERE clause
+	d) After the ORDER BY clause
+Question
+423  of 500
+
+Topic: J2EE
+
+In J2EE, _____ are the business components that run on the server.
+	a) Java Beans
+	//b) Enterprise Java Beans
+	c) Java Server Pages
+	d) Java Script
+Question
+424  of 500
+
+Topic: J2EE
+
+In J2EE, ____ are the presentation layer web components that run on the server
+	a) Controllers
+	b) Entity Beans
+	//c) Java Server Pages
+	d) Session Beans
+Question
+425  of 500
+
+Topic: J2EE
+
+Web components are supported by the services of runtime platform called 
+	//Web container 
+	Persistence layer 
+	Presentation layer 
+	Intergration Layer 
+Question
+426  of 500
+
+Topic: J2EE
+
+In MVC, ____ layer presents the look and feel of the application. 
+	//View 
+	Model 
+	Controller 
+	Filter 
+Question
+427  of 500
+
+Topic: J2EE
+
+In MVC, _____ layer contains the core of the application’s functionality and encapsulates the state of the application 
+	View 
+	//Model 
+	Controller 
+	Filter 
+Question
+428  of 500
+
+Topic: J2EE
+
+Which of the following is a valid type of Enterprise Beans ?
+	MSB, CMP, BMP 
+	//Session, Entity and Message-Driven 
+	Message Service broker 
+	Enterprise messaging platform
+Question
+429  of 500
+
+Topic: J2EE
+
+Which of the following directories will, by default be visible to a visiting web browswer client? (given webapp as the root directory of the web application).?
+	//webap\WEB-INF 
+	webap\WEB-INF\classes 
+	webapp\jsp 
+	webap\WEB-INF\html 
+Question
+430  of 500
+
+Topic: J2EE
+
+Bean-Managed Persistence is supported by
+	//Session Bean 
+	Entity Bean 
+	MDB 
+	MSB 
+Question
+431  of 500
+
+Topic: J2EE
+
+JNDI is an acronym for 
+	//Java Naming and Directory Interface 
+	Java Naming and Dictionary Interface 
+	Java Naming and Direct Interface 
+	Java Names and Data Interaction 
+Question
+432  of 500
+
+Topic: J2EE
+
+Which of the following is responsible for execution of Web tier components ? 
+	Message Server 
+	//J2EE server 
+	EIS Server 
+	Integration Server 
+Question
+433  of 500
+
+Topic: J2EE
+
+Web Container responsible for 
+	Managing the execution of enterprise beans 
+	//Managing the execution of JSP and servlet components 
+	Managing the execution of application messaging components 
+	Managing the execution of applets 
+Question
+434  of 500
+
+Topic: J2EE
+
+Tag "jsp:element" in JSP is used to
+	//construct dynamic content 
+	construct static content 
+	construct only HTML content 
+	construct WML content
+Question
+435  of 500
+
+Topic: J2EE
+
+Enterprise Information System Tier is also known as
+	Client Tier 
+	Applet 
+	Messaging System 
+	//Data Tier 
+Question
+436  of 500
+
+Topic: J2EE
+
+How are Web Clients also referred to as ?
+	//Thin clients
+	Business clients
+	Messaging clients
+	Integration clients
+Question
+437  of 500
+
+Topic: J2EE
+
+Which of the following statements is true? 
+	The init method is called each time a Servlet service method runs 
+	The doget method is called by the container when it is placed into service 
+	//When a container shuts down it will call the destroy method of running servlets 
+	When a container shuts down it will call the undeploy method of running servlets 
+Question
+438  of 500
+
+Topic: J2EE
+
+Which of the following option is used to retrive the information about the Servlet container?
+	sendRedirect 
+	PageContext 
+	//ServletContext 
+	RequestDispatcher 
+Question
+439  of 500
+
+Topic: J2EE
+
+Which of the following is NOT a type of SessionTracking? 
+	Using Cookies 
+	Using URL rewriting 
+	//Using HttpServlet 
+	Using Hidden form fields
+Question
+440  of 500
+
+Topic: J2EE
+
+Which of the following statements is true? (given that webapp is the root of the web application) 
+	The deployment descriptor must reside in the webapp\ directory 
+	The deployment descriptor must reside in the webapp\deploy directory 
+	The deployment descriptor must reside in the webapp\CONFIG directory 
+	//The deployment descriptor must reside in the webapp\WEB-INF\ directory 
+Question
+441  of 500
+
+Topic: J2EE
+
+Which of the following statements is correct? 
+	Entity beans may only have Bean managed transaction demarcation if they use bean managed persistence.
+	Session Beans, Message Driven beans and Entity Beans can be designed to use Bean managed transacational demarcation. 
+	//Entity beans can only be designed to use Container Managed Transaction demarcation. 
+	Session beans cannot use bean managed transactions unless they communicate with message driven beans.
+Question
+442  of 500
+
+Topic: J2EE
+
+Which of the container is responsible for collecting authentication data such as the username and password from the user ?
+	Enterprise JavaBeans (EJB) Container
+	Web Container
+	//Application Client Container
+	Applet Container
+Question
+443  of 500
+
+Topic: J2EE
+
+The web server that implements Java Servlet and JavaServer Pages technology converts the request from the client into
+	Java Bean object
+	//HTTPServletRequest object
+	XML object
+	HTML object
+Question
+444  of 500
+
+Topic: J2EE
+
+Which of the following is the layer where web components are supported by the runtime platform services?  
+	//Web container 
+	Persistence layer 
+	Presentation layer 
+	Business Layer
+Question
+445  of 500
+
+Topic: J2EE
+
+Which of the following statement is correct in Point-to-Point messaging?
+	Each message has only multiple consumer 
+	A sender or a receiver of a message have timing dependencies 
+	The receiver do not require to acknowledge the successful processing of a message 
+	//A point-to-point (PTP) product or application is built on the concept of message queues, senders, and receivers.
+Question
+446  of 500
+
+Topic: J2EE
+
+Which of the following is a Java technology that is document-centric ?
+	Servlet
+	//Java Server Pages
+	Swing
+	Applet
+Question
+447  of 500
+
+Topic: J2EE
+
+Which is the method that is used to transfer control to another web component in Servlet ?
+	Next 
+	Move 
+	//forward 
+	Redirecting 
+Question
+448  of 500
+
+Topic: J2EE
+
+In J2EE, what does EJB Container manage?
+	//Execution of enterprise beans 
+	Execution of JSP and servlet components 
+	Execution of application client components 
+	Execution of static content 
+Question
+449  of 500
+
+Topic: J2EE
+
+Which of the following statements is true? 
+	The sendRedirect  method can only process an absolute URL as a parameter 
+	After a sendRedirect method call, the browser will automatically return to the original URL 
+	//If the sendRedirect method is called after the response has been committed, an exception will be thrown 
+	sendRedirect is a method of the HttpServletRequest class 
+Question
+450  of 500
+
+Topic: J2EE
+
+In Enterprise Java Bean, what is a session bean ?
+	Represents a business entity object that exists in persistent storage 
+	//Represents a single client inside the Application Server; implement a web service 
+	Acts as a listener for a particular messaging type 
+	Is a client side component
+Question
+451  of 500
+
+Topic: J2EE
+
+Which of the following statements is true? 
+	Can not able to directly access a servlet the servlet-name must have a matching servlet-mapping 
+	The init-param tag may contain java code between its opening and closing brackets 
+	//The welcome-file tag can mark a servlet as the default item that is returned from a url 
+	The welcome-file tag must point to a servlet called welcome 
+Question
+452  of 500
+
+Topic: J2EE
+
+Which of the following statement is true for Enterprise Java Bean?
+	Cannot make use of interfaces to define business methods 
+	Cannot make use of the Sun JavaMail API 
+	//Is a server-side component that encapsulates business logic 
+	Cannot make use of message driven bean API
+Question
+453  of 500
+
+Topic: J2EE
+
+JAAS is an acronym for 
+	Java Authentication Analysis System 
+	//Java Authentication and Authorization Service 
+	Java Analysis for Authorization Solution 
+	Java Action Analysis System 
+Question
+454  of 500
+
+Topic: J2EE
+
+What is the correct directory to place the file containing a compiled servlet? 
+(given that webapp is the root of the web application). 
+	webapp\classes 
+	webapp\servlets\ 
+	webapp\WEB-INF\ 
+	//webapp\WEB-INF\classes\ 
+Question
+455  of 500
+
+Topic: J2EE
+
+JSTL is an acronym for 
+	//Java Server Pages Standard Tag Library 
+	Java Servlet Pages and Tab library 
+	Java Stylesheet and Tag Library 
+	Java Simple Tag Library  
+Question
+456  of 500
+
+Topic: J2EE
+
+Java Message Service API supports 
+	//point-to-point messaging 
+	Multi Controller messaging 
+	Single Point Messaging 
+	Java Message Service does not support messaging. 
+Question
+457  of 500
+
+Topic: J2EE
+
+Thin clients are also called 
+	//Web Client 
+	Applets 
+	Swing 
+	Desktop Applications.
+Question
+458  of 500
+
+Topic: J2EE
+
+You have an HTML form that contains the following code
+<form action="myservlet">
+<input type=submit name="Submit"/>
+</form>
+
+Assume that myservlet is a valid implementation of HTTPServlet. If this code is rendered in a browser and the Submit button is clicked, what method will definitely be called in myservlet? 
+	dodelete() 
+	doPost() 
+	doForm() 
+	//doGet()
+Question
+459  of 500
+
+Topic: J2EE
+
+Which of the following statement is true? 
+	a war file is an xml configuration file 
+	a war file can contain servlets but not jsp pages 
+	//a war file can contain servlets, jsp and other resources 
+	The top directory of a war file is the document root of the application 
+Question
+460  of 500
+
+Topic: J2EE
+
+Which of the following feature is used by Web container to support Internationalization and Localization? 
+	//Resource Bundle 
+	Transaction Management 
+	Message Service broker 
+	Local Resource container 
+Question
+461  of 500
+
+Topic: J2EE
+
+Which one of the following represents the correct syntax for mapping a servlet url to a servlet name? 
+	<servlet> <servlet-name>welcomeservlet</servlet-name> 
+<url-pattern>/welcomeservlet</url-pattern> </servlet> 
+	<servlet-mapping> <name>welcomeservlet</name> 
+<pattern>/welcomeservlet</pattern> </servlet-mapping> 
+	<mapping> <servlet-class>welcomeservlet</servlet-class> 
+<url-pattern>/welcomeservlet</url-pattern> </mapping> 
+	//<servlet-mapping> <servlet-name>welcomeservlet</servlet-name> 
+<url-pattern>/welcomeservlet</url-pattern> </servlet-mapping> 
+Question
+462  of 500
+
+Topic: J2EE
+
+Which of the following methods is not provided by the HttpServlet class ?
+	doGet() 
+	doPost() 
+	//doHead() 
+	//doTail() 
+Question
+463  of 500
+
+Topic: J2EE
+
+Which of the following statements is true? 
+	A deployment descriptor is not mandatory for configuring and running a servlet. 
+	A deployment descriptor mandatory for configuring and running a JSP page 
+	The deployment descriptor consists of XHTML tags 
+	//The deployment descriptor consists of XML tags 
+Question
+464  of 500
+
+Topic: J2EE
+
+Which of the following is overall goal of the EJB architecture? 
+	The EJB architecture will provide Message Driven Beans. 
+	//The EJB architecture will provide a standard component architecture for building distributed business applications 
+	The EJB architecture will provide a standard component architecture for building standalone business client applications. 
+	The Enterprise JavaBeans architecture will be compatible with the TCP/IP protocols. 
+Question
+465  of 500
+
+Topic: J2EE
+
+JAXP is an acronym for 
+	Java API and Transaction Process 
+	//Java API for XML Processing 
+	Java API for Extreme Programing 
+	Java API for Exception Programing 
+Question
+466  of 500
+
+Topic: J2EE
+
+Consider the following HTML code
+<html><body> <a href=HelloServlet>HelloServlet>HelloServlet</a> </body></html>
+Which of the methods of HelloServlet will definitly called if the link is clicked? 
+	doLink 
+	//doGet() 
+	doPost() 
+	doReset() 
+Question
+467  of 500
+
+Topic: J2EE
+
+Which of the following is not used for session tracking?
+	Cookies
+	URL Rewriting
+	HTTPSession
+	//Page
+Question
+468  of 500
+
+Topic: J2EE
+
+Web-tier components executes on 
+	Client side 
+	//J2EE server 
+	Messaging Side 
+	Business Side. 
+Question
+469  of 500
+
+Topic: J2EE
+
+Assuming that myservlet is a valid HTTPServlet, which of the following methods of the request object can be used to retrieve the value of the parameter called param when the form is submitted?
+	getHttpParameter("param"); 
+	getValue("param") 
+	getAttribute("param 
+	//getParameter("param")
+Question
+470  of 500
+
+Topic: J2EE
+
+Which of the following component is not considered as J2EE component by the J2EE specification?
+	JSP
+	Servlet
+	//Java Beans
+	EJB
+Question
+471  of 500
+
+Topic: J2EE
+
+Which of the below container consists of a web browser and Java Plug-in running on the client together ?
+	Enterprise JavaBeans (EJB) container
+	Web container
+	Application client container
+	//Applet container
+Question
+472  of 500
+
+Topic: J2EE
+
+Which of the following extends the capabilities of servers that host applications accessed by way of a request-response programming model ?
+	Java Beans
+	Java Mail
+	Java Transaction
+	//Servlet class
+Question
+473  of 500
+
+Topic: JSP
+
+Which of the following methods cannot be overridden in a JSP page?
+	jspDestroy()
+	jspInit()
+	//_jspService()
+	getParameter()
+Question
+474  of 500
+
+Topic: JSP
+
+What is the key difference between using a jsp:forward and HttpServletResponse.sendRedirect()?
+	forward executes on the client while sendRedirect() executes on the server.
+	//forward executes on the server while sendRedirect() executes on the client.
+	Both are identical and both the methods execute on the server.
+	Both are identical and both the methods execute on the client.
+Question
+475  of 500
+
+Topic: JSP
+
+Which of the following is defined by the jsp engine?
+	jspInit()
+	_jspService()
+	_jspService(ServletRequest,ServletResponse)
+	//_jspService(HttpServletRequest,HttpServletResponse)
+Question
+476  of 500
+
+Topic: JSP
+
+Which of the following is the syntax for JSP declaration?
+	<# ! declaration; [ declaration; ]+ ... #>
+	//<% ! declaration; [ declaration; ]+ ... %>
+	<$ ! declaration; [ declaration; ]+ ... $>
+	<@ ! declaration; [ declaration; ]+ ... @>
+Question
+477  of 500
+
+Topic: JSP
+
+In JSP, Syntax of output comment is
+	<!-- --!>
+	<!-- -->
+	<!% .. ..%>
+	//<%-- --%>
+Question
+478  of 500
+
+Topic: JSP
+
+Which of the following JSP variables is not available within a JSP expression?
+	out
+	session
+	request
+	//httpsession
+Question
+479  of 500
+
+Topic: JSP
+
+Which of the following is NOT a standard method called as part of the JSP life cycle?
+	jspInit()
+	//jspService()
+	_jspService()
+	jspDestroy()
+Question
+480  of 500
+
+Topic: JSP
+
+When does a JSP directive get execute/invoked ?
+	translation time
+	execution time
+	run time
+	JSP directive will never get called
+Question
+481  of 500
+
+Topic: JSP
+
+How can we pre compile a JSP ?
+	Invoke JSP by appending query string ’?jsp-precompile=true’
+	Invoke JSP after appending query string ’?precompile=true’
+	//Invoke JSP by appending query string ’?jsp_precompile’
+	We cannot precompile a JSP page. We need to wait till the first request come, to compile JSP.
+Question
+482  of 500
+
+Topic: JSP
+
+<jsp:useBean id="my" class="test.MyBean" scope="application"/>
+In which type of object is ’my’ stored as an attribute?
+	PageContext
+	HttpSession
+	//ServletContext
+	ServletConfig
+Question
+483  of 500
+
+Topic: JSP
+
+<jsp:useBean id="my" class="java.lang.StringBuffer" scope="page" />
+
+Which statement regarding the above code is correct ?
+	//It will work fine.
+	It will complain at compile time because StringBuffer is not a javabean
+	It will complain at run time because StringBuffer is not a java bean
+	You should import java.lang.* to compile.
+Question
+484  of 500
+
+Topic: JSP
+
+Which statement is true regarding the code snippet given below ?
+<jsp:useBean id="abc" class="test.Abc" scope="page">
+        <jsp:setProperty name="abc" property="name" value="Wipro" />
+</jsp:useBean>
+	//This will create a new bean each time it is called and set the property also.
+	This code will fail to run if ’abc’ bean is not already present.
+	This code set the property only if the bean is newly created.
+	This code set the property only if the bean is already existing.
+Question
+485  of 500
+
+Topic: Servlets
+
+In which directory we keep our servlets ?
+	WEB-INF
+	// //WEB-INF\classes
+	WEB-INF\servlet
+	WEB-INF\lib
+Question
+486  of 500
+
+Topic: Servlets
+
+<from method = "GET" action = "MyServlet">
+       <input type= "text" name="txtName">
+       <input type= "text" name = "txtName">
+       <input type = "submit">
+</from>
+Which statement can be used to get the value of second text box from MyServlet ?
+	String value = request.getParameter("txtName");
+	String value = request.getAttributeValues("txtName") [1];
+	String value = request.getParameterValues("txtName") [0]
+	//String value = request.getParameterValues("txtName") [1];
+Question
+487  of 500
+
+Topic: Servlets
+
+Which method of HttpServlet class services HTTP get method ?
+	public void doGet (HttpServletRequest request, HttpServletResponse response) throws Exception { }
+	public void doGet (HttpServletResponse response, HttpServletRequest request) throws IOException, ServletException { }
+	public void get (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException { }
+	//public void doGet (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {}
+Question
+488  of 500
+
+Topic: Servlets
+
+What is the name of deployment descriptor file ?
+	dd.xml
+	server.xml
+	//web.xml
+	web-app.xml
+Question
+489  of 500
+
+Topic: Servlets
+
+Where is third party jar placed?
+	WEB-INF
+	WEB-INF\classes
+	//WEB-INF\lib
+	WEB-INF\jar
+Question
+490  of 500
+
+Topic: Servlets
+
+Which interface returns the session associated with a user?
+	//HttpServletRequest
+	HttpServletResponse
+	HttpServlet
+	ServletContext
+Question
+491  of 500
+
+Topic: Servlets
+
+Which of the following ensures that the session will never be expunged by the container ?
+	session.setMaxInactiveInterval(0);
+	session.setMaxInactiveInterval(1)
+	//session.setMaxInactiveInterval(-1);
+	session.setMinInactiveInterval(-1);
+ 
+Question
+492  of 500
+
+Topic: Servlets
+
+Which method is used to specify the content of the response is a binary file?
+	setContent();
+	setBinaryOutput()
+	//setContentType();
+	sendRedirect();
+Question
+493  of 500
+
+Topic: Servlets
+
+Which listener will get notified when an attribute to the context is added?
+	ServletRequestAttributeListener
+	ContextAttributeListener
+	ServletContextListener
+	//ServletContextAttributeListener
+Question
+494  of 500
+
+Topic: Servlets
+
+Which method is used by a servlet to place its session id in the URL ?
+	encodeURL of HttpServletRequest
+	encodeURL of HttpServletResponse
+	redirectURL of HttpServletRequest
+	redirectURL of HttpServletResponse
+Question
+495  of 500
+
+Topic: Servlets
+
+What listener can be implemented to know when a servlet request attribute is replaced ?
+	ServletContextListener
+	//ServletRequestAttributeListener
+	ServletAttributeListener
+	ServletContextAttributeListener
+Question
+496  of 500
+
+Topic: Servlets
+
+Which of the following can be used to keep track of number of concurrent users?
+	ServletContextListener
+	ServletSessionListener
+	//HttpSessionBindingListener
+	HttpSessionListener
+Question
+497  of 500
+
+Topic: Servlets
+
+Which method is defined in javax.servlet.http.HttpSessionEvent ?
+	//getSession
+	getSessionId
+	getAttribute
+	setAttribute
+Question
+498  of 500
+
+Topic: Servlets
+
+sendRedirect is a method of which class/interface?
+	HttpServletRequest
+	//HttpServletResponse
+	HttpServlet
+	ServletContext
+Question
+499  of 500
+
+Topic: Servlets
+
+encodeURL is a method of which class/interface?
+	HttpServletRequest
+	//HttpServletResponse
+	HttpServlet
+	ServletContext
+Question
+500  of 500
+
+Topic: Joins and Subqueries
+
+The result of a ------------- for tables A and B always contains all records of the "left" table (A), even if the join-condition does not find any matching record in the "right" table (B).
+	//a) left outer join
+	b) RIGHT OUTER JOIN
+	c) FULL OUTER JOIN
+	d) None of the above
