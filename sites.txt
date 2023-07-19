@@ -7,3 +7,4 @@
 http://it-ebooks.info
 
 https://github.com/oracle-samples/oracle-db-examples
+https://www.bmc.com/blogs/     --imp blogs
